@@ -51,26 +51,36 @@ class Header_Text extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(left: 0, right: 150),
-      child: Column(
-        children: [
-          Padding(
-            padding: EdgeInsets.only(right: 62),
-            child: Text(
-              'MAKE YOUR',
-              style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.w500,
-                  color: Colors.white),
-            ),
-          ),
-          Text(
-            'HOME BEAUTIFUL',
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
-          ),
-        ],
-      ),
+    return Padding(
+      padding: const EdgeInsets.only(left: 0, right: 150),
+      child: TweenAnimationBuilder(
+          duration: const Duration(seconds: 2),
+          tween: Tween<double>(begin: 0, end: 1),
+          builder: (_, double opacity, __) {
+            return AnimatedOpacity(
+              opacity: opacity,
+              duration: const Duration(seconds: 1),
+              curve: Curves.easeIn,
+              child: const Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(right: 62),
+                    child: Text(
+                      'MAKE YOUR',
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white),
+                    ),
+                  ),
+                  Text(
+                    'HOME BEAUTIFUL',
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+                  ),
+                ],
+              ),
+            );
+          }),
     );
   }
 }
