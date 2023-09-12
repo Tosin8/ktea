@@ -56,12 +56,12 @@ class Header_Text extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 0, right: 150),
       child: TweenAnimationBuilder(
-          duration: const Duration(seconds: 2),
+          duration: const Duration(milliseconds: 500),
           tween: Tween<double>(begin: 0, end: 1),
           builder: (_, double opacity, __) {
             return AnimatedOpacity(
               opacity: opacity,
-              duration: const Duration(seconds: 1),
+              duration: const Duration(milliseconds: 500),
               curve: Curves.easeIn,
               child: const Column(
                 children: [
@@ -102,12 +102,12 @@ class _Sub_TextState extends State<Sub_Text> {
     return Padding(
       padding: const EdgeInsets.only(left: 0, right: 120),
       child: TweenAnimationBuilder(
-          duration: const Duration(seconds: 2),
+          duration: const Duration(seconds: 1),
           tween: Tween<double>(begin: 0, end: 1),
           builder: (_, double opacity, __) {
             return AnimatedOpacity(
               opacity: opacity,
-              duration: const Duration(seconds: 2),
+              duration: const Duration(seconds: 1),
               curve: Curves.easeIn,
               child: const Text(
                 'The best simple place where you \n discover most outstanding furniture \n and make your home beautiful.',
