@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class Home extends StatefulWidget {
   const Home({super.key});
 
+  static String routeName = '/home';
   @override
   State<Home> createState() => _HomeState();
 }
