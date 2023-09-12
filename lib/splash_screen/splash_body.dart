@@ -2,11 +2,16 @@ import 'package:flutter/material.dart';
 
 import 'splash_widgets.dart';
 
-class Splash_Body extends StatelessWidget {
+class Splash_Body extends StatefulWidget {
   const Splash_Body({
     super.key,
   });
 
+  @override
+  State<Splash_Body> createState() => _Splash_BodyState();
+}
+
+class _Splash_BodyState extends State<Splash_Body> {
   @override
   Widget build(BuildContext context) {
     return Stack(

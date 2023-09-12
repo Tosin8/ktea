@@ -75,19 +75,34 @@ class Header_Text extends StatelessWidget {
   }
 }
 
-class Sub_Text extends StatelessWidget {
+class Sub_Text extends StatefulWidget {
   const Sub_Text({
     super.key,
   });
 
   @override
+  State<Sub_Text> createState() => _Sub_TextState();
+}
+
+class _Sub_TextState extends State<Sub_Text> {
+  @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(left: 0, right: 120),
-      child: Text(
-        'The best simple place where you \n discover most outstanding furniture \n and make your home beautiful.',
-        style: TextStyle(fontWeight: FontWeight.w500),
-      ),
+    return Padding(
+      padding: const EdgeInsets.only(left: 0, right: 120),
+      child: TweenAnimationBuilder(
+          duration: const Duration(seconds: 2),
+          tween: Tween<double>(begin: 0, end: 1),
+          builder: (_, double opacity, __) {
+            return AnimatedOpacity(
+              opacity: opacity,
+              duration: const Duration(seconds: 2),
+              curve: Curves.easeIn,
+              child: const Text(
+                'The best simple place where you \n discover most outstanding furniture \n and make your home beautiful.',
+                style: TextStyle(fontWeight: FontWeight.w500),
+              ),
+            );
+          }),
     );
   }
 }
