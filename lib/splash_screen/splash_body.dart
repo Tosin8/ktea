@@ -12,54 +12,34 @@ class Splash_Body extends StatelessWidget {
     return Stack(
       children: [
         bkgImage,
-        Container(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 120),
-            child: Column(
-              children: [
-                Center(
-                  child: Column(
-                    children: [
-                      Image.asset(
-                        'assets/icons/app_icon_black_25.png',
-                      ),
-                      Text(
-                        'PARADISE',
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 120),
+          child: Column(
+            children: [
+              const App_Icon(),
+              const SizedBox(height: 70),
+              const Header_Text(),
+              const SizedBox(height: 60),
+              const Sub_Text(),
+              const SizedBox(height: 160),
+              GestureDetector(
+                onTap: () {},
+                child: Container(
+                    width: 167,
+                    height: 55,
+                    decoration: const BoxDecoration(color: Colors.black),
+                    child: const Center(
+                      child: Text(
+                        'Start Shopping',
+                        textAlign: TextAlign.center,
                         style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w500,
-                          letterSpacing: 1.0,
-                        ),
+                            color: Colors.white, fontWeight: FontWeight.w400),
                       ),
-                      Text(
-                        'HOME',
-                        style: TextStyle(
-                            fontSize: 15,
-                            fontWeight: FontWeight.w500,
-                            letterSpacing: 3.90),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: 70),
-                Column(
-                  children: [
-                    Text(
-                      'MAKE YOUR',
-                      style:
-                          TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
-                    ),
-                    Text(
-                      'HOME BEAUTIFUL',
-                      style:
-                          TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
-                    ),
-                  ],
-                ),
-              ],
-            ),
+                    )),
+              )
+            ],
           ),
-        )
+        ),
       ],
     );
   }
