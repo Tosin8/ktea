@@ -10,6 +10,8 @@ class Home_Body extends StatefulWidget {
 class _Home_BodyState extends State<Home_Body> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Center(
+      child: Text('Welcome home'),
+    );
   }
 }

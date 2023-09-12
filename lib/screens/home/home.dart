@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_app/screens/home/home_body.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -11,9 +12,8 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Center(
-      child: Text('Welcome home'),
-    ));
+    return const Scaffold(
+      body: Home_Body(),
+    );
   }
 }
