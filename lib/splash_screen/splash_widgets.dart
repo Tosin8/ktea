@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../screens/home/home.dart';
+
 var bkgImage = Container(
   decoration: BoxDecoration(
     image: DecorationImage(
