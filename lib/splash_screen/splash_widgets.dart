@@ -91,3 +91,28 @@ class Sub_Text extends StatelessWidget {
     );
   }
 }
+
+class Splash_Button extends StatelessWidget {
+  const Splash_Button({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {},
+      child: Container(
+          width: 167,
+          height: 55,
+          decoration: const BoxDecoration(color: Colors.black),
+          child: const Center(
+            child: Text(
+              'Start Shopping',
+              textAlign: TextAlign.center,
+              style:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.w400),
+            ),
+          )),
+    );
+  }
+}
