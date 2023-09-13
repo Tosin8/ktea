@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:furniture_app/splash_screen/splash_widgets.dart';
 
@@ -13,13 +12,23 @@ class App_Drawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
         child: ListView(
-      children: const [
-        Padding(
+      children: [
+        const Padding(
           padding: EdgeInsets.symmetric(vertical: 30),
           child: App_Icon(),
         ),
-        Divider(),
-        Screen_Nav()
+        const Divider(),
+        const Screen_Nav(),
+        const SizedBox(height: 260),
+        const Divider(),
+        const SizedBox(height: 5),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset('assets/icons/copyright_20.png'),
+            const Text('2023, Product of Paradise Home Ltd')
+          ],
+        ),
       ],
     ));
   }
@@ -38,26 +47,38 @@ class Screen_Nav extends StatelessWidget {
         GestureDetector(
           onTap: () {},
           child: ListTile(
-            leading: SvgPicture.asset('assets/images/home_black.svg'),
+            leading: Image.asset('assets/icons/home.png'),
             title: const Text('Home'),
             splashColor: Colors.blueAccent,
           ),
         ),
-        ListTile(
-          leading: SvgPicture.asset('assets/images/home_black.svg'),
-          title: const Text('Cart'),
+        GestureDetector(
+          onTap: () {},
+          child: ListTile(
+            leading: Image.asset('assets/icons/cart_20.png'),
+            title: const Text('Cart'),
+          ),
         ),
-        ListTile(
-          leading: SvgPicture.asset('assets/images/home_black.svg'),
-          title: const Text('Saved Items'),
+        GestureDetector(
+          onTap: () {},
+          child: ListTile(
+            leading: Image.asset('assets/icons/save_20.png'),
+            title: const Text('Saved Items'),
+          ),
         ),
-        ListTile(
-          leading: SvgPicture.asset('assets/images/home_black.svg'),
-          title: const Text('Profile'),
+        GestureDetector(
+          onTap: () {},
+          child: ListTile(
+            leading: Image.asset('assets/icons/user_20.png'),
+            title: const Text('Profile'),
+          ),
         ),
-        ListTile(
-          leading: SvgPicture.asset('assets/images/home_black.svg'),
-          title: const Text('Help'),
+        GestureDetector(
+          onTap: () {},
+          child: ListTile(
+            leading: Image.asset('assets/icons/chat_20.png'),
+            title: const Text('Help'),
+          ),
         ),
       ],
     );
