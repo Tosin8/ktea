@@ -14,32 +14,43 @@ class _Home_BodyState extends State<Home_Body> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          elevation: 0,
-          shadowColor: Colors.black,
-          actions: [
-            GestureDetector(
+          appBar: AppBar(
+            elevation: 0,
+            shadowColor: Colors.black,
+            actions: [
+              GestureDetector(
+                  onTap: () {},
+                  child: Image.asset('assets/icons/notification_bell_23.png')),
+              const SizedBox(width: 10),
+              GestureDetector(
                 onTap: () {},
-                child: Image.asset('assets/icons/notification_bell_23.png')),
-            const SizedBox(width: 10),
-            GestureDetector(
-              onTap: () {},
-              child: Row(
-                children: [
-                  Image.asset("assets/icons/camera_25.png"),
-                  const SizedBox(width: 5),
-                  const Text(
-                    'Scan',
-                    style: TextStyle(fontWeight: FontWeight.w500),
-                  ),
-                  const SizedBox(width: 12),
-                ],
-              ),
-            )
-          ],
-        ),
-        drawer: const App_Drawer(),
-      ),
+                child: Row(
+                  children: [
+                    Image.asset("assets/icons/camera_25.png"),
+                    const SizedBox(width: 5),
+                    const Text(
+                      'Scan',
+                      style: TextStyle(fontWeight: FontWeight.w500),
+                    ),
+                    const SizedBox(width: 12),
+                  ],
+                ),
+              )
+            ],
+          ),
+          drawer: const App_Drawer(),
+          body: ListView(
+            children: [
+              PageView.builder(itemBuilder: (context, index) {
+                return Container(
+                    width: 20,
+                    height: 180,
+                    decoration: BoxDecoration(color: Colors.blue),
+                    child: Image.asset('assets/images/carousel/4.jpg',
+                        fit: BoxFit.cover));
+              })
+            ],
+          )),
     );
   }
 }
