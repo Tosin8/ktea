@@ -74,6 +74,8 @@ flutter:
     - assets/icons/app_icon_black_25.png
     - assets/icons/app_icon_white_25.png
     - assets/icons/app_icon_white.png
+    - assets/icons/notification_bell_23.png
+    - assets/icons/camera_25.png
     - assets/images/splash/1.jpg
     
     
