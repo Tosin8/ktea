@@ -41,14 +41,23 @@ class _Home_BodyState extends State<Home_Body> {
           drawer: const App_Drawer(),
           body: ListView(
             children: [
-              PageView.builder(itemBuilder: (context, index) {
-                return Container(
-                    width: 20,
-                    height: 180,
-                    decoration: BoxDecoration(color: Colors.blue),
-                    child: Image.asset('assets/images/carousel/4.jpg',
-                        fit: BoxFit.cover));
-              })
+              SizedBox(
+                height: 180,
+                width: MediaQuery.of(context).size.width,
+                child: PageView.builder(
+                    itemCount: assets.length,
+                    controller: PageController(
+                      initialPage: 0,
+                      viewportFraction: 0.7,
+                    ),
+                    itemBuilder: (context, index) {
+                      return Container(
+                          margin: const EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20)),
+                          child: Image.asset(assets[index], fit: BoxFit.cover));
+                    }),
+              )
             ],
           )),
     );
