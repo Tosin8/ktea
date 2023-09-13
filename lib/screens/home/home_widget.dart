@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+import 'package:furniture_app/splash_screen/splash_widgets.dart';
 
 class App_Drawer extends StatelessWidget {
   const App_Drawer({
@@ -10,31 +13,19 @@ class App_Drawer extends StatelessWidget {
     return Drawer(
         child: ListView(
       children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 20),
-          child: Column(
-            children: [
-              Image.asset(
-                'assets/icons/app_icon_black_25.png',
-              ),
-              const Text(
-                'PARADISE',
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w500,
-                  letterSpacing: 1.0,
-                ),
-              ),
-              const Text(
-                'HOME',
-                style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w500,
-                    letterSpacing: 3.90),
-              ),
-            ],
-          ),
+        const Padding(
+          padding: EdgeInsets.symmetric(vertical: 20),
+          child: App_Icon(),
         ),
+        const Divider(),
+        Column(
+          children: [
+            ListTile(
+              leading: SvgPicture.asset('assets/images/home_black.svg'),
+              title: const Text('Home'),
+            ),
+          ],
+        )
       ],
     ));
   }

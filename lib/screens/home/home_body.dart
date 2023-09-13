@@ -12,32 +12,34 @@ class Home_Body extends StatefulWidget {
 class _Home_BodyState extends State<Home_Body> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        elevation: 1,
-        shadowColor: Colors.black,
-        actions: [
-          GestureDetector(
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          elevation: 1,
+          shadowColor: Colors.black,
+          actions: [
+            GestureDetector(
+                onTap: () {},
+                child: Image.asset('assets/icons/notification_bell_23.png')),
+            const SizedBox(width: 10),
+            GestureDetector(
               onTap: () {},
-              child: Image.asset('assets/icons/notification_bell_23.png')),
-          const SizedBox(width: 10),
-          GestureDetector(
-            onTap: () {},
-            child: Row(
-              children: [
-                Image.asset("assets/icons/camera_25.png"),
-                const SizedBox(width: 5),
-                const Text(
-                  'Scan',
-                  style: TextStyle(fontWeight: FontWeight.w500),
-                ),
-                const SizedBox(width: 12),
-              ],
-            ),
-          )
-        ],
+              child: Row(
+                children: [
+                  Image.asset("assets/icons/camera_25.png"),
+                  const SizedBox(width: 5),
+                  const Text(
+                    'Scan',
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  const SizedBox(width: 12),
+                ],
+              ),
+            )
+          ],
+        ),
+        drawer: const App_Drawer(),
       ),
-      drawer: const App_Drawer(),
     );
   }
 }
