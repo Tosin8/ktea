@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'home_widget.dart';
+
 class Home_Body extends StatefulWidget {
   const Home_Body({super.key});
 
@@ -12,30 +14,30 @@ class _Home_BodyState extends State<Home_Body> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
+        elevation: 1,
         shadowColor: Colors.black,
         actions: [
           GestureDetector(
               onTap: () {},
               child: Image.asset('assets/icons/notification_bell_23.png')),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           GestureDetector(
             onTap: () {},
             child: Row(
               children: [
                 Image.asset("assets/icons/camera_25.png"),
-                SizedBox(width: 5),
-                Text(
+                const SizedBox(width: 5),
+                const Text(
                   'Scan',
                   style: TextStyle(fontWeight: FontWeight.w500),
                 ),
-                SizedBox(width: 12),
+                const SizedBox(width: 12),
               ],
             ),
           )
         ],
       ),
-      drawer: Drawer(),
+      drawer: const App_Drawer(),
     );
   }
 }
