@@ -40,26 +40,37 @@ class _Home_BodyState extends State<Home_Body> {
           ),
           drawer: const App_Drawer(),
           body: ListView(
-            children: [
-              SizedBox(
-                height: 180,
-                width: MediaQuery.of(context).size.width,
-                child: PageView.builder(
-                    itemCount: assets.length,
-                    controller: PageController(
-                      initialPage: 0,
-                      viewportFraction: 0.7,
-                    ),
-                    itemBuilder: (context, index) {
-                      return Container(
-                          margin: const EdgeInsets.all(8),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20)),
-                          child: Image.asset(assets[index], fit: BoxFit.cover));
-                    }),
-              )
-            ],
+            children: [CarouselSlider()],
           )),
+    );
+  }
+}
+
+class CarouselSlider extends StatelessWidget {
+  const CarouselSlider({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 180,
+      width: double.infinity,
+      child: PageView.builder(
+          itemCount: assets.length,
+          padEnds: false,
+          controller: PageController(
+            initialPage: 0,
+            viewportFraction: 0.9,
+          ),
+          itemBuilder: (context, index) {
+            return Container(
+                margin: const EdgeInsets.all(8),
+                clipBehavior: Clip.antiAlias,
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(30)),
+                child: Image.asset(assets[index], fit: BoxFit.cover));
+          }),
     );
   }
 }
