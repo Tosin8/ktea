@@ -15,7 +15,7 @@ class _Home_BodyState extends State<Home_Body> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          elevation: 1,
+          elevation: 0,
           shadowColor: Colors.black,
           actions: [
             GestureDetector(
