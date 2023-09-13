@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_app/components/constants.dart';
 
 import 'package:furniture_app/splash_screen/splash_widgets.dart';
 
@@ -11,26 +12,36 @@ class App_Drawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+        backgroundColor: kPrimaryColor,
+        elevation: 20,
         child: ListView(
-      children: [
-        const Padding(
-          padding: EdgeInsets.symmetric(vertical: 30),
-          child: App_Icon(),
-        ),
-        const Divider(),
-        const Screen_Nav(),
-        const SizedBox(height: 260),
-        const Divider(),
-        const SizedBox(height: 5),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/icons/copyright_20.png'),
-            const Text('2023, Product of Paradise Home Ltd')
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage('assets/images/drawer/1.jpg'),
+                      fit: BoxFit.cover)),
+              child: App_Icon(),
+            ),
+            // const Padding(
+            //   padding: EdgeInsets.symmetric(vertical: 30),
+
+            //child: App_Icon(),
+            // ),
+            const Divider(),
+            const Screen_Nav(),
+            const SizedBox(height: 260),
+            const Divider(),
+            const SizedBox(height: 5),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset('assets/icons/copyright_20.png'),
+                const Text('2023, Product of Paradise Home Ltd')
+              ],
+            ),
           ],
-        ),
-      ],
-    ));
+        ));
   }
 }
 
@@ -48,7 +59,11 @@ class Screen_Nav extends StatelessWidget {
           onTap: () {},
           child: ListTile(
             leading: Image.asset('assets/icons/home.png'),
-            title: const Text('Home'),
+            title: const Text(
+              'Home',
+              style:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
+            ),
             splashColor: Colors.blueAccent,
           ),
         ),
@@ -91,3 +106,6 @@ List<String> assets = [
   'assets/images/carousel/3.jpg',
   'assets/images/carousel/4.jpg',
 ];
+
+var subText =
+    const TextStyle(color: Colors.blueAccent, fontWeight: FontWeight.w500);

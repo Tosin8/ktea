@@ -28,9 +28,9 @@ class _Home_BodyState extends State<Home_Body> {
                   children: [
                     Image.asset("assets/icons/camera_25.png"),
                     const SizedBox(width: 5),
-                    const Text(
+                    Text(
                       'Scan',
-                      style: TextStyle(fontWeight: FontWeight.w500),
+                      style: subText,
                     ),
                     const SizedBox(width: 12),
                   ],
@@ -40,7 +40,29 @@ class _Home_BodyState extends State<Home_Body> {
           ),
           drawer: const App_Drawer(),
           body: ListView(
-            children: [CarouselSlider()],
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Row(
+                  children: [
+                    Image.asset('assets/icons/hot_sale_20.png'),
+                    Text(
+                      'Hot Sale Collections',
+                      style: subText,
+                    ),
+                    const SizedBox(width: 160),
+                    GestureDetector(
+                      onTap: () {},
+                      child: Text(
+                        'View All',
+                        style: subText,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const CarouselSlider()
+            ],
           )),
     );
   }
@@ -59,6 +81,9 @@ class CarouselSlider extends StatelessWidget {
       child: PageView.builder(
           itemCount: assets.length,
           padEnds: false,
+          pageSnapping: false,
+          //   reverse: true,
+          physics: const BouncingScrollPhysics(),
           controller: PageController(
             initialPage: 0,
             viewportFraction: 0.9,

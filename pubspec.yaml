@@ -79,11 +79,13 @@ flutter:
     - assets/icons/save_20.png
     - assets/icons/copyright_20.png
     - assets/icons/user_20.png
+    - assets/icons/hot_sale_20.png
     - assets/images/splash/1.jpg
     - assets/images/carousel/1.jpg
     - assets/images/carousel/2.jpg
     - assets/images/carousel/3.jpg
     - assets/images/carousel/4.jpg
+    - assets/images/drawer/1.jpg
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
