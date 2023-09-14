@@ -13,12 +13,36 @@ class Profile_Body extends StatefulWidget {
 class _Profile_BodyState extends State<Profile_Body> {
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
         SizedBox(height: 30),
         Profile_Pic(),
         SizedBox(height: 40),
-        Profile_Menu()
+        Profile_Menu(
+          text: 'My Account',
+          icon_prefix: 'assets/icons/user_20.png',
+          press: () {},
+        ),
+        Profile_Menu(
+          text: 'Notifications',
+          icon_prefix: 'assets/icons/notification_20.png',
+          press: () {},
+        ),
+        Profile_Menu(
+          text: 'Settings',
+          icon_prefix: 'assets/icons/settings_20.png',
+          press: () {},
+        ),
+        Profile_Menu(
+          text: 'Help Center',
+          icon_prefix: 'assets/icons/help_20.png',
+          press: () {},
+        ),
+        Profile_Menu(
+          text: 'Log Out',
+          icon_prefix: 'assets/icons/logout_20.png',
+          press: () {},
+        ),
       ],
     );
   }
@@ -28,11 +52,11 @@ class Profile_Menu extends StatelessWidget {
   const Profile_Menu({
     super.key,
     required this.text,
-    required this.icon,
+    required this.icon_prefix,
     required this.press,
   });
 
-  final String text, icon;
+  final String text, icon_prefix;
   final VoidCallback press;
 
   @override
@@ -50,9 +74,12 @@ class Profile_Menu extends StatelessWidget {
             padding: const EdgeInsets.only(left: 20),
             child: Row(
               children: [
-                Image.asset('assets/icons/user_20.png'),
+                Image.asset(icon_prefix),
                 const SizedBox(width: 20),
-                const Expanded(child: Text('My Account')),
+                Expanded(
+                    child: Text(
+                  text,
+                )),
                 const Icon(Icons.arrow_forward_ios),
                 const SizedBox(width: 10),
               ],
