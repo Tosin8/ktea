@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
+import '../../components/app_widgets.dart';
 import 'home_widget.dart';
 
 class Home_Body extends StatefulWidget {
@@ -54,6 +55,8 @@ class _Home_BodyState extends State<Home_Body> {
                       color: Colors.black.withOpacity(0.7)),
                 ),
                 const SizedBox(height: 10),
+                const SearchBarWidget(),
+                const SizedBox(height: 10),
                 Row(
                   children: [
                     Image.asset('assets/icons/hot_sale_20.png'),
@@ -97,14 +100,15 @@ class _CarouselSliderState extends State<CarouselSlider> {
   bool isreverse = false;
 
   myfirstFunction() {
-    Timer.periodic(Duration(seconds: 2), (timer) {
+    Timer.periodic(const Duration(seconds: 5), (timer) {
       if (myfirstcurrentIndex == 4) {
         isreverse = true;
       } else if (myfirstcurrentIndex == 0) {
         isreverse = false;
       }
       isreverse ? myfirstcurrentIndex-- : myfirstcurrentIndex++;
-      
+      myfirstpagecontroller.animateToPage(myfirstcurrentIndex,
+          duration: const Duration(milliseconds: 500), curve: Curves.linear);
     });
   }
 
@@ -112,6 +116,14 @@ class _CarouselSliderState extends State<CarouselSlider> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    myfirstFunction();
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    myfirstpagecontroller.dispose();
   }
 
   @override
@@ -123,12 +135,17 @@ class _CarouselSliderState extends State<CarouselSlider> {
           itemCount: assets.length,
           padEnds: false,
           pageSnapping: false,
-          //   reverse: true,
+          // reverse: true,
           physics: const BouncingScrollPhysics(),
-          controller: PageController(
-            initialPage: 0,
-            viewportFraction: 0.9,
-          ),
+          controller: myfirstpagecontroller,
+          onPageChanged: (value) {
+            myfirstcurrentIndex = value;
+            setState(() {});
+          },
+          // controller: PageController(
+          //   initialPage: 0,
+          //   viewportFraction: 0.9,
+          // ),
           itemBuilder: (context, index) {
             return Container(
                 margin: const EdgeInsets.all(8),

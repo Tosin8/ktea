@@ -76,6 +76,7 @@ flutter:
     - assets/icons/notification_bell_23.png
     - assets/icons/camera_25.png
     - assets/icons/chat_20.png
+    - assets/icons/search_23.png
     - assets/icons/save_20.png
     - assets/icons/copyright_20.png
     - assets/icons/user_20.png

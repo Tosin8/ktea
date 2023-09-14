@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_app/components/app_widgets.dart';
 import 'package:furniture_app/screens/home/home_widget.dart';
 
 class Profile extends StatefulWidget {
@@ -16,9 +17,9 @@ class _ProfileState extends State<Profile> {
         drawer: App_Drawer(),
         appBar: AppBar(
           iconTheme: const IconThemeData(color: Colors.blueAccent),
+          title: Text('Profile', style: AppBar_Header),
+          centerTitle: true,
         ),
-        body: Center(
-          child: Text('Profile'),
-        ));
+        body: Profile_Body);
   }
 }
