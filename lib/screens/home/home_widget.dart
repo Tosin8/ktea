@@ -15,40 +15,54 @@ class App_Drawer extends StatelessWidget {
         child: ListView(
           children: [
             DrawerHeader(
-                decoration: const BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('assets/images/drawer/1.jpg'),
-                        fit: BoxFit.cover)),
-                child: Center(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 30),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Image.asset('assets/icons/app_icon_white_25.png'),
-                        const Text(
-                          'PARADISE',
-                          style: TextStyle(
-                              fontSize: 15,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500,
-                              letterSpacing: 1.0),
-                        ),
-                        const Text(
-                          'HOME',
-                          style: TextStyle(
-                              fontSize: 15,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500,
-                              letterSpacing: 3.90),
-                        ),
-                      ],
+              decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage('assets/images/drawer/1.jpg'),
+                      fit: BoxFit.cover)),
+              child: Stack(
+                fit: StackFit.loose,
+                clipBehavior: Clip.none,
+                children: [
+                  Center(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 30),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Image.asset('assets/icons/app_icon_white_25.png'),
+                          const Text(
+                            'PARADISE',
+                            style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500,
+                                letterSpacing: 1.0),
+                          ),
+                          const Text(
+                            'HOME',
+                            style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500,
+                                letterSpacing: 3.90),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                )),
-            const Divider(),
+                  Positioned(
+                    top: 102,
+                    child: const CircleAvatar(
+                      radius: 30,
+                      backgroundImage:
+                          AssetImage('assets/images/drawer/model.jpg'),
+                    ),
+                  ),
+                ],
+              ),
+            ),
             const Screen_Nav(),
-            const SizedBox(height: 260),
+            const SizedBox(height: 220),
             const Divider(),
             const SizedBox(height: 5),
             Row(
