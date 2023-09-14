@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_app/screens/home/home.dart';
+
+import '../../components/routes.dart';
 
 // ignore: camel_case_types
 class App_Drawer extends StatelessWidget {
@@ -146,46 +147,6 @@ class App_Icon_White extends StatelessWidget {
 }
 
 // ignore: camel_case_types
-class Screen_Nav extends StatelessWidget {
-  const Screen_Nav({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        ListTile(
-          leading: Image.asset('assets/icons/home.png'),
-          title: const Text(
-            'Home',
-          ),
-          splashColor: Colors.blueAccent,
-          onTap: () {
-            Navigator.pushNamed(context, Home.routeName);
-          },
-        ),
-        ListTile(
-          leading: Image.asset('assets/icons/cart_20.png'),
-          title: const Text('Cart'),
-          onTap: () {},
-        ),
-        ListTile(
-          leading: Image.asset('assets/icons/save_20.png'),
-          title: const Text('Saved Items'),
-        ),
-        ListTile(
-          leading: Image.asset('assets/icons/user_20.png'),
-          title: const Text('Profile'),
-        ),
-        ListTile(
-          leading: Image.asset('assets/icons/chat_20.png'),
-          title: const Text('Help'),
-        ),
-      ],
-    );
-  }
-}
 
 List<String> assets = [
   'assets/images/carousel/1.jpg',
