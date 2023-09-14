@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+import 'profile_widget.dart';
 
 class Profile_Body extends StatefulWidget {
   const Profile_Body({super.key});
@@ -10,6 +13,8 @@ class Profile_Body extends StatefulWidget {
 class _Profile_BodyState extends State<Profile_Body> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const Column(
+      children: [SizedBox(height: 30), Profile_Pic()],
+    );
   }
 }

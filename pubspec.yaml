@@ -75,9 +75,11 @@ flutter:
     - assets/icons/app_icon_white.png
     - assets/icons/notification_bell_23.png
     - assets/icons/camera_25.png
+    - assets/icons/camera_15.png
     - assets/icons/chat_20.png
     - assets/icons/search_23.png
     - assets/icons/save_20.png
+    - assets/icons/camera_icon.svg
     - assets/icons/copyright_20.png
     - assets/icons/user_20.png
     - assets/icons/hot_sale_20.png
