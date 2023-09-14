@@ -26,8 +26,9 @@ class App_Drawer extends StatelessWidget {
                 children: [App_Icon_White(), Model_User(), User_Details()],
               ),
             ),
+            SizedBox(height: 12),
             const Screen_Nav(),
-            const SizedBox(height: 220),
+            const SizedBox(height: 170),
             const Divider(
               color: Colors.white,
               thickness: 1,
@@ -37,7 +38,7 @@ class App_Drawer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset('assets/icons/copyright_20.png'),
-                const Text('2023, Product of Paradise Home Ltd')
+                const Text('2023,Paradise Home Ltd')
               ],
             ),
           ],

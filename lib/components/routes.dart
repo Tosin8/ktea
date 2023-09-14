@@ -3,6 +3,7 @@ import 'package:furniture_app/screens/home/home.dart';
 import 'package:furniture_app/splash_screen/splash.dart';
 
 import '../screens/cart/cart.dart';
+import '../screens/categories/category.dart';
 import '../screens/help/help.dart';
 import '../screens/profile/profile.dart';
 import '../screens/saved/saved.dart';
@@ -14,6 +15,7 @@ final Map<String, WidgetBuilder> routes = {
   Saved.routeName: (context) => const Saved(),
   Profile.routeName: (context) => const Profile(),
   Help.routeName: (context) => const Help(),
+  Category.routeName: (context) => const Category(),
 };
 
 class Screen_Nav extends StatelessWidget {
@@ -44,7 +46,7 @@ class Screen_Nav extends StatelessWidget {
             ),
             splashColor: Colors.blueAccent,
             onTap: () {
-              Navigator.pushNamed(context, Home.routeName);
+              Navigator.pushNamed(context, Category.routeName);
             },
           ),
           ListTile(

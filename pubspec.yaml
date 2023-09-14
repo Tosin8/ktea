@@ -97,6 +97,13 @@ flutter:
     - assets/images/carousel/4.jpg
     - assets/images/drawer/1.jpg
     - assets/images/drawer/model.jpg
+    - assets/category_menu/cabinet_bkg.jpg
+    - assets/category_menu/home_deco_bkg.jpg
+    - assets/category_menu/light_bkg.jpg
+    - assets/category_menu/sofa_bkg.jpg
+    - assets/category_menu/table_bkg.jpg
+    - assets/category_menu/cabinet.png
+
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
