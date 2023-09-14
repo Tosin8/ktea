@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
 
 import 'home_widget.dart';
 
@@ -78,10 +79,40 @@ class _Home_BodyState extends State<Home_Body> {
   }
 }
 
-class CarouselSlider extends StatelessWidget {
+class CarouselSlider extends StatefulWidget {
   const CarouselSlider({
     super.key,
   });
+
+  @override
+  State<CarouselSlider> createState() => _CarouselSliderState();
+}
+
+class _CarouselSliderState extends State<CarouselSlider> {
+// creating autoplay timer and creating variables for pagecontroller.
+  int myfirstcurrentIndex = 0;
+
+  PageController myfirstpagecontroller =
+      PageController(initialPage: 0, viewportFraction: 0.9);
+  bool isreverse = false;
+
+  myfirstFunction() {
+    Timer.periodic(Duration(seconds: 2), (timer) {
+      if (myfirstcurrentIndex == 4) {
+        isreverse = true;
+      } else if (myfirstcurrentIndex == 0) {
+        isreverse = false;
+      }
+      isreverse ? myfirstcurrentIndex-- : myfirstcurrentIndex++;
+      
+    });
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
