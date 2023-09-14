@@ -15,9 +15,11 @@ class _Category_BodyState extends State<Category_Body> {
     return Padding(
         padding: const EdgeInsets.symmetric(vertical: 10),
         child: ListView(children: [
-          HomeDecoration(),
-          SizedBox(height: 20),
-          
+          const HomeDecoration(),
+          const SizedBox(height: 20),
+          const Sofa(),
+          const SizedBox(height: 20),
+          const TableP(),
         ]));
   }
 }
