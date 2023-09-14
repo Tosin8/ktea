@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_app/components/constants.dart';
+import 'package:furniture_app/screens/home/home.dart';
 
 // ignore: camel_case_types
 class App_Drawer extends StatelessWidget {
@@ -10,7 +10,7 @@ class App_Drawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-        backgroundColor: kPrimaryColor,
+        // backgroundColor: kPrimaryColor,
         elevation: 20,
         child: ListView(
           children: [
@@ -159,14 +159,16 @@ class Screen_Nav extends StatelessWidget {
           leading: Image.asset('assets/icons/home.png'),
           title: const Text(
             'Home',
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
           ),
           splashColor: Colors.blueAccent,
-          onTap: () {},
+          onTap: () {
+            Navigator.pushNamed(context, Home.routeName);
+          },
         ),
         ListTile(
           leading: Image.asset('assets/icons/cart_20.png'),
           title: const Text('Cart'),
+          onTap: () {},
         ),
         ListTile(
           leading: Image.asset('assets/icons/save_20.png'),
