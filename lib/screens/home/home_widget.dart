@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/components/constants.dart';
 
-import 'package:furniture_app/splash_screen/splash_widgets.dart';
-
 // ignore: camel_case_types
 class App_Drawer extends StatelessWidget {
   const App_Drawer({
@@ -16,18 +14,38 @@ class App_Drawer extends StatelessWidget {
         elevation: 20,
         child: ListView(
           children: [
-            const DrawerHeader(
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage('assets/images/drawer/1.jpg'),
-                      fit: BoxFit.cover)),
-              child: App_Icon(),
-            ),
-            // const Padding(
-            //   padding: EdgeInsets.symmetric(vertical: 30),
-
-            //child: App_Icon(),
-            // ),
+            DrawerHeader(
+                decoration: const BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage('assets/images/drawer/1.jpg'),
+                        fit: BoxFit.cover)),
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 30),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Image.asset('assets/icons/app_icon_white_25.png'),
+                        const Text(
+                          'PARADISE',
+                          style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              letterSpacing: 1.0),
+                        ),
+                        const Text(
+                          'HOME',
+                          style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              letterSpacing: 3.90),
+                        ),
+                      ],
+                    ),
+                  ),
+                )),
             const Divider(),
             const Screen_Nav(),
             const SizedBox(height: 260),
@@ -55,45 +73,30 @@ class Screen_Nav extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        GestureDetector(
-          onTap: () {},
-          child: ListTile(
-            leading: Image.asset('assets/icons/home.png'),
-            title: const Text(
-              'Home',
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
-            ),
-            splashColor: Colors.blueAccent,
+        ListTile(
+          leading: Image.asset('assets/icons/home.png'),
+          title: const Text(
+            'Home',
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
           ),
+          splashColor: Colors.blueAccent,
+          onTap: () {},
         ),
-        GestureDetector(
-          onTap: () {},
-          child: ListTile(
-            leading: Image.asset('assets/icons/cart_20.png'),
-            title: const Text('Cart'),
-          ),
+        ListTile(
+          leading: Image.asset('assets/icons/cart_20.png'),
+          title: const Text('Cart'),
         ),
-        GestureDetector(
-          onTap: () {},
-          child: ListTile(
-            leading: Image.asset('assets/icons/save_20.png'),
-            title: const Text('Saved Items'),
-          ),
+        ListTile(
+          leading: Image.asset('assets/icons/save_20.png'),
+          title: const Text('Saved Items'),
         ),
-        GestureDetector(
-          onTap: () {},
-          child: ListTile(
-            leading: Image.asset('assets/icons/user_20.png'),
-            title: const Text('Profile'),
-          ),
+        ListTile(
+          leading: Image.asset('assets/icons/user_20.png'),
+          title: const Text('Profile'),
         ),
-        GestureDetector(
-          onTap: () {},
-          child: ListTile(
-            leading: Image.asset('assets/icons/chat_20.png'),
-            title: const Text('Help'),
-          ),
+        ListTile(
+          leading: Image.asset('assets/icons/chat_20.png'),
+          title: const Text('Help'),
         ),
       ],
     );

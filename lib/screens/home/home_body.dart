@@ -15,6 +15,8 @@ class _Home_BodyState extends State<Home_Body> {
     return SafeArea(
       child: Scaffold(
           appBar: AppBar(
+            iconTheme: const IconThemeData(
+                color: Colors.blueAccent), // for changing default color.
             elevation: 0,
             shadowColor: Colors.black,
             actions: [
