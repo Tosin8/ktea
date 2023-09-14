@@ -51,4 +51,4 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
   }
 }
 
-var AppBar_Header = const TextStyle(fontSize: 18);
+var AppBar_Header = const TextStyle(fontSize: 18, color: Colors.blueAccent);
