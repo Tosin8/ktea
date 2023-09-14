@@ -38,6 +38,16 @@ class Screen_Nav extends StatelessWidget {
             },
           ),
           ListTile(
+            leading: Image.asset('assets/icons/categories_25.png'),
+            title: const Text(
+              'Categories',
+            ),
+            splashColor: Colors.blueAccent,
+            onTap: () {
+              Navigator.pushNamed(context, Home.routeName);
+            },
+          ),
+          ListTile(
             leading: Image.asset('assets/icons/cart_20.png'),
             title: const Text('Cart'),
             onTap: () {

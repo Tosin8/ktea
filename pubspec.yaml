@@ -88,6 +88,8 @@ flutter:
     - assets/icons/hot_sale_20.png
     - assets/icons/settings_20.png
     - assets/icons/location_10.png
+    - assets/icons/categories_20.png
+    - assets/icons/categories_25.png
     - assets/images/splash/1.jpg
     - assets/images/carousel/1.jpg
     - assets/images/carousel/2.jpg
