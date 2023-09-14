@@ -41,11 +41,19 @@ class _Home_BodyState extends State<Home_Body> {
             ],
           ),
           drawer: const App_Drawer(),
-          body: ListView(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 10),
-                child: Row(
+          body: Padding(
+            padding: const EdgeInsets.only(left: 10),
+            child: ListView(
+              children: [
+                Text(
+                  'Find modern \n furniture for you',
+                  style: TextStyle(
+                      fontSize: 23,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black.withOpacity(0.7)),
+                ),
+                const SizedBox(height: 10),
+                Row(
                   children: [
                     Image.asset('assets/icons/hot_sale_20.png'),
                     Text(
@@ -62,9 +70,9 @@ class _Home_BodyState extends State<Home_Body> {
                     ),
                   ],
                 ),
-              ),
-              const CarouselSlider()
-            ],
+                const CarouselSlider(),
+              ],
+            ),
           )),
     );
   }
