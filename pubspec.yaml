@@ -59,6 +59,7 @@ flutter:
     - assets/icons/user.svg
     - assets/icons/bag.svg
     - assets/icons/arrow_long_left.svg
+    - assets/icons/arrow_forward.png
     - assets/icons/check.svg
     - assets/icons/home.svg
     - assets/icons/menu.svg
@@ -76,7 +77,7 @@ flutter:
     - assets/icons/notification_bell_23.png
     - assets/icons/camera_25.png
     - assets/icons/camera_15.png
-    - assets/icons/chat_20.png
+    - assets/icons/chat_white_20.png
     - assets/icons/search_23.png
     - assets/icons/save_20.png
     - assets/icons/camera_icon.svg
@@ -105,7 +106,7 @@ flutter:
     - assets/category_menu/cabinet.png
     - assets/category_menu/home_deco_250.png
     - assets/category_menu/cabinet_350.png
-    - assets/category_menu/light_180.png
+    - assets/category_menu/light_10.png
     - assets/category_menu/sofa_200.png
     - assets/category_menu/table_350.png
 

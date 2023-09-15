@@ -79,7 +79,7 @@ class Profile_Menu extends StatelessWidget {
                     child: Text(
                   text,
                 )),
-                const Icon(Icons.arrow_forward_ios),
+                Image.asset('assets/icons/arrow_forward.png'),
                 const SizedBox(width: 10),
               ],
             ),
