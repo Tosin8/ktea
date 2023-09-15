@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../components/routes.dart';
+import 'dart:async';
 
 // ignore: camel_case_types
 class App_Drawer extends StatelessWidget {
@@ -158,3 +159,79 @@ List<String> assets = [
 
 var subText =
     const TextStyle(color: Colors.blueAccent, fontWeight: FontWeight.w500);
+
+class CarouselSlider extends StatefulWidget {
+  const CarouselSlider({
+    super.key,
+  });
+
+  @override
+  State<CarouselSlider> createState() => _CarouselSliderState();
+}
+
+class _CarouselSliderState extends State<CarouselSlider> {
+// creating autoplay timer and creating variables for pagecontroller.
+  int myfirstcurrentIndex = 0;
+
+  PageController myfirstpagecontroller =
+      PageController(initialPage: 0, viewportFraction: 0.9);
+  bool isreverse = false;
+
+  myfirstFunction() {
+    Timer.periodic(const Duration(seconds: 5), (timer) {
+      if (myfirstcurrentIndex == 4) {
+        isreverse = true;
+      } else if (myfirstcurrentIndex == 0) {
+        isreverse = false;
+      }
+      isreverse ? myfirstcurrentIndex-- : myfirstcurrentIndex++;
+      myfirstpagecontroller.animateToPage(myfirstcurrentIndex,
+          duration: const Duration(milliseconds: 500), curve: Curves.linear);
+    });
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    myfirstFunction();
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    myfirstpagecontroller.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 180,
+      width: double.infinity,
+      child: PageView.builder(
+          itemCount: assets.length,
+          padEnds: false,
+          pageSnapping: false,
+          // reverse: true,
+          physics: const BouncingScrollPhysics(),
+          controller: myfirstpagecontroller,
+          onPageChanged: (value) {
+            myfirstcurrentIndex = value;
+            setState(() {});
+          },
+          // controller: PageController(
+          //   initialPage: 0,
+          //   viewportFraction: 0.9,
+          // ),
+          itemBuilder: (context, index) {
+            return Container(
+                margin: const EdgeInsets.all(8),
+                clipBehavior: Clip.antiAlias,
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(30)),
+                child: Image.asset(assets[index], fit: BoxFit.cover));
+          }),
+    );
+  }
+}
