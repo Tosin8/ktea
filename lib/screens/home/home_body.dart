@@ -86,19 +86,3 @@ class _Home_BodyState extends State<Home_Body> {
 }
 
 // ignore: camel_case_types
-class ProductHeader_Title extends StatelessWidget {
-  const ProductHeader_Title({
-    super.key,
-    required this.title,
-  });
-
-  final String title;
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: const TextStyle(
-          fontSize: 18, fontWeight: FontWeight.w500, color: Colors.blue),
-    );
-  }
-}
