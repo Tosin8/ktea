@@ -22,6 +22,8 @@ class _Category_BodyState extends State<Category_Body> {
           TableP(),
           SizedBox(height: 20),
           Cabinet(),
+          SizedBox(height: 20),
+          Light(),
         ]));
   }
 }

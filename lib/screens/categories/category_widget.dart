@@ -75,7 +75,7 @@ class Sofa extends StatelessWidget {
             child: Image.asset('assets/category_menu/sofa_bkg.jpg')),
         Positioned(
           top: 65,
-          left: 80,
+          left: 60,
           child: Column(
             children: [
               const Text(
@@ -188,12 +188,12 @@ class Cabinet extends StatelessWidget {
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
             child: Image.asset('assets/category_menu/cabinet_bkg.jpg')),
         Positioned(
-            top: -80,
-            left: 30,
+            top: -90,
+            left: -50,
             child: Image.asset('assets/category_menu/cabinet_350.png')),
         Positioned(
-          top: 65,
-          left: 120,
+          top: 60,
+          right: 70,
           child: Column(
             children: [
               const Text(
@@ -221,6 +221,64 @@ class Cabinet extends StatelessWidget {
             ],
           ),
         ),
+      ],
+    );
+  }
+}
+
+class Light extends StatelessWidget {
+  const Light({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      fit: StackFit.loose,
+      clipBehavior: Clip.none,
+      children: [
+        Container(
+            clipBehavior: Clip.antiAlias,
+            height: 190,
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
+            child: Image.asset('assets/category_menu/light_bkg.jpg')),
+        Positioned(
+          top: 65,
+          left: 60,
+          child: Column(
+            children: [
+              const Text(
+                'LIGHT',
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 15,
+                  color: Colors.white,
+                ),
+              ),
+              const SizedBox(height: 10),
+              GestureDetector(
+                onTap: () {},
+                child: Container(
+                  height: 30,
+                  width: 80,
+                  decoration:
+                      BoxDecoration(border: Border.all(color: Colors.white)),
+                  child: const Center(
+                    child: Text(
+                      'Shop Now',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
+        Positioned(
+            top: 0,
+            right: 20,
+            child: Image.asset('assets/category_menu/light_180.png')),
       ],
     );
   }
