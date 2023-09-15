@@ -34,18 +34,83 @@ class _Help_BodyState extends State<Help_Body> {
                 ]),
             child: Column(
               children: [
-                Row(
-                  children: [
-                    Text(
-                      'Place an Order',
-                      style: TextStyle(fontSize: 16),
-                    ),
-                    Image.asset('assets/icons/arrow_forward.png'),
-                  ],
-                )
+                SizedBox(height: 12),
+                Help_Menu(
+                  title: 'Placing an  Order',
+                  press: () {},
+                ),
+                SizedBox(height: 30),
+                Help_Menu(
+                  title: 'Payment Options',
+                  press: () {},
+                ),
+                SizedBox(height: 30),
+                Help_Menu(
+                  title: 'Delivery Timeline',
+                  press: () {},
+                ),
+                SizedBox(height: 30),
+                Help_Menu(
+                  title: 'Tracking an Order',
+                  press: () {},
+                ),
+                SizedBox(height: 30),
+                Help_Menu(
+                  title: 'Cancel an Order   ',
+                  press: () {},
+                ),
+                SizedBox(height: 30),
+                Help_Menu(
+                  title: 'Create a Return   ',
+                  press: () {},
+                ),
+                SizedBox(height: 30),
+                Help_Menu(
+                  title: 'Warranty              ',
+                  press: () {},
+                ),
+                SizedBox(height: 30),
+                Help_Menu(
+                  title: 'About Us             ',
+                  press: () {},
+                ),
               ],
             ))
       ],
+    );
+  }
+}
+
+class Help_Menu extends StatelessWidget {
+  const Help_Menu({
+    super.key,
+    required this.title,
+    required this.press,
+  });
+
+  final String title;
+  final VoidCallback press;
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 24.0),
+      child: GestureDetector(
+        onTap: press,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 5),
+          child: Row(
+            children: [
+              Text(
+                title,
+                style: TextStyle(fontSize: 16),
+              ),
+              const SizedBox(width: 200),
+              Image.asset('assets/icons/arrow_forward.png'),
+              SizedBox(width: 10),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
