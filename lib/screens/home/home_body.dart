@@ -80,6 +80,19 @@ class _Home_BodyState extends State<Home_Body> {
                   title: 'Table',
                 ),
                 const SizedBox(height: 10),
+                Column(
+                  children: [
+                    Container(
+                        height: 180,
+                        width: 160,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        child: Image.asset(
+                          Product_HomeDeco[0].title,
+                        ))
+                  ],
+                )
               ],
             ),
           )),
