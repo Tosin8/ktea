@@ -26,9 +26,9 @@ class HomeDecoration extends StatelessWidget {
           left: 170,
           child: Column(
             children: [
-              Text(
+              const Text(
                 'HOME DECORATIONS',
-                style: const TextStyle(
+                style: TextStyle(
                   fontWeight: FontWeight.w600,
                   fontSize: 15,
                 ),
@@ -78,9 +78,9 @@ class Sofa extends StatelessWidget {
           left: 80,
           child: Column(
             children: [
-              Text(
+              const Text(
                 'SOFA',
-                style: const TextStyle(
+                style: TextStyle(
                   fontWeight: FontWeight.w600,
                   fontSize: 15,
                 ),
@@ -131,12 +131,74 @@ class TableP extends StatelessWidget {
             child: Image.asset('assets/category_menu/table_bkg.jpg')),
         Positioned(
           top: 65,
-          left: 80,
+          left: 60,
           child: Column(
             children: [
-              Text(
+              const Text(
                 'TABLE',
-                style: const TextStyle(
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 15,
+                  color: Colors.white,
+                ),
+              ),
+              const SizedBox(height: 10),
+              GestureDetector(
+                onTap: () {},
+                child: Container(
+                  height: 30,
+                  width: 80,
+                  decoration:
+                      BoxDecoration(border: Border.all(color: Colors.white)),
+                  child: const Center(
+                    child: Text(
+                      'Shop Now',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
+        Positioned(
+            top: -80,
+            right: -48,
+            child: Image.asset('assets/category_menu/table_350.png')),
+      ],
+    );
+  }
+}
+
+class Cabinet extends StatelessWidget {
+  const Cabinet({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      fit: StackFit.loose,
+      clipBehavior: Clip.none,
+      children: [
+        Container(
+            clipBehavior: Clip.antiAlias,
+            height: 190,
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
+            child: Image.asset('assets/category_menu/cabinet_bkg.jpg')),
+        Positioned(
+            top: -80,
+            left: 30,
+            child: Image.asset('assets/category_menu/cabinet_350.png')),
+        Positioned(
+          top: 65,
+          left: 120,
+          child: Column(
+            children: [
+              const Text(
+                'CABINET',
+                style: TextStyle(
                   fontWeight: FontWeight.w600,
                   fontSize: 15,
                 ),
@@ -155,14 +217,10 @@ class TableP extends StatelessWidget {
                     ),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),
-        Positioned(
-            top: -20,
-            right: 20,
-            child: Image.asset('assets/category_menu/table_400.png')),
       ],
     );
   }

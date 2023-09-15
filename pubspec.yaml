@@ -104,10 +104,10 @@ flutter:
     - assets/category_menu/table_bkg.jpg
     - assets/category_menu/cabinet.png
     - assets/category_menu/home_deco_250.png
-    - assets/category_menu/cabinet_250.png
+    - assets/category_menu/cabinet_350.png
     - assets/category_menu/light_150.png
     - assets/category_menu/sofa_200.png
-    - assets/category_menu/table_400.png
+    - assets/category_menu/table_350.png
 
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
