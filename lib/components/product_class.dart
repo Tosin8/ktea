@@ -1,39 +1,68 @@
-class Product {
-  final int price;
-  final String id, title, category, image, subTitle, description;
+import 'package:flutter/material.dart';
 
-  Product({
-    required this.id,
-    required this.price,
-    required this.title,
-    required this.category,
+class Product_HomeDeco {
+  final String image, title, description;
+  final int price, id;
+
+  Product_HomeDeco({
     required this.image,
-    required this.subTitle,
+    required this.title,
     required this.description,
+    required this.price,
+    required this.id,
   });
-
-  // to create a category from JSON
-  factory Product.fromJson(Map<String, dynamic> json) {
-    return Product(
-      id: json["id"],
-      title: json["title"],
-      image: json["image"],
-      price: json["price"],
-      category: json["category"],
-      subTitle: json["subTitle"],
-      description: json["description"],
-    );
-  }
 }
 
-// home decoration products
-Product product = Product(
-  id: "1",
-  price: 1600,
-  title: "Marble Deco",
-  image: "assets/products/home_decoration/1.jpg",
-  category: "Home Decoration",
-  subTitle: "Tieton Armchair",
-  description:
-      "This armchair is an elegant and functional piece of furniture. It is suitable for family visits and parties with friends and perfect for relaxing in front of the TV after hard work.",
-);
+List<Product_HomeDeco> products = [
+  Product_HomeDeco(
+    id: 1,
+    title: "Office Code",
+    price: 234,
+    description: dummyText,
+    image: "assets/images/bag_1.png",
+  ),
+  Product_HomeDeco(
+    id: 2,
+    title: "Belt Bag",
+    price: 234,
+    size: 8,
+    description: dummyText,
+    image: "assets/images/bag_2.png",
+  ),
+  Product(
+    id: 3,
+    title: "Hang Top",
+    price: 234,
+    size: 10,
+    description: dummyText,
+    image: "assets/images/bag_3.png",
+  ),
+  Product(
+    id: 4,
+    title: "Old Fashion",
+    price: 234,
+    size: 11,
+    description: dummyText,
+    image: "assets/images/bag_4.png",
+  ),
+  Product(
+      id: 5,
+      title: "Office Code",
+      price: 234,
+      size: 12,
+      description: dummyText,
+      image: "assets/images/bag_5.png",
+      color: Color(0xFFFB7883)),
+  Product(
+    id: 6,
+    title: "Office Code",
+    price: 234,
+    size: 12,
+    description: dummyText,
+    image: "assets/images/bag_6.png",
+    color: Color(0xFFAEAEAE),
+  ),
+];
+
+String dummyText =
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. When an unknown printer took a galley.";

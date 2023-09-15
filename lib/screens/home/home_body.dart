@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../components/app_widgets.dart';
+import '../../components/product_class.dart';
 import 'home_widget.dart';
 
 class Home_Body extends StatefulWidget {
@@ -79,23 +80,6 @@ class _Home_BodyState extends State<Home_Body> {
                   title: 'Table',
                 ),
                 const SizedBox(height: 10),
-                // Container(
-                //   decoration: BoxDecoration(
-                //     borderRadius: BorderRadius.circular(30),
-                //   ),
-                //   child: AspectRatio(
-                //       aspectRatio: 1,
-                //       child: Column(
-                //         children: [
-                //           AspectRatio(
-                //             aspectRatio: 1,
-                //             child: FadeInImage.assetNetwork(
-                //                 placeholder: 'assets/icons/spinner.gif',
-                //                 image: image),
-                //           )
-                //         ],
-                //       )),
-                // ),
               ],
             ),
           )),
