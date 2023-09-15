@@ -107,7 +107,7 @@ flutter:
     - assets/category_menu/cabinet_250.png
     - assets/category_menu/light_150.png
     - assets/category_menu/sofa_200.png
-    - assets/category_menu/table_250.png
+    - assets/category_menu/table_400.png
 
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see

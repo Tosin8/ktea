@@ -162,7 +162,7 @@ class TableP extends StatelessWidget {
         Positioned(
             top: -20,
             right: 20,
-            child: Image.asset('assets/category_menu/sofa_200.png')),
+            child: Image.asset('assets/category_menu/table_400.png')),
       ],
     );
   }
