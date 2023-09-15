@@ -17,8 +17,9 @@ class _CategoryState extends State<Category> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: App_Drawer(),
+      drawer: const App_Drawer(),
       appBar: AppBar(
+        iconTheme: const IconThemeData(color: Colors.blue),
         title: Text(
           'Category',
           style: AppBar_Header,

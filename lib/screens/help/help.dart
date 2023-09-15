@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_app/components/app_widgets.dart';
+import 'package:furniture_app/screens/help/help_body.dart';
 
 import '../home/home_widget.dart';
 
@@ -16,10 +18,13 @@ class _HelpState extends State<Help> {
     return Scaffold(
         drawer: App_Drawer(),
         appBar: AppBar(
+          title: Text(
+            'Help',
+            style: AppBar_Header,
+          ),
+          centerTitle: true,
           iconTheme: const IconThemeData(color: Colors.blueAccent),
         ),
-        body: Center(
-          child: Text('Help'),
-        ));
+        body: Help_Body());
   }
 }
