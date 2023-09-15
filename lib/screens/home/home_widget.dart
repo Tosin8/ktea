@@ -157,8 +157,10 @@ List<String> assets = [
   'assets/images/carousel/4.jpg',
 ];
 
-var subText =
-    const TextStyle(color: Colors.blueAccent, fontWeight: FontWeight.w500);
+var subText = const TextStyle(
+  color: Colors.blueAccent,
+  fontWeight: FontWeight.w500,
+);
 
 class CarouselSlider extends StatefulWidget {
   const CarouselSlider({
