@@ -10,6 +10,17 @@ class Help_Body extends StatefulWidget {
 class _Help_BodyState extends State<Help_Body> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return ListView(
+      children: [
+        Container(
+          child: Row(
+            children: [
+              Image.asset('assets/icons/chat_20.png'),
+              Text('CHAT WITH US'),
+            ],
+          ),
+        )
+      ],
+    );
   }
 }
