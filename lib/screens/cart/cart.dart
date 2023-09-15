@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_app/components/app_widgets.dart';
 
 import '../home/home_widget.dart';
 
@@ -17,11 +18,16 @@ class _CartState extends State<Cart> {
     return Scaffold(
       drawer: App_Drawer(),
       appBar: AppBar(
+        title: Text(
+          'Cart',
+          style: AppBar_Header,
+        ),
+        centerTitle: true,
         iconTheme: const IconThemeData(color: Colors.blueAccent),
         //backgroundColor: Colors.green,
       ),
       body: Center(
-        child: Text('Cart'),
+        child: Text('Cart is Empty'),
       ),
     );
   }
