@@ -79,23 +79,23 @@ class _Home_BodyState extends State<Home_Body> {
                   title: 'Table',
                 ),
                 const SizedBox(height: 10),
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                  child: AspectRatio(
-                      aspectRatio: 1,
-                      child: Column(
-                        children: [
-                          AspectRatio(
-                            aspectRatio: 1,
-                            child: FadeInImage.assetNetwork(
-                                placeholder: 'assets/icons/spinner.gif',
-                                image: image),
-                          )
-                        ],
-                      )),
-                ),
+                // Container(
+                //   decoration: BoxDecoration(
+                //     borderRadius: BorderRadius.circular(30),
+                //   ),
+                //   child: AspectRatio(
+                //       aspectRatio: 1,
+                //       child: Column(
+                //         children: [
+                //           AspectRatio(
+                //             aspectRatio: 1,
+                //             child: FadeInImage.assetNetwork(
+                //                 placeholder: 'assets/icons/spinner.gif',
+                //                 image: image),
+                //           )
+                //         ],
+                //       )),
+                // ),
               ],
             ),
           )),

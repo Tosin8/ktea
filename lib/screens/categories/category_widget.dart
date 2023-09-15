@@ -47,7 +47,7 @@ class HomeDecoration extends StatelessWidget {
                     ),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),
