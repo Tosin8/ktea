@@ -78,6 +78,7 @@ flutter:
     - assets/icons/camera_25.png
     - assets/icons/camera_15.png
     - assets/icons/chat_white_20.png
+    - assets/icons/chat_20.png
     - assets/icons/search_23.png
     - assets/icons/save_20.png
     - assets/icons/camera_icon.svg
@@ -106,9 +107,30 @@ flutter:
     - assets/category_menu/cabinet.png
     - assets/category_menu/home_deco_250.png
     - assets/category_menu/cabinet_350.png
-    - assets/category_menu/light_10.png
+    - assets/category_menu/light_180.png
     - assets/category_menu/sofa_200.png
     - assets/category_menu/table_350.png
+    - assets/products/home_decoration/1.jpg
+    - assets/products/home_decoration/2.jpg
+    - assets/products/home_decoration/3.jpg
+    - assets/products/home_decoration/4.jpg
+    - assets/products/light/1.jpg
+    - assets/products/light/2.jpg
+    - assets/products/light/3.jpg
+    - assets/products/light/myntra.jpg
+    - assets/products/sofa/1.jpg
+    - assets/products/sofa/2.jpg
+    - assets/products/sofa/3.jpg
+    - assets/products/sofa/4.jpg
+    - assets/products/table/1.jpg
+    - assets/products/table/2.jpg
+    - assets/products/table/3.jpg
+    - assets/products/table/4.jpg
+    - assets/products/cabinet/9tier_shoe_rack.jpg
+    - assets/products/cabinet/clothes_hanger.jpg
+    - assets/products/cabinet/triangle_coat_rack.jpg
+    - assets/products/cabinet/handy_cabinet.jpg
+
 
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
