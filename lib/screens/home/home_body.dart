@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
 
 import '../../components/app_widgets.dart';
 import 'home_widget.dart';
@@ -75,6 +74,11 @@ class _Home_BodyState extends State<Home_Body> {
                   ],
                 ),
                 const CarouselSlider(),
+                SizedBox(width: 10),
+                Text(
+                  'Table',
+                  style: subText,
+                )
               ],
             ),
           )),
