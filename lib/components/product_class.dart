@@ -40,20 +40,20 @@ List<Product_HomeDeco> products = [
     description: dummyText,
     image: "assets/images/bag_4.png",
   ),
-  Product_HomeDeco(
-    id: 5,
-    title: "Office Code",
-    price: 234,
-    description: dummyText,
-    image: "assets/images/bag_5.png",
-  ),
-  Product_HomeDeco(
-    id: 6,
-    title: "Office Code",
-    price: 234,
-    description: dummyText,
-    image: "assets/images/bag_6.png",
-  ),
+  // Product_HomeDeco(
+  //   id: 5,
+  //   title: "Office Code",
+  //   price: 234,
+  //   description: dummyText,
+  //   image: "assets/images/bag_5.png",
+  // ),
+  // Product_HomeDeco(
+  //   id: 6,
+  //   title: "Office Code",
+  //   price: 234,
+  //   description: dummyText,
+  //   image: "assets/images/bag_6.png",
+  // ),
 ];
 
 String dummyText =

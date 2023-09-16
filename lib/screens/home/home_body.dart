@@ -84,8 +84,13 @@ class _Home_BodyState extends State<Home_Body> {
                     child: GridView.builder(
                   itemCount: products.length,
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2),
-                  itemBuilder: (context, index) => ProductCard(),
+                    crossAxisCount: 2,
+                    childAspectRatio: 0.50,
+                  ),
+                  itemBuilder: (context, index) => ProductCard(
+                    product: products[index],
+                    press: () {},
+                  ),
                 ))
               ],
             ),
@@ -96,7 +101,7 @@ class _Home_BodyState extends State<Home_Body> {
 
 class ProductCard extends StatelessWidget {
   final Product_HomeDeco product;
-  final Function press;
+  final VoidCallback press;
   const ProductCard({
     super.key,
     required this.product,
@@ -107,25 +112,28 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              ClipRRect(
-                  borderRadius: BorderRadius.circular(16),
-                  child: Image.asset(
-                    products[0].image,
-                  )),
-              SizedBox(height: 8),
-              Text(
-                products[0].title,
-                style: TextStyle(fontWeight: FontWeight.w500),
-              ),
-              Text(
-                '\$${products[0].price}',
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-            ],
+        GestureDetector(
+          onTap: press,
+          child: Container(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                ClipRRect(
+                    borderRadius: BorderRadius.circular(16),
+                    child: Image.asset(
+                      products[0].image,
+                    )),
+                SizedBox(height: 8),
+                Text(
+                  products[0].title,
+                  style: TextStyle(fontWeight: FontWeight.w500),
+                ),
+                Text(
+                  '\$${products[0].price}',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
           ),
         )
       ],
