@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class Product_HomeDeco {
   final String image, title, description;
   final int price, id;
