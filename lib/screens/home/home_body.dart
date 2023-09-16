@@ -80,28 +80,49 @@ class _Home_BodyState extends State<Home_Body> {
                   title: 'Table',
                 ),
                 const SizedBox(height: 10),
-                Column(
-                  children: [
-                    Container(
-                      child: Column(
-                        children: [
-                          ClipRRect(
-                              borderRadius: BorderRadius.circular(16),
-                              child: Image.asset(
-                                products[0].image,
-                              )),
-                          SizedBox(height: 8),
-                          Text(
-                            products[0].title,
-                          ),
-                        ],
-                      ),
-                    )
-                  ],
-                )
+            Expanded(child: GridView.builder(gridDelegate: gridDelegate, itemBuilder: itemBuilder))
               ],
             ),
           )),
+    );
+  }
+}
+
+class ProductCard extends StatelessWidget {
+  final Product_HomeDeco products;
+  final Function press;
+  const ProductCard({
+    super.key,
+    required this.products,
+    required this.press,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ClipRRect(
+                  borderRadius: BorderRadius.circular(16),
+                  child: Image.asset(
+                    products[0].image,
+                  )),
+              SizedBox(height: 8),
+              Text(
+                products[0].title,
+                style: TextStyle(fontWeight: FontWeight.w500),
+              ),
+              Text(
+                '\$${products[0].price}',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
+        )
+      ],
     );
   }
 }
