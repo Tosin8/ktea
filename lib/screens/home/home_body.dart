@@ -89,7 +89,7 @@ class _Home_BodyState extends State<Home_Body> {
                           borderRadius: BorderRadius.circular(16),
                         ),
                         child: Image.asset(
-                          Product_HomeDeco[0].title,
+                          products[0].image,
                         ))
                   ],
                 )
