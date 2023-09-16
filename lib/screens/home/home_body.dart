@@ -82,11 +82,21 @@ class _Home_BodyState extends State<Home_Body> {
                 const SizedBox(height: 10),
                 Column(
                   children: [
-                    ClipRRect(
-                        borderRadius: BorderRadius.circular(16),
-                        child: Image.asset(
-                          products[0].image,
-                        ))
+                    Container(
+                      child: Column(
+                        children: [
+                          ClipRRect(
+                              borderRadius: BorderRadius.circular(16),
+                              child: Image.asset(
+                                products[0].image,
+                              )),
+                          SizedBox(height: 8),
+                          Text(
+                            products[0].title,
+                          ),
+                        ],
+                      ),
+                    )
                   ],
                 )
               ],

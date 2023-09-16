@@ -24,7 +24,7 @@ List<Product_HomeDeco> products = [
     title: "Belt Bag",
     price: 234,
     description: dummyText,
-    image: "assets/images/1.png",
+    image: "assets/products/home_decoration/2_150.jpg",
   ),
   Product_HomeDeco(
     id: 3,
