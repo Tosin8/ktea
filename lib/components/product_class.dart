@@ -24,7 +24,7 @@ List<Products> products = [
     title: "Belt Bag",
     price: 234,
     description: dummyText,
-    image: "assets/products/home_decoration/2_170.jpg",
+    image: "assets/products/home_decoration/2_160.jpg",
   ),
   Products(
     id: 3,

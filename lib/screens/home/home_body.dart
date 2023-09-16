@@ -244,7 +244,7 @@ class ItemCard2 extends StatelessWidget {
       child: Column(
         children: [
           ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(30),
               child: Image.asset(
                 products[1].image,
               )),
