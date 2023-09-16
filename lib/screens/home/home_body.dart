@@ -80,7 +80,13 @@ class _Home_BodyState extends State<Home_Body> {
                   title: 'Table',
                 ),
                 const SizedBox(height: 10),
-            Expanded(child: GridView.builder(gridDelegate: gridDelegate, itemBuilder: itemBuilder))
+                Expanded(
+                    child: GridView.builder(
+                  itemCount: products.length,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2),
+                  itemBuilder: (context, index) => ProductCard(),
+                ))
               ],
             ),
           )),
@@ -89,11 +95,11 @@ class _Home_BodyState extends State<Home_Body> {
 }
 
 class ProductCard extends StatelessWidget {
-  final Product_HomeDeco products;
+  final Product_HomeDeco product;
   final Function press;
   const ProductCard({
     super.key,
-    required this.products,
+    required this.product,
     required this.press,
   });
 
