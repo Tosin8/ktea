@@ -15,38 +15,38 @@ class _Home_BodyState extends State<Home_Body> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
-          appBar: AppBar(
-            iconTheme: const IconThemeData(
-                color: Colors.blueAccent), // for changing default color.
-            elevation: 0,
-            shadowColor: Colors.black,
-            actions: [
-              GestureDetector(
+        child: Scaffold(
+            appBar: AppBar(
+              iconTheme: const IconThemeData(
+                  color: Colors.blueAccent), // for changing default color.
+              elevation: 0,
+              shadowColor: Colors.black,
+              actions: [
+                GestureDetector(
+                    onTap: () {},
+                    child:
+                        Image.asset('assets/icons/notification_bell_23.png')),
+                const SizedBox(width: 10),
+                GestureDetector(
                   onTap: () {},
-                  child: Image.asset('assets/icons/notification_bell_23.png')),
-              const SizedBox(width: 10),
-              GestureDetector(
-                onTap: () {},
-                child: Row(
-                  children: [
-                    Image.asset("assets/icons/camera_25.png"),
-                    const SizedBox(width: 5),
-                    Text(
-                      'Scan',
-                      style: subText,
-                    ),
-                    const SizedBox(width: 12),
-                  ],
-                ),
-              )
-            ],
-          ),
-          drawer: const App_Drawer(),
-          body: Padding(
-            padding: const EdgeInsets.only(left: 10),
-            child: ListView(
-              children: [
+                  child: Row(
+                    children: [
+                      Image.asset("assets/icons/camera_25.png"),
+                      const SizedBox(width: 5),
+                      Text(
+                        'Scan',
+                        style: subText,
+                      ),
+                      const SizedBox(width: 12),
+                    ],
+                  ),
+                )
+              ],
+            ),
+            drawer: const App_Drawer(),
+            body: Padding(
+              padding: const EdgeInsets.only(left: 10),
+              child: ListView(children: [
                 Text(
                   ' Find modern \n furniture for you',
                   style: TextStyle(
@@ -80,64 +80,32 @@ class _Home_BodyState extends State<Home_Body> {
                   title: 'Table',
                 ),
                 const SizedBox(height: 10),
-                Expanded(
-                    child: GridView.builder(
-                  itemCount: products.length,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    childAspectRatio: 0.50,
-                  ),
-                  itemBuilder: (context, index) => ProductCard(
-                    product: products[index],
-                    press: () {},
-                  ),
-                ))
-              ],
-            ),
-          )),
-    );
-  }
-}
-
-class ProductCard extends StatelessWidget {
-  final Product_HomeDeco product;
-  final VoidCallback press;
-  const ProductCard({
-    super.key,
-    required this.product,
-    required this.press,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        GestureDetector(
-          onTap: press,
-          child: Container(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                ClipRRect(
-                    borderRadius: BorderRadius.circular(16),
-                    child: Image.asset(
-                      products[0].image,
-                    )),
-                SizedBox(height: 8),
-                Text(
-                  products[0].title,
-                  style: TextStyle(fontWeight: FontWeight.w500),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ClipRRect(
+                        borderRadius: BorderRadius.circular(16),
+                        child: Image.asset(
+                          products[0].image,
+                        )),
+                    SizedBox(height: 8),
+                    Padding(
+                        padding: const EdgeInsets.only(left: 40),
+                        child: Text(
+                          products[0].title,
+                          style: TextStyle(fontWeight: FontWeight.w500),
+                        )),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 60),
+                      child: Text(
+                        '\$${products[0].price}',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ],
                 ),
-                Text(
-                  '\$${products[0].price}',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-          ),
-        )
-      ],
-    );
+              ]),
+            )));
   }
 }
 
