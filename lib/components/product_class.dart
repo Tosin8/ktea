@@ -1,8 +1,8 @@
-class Product_HomeDeco {
+class Products {
   final String image, title, description;
   final int price, id;
 
-  Product_HomeDeco({
+  Products({
     required this.image,
     required this.title,
     required this.description,
@@ -11,49 +11,49 @@ class Product_HomeDeco {
   });
 }
 
-List<Product_HomeDeco> products = [
-  Product_HomeDeco(
+List<Products> products = [
+  Products(
     id: 1,
     title: "Office Code",
     price: 234,
     description: dummyText,
     image: "assets/products/home_decoration/1_150.jpg",
   ),
-  Product_HomeDeco(
+  Products(
     id: 2,
     title: "Belt Bag",
     price: 234,
     description: dummyText,
-    image: "assets/products/home_decoration/2_150.jpg",
+    image: "assets/products/home_decoration/2_170.jpg",
   ),
-  Product_HomeDeco(
+  Products(
     id: 3,
     title: "Hang Top",
     price: 234,
     description: dummyText,
-    image: "assets/images/bag_3.png",
+    image: "assets/products/home_decoration/3_150.jpg",
   ),
-  Product_HomeDeco(
+  Products(
     id: 4,
     title: "Old Fashion",
     price: 234,
     description: dummyText,
-    image: "assets/images/bag_4.png",
+    image: "assets/products/home_decoration/4_150.jpg",
   ),
-  // Product_HomeDeco(
-  //   id: 5,
-  //   title: "Office Code",
-  //   price: 234,
-  //   description: dummyText,
-  //   image: "assets/images/bag_5.png",
-  // ),
-  // Product_HomeDeco(
-  //   id: 6,
-  //   title: "Office Code",
-  //   price: 234,
-  //   description: dummyText,
-  //   image: "assets/images/bag_6.png",
-  // ),
+  Products(
+    id: 5,
+    title: "Office Code",
+    price: 234,
+    description: dummyText,
+    image: "assets/products/sofa/1_150.jpg",
+  ),
+  Products(
+    id: 6,
+    title: "Office Code",
+    price: 234,
+    description: dummyText,
+    image: "assets/products/sofa/2_150.jpg",
+  ),
 ];
 
 String dummyText =
