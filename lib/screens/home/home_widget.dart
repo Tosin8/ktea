@@ -467,3 +467,73 @@ class ItemCard6 extends StatelessWidget {
     );
   }
 }
+
+class ItemCard7 extends StatelessWidget {
+  const ItemCard7({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        children: [
+          ClipRRect(
+              borderRadius: BorderRadius.circular(16),
+              child: Image.asset(
+                products[6].image,
+              )),
+          const SizedBox(height: 8),
+          Padding(
+              padding: const EdgeInsets.only(left: 40),
+              child: Text(
+                products[6].title,
+                style: const TextStyle(fontWeight: FontWeight.w500),
+              )),
+          Padding(
+            padding: const EdgeInsets.only(left: 30),
+            child: Text(
+              '\$${products[6].price}',
+              style: const TextStyle(fontWeight: FontWeight.bold),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class ItemCard8 extends StatelessWidget {
+  const ItemCard8({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        children: [
+          ClipRRect(
+              borderRadius: BorderRadius.circular(16),
+              child: Image.asset(
+                products[7].image,
+              )),
+          const SizedBox(height: 8),
+          Padding(
+              padding: const EdgeInsets.only(left: 40),
+              child: Text(
+                products[7].title,
+                style: const TextStyle(fontWeight: FontWeight.w500),
+              )),
+          Padding(
+            padding: const EdgeInsets.only(left: 30),
+            child: Text(
+              '\$${products[7].price}',
+              style: const TextStyle(fontWeight: FontWeight.bold),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

@@ -59,14 +59,14 @@ List<Products> products = [
     title: "Office Code",
     price: 234,
     description: dummyText,
-    image: "assets/products/sofa/2_150.jpg",
+    image: "assets/products/sofa/3_150.jpg",
   ),
   Products(
     id: 8,
     title: "Office Code",
     price: 234,
     description: dummyText,
-    image: "assets/products/sofa/2_150.jpg",
+    image: "assets/products/sofa/4_150.jpg",
   ),
 ];
 
