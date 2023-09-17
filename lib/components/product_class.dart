@@ -54,6 +54,20 @@ List<Products> products = [
     description: dummyText,
     image: "assets/products/sofa/2_150.jpg",
   ),
+  Products(
+    id: 7,
+    title: "Office Code",
+    price: 234,
+    description: dummyText,
+    image: "assets/products/sofa/2_150.jpg",
+  ),
+  Products(
+    id: 8,
+    title: "Office Code",
+    price: 234,
+    description: dummyText,
+    image: "assets/products/sofa/2_150.jpg",
+  ),
 ];
 
 String dummyText =
