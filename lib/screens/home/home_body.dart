@@ -123,6 +123,8 @@ class _Home_BodyState extends State<Home_Body> {
             ]),
           ),
           SizedBox(height: 18),
+
+          // table.
           const ProductHeader_Title(
             title: 'Table',
           ),
@@ -131,18 +133,18 @@ class _Home_BodyState extends State<Home_Body> {
             padding: EdgeInsets.only(left: 4),
             child: Column(children: [
               Row(children: [
-                ItemCard1(),
+                ItemCard9(),
                 SizedBox(width: 45),
-                ItemCard2(),
+                // ItemCard10(),
               ]),
               SizedBox(height: 15),
-              Row(
-                children: [
-                  ItemCard3(),
-                  SizedBox(width: 45),
-                  ItemCard4(),
-                ],
-              ),
+              //  Row(
+              //     children: [
+              //       ItemCard11(),
+              //       SizedBox(width: 45),
+              //       ItemCard12(),
+              //     ],
+              //   ),
             ]),
           ),
           SizedBox(height: 18),
@@ -199,4 +201,3 @@ class _Home_BodyState extends State<Home_Body> {
     ));
   }
 }
-

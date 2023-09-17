@@ -537,3 +537,143 @@ class ItemCard8 extends StatelessWidget {
     );
   }
 }
+
+class ItemCard9 extends StatelessWidget {
+  const ItemCard9({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        children: [
+          ClipRRect(
+              borderRadius: BorderRadius.circular(16),
+              child: Image.asset(
+                products[8].image,
+              )),
+          const SizedBox(height: 8),
+          Padding(
+              padding: const EdgeInsets.only(left: 40),
+              child: Text(
+                products[8].title,
+                style: const TextStyle(fontWeight: FontWeight.w500),
+              )),
+          Padding(
+            padding: const EdgeInsets.only(left: 30),
+            child: Text(
+              '\$${products[8].price}',
+              style: const TextStyle(fontWeight: FontWeight.bold),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class ItemCard10 extends StatelessWidget {
+  const ItemCard10({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        children: [
+          ClipRRect(
+              borderRadius: BorderRadius.circular(16),
+              child: Image.asset(
+                products[9].image,
+              )),
+          const SizedBox(height: 8),
+          Padding(
+              padding: const EdgeInsets.only(left: 40),
+              child: Text(
+                products[9].title,
+                style: const TextStyle(fontWeight: FontWeight.w500),
+              )),
+          Padding(
+            padding: const EdgeInsets.only(left: 30),
+            child: Text(
+              '\$${products[9].price}',
+              style: const TextStyle(fontWeight: FontWeight.bold),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class ItemCard11 extends StatelessWidget {
+  const ItemCard11({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        children: [
+          ClipRRect(
+              borderRadius: BorderRadius.circular(16),
+              child: Image.asset(
+                products[10].image,
+              )),
+          const SizedBox(height: 8),
+          Padding(
+              padding: const EdgeInsets.only(left: 40),
+              child: Text(
+                products[10].title,
+                style: const TextStyle(fontWeight: FontWeight.w500),
+              )),
+          Padding(
+            padding: const EdgeInsets.only(left: 30),
+            child: Text(
+              '\$${products[10].price}',
+              style: const TextStyle(fontWeight: FontWeight.bold),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class ItemCard12 extends StatelessWidget {
+  const ItemCard12({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        children: [
+          ClipRRect(
+              borderRadius: BorderRadius.circular(16),
+              child: Image.asset(
+                products[11].image,
+              )),
+          const SizedBox(height: 8),
+          Padding(
+              padding: const EdgeInsets.only(left: 40),
+              child: Text(
+                products[11].title,
+                style: const TextStyle(fontWeight: FontWeight.w500),
+              )),
+          Padding(
+            padding: const EdgeInsets.only(left: 30),
+            child: Text(
+              '\$${products[11].price}',
+              style: const TextStyle(fontWeight: FontWeight.bold),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
