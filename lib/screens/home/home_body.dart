@@ -75,6 +75,8 @@ class _Home_BodyState extends State<Home_Body> {
           ),
           const CarouselSlider(),
           const SizedBox(height: 10),
+
+          // home decoration.
           const ProductHeader_Title(
             title: 'Home Decorations',
           ),
@@ -113,9 +115,9 @@ class _Home_BodyState extends State<Home_Body> {
               SizedBox(height: 15),
               Row(
                 children: [
-                  ItemCard3(),
+                  ItemCard7(),
                   SizedBox(width: 45),
-                  ItemCard4(),
+                  ItemCard8(),
                 ],
               ),
             ]),
@@ -167,6 +169,8 @@ class _Home_BodyState extends State<Home_Body> {
             ]),
           ),
           SizedBox(height: 18),
+
+          // Light Category
           const ProductHeader_Title(
             title: 'Light',
           ),
@@ -196,214 +200,3 @@ class _Home_BodyState extends State<Home_Body> {
   }
 }
 
-class ItemCard1 extends StatelessWidget {
-  const ItemCard1({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          ClipRRect(
-              borderRadius: BorderRadius.circular(16),
-              child: Image.asset(
-                products[0].image,
-              )),
-          const SizedBox(height: 8),
-          Padding(
-              padding: const EdgeInsets.only(left: 40),
-              child: Text(
-                products[0].title,
-                style: const TextStyle(fontWeight: FontWeight.w500),
-              )),
-          Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Text(
-              '\$${products[0].price}',
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-// ignore: camel_case_types
-
-class ItemCard2 extends StatelessWidget {
-  const ItemCard2({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          ClipRRect(
-              borderRadius: BorderRadius.circular(30),
-              child: Image.asset(
-                products[1].image,
-              )),
-          const SizedBox(height: 8),
-          Padding(
-              padding: const EdgeInsets.only(left: 40),
-              child: Text(
-                products[1].title,
-                style: const TextStyle(fontWeight: FontWeight.w500),
-              )),
-          Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Text(
-              '\$${products[1].price}',
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class ItemCard3 extends StatelessWidget {
-  const ItemCard3({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Image.asset(
-                products[2].image,
-              )),
-          const SizedBox(height: 8),
-          Padding(
-              padding: const EdgeInsets.only(left: 40),
-              child: Text(
-                products[2].title,
-                style: const TextStyle(fontWeight: FontWeight.w500),
-              )),
-          Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Text(
-              '\$${products[2].price}',
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class ItemCard4 extends StatelessWidget {
-  const ItemCard4({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Image.asset(
-                products[3].image,
-              )),
-          const SizedBox(height: 8),
-          Padding(
-              padding: const EdgeInsets.only(left: 40),
-              child: Text(
-                products[3].title,
-                style: const TextStyle(fontWeight: FontWeight.w500),
-              )),
-          Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Text(
-              '\$${products[3].price}',
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class ItemCard5 extends StatelessWidget {
-  const ItemCard5({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          ClipRRect(
-              borderRadius: BorderRadius.circular(16),
-              child: Image.asset(
-                products[4].image,
-              )),
-          const SizedBox(height: 8),
-          Padding(
-              padding: const EdgeInsets.only(left: 40),
-              child: Text(
-                products[4].title,
-                style: const TextStyle(fontWeight: FontWeight.w500),
-              )),
-          Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Text(
-              '\$${products[4].price}',
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class ItemCard6 extends StatelessWidget {
-  const ItemCard6({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Image.asset(
-                products[5].image,
-              )),
-          const SizedBox(height: 8),
-          Padding(
-              padding: const EdgeInsets.only(left: 40),
-              child: Text(
-                products[5].title,
-                style: const TextStyle(fontWeight: FontWeight.w500),
-              )),
-          Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Text(
-              '\$${products[5].price}',
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
