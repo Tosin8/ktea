@@ -20,9 +20,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      initialRoute: Splash_Screen.routeName,
-      routes: routes,
-      // home: const Splash_Screen(),
+      // initialRoute: FurnitureSplash.routeName,
+      // routes: routes,
+     home: const FurnitureSplash(),
     );
   }
 }

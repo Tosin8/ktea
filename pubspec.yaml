@@ -31,15 +31,11 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  flutter_fadein: ^2.0.0
   flutter_svg: ^2.0.7
+  page_transition: ^2.1.0
 
 dev_dependencies:
-
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
@@ -91,8 +87,9 @@ flutter:
     - assets/icons/settings_20.png
     - assets/icons/location_10.png
     - assets/icons/categories_20.png
+    - assets/icons/right-down.png
     - assets/icons/categories_25.png
-    - assets/images/splash/1.jpg
+    - assets/images/splash/splash.jpg
     - assets/images/carousel/1.jpg
     - assets/images/carousel/2.jpg
     - assets/images/carousel/3.jpg
@@ -130,8 +127,6 @@ flutter:
     - assets/products/cabinet/clothes_hanger.jpg
     - assets/products/cabinet/triangle_coat_rack.jpg
     - assets/products/cabinet/handy_cabinet.jpg
-
-
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

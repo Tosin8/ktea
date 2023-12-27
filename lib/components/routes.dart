@@ -9,7 +9,7 @@ import '../screens/profile/profile.dart';
 import '../screens/saved/saved.dart';
 
 final Map<String, WidgetBuilder> routes = {
-  Splash_Screen.routeName: (context) => const Splash_Screen(),
+  //Splash_Screen.routeName: (context) => const Splash_Screen(),
   Home.routeName: (context) => const Home(),
   Cart.routeName: (context) => const Cart(),
   Saved.routeName: (context) => const Saved(),
