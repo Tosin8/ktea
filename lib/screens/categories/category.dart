@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_app/components/app_widgets.dart';
-import 'package:furniture_app/screens/home/home_widget.dart';
+import 'package:ktea/screens/home/home_widget.dart';
 
+import '../../components/app_widgets.dart';
 import 'category_body.dart';
 
 class Category extends StatefulWidget {

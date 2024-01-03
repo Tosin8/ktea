@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_app/components/app_widgets.dart';
-import 'package:furniture_app/screens/help/help_body.dart';
 
+
+import '../../components/app_widgets.dart';
 import '../home/home_widget.dart';
+import 'help_body.dart';
 
 class Help extends StatefulWidget {
   const Help({super.key});

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_app/components/app_widgets.dart';
-import 'package:furniture_app/screens/cart/cart_body.dart';
 
+
+import '../../components/app_widgets.dart';
 import '../home/home_widget.dart';
+import 'cart_body.dart';
 
 class Cart extends StatefulWidget {
   const Cart({super.key});

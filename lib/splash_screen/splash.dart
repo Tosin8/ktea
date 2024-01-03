@@ -85,7 +85,7 @@ child: Stack (
     const Positioned(
       top: 45,
       left: 165, 
-      child: Text('KTEA', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 20, color: Colors.white),), 
+      child: Text('KTEA', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 20, color: Colors.orange),), 
     ), 
     Positioned(
       bottom: 0, 

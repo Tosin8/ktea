@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_app/components/app_widgets.dart';
-import 'package:furniture_app/screens/home/home_widget.dart';
 
+
+import '../../components/app_widgets.dart';
+import '../home/home_widget.dart';
 import 'profile_body.dart';
 
 class Profile extends StatefulWidget {
