@@ -74,10 +74,10 @@ child: Stack (
       fit: BoxFit.cover, 
       ),),
     ), 
-    Positioned(
+    const Positioned(
       top: 45,
       left: 165, 
-      child: Text('KTEA', style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),), 
+      child: Text('KTEA', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 20, color: Colors.white),), 
     ), 
     Positioned(
       bottom: 0, 
