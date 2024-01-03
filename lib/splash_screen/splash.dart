@@ -13,19 +13,19 @@ class _OnboardingState extends State<Onboarding> with SingleTickerProviderStateM
   final List<dynamic> _furnitures = [
 
     {
-      'title': 'Modern \nFurnitures', 
-      'sub_title': 'Choose from thousands\nof items that fits your choice', 
+      'title': 'Your Home\nYour Story', 
+      'sub_title': 'Spaces for Stories:\nDistinctly designed for lounging in style\nWhere inspiration lives.', 
       'image': 'assets/images/splash/1.jpg', 
     }, 
 
     {
-      'title': 'Dream \nSpaces', 
-      'sub_title': 'Bedroom Oasis:\nTransform your private sanctuary', 
+      'title': 'Where Dreams\nBegin', 
+      'sub_title': 'Bedroom Oasis:\nTransform your private sanctuary\nBedrooms built around your lifestyle', 
       'image': 'assets/images/splash/2.jpg', 
     }, 
     {
       'title': 'Unique as \nYour Recipes', 
-      'sub_title': 'Custom Kitchens:\n Your Culinary Canvas\nWhere food memories are made. ', 
+      'sub_title': 'Custom Kitchens:\nYour Culinary Canvas\nWhere food memories are made. ', 
       'image': 'assets/images/splash/3.jpg', 
     }
   ]; 
