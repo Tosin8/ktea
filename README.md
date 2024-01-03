@@ -12,7 +12,7 @@
 
 Project Name: KTEA
 Description: It's an interior design app 
-Technologies used: Flutter, Firebase, GetX
+Technologies used: Flutter, Firebase, GetX, ARCore ( to be added soon)
 Authors and Contributors: 
 Tosin Ezekiel (Unicorn Developer),
 License: MIT License.
