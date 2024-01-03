@@ -1,7 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:furniture_app/firebase_options.dart';
-import 'package:furniture_app/splash_screen/splash.dart';
+
+import 'firebase_options.dart';
+import 'splash_screen/splash.dart';
+
 
 
 Future<void> main() async {

@@ -1,5 +1,5 @@
-name: furniture_app
-description: A new Flutter project.
+name: ktea
+description: An interior design mobile app created in GetX state management. 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -35,6 +35,7 @@ dependencies:
     sdk: flutter
   flutter_fadein: ^2.0.0
   flutter_svg: ^2.0.7
+  get: ^4.6.6
   page_transition: ^2.1.0
 
 dev_dependencies:
