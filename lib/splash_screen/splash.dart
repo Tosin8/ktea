@@ -19,7 +19,7 @@ class _OnboardingState extends State<Onboarding> with SingleTickerProviderStateM
     }, 
 
     {
-      'title': 'Where Dreams\nBegin', 
+      'title': 'Dream It\nStyle It', 
       'sub_title': 'Bedroom Oasis:\nTransform your private sanctuary\nBedrooms built around your lifestyle', 
       'image': 'assets/images/splash/2.jpg', 
     }, 
@@ -73,6 +73,11 @@ child: Stack (
       child: Image.asset(_furnitures[index]['image'], 
       fit: BoxFit.cover, 
       ),),
+    ), 
+    Positioned(
+      top: 45,
+      left: 165, 
+      child: Text('KTEA', style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),), 
     ), 
     Positioned(
       bottom: 0, 
