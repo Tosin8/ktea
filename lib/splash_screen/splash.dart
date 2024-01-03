@@ -152,18 +152,26 @@ child: Stack (
                     ],
                   ),),): 
                   Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    // child: Row(
+                    //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    //   children: [
+                    //     TextButton(onPressed: (){
+                    //      controller.jumpToPage(2); 
+                    //     }, child: const Text('Skip',
+                    //      style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400, color: Colors.orange),)), 
+                    //     TextButton(onPressed: (){
+                    //       controller.nextPage(duration: Duration(milliseconds: 500), curve: Curves.easeInOut); 
+                    //     }, child: const Text('Next', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400, color: Colors.orange),))
+                    //   ],
+                    // ),
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        TextButton(onPressed: (){
-                         controller.jumpToPage(2); 
-                        }, child: const Text('Skip',
-                         style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400, color: Colors.orange),)), 
-                        TextButton(onPressed: (){
-                          controller.nextPage(duration: Duration(milliseconds: 500), curve: Curves.easeInOut); 
-                        }, child: const Text('Next', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400, color: Colors.orange),))
+                        Text('Swipe Left', style: TextStyle(color: Colors.orange, fontSize: 16, fontWeight: FontWeight.w600),
+                        ),
+                        Icon(Icons.arrow_forward_ios, color: Colors.orange,)
                       ],
-                    ),
+                    ), 
                   )
               )), 
               const SizedBox(height: 20,)
