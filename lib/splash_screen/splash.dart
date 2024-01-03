@@ -11,6 +11,7 @@ class Onboarding extends StatefulWidget {
 class _OnboardingState extends State<Onboarding> with SingleTickerProviderStateMixin{
 
   bool isLastPage = false; 
+  final controller = PageController(); 
 
   final List<dynamic> _furnitures = [
 
@@ -56,6 +57,7 @@ late final Animation<double> _animation = Tween<double> (
         onPageChanged: (int index) {
           _controller.value = 0.0; 
           _controller.forward(); 
+          controller: controller; 
           setState(() {
             isLastPage = index == 2; 
           });
@@ -153,10 +155,12 @@ child: Stack (
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         TextButton(onPressed: (){
-                         // _controller.jumpToPage(2); 
+                         controller.jumpToPage(2); 
                         }, child: const Text('Skip',
                          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400, color: Colors.orange),)), 
-                        TextButton(onPressed: (){}, child: const Text('Next', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400, color: Colors.orange),))
+                        TextButton(onPressed: (){
+                          controller.nextPage(duration: Duration(milliseconds: 500), curve: Curves.easeInOut); 
+                        }, child: const Text('Next', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400, color: Colors.orange),))
                       ],
                     ),
                   )
