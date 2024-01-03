@@ -100,7 +100,7 @@ child: Stack (
               child: Text(_furnitures[index]['title'], 
               style: const TextStyle(
                 color: Colors.white ,
-                fontSize: 42, 
+                fontSize: 35, 
                 fontWeight: FontWeight.bold),
                 ),
             ),

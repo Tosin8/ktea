@@ -9,3 +9,12 @@
 
 ![features-2](https://github.com/Tosin8/furniture_app/assets/23019300/f2be7efa-6794-47fb-9d8b-cd46e45ff159)
 
+
+Project Name: KTEA
+Description: It's an interior design app 
+Technologies used: Flutter, Firebase, GetX
+Authors and Contributors: 
+Tosin Ezekiel (Unicorn Developer),
+License: MIT License.
+Link to the project on GitHub: https://github.com/Tosin8/furniture_app
+
