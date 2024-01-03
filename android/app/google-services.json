@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "255258755366",
+    "project_id": "ktea-6274c",
+    "storage_bucket": "ktea-6274c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:255258755366:android:de30983b2b492bfc71c1e7",
+        "android_client_info": {
+          "package_name": "com.example.furniture_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjgE1TaK8zmJXfLAOfv4hi1v57f7qMhgg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
