@@ -17,18 +17,18 @@ class _OnboardingState extends State<Onboarding> with SingleTickerProviderStateM
 
     {
       'title': 'Your Home\nYour Story', 
-      'sub_title': 'Spaces for Stories:\nDistinctly designed for lounging in style\nWhere inspiration lives.', 
+      'sub_title': 'Spaces for Stories:\nDistinctly designed for lounging in style,\nWhere inspiration lives.', 
       'image': 'assets/images/splash/1.jpg', 
     }, 
 
     {
       'title': 'Dream It\nStyle It', 
-      'sub_title': 'Bedroom Oasis:\nTransform your private sanctuary\nBedrooms built around your lifestyle', 
+      'sub_title': 'Bedroom Oasis:\nTransform your private sanctuary,\nBedrooms built around your lifestyle.', 
       'image': 'assets/images/splash/2.jpg', 
     }, 
     {
       'title': 'Unique as \nYour Recipes', 
-      'sub_title': 'Custom Kitchens:\nYour Culinary Canvas\nWhere food memories are made. ', 
+      'sub_title': 'Custom Kitchens:\nYour culinary canvas,\nWhere food memories are made.', 
       'image': 'assets/images/splash/3.jpg', 
     }
   ]; 
