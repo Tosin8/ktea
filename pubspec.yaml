@@ -28,6 +28,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  animate_do: ^3.1.2
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
@@ -128,9 +129,10 @@ flutter:
     - assets/products/cabinet/triangle_coat_rack.jpg
     - assets/products/cabinet/handy_cabinet.jpg
 
-    - assets/images/1.jpg
-    - assets/images/2.jpg
-    - assets/images/3.jpg
+    # Splash Screen Images.
+    - assets/images/splash/1.jpg
+    - assets/images/splash/2.jpg
+    - assets/images/splash/3.jpg
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
