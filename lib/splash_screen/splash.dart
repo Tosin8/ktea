@@ -1,126 +1,150 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
-import 'package:page_transition/page_transition.dart';
-
-import '../screens/home/home.dart';
-
-
-class FurnitureSplash extends StatelessWidget {
-  const FurnitureSplash({super.key});
+class Onboarding extends StatefulWidget {
+  const Onboarding({super.key});
 
   @override
+  State<Onboarding> createState() => _OnboardingState();
+}
+
+class _OnboardingState extends State<Onboarding> with SingleTickerProviderStateMixin{
+
+  final List<dynamic> _furnitures = [
+
+    {
+      'title': 'Modern \nFurnitures', 
+      'sub_title': 'Choose from thousands\nof items that fits your choice', 
+      'image': 'assets/furniture_onboard/1.jpg', 
+    }, 
+
+    {
+      'title': 'Modern \nFurnitures', 
+      'sub_title': 'Choose from thousands\nof items that fits your choice', 
+      'image': 'assets/furniture_onboard/2.jpg', 
+    }, 
+    {
+      'title': 'Modern \nFurnitures', 
+      'sub_title': 'Choose from thousands\nof items that fits your choice', 
+      'image': 'assets/furniture_onboard/3.jpg', 
+    }
+  ]; 
+
+
+late final AnimationController _controller = AnimationController (vsync: this, 
+duration: const Duration(seconds: 20), 
+)..repeat(reverse: true);
+
+
+late final Animation<double> _animation = Tween<double> (
+  begin: 1.0,
+   end: 1.5).animate(CurvedAnimation(parent: _controller, curve: Curves.easeIn)); 
+
+   @override
+  void dispose() {
+    
+    super.dispose();
+    _controller.dispose(); 
+
+  }
+  @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold( 
-        body: ListView(
-          children: [
-            Container(
-              height: 450, width: double.infinity,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/images/splash/splash.jpg'),
-                  fit: BoxFit.cover,
-                ),
-              ),
-              child: Container(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.bottomCenter,
-                    end: Alignment.topRight,
-                    colors: [
-                      Colors.black.withOpacity(0.4),
-                      Colors.black.withOpacity(0.0),
-                    ],
-                  ),
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.only(top: 20, left: 180),
-                  child: Text('KTEA', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w500, ),
-                  )),
-              ),
-            ), 
-            Container(
-              width: double.infinity,
-              height: 330,
-               
-                 color: const Color(0xffCEC8BF),
-             
-              child: Stack(
-                //fit: StackFit.loose,
-                clipBehavior: Clip.none,
+    return Scaffold( 
+      body: PageView.builder(
+        onPageChanged: (int index) {
+          _controller.value = 0.0; 
+          _controller.forward(); 
+        },
+
+        itemCount: _furnitures.length,
+        controller: PageController(viewportFraction: 1.0),
+        itemBuilder: (context, index) {
+          return Container(
+child: Stack (
+  children: [
+    Container(
+      height: MediaQuery.of(context).size.height, 
+      width: MediaQuery.of(context).size.height,
+      clipBehavior: Clip.hardEdge, 
+      decoration: const BoxDecoration(
       
-                children:[
+      ),
+      child: ScaleTransition(scale: _animation, 
+      child: Image.asset(_furnitures[index]['image'], 
+      fit: BoxFit.cover, 
+      ),),
+    ), 
+    Positioned(
+      bottom: 0, 
+
+      child: Container(
+        padding: const EdgeInsets.all(20), 
+        width: MediaQuery.of(context).size.width, 
+        height: MediaQuery.of(context).size.height, 
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.bottomRight, 
+            colors: [
+              Colors.black.withOpacity(0.9), 
+              Colors.black.withOpacity(0.8), 
+              Colors.black.withOpacity(0.2), 
+              Colors.black.withOpacity(0.1), 
+            ])
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            FadeInDown(
+              duration: const Duration(milliseconds: 500),
+              child: Text(_furnitures[index]['title'], 
+              style: const TextStyle(
+                color: Colors.white ,
+                fontSize: 42, 
+                fontWeight: FontWeight.bold),
+                ),
+            ),
+            const SizedBox(height: 10), 
+            FadeInLeft(
+              delay: const Duration(milliseconds: 100), 
+              duration: const Duration(milliseconds: 800),
+              child: Text(_furnitures[index]['sub_title'], 
+              style: TextStyle(color: Colors.grey.shade400, fontSize: 18),),
+            ), 
+            const SizedBox(height: 50), 
+            FadeInRight(
+              delay: const Duration(milliseconds: 100), 
+              duration: const Duration(milliseconds: 1000),
+              child: Align(
+                alignment: Alignment.bottomRight, 
+                child: MaterialButton(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(40)
+                  ), 
                   
-                  Positioned(
-                    top: -70,left: 20,
-                    child: FadeInLeft(
-                      duration: Duration(seconds: 4), 
-                      delay: Duration(milliseconds: 500),
-                    
-                      child: Text(
-                        'Elegant\nSimple\nFurnitures.',
-                         style: TextStyle(fontSize: 35, fontWeight: FontWeight.w500),),
-                    )), 
-            Padding(
-                    padding: EdgeInsets.symmetric(vertical: 100, horizontal: 80),
-                    child: FadeInLeft( 
-                      duration: Duration(seconds: 6),
-                      
-                      child: Text('Transform your home with \nthe best luxury furnitures. ', style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),textAlign: TextAlign.center,)), 
-                    
-                    ), 
-                    Positioned( 
-                      left: 170, 
-                      bottom: 80,
-                      child: FadeIn(
-                        duration: const Duration(seconds: 6) ,
-                        
-                        child: Container(
-                          width: 66, height: 66,
-                          child: Image.asset('assets/icons/right-down.png')),
-                      ),
-                    ),   
-                    Positioned( 
-                      right: 20, 
-                      bottom: 40,
-                      child: FadeIn(
-                        duration: const Duration(seconds: 9),
-                        
-                        child: GestureDetector( 
-                          onTap: (){
-                            Navigator.push(context,
-                            PageTransition(type: PageTransitionType.fade, 
-                            child: const Home(), 
-                            )
-                            ); 
-                          },
-                          child: Container(
-                                    width: 108,
-                                    height: 108,
-                                    decoration: const ShapeDecoration(
-                                      color: Color(0xFF5B5452),
-                                      shape: OvalBorder(),
-                                      shadows: [
-                                        BoxShadow(
-                                          color: Color(0x3F000000),
-                                          blurRadius: 4,
-                                          offset: Offset(0, 4),
-                                          spreadRadius: 0,
-                                        )
-                                      ],
-                                    ),
-                               child: const Align(child: Text('START', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w500),)),   ),
-                        ),
-                      ),
-                    ),
-
-
-                    ]),
-            )
+                  onPressed: (){}, 
+                  color: Colors.orange, 
+                  padding: const EdgeInsets.only(right: 5, left: 30, top: 5, bottom: 5), child: Container(height: 40, width: MediaQuery.of(context).size.width * 0.4, 
+                  child: Row(
+                    children: [
+                      const Text('Get Started', 
+                      style: TextStyle(color: Colors.black, fontSize: 16, 
+                      ),), 
+                      const Spacer(), 
+                      Container(
+                        padding: const EdgeInsets.all(8), 
+                        decoration: BoxDecoration(color: Colors.orange.shade300, borderRadius: BorderRadius.circular(40)),child: Icon(Icons.arrow_forward_ios, color: Colors.orange.shade100,),
+                      )
+                    ],
+                  ),),),
+              )), 
+              const SizedBox(height: 20,)
           ],
         ),
-      ),
+      ))
+  ],)
+          ); 
+        })
     );
   }
 }
