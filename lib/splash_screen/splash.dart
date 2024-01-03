@@ -56,6 +56,9 @@ late final Animation<double> _animation = Tween<double> (
         onPageChanged: (int index) {
           _controller.value = 0.0; 
           _controller.forward(); 
+          setState(() {
+            isLastPage = index == 2; 
+          });
         },
 
         itemCount: _furnitures.length,
@@ -124,14 +127,15 @@ child: Stack (
               duration: const Duration(milliseconds: 1000),
               child: Align(
                 alignment: Alignment.bottomRight, 
-                child: MaterialButton(
+                child: isLastPage ? MaterialButton(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(40)
                   ), 
                   
                   onPressed: (){}, 
                   color: Colors.orange, 
-                  padding: const EdgeInsets.only(right: 5, left: 30, top: 5, bottom: 5), child: Container(height: 40, width: MediaQuery.of(context).size.width * 0.4, 
+                  padding: const EdgeInsets.only(right: 5, left: 30, top: 5, bottom: 5), 
+                  child: Container(height: 40, width: MediaQuery.of(context).size.width * 0.4, 
                   child: Row(
                     children: [
                       const Text('Get Started', 
@@ -143,7 +147,19 @@ child: Stack (
                         decoration: BoxDecoration(color: Colors.orange.shade300, borderRadius: BorderRadius.circular(40)),child: Icon(Icons.arrow_forward_ios, color: Colors.orange.shade100,),
                       )
                     ],
-                  ),),),
+                  ),),): 
+                  Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        TextButton(onPressed: (){
+                         // _controller.jumpToPage(2); 
+                        }, child: const Text('Skip',
+                         style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400, color: Colors.orange),)), 
+                        TextButton(onPressed: (){}, child: const Text('Next', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400, color: Colors.orange),))
+                      ],
+                    ),
+                  )
               )), 
               const SizedBox(height: 20,)
           ],
