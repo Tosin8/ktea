@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       ),
       // initialRoute: FurnitureSplash.routeName,
       // routes: routes,
-     home: const FurnitureSplash(),
+     home: const Onboarding(),
     );
   }
 }

@@ -15,18 +15,18 @@ class _OnboardingState extends State<Onboarding> with SingleTickerProviderStateM
     {
       'title': 'Modern \nFurnitures', 
       'sub_title': 'Choose from thousands\nof items that fits your choice', 
-      'image': 'assets/furniture_onboard/1.jpg', 
+      'image': 'assets/images/splash/1.jpg', 
     }, 
 
     {
-      'title': 'Modern \nFurnitures', 
-      'sub_title': 'Choose from thousands\nof items that fits your choice', 
-      'image': 'assets/furniture_onboard/2.jpg', 
+      'title': 'Dream \nSpaces', 
+      'sub_title': 'Bedroom Oasis:\nTransform your private sanctuary', 
+      'image': 'assets/images/splash/2.jpg', 
     }, 
     {
-      'title': 'Modern \nFurnitures', 
-      'sub_title': 'Choose from thousands\nof items that fits your choice', 
-      'image': 'assets/furniture_onboard/3.jpg', 
+      'title': 'Unique as \nYour Recipes', 
+      'sub_title': 'Custom Kitchens:\n Your Culinary Canvas\nWhere food memories are made. ', 
+      'image': 'assets/images/splash/3.jpg', 
     }
   ]; 
 
