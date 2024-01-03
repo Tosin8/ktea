@@ -10,6 +10,8 @@ class Onboarding extends StatefulWidget {
 
 class _OnboardingState extends State<Onboarding> with SingleTickerProviderStateMixin{
 
+  bool isLastPage = false; 
+
   final List<dynamic> _furnitures = [
 
     {
