@@ -54,10 +54,11 @@ late final Animation<double> _animation = Tween<double> (
   Widget build(BuildContext context) {
     return Scaffold( 
       body: PageView.builder(
+        
         onPageChanged: (int index) {
           _controller.value = 0.0; 
           _controller.forward(); 
-          controller: controller; 
+         
           setState(() {
             isLastPage = index == 2; 
           });
