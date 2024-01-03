@@ -127,6 +127,10 @@ flutter:
     - assets/products/cabinet/clothes_hanger.jpg
     - assets/products/cabinet/triangle_coat_rack.jpg
     - assets/products/cabinet/handy_cabinet.jpg
+
+    - assets/images/1.jpg
+    - assets/images/2.jpg
+    - assets/images/3.jpg
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
