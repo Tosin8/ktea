@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_app/screens/home/home.dart';
-import 'package:furniture_app/splash_screen/splash.dart';
+
 
 import '../screens/cart/cart.dart';
 import '../screens/categories/category.dart';
 import '../screens/help/help.dart';
+import '../screens/home/home.dart';
 import '../screens/profile/profile.dart';
 import '../screens/saved/saved.dart';
 

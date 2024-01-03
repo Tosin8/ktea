@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_app/components/constants.dart';
+
+import 'constants.dart';
+
 
 class SearchBarWidget extends StatefulWidget {
   const SearchBarWidget({
