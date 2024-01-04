@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ktea/components/app_widgets.dart';
 
-import '../../components/app_widgets.dart';
-import '../../components/product_class.dart';
+
 import 'home_widget.dart';
 
 class Home_Body extends StatefulWidget {

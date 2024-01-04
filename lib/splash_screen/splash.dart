@@ -137,9 +137,7 @@ child: Stack (
                     borderRadius: BorderRadius.circular(40)
                   ), 
                   
-                  onPressed: (){
-                    Get.to(const Home());
-                  }, 
+                  onPressed: () => Get.to(() => const Home()), 
                   color: Colors.orange, 
                   padding: const EdgeInsets.only(right: 5, left: 30, top: 5, bottom: 5), 
                   child: Container(height: 40, width: MediaQuery.of(context).size.width * 0.4, 
