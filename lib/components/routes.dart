@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 
 import '../screens/cart/cart.dart';
@@ -36,7 +37,7 @@ class Screen_Nav extends StatelessWidget {
             ),
             splashColor: Colors.blueAccent,
             onTap: () {
-              Navigator.pushNamed(context, Home.routeName);
+              Get.to(Home());
             },
           ),
           ListTile(
@@ -46,15 +47,15 @@ class Screen_Nav extends StatelessWidget {
             ),
             splashColor: Colors.blueAccent,
             onTap: () {
-              Navigator.pushNamed(context, Category.routeName);
+              Get.to(Category());
             },
           ),
           ListTile(
             leading: Image.asset('assets/icons/cart_20.png'),
             title: const Text('Cart'),
             onTap: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => const Cart()));
+          Get.to(()=> Cart()
+                  );
             },
           ),
           ListTile(

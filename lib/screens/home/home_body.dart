@@ -42,7 +42,7 @@ class _Home_BodyState extends State<Home_Body> {
           )
         ],
       ),
-      drawer: const App_Drawer(),
+     
       body: Padding(
         padding: const EdgeInsets.only(left: 10),
         child: ListView(children: [
