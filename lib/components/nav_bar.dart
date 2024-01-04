@@ -1,5 +1,11 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:ktea/screens/categories/category.dart';
+
+import '../screens/cart/cart.dart';
+import '../screens/home/home.dart';
+import '../screens/profile/profile.dart';
+import '../screens/saved/saved.dart';
 
 class NavBarApp extends StatefulWidget {
   const NavBarApp({super.key});
@@ -9,7 +15,15 @@ class NavBarApp extends StatefulWidget {
 }
 
 class _NavBarAppState extends State<NavBarApp> {
-  int index = 2; 
+  final navigationKey = GlobalKey<CurvedNavigationBarState>(); 
+  int index = 0; 
+  final screens = [
+    const Home(), 
+    const Category(), 
+    const Cart(),
+    const Saved(),
+    const Profile(),
+  ]; 
   @override
   Widget build(BuildContext context) {
     final items = [
@@ -20,6 +34,7 @@ class _NavBarAppState extends State<NavBarApp> {
           const Icon(Icons.person, size: 30, color: Colors.white,),
     ];
     return Scaffold( 
+      extendBody: true,
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: const Text('Curved Nav bar'),
@@ -27,7 +42,9 @@ class _NavBarAppState extends State<NavBarApp> {
       bottomNavigationBar: CurvedNavigationBar(
         color: Colors.blue, 
         backgroundColor: Colors.transparent,
+        buttonBackgroundColor: Colors.orangeAccent,
         height: 60, index: index, 
+        animationCurve: Curves.easeInOut, animationDuration: const Duration(milliseconds: 300),
         items: items, 
         onTap:(index) => setState(() =>
           this.index = index
