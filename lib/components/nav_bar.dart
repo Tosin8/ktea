@@ -47,7 +47,7 @@ class _NavBarAppState extends State<NavBarApp> {
           backgroundColor: Colors.transparent,
           buttonBackgroundColor: Colors.orangeAccent,
           height: 60, index: index, 
-          animationCurve: Curves.easeInOut, animationDuration: const Duration(milliseconds: 300),
+          animationCurve: Curves.easeInOut, animationDuration: const Duration(milliseconds: 500),
           items: items, 
           onTap:(index) => setState(() =>
             this.index = index
