@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ktea/components/nav_bar.dart';
 import 'package:ktea/screens/home/home.dart';
 
 class Onboarding extends StatefulWidget {
@@ -137,7 +138,7 @@ child: Stack (
                     borderRadius: BorderRadius.circular(40)
                   ), 
                   
-                  onPressed: () => Get.to(() => const Home()), 
+                  onPressed: () => Get.to(() => const NavBarApp()), 
                   color: Colors.orange, 
                   padding: const EdgeInsets.only(right: 5, left: 30, top: 5, bottom: 5), 
                   child: Container(height: 40, width: MediaQuery.of(context).size.width * 0.4, 
