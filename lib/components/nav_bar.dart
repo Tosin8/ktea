@@ -33,23 +33,27 @@ class _NavBarAppState extends State<NavBarApp> {
          const Icon(Icons.favorite, size: 30, color: Colors.white,),
           const Icon(Icons.person, size: 30, color: Colors.white,),
     ];
-    return Scaffold( 
-      extendBody: true,
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: const Text('Curved Nav bar'),
-      ),
-      bottomNavigationBar: CurvedNavigationBar(
-        color: Colors.blue, 
-        backgroundColor: Colors.transparent,
-        buttonBackgroundColor: Colors.orangeAccent,
-        height: 60, index: index, 
-        animationCurve: Curves.easeInOut, animationDuration: const Duration(milliseconds: 300),
-        items: items, 
-        onTap:(index) => setState(() =>
-          this.index = index
-        )), 
-      ); 
+    return ClipRect(
+      child: Scaffold( 
+        extendBody: true,
+        // appBar: AppBar(
+        //   automaticallyImplyLeading: false,
+        //   title: const Text('Curved Nav bar'),
+        // ),
+        body: screens[index], 
+        bottomNavigationBar: CurvedNavigationBar(
+          key: navigationKey, 
+          color: Colors.blue, 
+          backgroundColor: Colors.transparent,
+          buttonBackgroundColor: Colors.orangeAccent,
+          height: 60, index: index, 
+          animationCurve: Curves.easeInOut, animationDuration: const Duration(milliseconds: 300),
+          items: items, 
+          onTap:(index) => setState(() =>
+            this.index = index
+          )), 
+        ),
+    ); 
     
   }
 }
