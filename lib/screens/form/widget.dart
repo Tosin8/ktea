@@ -16,12 +16,16 @@ class _AppFormState extends State<AppForm> {
         padding: EdgeInsets.only(left: 15, right: 15),
         child: Column(
           children: [
-            buildEmailFormField(label: 'Email', hint: 'Enter your email',
+            buildEmailFormField(
+              label: 'Email', hint: 'Enter your email',
               
             ), 
 
             SizedBox(height: 30), 
-            buildPwdFormField(label: 'Password',hint: 'Enter your password',), 
+            buildPwdFormField(
+              label: 'Password',hint: 'Enter your password',), 
+              SizedBox(height: 40), 
+              DefaultButton(textBtn: 'Continue',), 
           ],
         ),
       ),
@@ -103,6 +107,33 @@ final String hint;
           borderSide: const BorderSide(color: Colors.black), 
           gapPadding: 10, 
         )
+      ),
+    );
+  }
+}
+
+class DefaultButton extends StatelessWidget {
+  const DefaultButton({super.key, required this.textBtn});
+
+final String textBtn; 
+final VoidCallbackAction press; 
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        
+      },
+      child: Container(
+        width: 350, height: 60,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(40),
+          color: Colors.orange
+        ),
+        child: Align(
+          child: Text(textBtn, 
+          style: TextStyle(color: Colors.white, fontSize: 20,
+          fontWeight: FontWeight.w500),),
+        ),
       ),
     );
   }
