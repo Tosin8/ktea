@@ -12,7 +12,26 @@ class _AppFormState extends State<AppForm> {
   Widget build(BuildContext context) {
     return Form(
       child: Column(
-        children: [],
+        children: [
+          TextFormField(
+            decoration: InputDecoration(
+              labelText: 'Email', 
+              hintText: 'Enter your email', 
+              floatingLabelBehavior: FloatingLabelBehavior.always, 
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(28),
+                gapPadding: 10, 
+                borderSide: BorderSide(color: Colors.orange),
+              ), 
+              focusedBorder: OutlineInputBorder(
+                
+                borderRadius: BorderRadius.circular(28), 
+                borderSide: BorderSide(color: Colors.black), 
+                gapPadding: 10, 
+              )
+            ),
+          )
+        ],
       ),
     );
   }

@@ -17,6 +17,7 @@ class SignInBody extends StatelessWidget {
             SizedBox(height: 6),  
             Text('Sign in with your email and password \nor continue with your social media account',style: TextStyle(fontSize: 16), 
             textAlign: TextAlign.center,), 
+            SizedBox(height: 30), 
             AppForm(), 
           ],
           
