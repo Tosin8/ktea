@@ -137,6 +137,11 @@ flutter:
     - assets/images/splash/1.jpg
     - assets/images/splash/2.jpg
     - assets/images/splash/3.jpg
+
+    # Social Media Icons. 
+    - assets/icons/social/fb-logo.png
+    - assets/icons/social/google-logo.png
+    - assets/icons/social/apple-logo.png
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

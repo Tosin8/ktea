@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class AppForm extends StatefulWidget {
   const AppForm({super.key});
@@ -48,9 +49,12 @@ class _AppFormState extends State<AppForm> {
               SizedBox(height: 40), 
               Text('- OR USE - ') , 
               SizedBox(height: 20), 
-              Row(
-                children: [],
-              )
+             Row(
+              children: [
+                SocialBtn(icon: 'assets/images/social/fb-logo.png'), 
+                
+              ],
+             )
           ],
         ),
       ),
@@ -159,5 +163,30 @@ final GestureTapCallback press;
         ),
       ),
     );
+  }
+}
+
+class SocialBtn extends StatelessWidget {
+  const SocialBtn({super.key, required this.icon});
+
+ final IconData icon; 
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 40, width: 40, 
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        boxShadow: [
+          BoxShadow(
+            offset: Offset(0, 6) , 
+            blurRadius: 10, 
+            color: Color(0xffb0b0b0).withOpacity(0.2), 
+          )
+        ]
+      ),
+      child: TextButton(onPressed: () {  },
+      child: Icon(icon)),
+    ); 
+    
   }
 }
