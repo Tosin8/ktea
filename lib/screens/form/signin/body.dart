@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widget.dart';
+
 class SignInBody extends StatelessWidget {
   const SignInBody({super.key});
 
@@ -14,7 +16,8 @@ class SignInBody extends StatelessWidget {
             style: TextStyle(color: Colors.black, fontSize: 28, fontWeight: FontWeight.bold),),
             SizedBox(height: 6),  
             Text('Sign in with your email and password \nor continue with your social media account',style: TextStyle(fontSize: 16), 
-            textAlign: TextAlign.center,)
+            textAlign: TextAlign.center,), 
+            AppForm(), 
           ],
           
         ),
@@ -23,16 +26,3 @@ class SignInBody extends StatelessWidget {
   }
 }
 
-class Form extends StatefulWidget {
-  const Form({super.key});
-
-  @override
-  State<Form> createState() => _FormState();
-}
-
-class _FormState extends State<Form> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
