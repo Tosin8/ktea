@@ -11,21 +11,46 @@ class AppForm extends StatefulWidget {
 class _AppFormState extends State<AppForm> {
   @override
   Widget build(BuildContext context) {
-    return const Form(
+    return Form(
       child: Padding(
-        padding: EdgeInsets.only(left: 15, right: 15),
+        padding: const EdgeInsets.only(left: 15, right: 15),
         child: Column(
           children: [
-            buildEmailFormField(
+            const buildEmailFormField(
               label: 'Email', hint: 'Enter your email',
               
             ), 
 
-            SizedBox(height: 30), 
-            buildPwdFormField(
+            const SizedBox(height: 30), 
+            const buildPwdFormField(
               label: 'Password',hint: 'Enter your password',), 
+              const SizedBox(height: 40), 
+              Row(
+                children: [
+                  Checkbox(
+                    value: false,
+                     onChanged: (bool? value) {  },
+                  ), 
+                  const Text('Remember me'),
+                  const SizedBox(width: 100), 
+                  Expanded(child: GestureDetector(
+                    onTap: () {
+                      
+                    },
+                    child: const Text('Forgot Password',
+                    style: TextStyle(
+                      decoration: TextDecoration.underline
+                    ),)))
+                ],
+              ), 
               SizedBox(height: 40), 
-              DefaultButton(textBtn: 'Continue',), 
+              DefaultButton(textBtn: 'Continue', press: () {  },),
+              SizedBox(height: 40), 
+              Text('- OR USE - ') , 
+              SizedBox(height: 20), 
+              Row(
+                children: [],
+              )
           ],
         ),
       ),
@@ -113,16 +138,14 @@ final String hint;
 }
 
 class DefaultButton extends StatelessWidget {
-  const DefaultButton({super.key, required this.textBtn});
+  const DefaultButton({super.key, required this.textBtn, required this.press});
 
 final String textBtn; 
-final VoidCallbackAction press; 
+final GestureTapCallback press; 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        
-      },
+      onTap: press, 
       child: Container(
         width: 350, height: 60,
         decoration: BoxDecoration(
@@ -131,7 +154,7 @@ final VoidCallbackAction press;
         ),
         child: Align(
           child: Text(textBtn, 
-          style: TextStyle(color: Colors.white, fontSize: 20,
+          style: const TextStyle(color: Colors.white, fontSize: 20,
           fontWeight: FontWeight.w500),),
         ),
       ),
