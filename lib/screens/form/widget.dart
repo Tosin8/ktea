@@ -15,17 +15,19 @@ final formKey = GlobalKey<FormState>();
   late String _email; 
   late String _pwd;
 
-  void validateAndSave() {
+  bool validateAndSave() {
    final form = formKey.currentState; 
-   if(form != null && form.validate()) {
+   if(form.validate()) {
     form.save();
-    print('Form is Valid'); 
+    return true; 
    } else {
-    print('Form is Invalid'); 
+    return false;
    }
   }
 
 void validateAndSubmit() {}
+
+
   @override
   Widget build(BuildContext context) {
     return Form(
