@@ -26,6 +26,7 @@ class SignInBody extends StatelessWidget {
               const Text('- OR USE - ') , 
               const SizedBox(height: 10), 
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   GestureDetector(
                     onTap: () {
@@ -36,9 +37,31 @@ class SignInBody extends StatelessWidget {
                                   
                           
                           child: Image.asset('assets/icons/social/fb-logo.png')),
-                  )
-      ,
-                  
+                  ),
+      
+                   GestureDetector(
+                    onTap: () {
+                      Get.to(''); 
+                    },
+                    child: Container(
+                      height: 80, width: 80,
+                                  
+                          
+                          child: Image.asset('assets/icons/social/google-logo.png')),
+                  ),
+      
+                GestureDetector(
+                    onTap: () {
+                      Get.to(''); 
+                    },
+                    child: Container(
+                      height: 80, width: 80,
+                                  
+                          
+                          child: Image.asset('assets/icons/social/apple-logo.png')),
+                  ),
+      
+               
                 ],
               )
           ],
