@@ -9,17 +9,17 @@ class AppForm extends StatefulWidget {
 }
 
 class _AppFormState extends State<AppForm> {
+final formKey = new GlobalKey<FormState>(); 
 
-  String _email; 
-  String _pwd;
+  late String _email; 
+  late String _pwd;
 
-  void validateAndSave() {
-    final form = _formKey.currentState;
-  }
+  
 
   @override
   Widget build(BuildContext context) {
     return Form(
+      key: formKey, 
       child: Padding(
         padding: EdgeInsets.only(left: 15, right: 15),
         child: Column(
@@ -35,7 +35,7 @@ class _AppFormState extends State<AppForm> {
             buildPwdFormField(
               label: 'Password',
               hint: 'Enter your password',
-               validator: (value) => value.isEmpty ? 'Email can\'t be empty' : null
+               validator: (value) => value.isEmpty ? 'Password can\'t be empty' : null
               ), 
            
           ],

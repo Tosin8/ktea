@@ -6,6 +6,10 @@ import '../widget.dart';
 class SignInBody extends StatelessWidget {
   const SignInBody({super.key});
 
+
+void validateAndSave() {
+   
+  }
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -26,7 +30,9 @@ class SignInBody extends StatelessWidget {
               child: checkBox()), 
               
             const SizedBox(height: 30), 
-             DefaultButton(textBtn: 'Continue', press: () {  },),
+             DefaultButton(textBtn: 'Continue',
+              press: validateAndSave,
+             ),
               const SizedBox(height: 40), 
               const Text('- OR USE - ') , 
               const SizedBox(height: 10), 
