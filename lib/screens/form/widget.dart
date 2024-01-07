@@ -25,6 +25,7 @@ final formKey = GlobalKey<FormState>();
    }
   }
 
+void validateAndSubmit() {}
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -52,7 +53,7 @@ final formKey = GlobalKey<FormState>();
           checkBox(),
               const SizedBox(height: 30), 
              DefaultButton(textBtn: 'Continue',
-              press: validateAndSave,
+              press: validateAndSubmit,
              ),
           ],
         ),
