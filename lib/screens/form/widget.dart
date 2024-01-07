@@ -29,9 +29,14 @@ final formKey = GlobalKey<FormState>();
 
 void validateAndSubmit() async {
   if(validateAndSave()){
+    try {
     FirebaseUser user = (await FirebaseAuth.instance.signInWithEmailAndPassword(
       email: _email, password: _pwd)) as FirebaseUser; 
       print('Signed in: ${user.uid}'); 
+    }
+    catch (e) {
+      print('Error: $e'); 
+    }
   }
 }
 
