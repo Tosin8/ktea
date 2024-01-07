@@ -17,6 +17,11 @@ final formKey = GlobalKey<FormState>();
 
   void validateAndSave() {
    final form = formKey.currentState; 
+   if(form != null && form.validate()) {
+    print('Form is Valid'); 
+   } else {
+    print('Form is Invalid'); 
+   }
   }
 
   @override
@@ -30,7 +35,8 @@ final formKey = GlobalKey<FormState>();
             buildEmailFormField(
               label: 'Email', 
               hint: 'Enter your email',
-              validator: (value) => value.isEmpty ? 'Email can\'t be empty' : null
+              validator: (value) => value.isEmpty ? 'Email can\'t be empty' : null, 
+              onSaved: (value) => _email = value, 
               
             ), 
 
@@ -38,7 +44,8 @@ final formKey = GlobalKey<FormState>();
             buildPwdFormField(
               label: 'Password',
               hint: 'Enter your password',
-               validator: (value) => value.isEmpty ? 'Password can\'t be empty' : null
+               validator: (value) => value.isEmpty ? 'Password can\'t be empty' : null, 
+               onSaved: (value) => _pwd = value, 
               ), 
            const SizedBox(height: 10),  
           checkBox(),
@@ -57,7 +64,7 @@ class buildEmailFormField extends StatelessWidget {
   const buildEmailFormField({
     Key? key,
     required this.label,
-    required this.hint, required String? Function(dynamic value) validator,
+    required this.hint, required String? Function(dynamic value) validator, required Function(dynamic value) onSaved,
   }) : super(key: key);
 
 final String label; 
@@ -95,7 +102,7 @@ final String hint;
 // ignore: camel_case_types
 class buildPwdFormField extends StatelessWidget {
    const buildPwdFormField({
-    super.key, required this.label, required this.hint, required String? Function(dynamic value) validator,
+    super.key, required this.label, required this.hint, required String? Function(dynamic value) validator, required Function(dynamic value) onSaved,
   });
 
 final String label; 
