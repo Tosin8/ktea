@@ -12,7 +12,11 @@ class _AppFormState extends State<AppForm> {
 
   String _email; 
   String _pwd;
-  
+
+  void validateAndSave() {
+    final form = _formKey.currentState;
+  }
+
   @override
   Widget build(BuildContext context) {
     return const Form(
