@@ -49,12 +49,7 @@ class _AppFormState extends State<AppForm> {
               SizedBox(height: 40), 
               Text('- OR USE - ') , 
               SizedBox(height: 20), 
-             Row(
-              children: [
-                SocialBtn(icon: 'assets/images/social/fb-logo.png'), 
-                
-              ],
-             )
+            
           ],
         ),
       ),
