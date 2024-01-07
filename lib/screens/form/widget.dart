@@ -1,6 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class AppForm extends StatefulWidget {
   const AppForm({super.key});
@@ -12,40 +11,21 @@ class AppForm extends StatefulWidget {
 class _AppFormState extends State<AppForm> {
   @override
   Widget build(BuildContext context) {
-    return Form(
+    return const Form(
       child: Padding(
-        padding: const EdgeInsets.only(left: 15, right: 15),
+        padding: EdgeInsets.only(left: 15, right: 15),
         child: Column(
           children: [
-            const buildEmailFormField(
-              label: 'Email', hint: 'Enter your email',
+            buildEmailFormField(
+              label: 'Email', 
+              hint: 'Enter your email',
               
             ), 
 
-            const SizedBox(height: 30), 
-            const buildPwdFormField(
-              label: 'Password',hint: 'Enter your password',), 
-              const SizedBox(height: 40), 
-              Row(
-                children: [
-                  Checkbox(
-                    value: false,
-                     onChanged: (bool? value) {  },
-                  ), 
-                  const Text('Remember me'),
-                  const SizedBox(width: 100), 
-                  Expanded(child: GestureDetector(
-                    onTap: () {
-                      
-                    },
-                    child: const Text('Forgot Password',
-                    style: TextStyle(
-                      decoration: TextDecoration.underline
-                    ),)))
-                ],
-              ), 
-              
-             
+            SizedBox(height: 30), 
+            buildPwdFormField(
+              label: 'Password',
+              hint: 'Enter your password',), 
             
           ],
         ),
@@ -158,27 +138,3 @@ final GestureTapCallback press;
   }
 }
 
-class SocialBtn extends StatelessWidget {
-  const SocialBtn({super.key, required this.icon});
-
- final IconData icon; 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 40, width: 40, 
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        boxShadow: [
-          BoxShadow(
-            offset: Offset(0, 6) , 
-            blurRadius: 10, 
-            color: Color(0xffb0b0b0).withOpacity(0.2), 
-          )
-        ]
-      ),
-      child: TextButton(onPressed: () {  },
-      child: Icon(icon)),
-    ); 
-    
-  }
-}
