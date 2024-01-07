@@ -2,6 +2,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ktea/model/firebaseuser.dart';
 
 class AppForm extends StatefulWidget {
   const AppForm({super.key});
@@ -26,9 +27,9 @@ final formKey = GlobalKey<FormState>();
    }
   }
 
-void validateAndSubmit() {
+void validateAndSubmit() async {
   if(validateAndSave()){
-    FirebaseAuth.instance.signInWithEmailAndPassword(email: _email, password: _pwd);
+    FirebaseUser user = await FirebaseAuth.instance.signInWithEmailAndPassword(email: _email, password: _pwd);
   }
 }
 
