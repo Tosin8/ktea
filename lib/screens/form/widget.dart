@@ -19,7 +19,7 @@ class _AppFormState extends State<AppForm> {
 
   @override
   Widget build(BuildContext context) {
-    return const Form(
+    return Form(
       child: Padding(
         padding: EdgeInsets.only(left: 15, right: 15),
         child: Column(
@@ -27,14 +27,17 @@ class _AppFormState extends State<AppForm> {
             buildEmailFormField(
               label: 'Email', 
               hint: 'Enter your email',
+              validator: (value) => value.isEmpty ? 'Email can\'t be empty' : null
               
             ), 
 
             SizedBox(height: 30), 
             buildPwdFormField(
               label: 'Password',
-              hint: 'Enter your password',), 
-            
+              hint: 'Enter your password',
+               validator: (value) => value.isEmpty ? 'Email can\'t be empty' : null
+              ), 
+           
           ],
         ),
       ),
@@ -42,10 +45,49 @@ class _AppFormState extends State<AppForm> {
   }
 }
 
+class buildEmailFormField extends StatelessWidget {
+  const buildEmailFormField({
+    Key? key,
+    required this.label,
+    required this.hint, required String? Function(dynamic value) validator,
+  }) : super(key: key);
+
+final String label; 
+final String hint; 
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      keyboardType: TextInputType.emailAddress,
+      decoration: InputDecoration(
+        suffixIcon: const Padding(
+          padding: EdgeInsets.only(right: 10), 
+          child: Icon(Icons.mail_outline,)),
+    
+        labelText: label, 
+        hintText: hint,
+        
+         hintStyle: TextStyle(color: Colors.grey[500]), 
+        contentPadding: const EdgeInsets.symmetric(horizontal: 42, vertical: 20),
+        floatingLabelBehavior: FloatingLabelBehavior.always, 
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(28),
+          gapPadding: 10, 
+          borderSide: const BorderSide(color: Colors.orange),
+        ), 
+        focusedBorder: OutlineInputBorder(
+          
+          borderRadius: BorderRadius.circular(28), 
+          borderSide: const BorderSide(color: Colors.black), 
+          gapPadding: 10, 
+        )
+      ),
+    );
+  }
+}
 // ignore: camel_case_types
 class buildPwdFormField extends StatelessWidget {
    const buildPwdFormField({
-    super.key, required this.label, required this.hint,
+    super.key, required this.label, required this.hint, required String? Function(dynamic value) validator,
   });
 
 final String label; 
@@ -83,43 +125,7 @@ final String hint;
 }
 
 // ignore: camel_case_types
-class buildEmailFormField extends StatelessWidget {
-  const buildEmailFormField({
-    Key? key,
-    required this.label,
-    required this.hint,
-  }) : super(key: key);
 
-final String label; 
-final String hint; 
-  @override
-  Widget build(BuildContext context) {
-    return TextFormField(
-      keyboardType: TextInputType.emailAddress,
-      decoration: InputDecoration(
-        suffixIcon: const Padding(
-          padding: EdgeInsets.only(right: 10), 
-          child: Icon(Icons.mail_outline,)),
-    
-        labelText: label, 
-        hintText: hint, hintStyle: TextStyle(color: Colors.grey[500]), 
-        contentPadding: const EdgeInsets.symmetric(horizontal: 42, vertical: 20),
-        floatingLabelBehavior: FloatingLabelBehavior.always, 
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(28),
-          gapPadding: 10, 
-          borderSide: const BorderSide(color: Colors.orange),
-        ), 
-        focusedBorder: OutlineInputBorder(
-          
-          borderRadius: BorderRadius.circular(28), 
-          borderSide: const BorderSide(color: Colors.black), 
-          gapPadding: 10, 
-        )
-      ),
-    );
-  }
-}
 
 class DefaultButton extends StatelessWidget {
   const DefaultButton({super.key, required this.textBtn, required this.press});
