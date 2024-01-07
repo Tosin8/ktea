@@ -44,11 +44,8 @@ class _AppFormState extends State<AppForm> {
                     ),)))
                 ],
               ), 
-              SizedBox(height: 40), 
-              DefaultButton(textBtn: 'Continue', press: () {  },),
-              SizedBox(height: 40), 
-              Text('- OR USE - ') , 
-              SizedBox(height: 20), 
+              
+             
             
           ],
         ),
