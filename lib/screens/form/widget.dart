@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class AppForm extends StatefulWidget {
   const AppForm({super.key});
@@ -9,12 +10,14 @@ class AppForm extends StatefulWidget {
 }
 
 class _AppFormState extends State<AppForm> {
-final formKey = new GlobalKey<FormState>(); 
+final formKey = GlobalKey<FormState>(); 
 
   late String _email; 
   late String _pwd;
 
-  
+  void validateAndSave() {
+   final form = formKey.currentState; 
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +40,12 @@ final formKey = new GlobalKey<FormState>();
               hint: 'Enter your password',
                validator: (value) => value.isEmpty ? 'Password can\'t be empty' : null
               ), 
-           
+           const SizedBox(height: 10),  
+          checkBox(),
+              const SizedBox(height: 30), 
+             DefaultButton(textBtn: 'Continue',
+              press: validateAndSave,
+             ),
           ],
         ),
       ),
@@ -148,6 +156,83 @@ final GestureTapCallback press;
           fontWeight: FontWeight.w500),),
         ),
       ),
+    );
+  }
+}
+
+class checkBox extends StatelessWidget {
+  const checkBox({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+       children: [
+         Checkbox(
+           value: false,
+            onChanged: (bool? value) {  },
+         ), 
+         const Text('Remember me'),
+         const SizedBox(width: 100), 
+         Expanded(child: GestureDetector(
+           onTap: () {
+             
+           },
+           child: const Text('Forgot Password',
+           style: TextStyle(
+             decoration: TextDecoration.underline
+           ),)))
+       ],
+     );
+  }
+}
+
+class SocialCard extends StatelessWidget {
+  const SocialCard({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        GestureDetector(
+          onTap: () {
+            Get.to(''); 
+          },
+          child: Container(
+            height: 80, width: 80,
+                        
+                
+                child: Image.asset('assets/icons/social/fb-logo.png')),
+        ),
+          
+         GestureDetector(
+          onTap: () {
+            Get.to(''); 
+          },
+          child: Container(
+            height: 80, width: 80,
+                        
+                
+                child: Image.asset('assets/icons/social/google-logo.png')),
+        ),
+          
+      GestureDetector(
+          onTap: () {
+            Get.to(''); 
+          },
+          child: Container(
+            height: 80, width: 80,
+                        
+                
+                child: Image.asset('assets/icons/social/apple-logo.png')),
+        ),
+          
+     
+      ],
     );
   }
 }
