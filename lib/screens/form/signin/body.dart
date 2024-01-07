@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../widget.dart';
 
@@ -23,25 +24,21 @@ class SignInBody extends StatelessWidget {
              DefaultButton(textBtn: 'Continue', press: () {  },),
               const SizedBox(height: 40), 
               const Text('- OR USE - ') , 
-              const SizedBox(height: 20), 
+              const SizedBox(height: 10), 
               Row(
                 children: [
-                  Container(
-                    height: 40, width: 40,
-                    decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        boxShadow: [
-          BoxShadow(
-            offset: const Offset(0, 6) , 
-            blurRadius: 10, 
-            color: const Color(0xffb0b0b0).withOpacity(0.2), 
-          )
-        ]
-      ),
-      child: TextButton(onPressed: () {  },
-      child: const Icon(Icons.abc))
-      ,
+                  GestureDetector(
+                    onTap: () {
+                      Get.to(''); 
+                    },
+                    child: Container(
+                      height: 80, width: 80,
+                                  
+                          
+                          child: Image.asset('assets/icons/social/fb-logo.png')),
                   )
+      ,
+                  
                 ],
               )
           ],
