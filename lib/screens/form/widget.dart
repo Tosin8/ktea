@@ -31,6 +31,7 @@ void validateAndSubmit() async {
   if(validateAndSave()){
     FirebaseUser user = (await FirebaseAuth.instance.signInWithEmailAndPassword(
       email: _email, password: _pwd)) as FirebaseUser; 
+      print('Signed in: ${user.uid}'); 
   }
 }
 
