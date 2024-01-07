@@ -9,6 +9,10 @@ class AppForm extends StatefulWidget {
 }
 
 class _AppFormState extends State<AppForm> {
+
+  String _email; 
+  String _pwd;
+  
   @override
   Widget build(BuildContext context) {
     return const Form(
