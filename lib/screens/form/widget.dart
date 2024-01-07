@@ -18,6 +18,7 @@ final formKey = GlobalKey<FormState>();
   void validateAndSave() {
    final form = formKey.currentState; 
    if(form != null && form.validate()) {
+    form.save();
     print('Form is Valid'); 
    } else {
     print('Form is Invalid'); 
