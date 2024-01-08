@@ -16,6 +16,8 @@ class AppForm extends StatefulWidget {
 class _AppFormState extends State<AppForm> {
 final formKey = GlobalKey<FormState>(); 
 
+final List<String> errors = []; 
+
   late String _email; 
   late String _pwd;
 
@@ -64,7 +66,16 @@ void validateAndSubmit() async {
             buildEmailFormField(
               label: 'Email', 
               hint: 'Enter your email',
-              validator: (value) => value.isEmpty ? 'Email can\'t be empty' : null, 
+              validator: (value) {
+                if (value.isEmpty) {
+                  setState(() {
+                    errors.add('Email can\'t be empty');
+                  });
+                }
+                return null; 
+              },
+              
+              /*(value) => value.isEmpty ? 'Email can\'t be empty' : null, */ 
               onSaved: (value) => _email = value, 
               
             ), 
@@ -79,6 +90,13 @@ void validateAndSubmit() async {
            const SizedBox(height: 10),  
           checkBox(),
               const SizedBox(height: 30), 
+              Row(
+                children: [
+                  Image.asset(''), 
+                  SizedBox(width: 10,), 
+                  Text(errors[0]), 
+                ],
+              ), 
              DefaultButton(textBtn: 'Continue',
               press: validateAndSubmit,
              ),
