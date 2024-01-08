@@ -16,7 +16,7 @@ class AppForm extends StatefulWidget {
 class _AppFormState extends State<AppForm> {
 final formKey = GlobalKey<FormState>(); 
 
-final List<String> errors = []; 
+final List<String> errors = ['Demo Error']; 
 
   late String _email; 
   late String _pwd;
@@ -90,13 +90,8 @@ void validateAndSubmit() async {
            const SizedBox(height: 10),  
           checkBox(),
               const SizedBox(height: 30), 
-              Row(
-                children: [
-                  Image.asset(''), 
-                  SizedBox(width: 10,), 
-                  Text(errors[0]), 
-                ],
-              ), 
+              FormError(errors: errors), 
+              SizedBox(height: 10), 
              DefaultButton(textBtn: 'Continue',
               press: validateAndSubmit,
              ),
@@ -104,6 +99,34 @@ void validateAndSubmit() async {
         ),
       ),
     );
+  }
+}
+
+class FormError extends StatelessWidget {
+  const FormError({
+    super.key,
+    required this.errors,
+  });
+
+  final List<String> errors;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: List.generate(errors.length, (index) => formErrorText(error: errors[index]))
+    );
+  }
+
+  Row formErrorText({required String error}) {
+    return Row(
+        children: [
+          Container(
+            width: 20, height: 20,
+            child: Image.asset('assets/icons/error.png')), 
+          SizedBox(width: 10,), 
+          Text(error), 
+        ],
+      );
   }
 }
 
@@ -292,27 +315,27 @@ class SocialCard extends StatelessWidget {
 }
 
 
-class createAccount extends StatelessWidget {
-  const createAccount({
-    super.key,
-  });
+// class createAccount extends StatelessWidget {
+//   const createAccount({
+//     super.key,
+//   });
 
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector( 
-      onTap: moveToRegister(),
-      child: const Text('Create Account', 
-      style: TextStyle(
-        fontSize: 18,
-        color: Colors.orange,
-        fontWeight: FontWeight.w600,
-        decoration: TextDecoration.underline,), 
-       ),
-    );
-  }
+//   @override
+//   Widget build(BuildContext context) {
+//     return GestureDetector( 
+//       onTap: moveToRegister(),
+//       child: const Text('Create Account', 
+//       style: TextStyle(
+//         fontSize: 18,
+//         color: Colors.orange,
+//         fontWeight: FontWeight.w600,
+//         decoration: TextDecoration.underline,), 
+//        ),
+//     );
+//   }
   
  
-}
+// }
 
 enum FormType {
     login, 

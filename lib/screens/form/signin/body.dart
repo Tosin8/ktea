@@ -26,32 +26,12 @@ class SignInBody extends StatelessWidget {
                 Text('- OR USE - ') , 
                 SizedBox(height: 10), 
                 SocialCard(),
-                createAccount(), 
+                //createAccount(), 
             ],
             
           ),
         ),
       ),
-    );
-  }
-}
-
-class createAccount extends StatelessWidget {
-  const createAccount({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector( 
-      onTap: (){},
-      child: const Text('Create Account', 
-      style: TextStyle(
-        fontSize: 18,
-        color: Colors.orange,
-        fontWeight: FontWeight.w600,
-        decoration: TextDecoration.underline,), 
-       ),
     );
   }
 }
