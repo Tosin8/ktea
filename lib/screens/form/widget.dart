@@ -9,6 +9,8 @@ class AppForm extends StatefulWidget {
 
   @override
   State<AppForm> createState() => _AppFormState();
+  
+  
 }
 
 class _AppFormState extends State<AppForm> {
@@ -16,6 +18,9 @@ final formKey = GlobalKey<FormState>();
 
   late String _email; 
   late String _pwd;
+
+  FormType _formType = FormType.login; 
+  
 
   bool validateAndSave() {
    final form = formKey.currentState; 
@@ -25,6 +30,13 @@ final formKey = GlobalKey<FormState>();
    } else {
     return false;
    }
+  }
+
+
+ moveToRegister() {
+    setState((){
+      _formType = FormType.register; 
+    });
   }
 
 void validateAndSubmit() async {
@@ -261,3 +273,30 @@ class SocialCard extends StatelessWidget {
   }
 }
 
+
+class createAccount extends StatelessWidget {
+  const createAccount({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector( 
+      onTap: moveToRegister(),
+      child: const Text('Create Account', 
+      style: TextStyle(
+        fontSize: 18,
+        color: Colors.orange,
+        fontWeight: FontWeight.w600,
+        decoration: TextDecoration.underline,), 
+       ),
+    );
+  }
+  
+ 
+}
+
+enum FormType {
+    login, 
+    register
+  }
