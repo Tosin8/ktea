@@ -82,6 +82,7 @@ flutter:
     - assets/icons/chat_20.png
     - assets/icons/search_23.png
     - assets/icons/save_20.png
+    - assets/icons/error.png
     - assets/icons/camera_icon.svg
     - assets/icons/copyright_20.png
     - assets/icons/user_20.png
