@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ktea/model/firebaseuser.dart';
 
+import 'form_error.dart';
+
 class AppForm extends StatefulWidget {
   const AppForm({super.key});
 
@@ -41,17 +43,23 @@ final List<String> errors = ['Demo Error'];
     });
   }
 
-void validateAndSubmit() async {
-  if(validateAndSave()){
-    try {
-    FirebaseUser user = (await FirebaseAuth.instance.signInWithEmailAndPassword(
-      email: _email, password: _pwd)) as FirebaseUser; 
-      print('Signed in: ${user.uid}'); 
-    }
-    catch (e) {
-      print('Error: $e'); 
-    }
-  }
+// void validateAndSubmit() async {
+//   if(validateAndSave()){
+//     try {
+//     FirebaseUser user = (await FirebaseAuth.instance.signInWithEmailAndPassword(
+//       email: _email, password: _pwd)) as FirebaseUser; 
+//       print('Signed in: ${user.uid}'); 
+//     }
+//     catch (e) {
+//       print('Error: $e'); 
+//     }
+//   }
+// }
+
+void validateAndSubmit() {
+if (formKey.currentState!.validate()){
+  formKey.currentState?.save(); 
+}; 
 }
 
 
@@ -102,33 +110,7 @@ void validateAndSubmit() async {
   }
 }
 
-class FormError extends StatelessWidget {
-  const FormError({
-    super.key,
-    required this.errors,
-  });
 
-  final List<String> errors;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: List.generate(errors.length, (index) => formErrorText(error: errors[index]))
-    );
-  }
-
-  Row formErrorText({required String error}) {
-    return Row(
-        children: [
-          Container(
-            width: 20, height: 20,
-            child: Image.asset('assets/icons/error.png')), 
-          SizedBox(width: 10,), 
-          Text(error), 
-        ],
-      );
-  }
-}
 
 class buildEmailFormField extends StatelessWidget {
   const buildEmailFormField({
