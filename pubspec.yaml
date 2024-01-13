@@ -32,6 +32,7 @@ dependencies:
   cloud_firestore: ^4.13.6
   cupertino_icons: ^1.0.2
   curved_navigation_bar: ^1.0.3
+  custom_navigation_bar: ^0.8.2
   firebase_auth: ^4.15.3
   firebase_core: ^2.24.2
   flutter:
@@ -139,7 +140,7 @@ flutter:
     - assets/images/splash/2.jpg
     - assets/images/splash/3.jpg
 
-    # Social Media Icons. 
+    # Social Media Icons.
     - assets/icons/social/fb-logo.png
     - assets/icons/social/google-logo.png
     - assets/icons/social/apple-logo.png

@@ -1,4 +1,6 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+//import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:custom_navigation_bar/custom_navigation_bar.dart';
+
 import 'package:flutter/material.dart';
 import 'package:ktea/screens/categories/category.dart';
 
@@ -15,7 +17,7 @@ class NavBarApp extends StatefulWidget {
 }
 
 class _NavBarAppState extends State<NavBarApp> {
-  final navigationKey = GlobalKey<CurvedNavigationBarState>(); 
+  final navigationKey = GlobalKey<CustomNavigationBarState>(); 
   int index = 0; 
   final screens = [
     const Home(), 
@@ -40,8 +42,10 @@ class _NavBarAppState extends State<NavBarApp> {
         //   automaticallyImplyLeading: false,
         //   title: const Text('Curved Nav bar'),
         // ),
+
+        // CurvedNavigationBar
         body: screens[index], 
-        bottomNavigationBar: CurvedNavigationBar(
+        bottomNavigationBar: CustomNavigationBar(
           key: navigationKey, 
           color: Colors.blue, 
           backgroundColor: Colors.transparent,
