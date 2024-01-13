@@ -32,9 +32,9 @@ class MyApp extends StatelessWidget {
       ),
       // initialRoute: FurnitureSplash.routeName,
       // routes: routes,
-     //home: const Onboarding(), 
+     home: const Onboarding(), 
 
-     home: SignIn(), 
+     //home: SignIn(), 
     );
   }
 }

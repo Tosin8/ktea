@@ -56,8 +56,10 @@ class _NavBarAppState extends State<NavBarApp> {
         bottomNavigationBar: CustomNavigationBar(
          // key: navigationKey, 
           //color: Colors.blue, 
-          backgroundColor: Colors.transparent,
+          backgroundColor: Colors.blueAccent,
+          elevation: 0,
           selectedColor: Colors.blueAccent,
+          borderRadius: Radius.circular(20), 
           unSelectedColor: Colors.grey,
           currentIndex: currentindex,
          // buttonBackgroundColor: Colors.orangeAccent,
