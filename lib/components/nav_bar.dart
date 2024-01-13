@@ -17,7 +17,7 @@ class NavBarApp extends StatefulWidget {
 }
 
 class _NavBarAppState extends State<NavBarApp> {
-  final navigationKey = GlobalKey<CustomNavigationBarState>(); 
+  //final navigationKey = GlobalKey<CustomNavigationBarState>(); 
   int currentindex = 0; 
   final screens = [
     const Home(), 
@@ -54,7 +54,7 @@ class _NavBarAppState extends State<NavBarApp> {
         // CurvedNavigationBar
         body: screens[currentindex], 
         bottomNavigationBar: CustomNavigationBar(
-          key: navigationKey, 
+         // key: navigationKey, 
           //color: Colors.blue, 
           backgroundColor: Colors.transparent,
           selectedColor: Colors.blueAccent,
