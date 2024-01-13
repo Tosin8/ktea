@@ -37,8 +37,10 @@ class _NavBarAppState extends State<NavBarApp> {
     // ];
     
     final items = [
-      CustomNavigationBarItem(icon: Icon(Icons.home, size: 30, color: Colors.white)), 
-      CustomNavigationBarItem(icon: Icon(Icons.apps, size: 30, color: Colors.white)), CustomNavigationBarItem(icon: Icon(Icons.shopping_cart, size: 30, color: Colors.white)), CustomNavigationBarItem(icon: Icon(Icons.favorite, size: 30, color: Colors.white)), CustomNavigationBarItem(icon: Icon(Icons.person, size: 30, color: Colors.white)), 
+      CustomNavigationBarItem(icon: const Icon(Icons.home_outlined, size: 30, color: Colors.white,)), 
+      CustomNavigationBarItem(icon: const Icon(Icons.dashboard_rounded, size: 30, color: Colors.white)),
+       CustomNavigationBarItem(icon: const Icon(Icons.shopping_cart_outlined, size: 30, color: Colors.white, )),
+        CustomNavigationBarItem(icon: const Icon(Icons.favorite_outline_rounded, size: 30, color: Colors.white)), CustomNavigationBarItem(icon: const Icon(Icons.person, size: 30, color: Colors.white)), 
     ]; 
 
 
@@ -56,11 +58,13 @@ class _NavBarAppState extends State<NavBarApp> {
         bottomNavigationBar: CustomNavigationBar(
          // key: navigationKey, 
           //color: Colors.blue, 
-          backgroundColor: Colors.blueAccent,
-          elevation: 0,
-          selectedColor: Colors.blueAccent,
-          borderRadius: Radius.circular(20), 
-          unSelectedColor: Colors.grey,
+          backgroundColor: Colors.black,
+          isFloating: true,
+          elevation: 5,
+          selectedColor: const Color(0xff040307), 
+          borderRadius: const Radius.circular(20), 
+          strokeColor: Colors.blue,
+          unSelectedColor: Colors.blueAccent,
           currentIndex: currentindex,
          // buttonBackgroundColor: Colors.orangeAccent,
          // height: 60,
