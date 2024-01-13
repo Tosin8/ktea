@@ -47,11 +47,14 @@ class _NavBarAppState extends State<NavBarApp> {
         body: screens[index], 
         bottomNavigationBar: CustomNavigationBar(
           key: navigationKey, 
-          color: Colors.blue, 
+          //color: Colors.blue, 
           backgroundColor: Colors.transparent,
-          buttonBackgroundColor: Colors.orangeAccent,
-          height: 60, index: index, 
-          animationCurve: Curves.easeInOut, animationDuration: const Duration(milliseconds: 500),
+          selectedColor: Colors.blueAccent,
+          unSelectedColor: Colors.grey,
+         // buttonBackgroundColor: Colors.orangeAccent,
+         // height: 60,
+         // index: index, 
+         // animationCurve: Curves.easeInOut, //animationDuration: const Duration(milliseconds: 500),
           items: items, 
           onTap:(index) => setState(() =>
             this.index = index
