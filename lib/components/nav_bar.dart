@@ -18,7 +18,7 @@ class NavBarApp extends StatefulWidget {
 
 class _NavBarAppState extends State<NavBarApp> {
   final navigationKey = GlobalKey<CustomNavigationBarState>(); 
-  int index = 0; 
+  int currentindex = 0; 
   final screens = [
     const Home(), 
     const Category(), 
@@ -28,13 +28,21 @@ class _NavBarAppState extends State<NavBarApp> {
   ]; 
   @override
   Widget build(BuildContext context) {
+    // final items = [
+    //   const Icon(Icons.home, size: 30, color: Colors.white,),
+    //    const Icon(Icons.apps, size: 30, color: Colors.white,),
+    //     const Icon(Icons.shopping_cart, size: 30, color: Colors.white,),
+    //      const Icon(Icons.favorite, size: 30, color: Colors.white,),
+    //       const Icon(Icons.person, size: 30, color: Colors.white,),
+    // ];
+    
     final items = [
-      const Icon(Icons.home, size: 30, color: Colors.white,),
-       const Icon(Icons.apps, size: 30, color: Colors.white,),
-        const Icon(Icons.shopping_cart, size: 30, color: Colors.white,),
-         const Icon(Icons.favorite, size: 30, color: Colors.white,),
-          const Icon(Icons.person, size: 30, color: Colors.white,),
-    ];
+      CustomNavigationBarItem(icon: Icon(Icons.home, size: 30, color: Colors.white)), 
+      CustomNavigationBarItem(icon: Icon(Icons.apps, size: 30, color: Colors.white)), CustomNavigationBarItem(icon: Icon(Icons.shopping_cart, size: 30, color: Colors.white)), CustomNavigationBarItem(icon: Icon(Icons.favorite, size: 30, color: Colors.white)), CustomNavigationBarItem(icon: Icon(Icons.person, size: 30, color: Colors.white)), 
+    ]; 
+
+
+
     return ClipRect(
       child: Scaffold( 
         extendBody: true,
@@ -44,21 +52,23 @@ class _NavBarAppState extends State<NavBarApp> {
         // ),
 
         // CurvedNavigationBar
-        body: screens[index], 
+        body: screens[currentindex], 
         bottomNavigationBar: CustomNavigationBar(
           key: navigationKey, 
           //color: Colors.blue, 
           backgroundColor: Colors.transparent,
           selectedColor: Colors.blueAccent,
           unSelectedColor: Colors.grey,
+          currentIndex: currentindex,
          // buttonBackgroundColor: Colors.orangeAccent,
          // height: 60,
          // index: index, 
          // animationCurve: Curves.easeInOut, //animationDuration: const Duration(milliseconds: 500),
           items: items, 
-          onTap:(index) => setState(() =>
-            this.index = index
-          )), 
+          onTap:(currentindex) => setState(() =>
+            this.currentindex = currentindex
+          ), 
+          ), 
         ),
     ); 
     
