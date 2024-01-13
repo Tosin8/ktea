@@ -7,6 +7,7 @@ import 'package:ktea/screens/categories/category.dart';
 import '../screens/cart/cart.dart';
 import '../screens/home/home.dart';
 import '../screens/profile/profile.dart';
+import 'package:antdesign_icons/antdesign_icons.dart';
 import '../screens/saved/saved.dart';
 
 class NavBarApp extends StatefulWidget {
@@ -37,10 +38,28 @@ class _NavBarAppState extends State<NavBarApp> {
     // ];
     
     final items = [
-      CustomNavigationBarItem(icon: const Icon(Icons.home_outlined, size: 30, color: Colors.white,)), 
-      CustomNavigationBarItem(icon: const Icon(Icons.dashboard_rounded, size: 30, color: Colors.white)),
-       CustomNavigationBarItem(icon: const Icon(Icons.shopping_cart_outlined, size: 30, color: Colors.white, )),
-        CustomNavigationBarItem(icon: const Icon(Icons.favorite_outline_rounded, size: 30, color: Colors.white)), CustomNavigationBarItem(icon: const Icon(Icons.person, size: 30, color: Colors.white)), 
+      CustomNavigationBarItem(
+        icon: 
+      Icon(
+        //Icons.home_outlined, 
+        AntDesign.getIconData('home'), 
+      size: 30,
+       color: Colors.white,)), 
+      CustomNavigationBarItem(icon: const Icon(Icons.dashboard_rounded, 
+      size: 30,
+       color: Colors.white)),
+       CustomNavigationBarItem(icon: const Icon(Icons.shopping_cart_outlined,
+        size: 30, 
+        color: Colors.white, )),
+        CustomNavigationBarItem(icon: const Icon(
+          Icons.favorite_outline_rounded,
+          
+         size: 30,
+          color: Colors.white), 
+          badgeCount: 3 ), 
+          CustomNavigationBarItem(icon: const Icon(Icons.person_outline_rounded, 
+          size: 30,
+           color: Colors.white)), 
     ]; 
 
 
@@ -61,9 +80,11 @@ class _NavBarAppState extends State<NavBarApp> {
           backgroundColor: Colors.black,
           isFloating: true,
           elevation: 5,
-          selectedColor: const Color(0xff040307), 
+          selectedColor: Colors.yellow, 
           borderRadius: const Radius.circular(20), 
+          scaleCurve: Curves.bounceInOut,
           strokeColor: Colors.blue,
+          bubbleCurve: Curves.decelerate,
           unSelectedColor: Colors.blueAccent,
           currentIndex: currentindex,
          // buttonBackgroundColor: Colors.orangeAccent,

@@ -29,6 +29,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   animate_do: ^3.1.2
+  antdesign_icons: ^0.0.3
   cloud_firestore: ^4.13.6
   cupertino_icons: ^1.0.2
   curved_navigation_bar: ^1.0.3
