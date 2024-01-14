@@ -93,7 +93,7 @@ class _NavBarAppState extends State<NavBarApp> {
           scaleCurve: Curves.bounceInOut,
           strokeColor: Colors.blue,
           bubbleCurve: Curves.decelerate,
-          unSelectedColor: Colors.blueAccent,
+          unSelectedColor: Colors.grey[600],
           currentIndex: currentindex,
          // buttonBackgroundColor: Colors.orangeAccent,
          // height: 60,
