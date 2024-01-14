@@ -45,15 +45,15 @@ class _NavBarAppState extends State<NavBarApp> {
       
       size: 30,
        color: Colors.white,), 
-       title: Text('Home', style: TextStyle(color: Colors.white),),  
-       ), 
+       ),  
+        
       CustomNavigationBarItem(icon: const Icon(Icons.dashboard_rounded, 
       size: 30,
        color: Colors.white)),
        CustomNavigationBarItem(icon: const Icon(Icons.shopping_cart_outlined,
         size: 30, 
         color: Colors.white, ), 
-        title: Text('Cart', style: TextStyle(color: Colors.white),),
+        
         badgeCount: 0,
          showBadge: true, 
         ),
