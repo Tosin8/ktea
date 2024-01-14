@@ -40,9 +40,9 @@ class _NavBarAppState extends State<NavBarApp> {
     final items = [
       CustomNavigationBarItem(
         icon: 
-      Icon(
-        //Icons.home_outlined, 
-        AntDesign.getIconData('home'), 
+      const Icon(
+        Icons.home_outlined, 
+      
       size: 30,
        color: Colors.white,)), 
       CustomNavigationBarItem(icon: const Icon(Icons.dashboard_rounded, 
@@ -50,7 +50,10 @@ class _NavBarAppState extends State<NavBarApp> {
        color: Colors.white)),
        CustomNavigationBarItem(icon: const Icon(Icons.shopping_cart_outlined,
         size: 30, 
-        color: Colors.white, )),
+        color: Colors.white, ), 
+        badgeCount: 0,
+         showBadge: true, 
+        ),
         CustomNavigationBarItem(icon: const Icon(
           Icons.favorite_outline_rounded,
           
