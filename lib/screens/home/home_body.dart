@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ktea/components/app_widgets.dart';
 import 'package:ktea/screens/extended_screen/notification.dart';
+import'package:badges/badges.dart' as badges;
 
 
 import 'home_widget.dart';
@@ -30,9 +31,13 @@ class _Home_BodyState extends State<Home_Body> {
                 Get.to(const Notifications()); 
               },
               child: 
-              Icon(Icons.notifications, 
-              
-            color: Colors.black,)
+              badges.Badge(
+                badgeContent: Text('0'), 
+                showBadge: true,
+                child: Icon(Icons.notifications, 
+                
+                            color: Colors.black,),
+              )
               ), 
               SizedBox(width: 10), 
         ]
