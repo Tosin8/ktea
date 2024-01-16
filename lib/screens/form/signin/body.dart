@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ktea/components/constants.dart';
 
+import '../signup/signup.dart';
 import '../widget.dart';
 
 class SignInBody extends StatelessWidget {
@@ -31,7 +32,7 @@ class SignInBody extends StatelessWidget {
                 const SocialCard(),
                 GestureDetector(
                   onTap: (){
-                    Get.to(SignUp);
+                    Get.to(const SignUp());
                   },
                   child: const Text('Create Account', 
                   style: TextStyle(
