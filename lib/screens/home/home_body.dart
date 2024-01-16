@@ -98,9 +98,10 @@ class _Home_BodyState extends State<Home_Body> {
           const SizedBox(height: 10),
 
           // home decoration.
-          const ProductHeader_Title(
-            title: 'Home Decorations',
-          ),
+          // const ProductHeader_Title(
+          //   title: 'Home Decorations',
+          // ),
+          Text('Popular', style: TextStyle(color: Colors.black,fontSize: 20),), 
           const SizedBox(height: 10),
           const Padding(
             padding: EdgeInsets.only(left: 4),
