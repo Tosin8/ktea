@@ -17,15 +17,17 @@ class _CategoryState extends State<Category> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const App_Drawer(),
-      appBar: AppBar(
-        iconTheme: const IconThemeData(color: Colors.blue),
-        title: Text(
-          'Category',
-          style: AppBar_Header,
-        ),
-        centerTitle: true,
-      ),
+      
+      //drawer: const App_Drawer(),
+      // appBar: AppBar(
+      //   automaticallyImplyLeading: false,
+      //   iconTheme: const IconThemeData(color: Colors.blue),
+      //   // title: Text(
+      //   //   'Category',
+      //   //   style: AppBar_Header,
+      //   // ),
+      //  // centerTitle: true,
+      // ),
       body: const Category_Body(),
     );
   }

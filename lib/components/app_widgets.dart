@@ -13,11 +13,11 @@ class SearchBarWidget extends StatefulWidget {
 }
 
 class _SearchBarWidgetState extends State<SearchBarWidget> {
-  TextEditingController _searchController = TextEditingController();
+  final TextEditingController _searchController = TextEditingController();
 
   @override
   void dispose() {
-    // TODO: implement dispose
+  
     super.dispose();
     _searchController.dispose();
   }
@@ -31,22 +31,22 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
         textInputAction: TextInputAction.search,
         controller: _searchController,
         decoration: InputDecoration(
-            hintText: 'Search your products....',
+            hintText: 'Search your products....',hintStyle: TextStyle(color: Colors.grey.shade500),
             contentPadding:
                 const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
             enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(20),
-              borderSide: BorderSide(color: kSecondaryColor),
+              borderRadius: BorderRadius.circular(10),
+              borderSide: BorderSide(color: Colors.black),
               gapPadding: 10,
             ),
             focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(20),
-              borderSide: BorderSide(color: kSecondaryColor),
+              borderRadius: BorderRadius.circular(10),
+              borderSide: BorderSide(color:Colors.orange),
               gapPadding: 10,
             ),
             prefixIcon: Padding(
                 padding: const EdgeInsets.only(left: 10),
-                child: Image.asset('assets/icons/search_23.png')),
+                child: Icon(Icons.search)),
             border: InputBorder.none),
         onChanged: (value) {
           // perform search operations based on the entered value.

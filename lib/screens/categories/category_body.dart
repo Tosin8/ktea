@@ -13,8 +13,10 @@ class _Category_BodyState extends State<Category_Body> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10),
+        padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 20
+      ),
         child: ListView(children: const [
+          Text('Collection', style: TextStyle(color: Colors.black, fontSize: 30, fontWeight: FontWeight.w500),), 
           HomeDecoration(),
           SizedBox(height: 20),
           Sofa(),
