@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:ktea/components/app_widgets.dart';
 import 'package:ktea/screens/extended_screen/notification.dart';
@@ -27,9 +28,12 @@ class _Home_BodyState extends State<Home_Body> {
         actions: [
           GestureDetector(
               onTap: () {
-                Get.to(Notifications()); 
+                Get.to(const Notifications()); 
               },
-              child: Icon(Icons.notifications, color: Colors.black,) 
+              child: 
+              const Icon(Icons.notifications, 
+              
+              color: Colors.black,) 
               ),
           const SizedBox(width: 10),
         
@@ -92,7 +96,7 @@ class _Home_BodyState extends State<Home_Body> {
               ),
             ]),
           ),
-          SizedBox(height: 18),
+          const SizedBox(height: 18),
           const ProductHeader_Title(
             title: 'Sofa',
           ),
@@ -115,7 +119,7 @@ class _Home_BodyState extends State<Home_Body> {
               ),
             ]),
           ),
-          SizedBox(height: 18),
+          const SizedBox(height: 18),
 
           // table.
           const ProductHeader_Title(
@@ -140,7 +144,7 @@ class _Home_BodyState extends State<Home_Body> {
               //   ),
             ]),
           ),
-          SizedBox(height: 18),
+          const SizedBox(height: 18),
           const ProductHeader_Title(
             title: 'Cabinet',
           ),
@@ -163,7 +167,7 @@ class _Home_BodyState extends State<Home_Body> {
               ),
             ]),
           ),
-          SizedBox(height: 18),
+          const SizedBox(height: 18),
 
           // Light Category
           const ProductHeader_Title(
@@ -188,7 +192,7 @@ class _Home_BodyState extends State<Home_Body> {
               ),
             ]),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
         ]),
       ),
     ));
