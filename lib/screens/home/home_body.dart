@@ -30,10 +30,12 @@ class _Home_BodyState extends State<Home_Body> {
               onTap: () {
                 Get.to(const Notifications()); 
               },
-              child: 
-              const Icon(Icons.notifications, 
+              child: Container(
+                height: 50, width: 100,
+                child: Image.asset('assets/icons/gif/notification.gif'))
+              // const Icon(Icons.notifications, 
               
-              color: Colors.black,) 
+              // color: Colors.black,) 
               ),
           const SizedBox(width: 10),
         
