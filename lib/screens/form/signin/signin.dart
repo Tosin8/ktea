@@ -7,8 +7,16 @@ class SignIn extends StatelessWidget{
   @override 
   Widget build(BuildContext context){
     return Scaffold(
+      
       appBar: AppBar(
-        title: Text('Sign In', style: TextStyle(color: Colors.grey[800], fontSize: 23),), centerTitle: true,
+        automaticallyImplyLeading: false,
+        // title: Text(
+        //   'Sign In', 
+        //   style: TextStyle(
+        //     color: Colors.grey[800],
+        //      fontSize: 23),
+        //      ), 
+         // centerTitle: true,
       ), 
       body: SignInBody(), 
     ); 

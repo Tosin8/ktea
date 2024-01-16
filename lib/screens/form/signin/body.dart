@@ -15,6 +15,7 @@ class SignInBody extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              //SizedBox(height: 8), 
               Text('Welcome Back',
               style: TextStyle(color: Colors.black, fontSize: 28, fontWeight: FontWeight.bold),),
               SizedBox(height: 6),  
