@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:ktea/components/app_widgets.dart';
+import 'package:ktea/screens/extended_screen/notification.dart';
 
 
 import 'home_widget.dart';
@@ -24,23 +26,13 @@ class _Home_BodyState extends State<Home_Body> {
         shadowColor: Colors.black,
         actions: [
           GestureDetector(
-              onTap: () {},
-              child: Image.asset('assets/icons/notification_bell_23.png')),
+              onTap: () {
+                Get.to(Notifications()); 
+              },
+              child: Icon(Icons.notifications, color: Colors.black,) 
+              ),
           const SizedBox(width: 10),
-          GestureDetector(
-            onTap: () {},
-            child: Row(
-              children: [
-                Image.asset("assets/icons/camera_25.png"),
-                const SizedBox(width: 5),
-                Text(
-                  'Scan',
-                  style: subText,
-                ),
-                const SizedBox(width: 12),
-              ],
-            ),
-          )
+        
         ],
       ),
      
