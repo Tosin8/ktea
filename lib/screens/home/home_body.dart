@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:ktea/components/app_widgets.dart';
 import 'package:ktea/screens/extended_screen/notification.dart';
@@ -23,24 +22,25 @@ class _Home_BodyState extends State<Home_Body> {
         automaticallyImplyLeading: false,
         iconTheme: const IconThemeData(
             color: Colors.blueAccent), // for changing default color.
-        elevation: 0,
-        shadowColor: Colors.black,
+       // elevation: 0,
+       // shadowColor: Colors.black,
         actions: [
           GestureDetector(
               onTap: () {
                 Get.to(const Notifications()); 
               },
-              child: Container(
-                height: 50, width: 100,
-                child: Image.asset('assets/icons/gif/notification.gif'))
-              // const Icon(Icons.notifications, 
+              child: 
+              Icon(Icons.notifications, 
               
-              // color: Colors.black,) 
+            color: Colors.black,)
+              ), 
+              SizedBox(width: 10), 
+        ]
               ),
-          const SizedBox(width: 10),
+     
         
-        ],
-      ),
+        
+      
      
       body: Padding(
         padding: const EdgeInsets.only(left: 10),

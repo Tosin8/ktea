@@ -30,6 +30,7 @@ environment:
 dependencies:
   animate_do: ^3.1.2
   antdesign_icons: ^0.0.3
+  badges: ^3.1.2
   cloud_firestore: ^4.13.6
   cupertino_icons: ^1.0.2
   curved_navigation_bar: ^1.0.3
@@ -147,7 +148,7 @@ flutter:
     - assets/icons/social/google-logo.png
     - assets/icons/social/apple-logo.png
 
-    #gifs 
+    #gifs
     - assets/icons/gif/notification.gif
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
