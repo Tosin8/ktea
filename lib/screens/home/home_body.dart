@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ktea/components/app_widgets.dart';
@@ -83,12 +84,14 @@ class _Home_BodyState extends State<Home_Body> {
             ],),
           ),
           SizedBox(height: 10),  
-          Text(
-            ' Unique Style \n Home Product',
-            style: TextStyle(
-                fontSize: 23,
-                fontWeight: FontWeight.w700,
-                color: Colors.black.withOpacity(0.7)),
+          FadeInLeft(
+            child: Text(
+              ' Unique Style \n Home Product',
+              style: TextStyle(
+                  fontSize: 23,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black.withOpacity(0.7)),
+            ),
           ),
           const SizedBox(height: 10),
           const SearchBarWidget(),
