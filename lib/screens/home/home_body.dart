@@ -22,9 +22,11 @@ class _Home_BodyState extends State<Home_Body> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         iconTheme: const IconThemeData(
-            color: Colors.blueAccent), // for changing default color.
+            color: Colors.blueAccent), 
+            // for changing default color.
        // elevation: 0,
        // shadowColor: Colors.black,
+       leading: Icon(Icons.menu, color: Colors.black,),
         actions: [
           GestureDetector(
               onTap: () {
@@ -32,21 +34,22 @@ class _Home_BodyState extends State<Home_Body> {
               },
               child: 
               badges.Badge(
-                badgeContent: Text('0'), 
+                position: badges.BadgePosition.topEnd(top: -10, end: -5),
+                badgeContent: const Text('0'), 
                 showBadge: true,
-                child: Icon(Icons.notifications, 
+                            badgeAnimation: const badges.BadgeAnimation.scale(animationDuration: Duration(milliseconds: 4500), 
+                            curve: Curves.easeIn,
+                            loopAnimation: true),
+                child:  const Icon(Icons.notifications, 
                 
                             color: Colors.black,),
+                            badgeStyle: badges.BadgeStyle(badgeColor: Colors.grey.shade300),
+
               )
               ), 
-              SizedBox(width: 10), 
+              const SizedBox(width: 10), 
         ]
               ),
-     
-        
-        
-      
-     
       body: Padding(
         padding: const EdgeInsets.only(left: 10),
         child: ListView(children: [
@@ -60,24 +63,8 @@ class _Home_BodyState extends State<Home_Body> {
           const SizedBox(height: 10),
           const SearchBarWidget(),
           const SizedBox(height: 10),
-          Row(
-            children: [
-              Image.asset('assets/icons/hot_sale_20.png'),
-              Text(
-                'Hot Sale Collections',
-                style: subText,
-              ),
-              const SizedBox(width: 160),
-              GestureDetector(
-                onTap: () {},
-                child: Text(
-                  'View All',
-                  style: subText,
-                ),
-              ),
-            ],
-          ),
-          const CarouselSlider(),
+         
+          //const CarouselSlider(),
           const SizedBox(height: 10),
 
           // home decoration.
