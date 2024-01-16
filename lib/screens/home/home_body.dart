@@ -92,7 +92,7 @@ class _Home_BodyState extends State<Home_Body> {
           ),
           const SizedBox(height: 10),
           const SearchBarWidget(),
-          const SizedBox(height: 10),
+          
          
           //const CarouselSlider(),
           const SizedBox(height: 10),
