@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ktea/components/constants.dart';
 
 import '../widget.dart';
 
@@ -9,7 +10,7 @@ class SignInBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
       child: SizedBox(
         width: double.infinity, 
         child: SingleChildScrollView(
@@ -27,7 +28,8 @@ class SignInBody extends StatelessWidget {
                 Text('- OR USE - ') , 
                 SizedBox(height: 10), 
                 SocialCard(),
-                //createAccount(), 
+                Text('Create Account', 
+                style: TextStyle(color: Colors.orange )) , 
             ],
             
           ),
