@@ -26,15 +26,20 @@ class _Category_BodyState extends State<Category_Body> {
           // Cabinet(),
           // SizedBox(height: 20),
            //Light(),
-           SizedBox(height: 10), 
+           const SizedBox(height: 10), 
            Container(
             height: 250,
             width: 300,
             decoration:  BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              image: DecorationImage(
+              image: const DecorationImage(
                 image: AssetImage('assets/images/collections/1.jpg',),
                 fit: BoxFit.cover,)
+            ),
+            child: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(colors: [Color.black])
+              ),
             ),
            )
         ]));
