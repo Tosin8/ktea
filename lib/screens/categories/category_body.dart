@@ -13,10 +13,10 @@ class _Category_BodyState extends State<Category_Body> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 20
+        padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 10
       ),
         child: ListView(children:  [
-          Text('Collection', style: TextStyle(color: Colors.black, fontSize: 30, fontWeight: FontWeight.w500),), 
+          const Text('Collection', style: TextStyle(color: Colors.black, fontSize: 30, fontWeight: FontWeight.w500),), 
           // HomeDecoration(),
           // SizedBox(height: 20),
           // Sofa(),
@@ -26,8 +26,16 @@ class _Category_BodyState extends State<Category_Body> {
           // Cabinet(),
           // SizedBox(height: 20),
            //Light(),
+           SizedBox(height: 10), 
            Container(
-            height: 100,
+            height: 250,
+            width: 300,
+            decoration:  BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              image: DecorationImage(
+                image: AssetImage('assets/images/collections/1.jpg',),
+                fit: BoxFit.cover,)
+            ),
            )
         ]));
   }
