@@ -150,6 +150,11 @@ flutter:
 
     #gifs
     - assets/icons/gif/notification.gif
+
+    #collections category
+    - assets/images/collections/1.jpg
+    - assets/images/collecctions/2.jpg
+    - assets/images/collections/3.jpg
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

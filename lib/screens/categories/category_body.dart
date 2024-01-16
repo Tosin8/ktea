@@ -15,17 +15,20 @@ class _Category_BodyState extends State<Category_Body> {
     return Padding(
         padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 20
       ),
-        child: ListView(children: const [
+        child: ListView(children:  [
           Text('Collection', style: TextStyle(color: Colors.black, fontSize: 30, fontWeight: FontWeight.w500),), 
-          HomeDecoration(),
-          SizedBox(height: 20),
-          Sofa(),
-          SizedBox(height: 20),
-          TableP(),
-          SizedBox(height: 20),
-          Cabinet(),
-          SizedBox(height: 20),
-          Light(),
+          // HomeDecoration(),
+          // SizedBox(height: 20),
+          // Sofa(),
+          // SizedBox(height: 20),
+          // TableP(),
+          // SizedBox(height: 20),
+          // Cabinet(),
+          // SizedBox(height: 20),
+           //Light(),
+           Container(
+            height: 100,
+           )
         ]));
   }
 }
