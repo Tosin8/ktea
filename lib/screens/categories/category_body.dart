@@ -1,5 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:ktea/screens/extended_screen/category_details/dining/dining_body.dart';
 
 import 'category_widget.dart';
 
@@ -18,8 +20,8 @@ class _Category_BodyState extends State<Category_Body> {
       ),
         child: ListView(
           children:   [
-            SizedBox(height: 10), 
-          Text('Collection',
+            const SizedBox(height: 10), 
+          const Text('Collection',
            style: TextStyle(color: Colors.black, fontSize: 30, fontWeight: FontWeight.w500),), 
           // HomeDecoration(),
           // SizedBox(height: 20),
@@ -30,41 +32,44 @@ class _Category_BodyState extends State<Category_Body> {
           // Cabinet(),
           // SizedBox(height: 20),
            //Light(),
-           SizedBox(height: 10), 
-           CollectionsWidget(imagebkg: 'assets/images/collections/1.jpg', 
+           const SizedBox(height: 10), 
+           CollectionsWidget(
+            imagebkg: 'assets/images/collections/1.jpg', 
            maintitle: 'Modern Dining', 
            subtitle: 'Classic yet contemporary,\nwith a timeless quality.',
             mainTime: 500, 
             delayTime: 0, 
-            press: () {  }, herotag: '',
+            press: () { 
+              Get.to(DiningScreen()); 
+             }, herotag: 'dining',
             ),
-            SizedBox(height: 10), 
+            const SizedBox(height: 10), 
             CollectionsWidget(imagebkg: 'assets/images/collections/2.jpg', 
            maintitle: 'Classic Furnitures', 
            subtitle: 'Best worth of it at \nthe peak of it\'s of excellence.',
             mainTime: 500, 
-            delayTime: 500,
+            delayTime: 500, press: () {  }, herotag: '',
             ), 
-            SizedBox(height: 10), 
+            const SizedBox(height: 10), 
             CollectionsWidget(imagebkg: 'assets/images/collections/3.jpg', 
            maintitle: 'Modern Dining', 
            subtitle: 'Classic yet contemporary,\nwith a timeless quality.',
             mainTime: 500, 
-            delayTime: 1000,
+            delayTime: 1000, press: () {  }, herotag: '',
             ), 
-            SizedBox(height: 10), 
+            const SizedBox(height: 10), 
             CollectionsWidget(imagebkg: 'assets/images/collections/3.jpg', 
            maintitle: 'Elegant Lights', 
            subtitle: 'Classic yet contemporary,\nwith a timeless quality.',
             mainTime: 500, 
-            delayTime: 1500,
+            delayTime: 1500, press: () {  }, herotag: '',
             ), 
-             SizedBox(height: 10), 
+             const SizedBox(height: 10), 
             CollectionsWidget(imagebkg: 'assets/images/collections/3.jpg', 
            maintitle: 'Cabinet', 
            subtitle: 'Classic yet contemporary,\nwith a timeless quality.',
             mainTime: 500, 
-            delayTime: 2000,
+            delayTime: 2000, press: () {  }, herotag: '',
             ), 
         ]));
   }
