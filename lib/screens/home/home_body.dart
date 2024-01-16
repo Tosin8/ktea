@@ -48,10 +48,10 @@ class _Home_BodyState extends State<Home_Body> {
         padding: const EdgeInsets.only(left: 10),
         child: ListView(children: [
           Text(
-            ' Find modern \n furniture for you',
+            ' Unique Style \n Home Product',
             style: TextStyle(
                 fontSize: 23,
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.w700,
                 color: Colors.black.withOpacity(0.7)),
           ),
           const SizedBox(height: 10),
