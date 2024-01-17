@@ -18,7 +18,9 @@ class UserModel {
   UserModel({required this.name, required this.email}); 
   
   UserModel.fromSnapshot(DocumentSnapshot snapshot) {
-    name = snapshot.data()[NAME]; 
-    email = snapshot.data()[EMAIL]; 
+    name = (snapshot.data() as Map<String, dynamic>)[NAME];
+    //name = snapshot.data()![NAME]; 
+    //email = snapshot.data()[EMAIL]; 
+    name = (snapshot.data() as Map<String, dynamic>)[EMAIL];
   }
 }
