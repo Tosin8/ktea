@@ -262,8 +262,8 @@ class SocialCard extends StatelessWidget {
             Get.to(''); 
           },
           child: Container(
-            height: 80, width: 80,
-                        
+            height: 30, width: 30,
+                        decoration: BoxDecoration(color: Colors.white24, borderRadius: BorderRadius.circular(30),),
                 
                 child: Image.asset('assets/icons/social/fb-logo.png')),
         ),
