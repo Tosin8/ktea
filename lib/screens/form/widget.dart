@@ -255,15 +255,23 @@ class SocialCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         GestureDetector(
           onTap: () {
             Get.to(''); 
           },
           child: Container(
-            height: 30, width: 30,
-                        decoration: BoxDecoration(color: Colors.white24, borderRadius: BorderRadius.circular(30),),
+            height: 40, width: 40,
+                        decoration: BoxDecoration(
+                          color: Colors.white10,
+                         borderRadius: BorderRadius.circular(30),
+                         boxShadow: [
+                          BoxShadow(
+                          color:Colors.grey.withOpacity(0.2),  
+                          spreadRadius: 1,
+                           ), 
+                         ]),
                 
                 child: Image.asset('assets/icons/social/fb-logo.png')),
         ),
@@ -273,7 +281,15 @@ class SocialCard extends StatelessWidget {
             Get.to(''); 
           },
           child: Container(
-            height: 80, width: 80,
+            height: 40, width: 40,
+            decoration: BoxDecoration( color: Colors.white10,
+                         borderRadius: BorderRadius.circular(30),
+                         boxShadow: [
+                          BoxShadow(
+                          color:Colors.grey.withOpacity(0.2),  
+                          spreadRadius: 1,
+                           ), 
+                         ]),
                         
                 
                 child: Image.asset('assets/icons/social/google-logo.png')),
@@ -284,8 +300,15 @@ class SocialCard extends StatelessWidget {
             Get.to(''); 
           },
           child: Container(
-            height: 80, width: 80,
-                        
+            height: 40, width: 40,
+                        decoration: BoxDecoration( color: Colors.white10,
+                         borderRadius: BorderRadius.circular(30),
+                         boxShadow: [
+                          BoxShadow(
+                          color:Colors.grey.withOpacity(0.2),  
+                          spreadRadius: 1,
+                           ), 
+                         ]),
                 
                 child: Image.asset('assets/icons/social/apple-logo.png')),
         ),
