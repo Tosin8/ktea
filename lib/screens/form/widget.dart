@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'forgot_pass/forgot.dart';
+
 
 
 
@@ -132,7 +134,7 @@ class checkBox extends StatelessWidget {
          const SizedBox(width: 100), 
          Expanded(child: GestureDetector(
            onTap: () {
-             
+             Get.to(const ForgotPwd());
            },
            child: const Text('Forgot Password',
            style: TextStyle(
