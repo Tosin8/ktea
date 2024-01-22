@@ -53,7 +53,19 @@ if (formKey.currentState!.validate()){
                 }
                 return null; 
                },
-                onSaved: (value) => _email = value, )
+                onSaved: (value) => _email = value, ), 
+                SizedBox(height: 30),
+                buildPwdFormField(label: 'Password',
+                 hint: 'Enter your password',
+                  validator: (value) => value.isEmpty ? 'Password can\'t be empty' : null, 
+                  onSaved: (value) => _pwd = value, ), 
+                  SizedBox(height: 30), 
+                  buildPwdFormField(label: 'Confirm Password',
+                 hint: 'Re-enter your password',
+                  validator: (value) => value.isEmpty ? 'Password can\'t be empty' : null, 
+                  onSaved: (value) => _pwd = value, ), 
+                  SizedBox(height: 30), 
+                  DefaultButton(textBtn: 'Continue', press: validateAndSubmit)
           ]),
           ),
 

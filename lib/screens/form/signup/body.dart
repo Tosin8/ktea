@@ -26,8 +26,20 @@ class _SignUpBodyState extends State<SignUpBody> {
               Text('Complete your details or continue \nwith social media', 
               
               textAlign: TextAlign.center,style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),),
+              const SizedBox(height: 50), 
+              const AppForm1(), 
               const SizedBox(height: 30), 
-              const AppForm1()
+              const SocialCard(),
+              const SizedBox(height: 20), 
+              const Column(
+                children: [
+                  Text('By continuing with the registration, it clearly \nshows you have agree with our', style: TextStyle(fontSize: 15),textAlign: TextAlign.center,),
+                  Text('Terms and Conditions', 
+                  style: TextStyle(color: Colors.orangeAccent,
+                    decoration: TextDecoration.underline, decorationColor: Colors.orangeAccent
+                  ),)
+                ],
+              )
             ],
           )),
       ),

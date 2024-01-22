@@ -15,7 +15,7 @@ class AppForm extends StatefulWidget {
 class _AppFormState extends State<AppForm> {
 final formKey = GlobalKey<FormState>(); 
 
-final List<String> errors = ['Demo Error']; 
+final List<String> errors = []; 
 
   late String _email; 
   late String _pwd;
@@ -85,7 +85,7 @@ if (formKey.currentState!.validate()){
               
             ), 
 
-            SizedBox(height: 30), 
+            SizedBox(height: 40), 
             buildPwdFormField(
               label: 'Password',
               hint: 'Enter your password',
