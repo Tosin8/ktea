@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class SignUpBody extends StatefulWidget {
   const SignUpBody({super.key});
 
@@ -8,6 +10,12 @@ class SignUpBody extends StatefulWidget {
 class _SignUpBodyState extends State<SignUpBody> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: ListView(
+        children: [
+          Text('he;')
+        ],
+      ),
+    );
   }
 }
