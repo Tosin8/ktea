@@ -10,12 +10,9 @@ class SignUpBody extends StatefulWidget {
 class _SignUpBodyState extends State<SignUpBody> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: ListView(
-        children: [
-          Text('he;')
-        ],
-      ),
+    return SizedBox(
+     
+      
     );
   }
 }

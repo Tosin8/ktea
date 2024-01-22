@@ -12,8 +12,7 @@ class SignInBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: SizedBox(
+    return  SizedBox(
         width: double.infinity, 
         child: SingleChildScrollView(
           child: FadeInRight(
@@ -47,8 +46,8 @@ class SignInBody extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
+      );
+  
   }
 }
 
