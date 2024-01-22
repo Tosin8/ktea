@@ -25,6 +25,12 @@ class _OTPBodyState extends State<OTPBody> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('This code will expire in '),
+            TweenAnimationBuilder(
+              tween: Tween(begin: 30.0, end: 0), 
+               duration: Duration(seconds: 30), 
+               builder: (context, value, child ) => Text('00:${value.toInt()}', 
+               style: TextStyle(color: Colors.orange, fontWeight: FontWeight.bold),
+               ))
           ],
         )
         ],)),
