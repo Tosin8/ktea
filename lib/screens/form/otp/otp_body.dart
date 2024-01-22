@@ -23,7 +23,13 @@ class _OTPBodyState extends State<OTPBody> {
         const SizedBox(height: 6,), 
         const Text("We've sent your code to your phone number "), 
         const SizedBox(height: 10), 
-        buildTimer()
+        buildTimer(), 
+        const SizedBox(height: 120), 
+        const OTPForm(), 
+        const SizedBox(height: 120,), 
+        GestureDetector(
+          onTap: (){},
+          child: const Text('Resend OTP Code', style: TextStyle(color: Colors.orange, decoration: TextDecoration.underline, decorationColor: Colors.orange), ))
         ],)),
       ),
     );
