@@ -10,13 +10,13 @@ class SignIn extends StatelessWidget{
       
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        // title: Text(
-        //   'Sign In', 
-        //   style: TextStyle(
-        //     color: Colors.grey[800],
-        //      fontSize: 23),
-        //      ), 
-         // centerTitle: true,
+        title: Text(
+          'Sign In', 
+          style: TextStyle(
+            color: Colors.grey[800],
+             fontSize: 20),
+             ), 
+         centerTitle: true,
       ), 
       body: SignInBody(), 
     ); 

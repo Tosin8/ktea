@@ -23,7 +23,7 @@ class _SignUpState extends State<SignUp> {
           }, 
           icon: Icon(Icons.arrow_back_ios)),
         
-        title: Text('Sign Up'), 
+        title: Text('Sign Up', style: TextStyle(color: Colors.grey[800], fontSize: 20),), 
         centerTitle: true,
       ),
       body: SignUpBody());
