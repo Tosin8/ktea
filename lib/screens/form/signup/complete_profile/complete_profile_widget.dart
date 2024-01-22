@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:ktea/screens/form/otp/otp.dart';
 import 'package:ktea/screens/form/widget.dart';
 
 class AppForm2 extends StatefulWidget {
@@ -48,8 +50,10 @@ class _AppForm2State extends State<AppForm2> {
               'Delivery Address', hint: 'Tend to include notable landmark', validator: (value) => value.isEmpty ? 'Address Landmark not found': null, 
               onSaved: (value) => phoneNumber = value), 
               SizedBox(height: 20), 
-              DefaultButton(textBtn: 'Register', 
-              press: (){})
+              DefaultButton(textBtn: 'Continue', 
+              press: (){
+                Get.to(OTP()); 
+              })
 
         ],
       ),),

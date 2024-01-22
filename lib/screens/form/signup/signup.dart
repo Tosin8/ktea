@@ -26,8 +26,8 @@ class _SignUpState extends State<SignUp> {
         title: Text('Sign Up', style: TextStyle(color: Colors.grey[800], fontSize: 20),), 
         centerTitle: true,
         actions: [
-          Text('1/2'), 
-        SizedBox(width: 10),   
+          Text('1/3'), 
+        SizedBox(width: 20),   
         ],
         
       ),

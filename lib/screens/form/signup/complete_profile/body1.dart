@@ -22,8 +22,17 @@ class _CompleteProfileBodyState extends State<CompleteProfileBody> {
           Text('Complete your details or continue \nwith social media', textAlign: TextAlign.center,style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),), 
           SizedBox(height: 50), 
           const AppForm2(), 
-        ],)),
-      ),
-    );
+          SizedBox(height: 30), 
+          const Column(
+                children: [
+                  Text('By continuing with the registration, it clearly \nshows you have agree with our', style: TextStyle(fontSize: 15),textAlign: TextAlign.center,),
+                  Text('Terms and Conditions', 
+                  style: TextStyle(color: Colors.orangeAccent,
+                    decoration: TextDecoration.underline, decorationColor: Colors.orangeAccent
+                  ),)
+
+        ],
+      )])))); 
+    
   }
 }

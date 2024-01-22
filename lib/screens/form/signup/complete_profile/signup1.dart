@@ -20,6 +20,10 @@ centerTitle: true,        automaticallyImplyLeading: false,
         leading: IconButton(onPressed: (){
           Get.back();
         }, icon: Icon(Icons.arrow_back_ios)),
+        actions: [
+          Text('2/3'), 
+          SizedBox(width: 20,)
+        ],
       ),
       body: CompleteProfileBody(),
     );
