@@ -240,3 +240,84 @@ enum FormType {
     login, 
     register
   }
+
+
+  class buildUserFirstFormField extends StatelessWidget {
+  const buildUserFirstFormField({
+    Key? key,
+    required this.label,
+    required this.hint, required String? Function(dynamic value) validator, required Function(dynamic value) onSaved,
+  }) : super(key: key);
+
+final String label; 
+final String hint; 
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      keyboardType: TextInputType.emailAddress,
+      decoration: InputDecoration(
+        suffixIcon: const Padding(
+          padding: EdgeInsets.only(right: 10), 
+          child: Icon(Icons.person_2_outlined,)),
+    
+        labelText: label, 
+        hintText: hint,
+        
+         hintStyle: TextStyle(color: Colors.grey[500]), 
+        contentPadding: const EdgeInsets.symmetric(horizontal: 42, vertical: 20),
+        floatingLabelBehavior: FloatingLabelBehavior.always, 
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(28),
+          gapPadding: 10, 
+          borderSide: const BorderSide(color: Colors.orange),
+        ), 
+        focusedBorder: OutlineInputBorder(
+          
+          borderRadius: BorderRadius.circular(28), 
+          borderSide: const BorderSide(color: Colors.black), 
+          gapPadding: 10, 
+        )
+      ),
+    );
+  }
+}
+
+class buildUserLastFormField extends StatelessWidget {
+  const buildUserLastFormField({
+    Key? key,
+    required this.label,
+    required this.hint, required String? Function(dynamic value) validator, required Function(dynamic value) onSaved,
+  }) : super(key: key);
+
+final String label; 
+final String hint; 
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      keyboardType: TextInputType.name,
+      decoration: InputDecoration(
+        suffixIcon: const Padding(
+          padding: EdgeInsets.only(right: 10), 
+          child: Icon(Icons.mail_outline,)),
+    
+        labelText: label, 
+        hintText: hint,
+        
+         hintStyle: TextStyle(color: Colors.grey[500]), 
+        contentPadding: const EdgeInsets.symmetric(horizontal: 42, vertical: 20),
+        floatingLabelBehavior: FloatingLabelBehavior.always, 
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(28),
+          gapPadding: 10, 
+          borderSide: const BorderSide(color: Colors.orange),
+        ), 
+        focusedBorder: OutlineInputBorder(
+          
+          borderRadius: BorderRadius.circular(28), 
+          borderSide: const BorderSide(color: Colors.black), 
+          gapPadding: 10, 
+        )
+      ),
+    );
+  }
+}
