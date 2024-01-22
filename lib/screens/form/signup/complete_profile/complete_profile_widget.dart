@@ -10,7 +10,13 @@ class AppForm2 extends StatefulWidget {
 
 class _AppForm2State extends State<AppForm2> {
   final formKey = GlobalKey<FormState>(); 
+
   final List<String> errors = []; 
+
+  late String firstName; 
+  late String lastName; 
+  late String phoneNumber; 
+  late String address; 
   @override
   Widget build(BuildContext context) {
     return  Form( 
@@ -27,7 +33,24 @@ class _AppForm2State extends State<AppForm2> {
             }
             return null; 
            }, 
-           onSaved: onSaved)
+           onSaved: (value) => firstName = value, ), 
+           const SizedBox(height: 30), 
+           buildUserLastFormField(label: 'Last Name', hint: 'Enter your last name', validator: (value) => value.isEmpty ? "Last Name can\t' be empty" : null, onSaved: (value) => lastName = value), 
+           SizedBox(height:30), 
+           buildUserPhoneFormField(label: 'Phone Number',
+            hint: 'Enter your phone number',
+             validator: (value) => value.isEmpty ? "Phone number not valid" : null, 
+             
+              onSaved: (value) => lastName = value), 
+              SizedBox(height: 30), 
+              buildUserAddressFormField(label: 
+              
+              'Delivery Address', hint: 'Tend to include notable landmark', validator: (value) => value.isEmpty ? 'Address Landmark not found': null, 
+              onSaved: (value) => phoneNumber = value), 
+              SizedBox(height: 20), 
+              DefaultButton(textBtn: 'Register', 
+              press: (){})
+
         ],
       ),),
     );
