@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:ktea/screens/form/signup/complete_profile/signup1.dart';
 import 'package:ktea/screens/form/widget.dart';
 
 class AppForm1 extends StatefulWidget {
@@ -39,7 +41,7 @@ if (formKey.currentState!.validate()){
     return Form(
       key: formKey, 
       child: Padding(
-        padding: EdgeInsets.only(
+        padding: const EdgeInsets.only(
           left: 15, right: 15), 
           child: Column(children: [
             buildEmailFormField(
@@ -54,18 +56,21 @@ if (formKey.currentState!.validate()){
                 return null; 
                },
                 onSaved: (value) => _email = value, ), 
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
                 buildPwdFormField(label: 'Password',
                  hint: 'Enter your password',
                   validator: (value) => value.isEmpty ? 'Password can\'t be empty' : null, 
                   onSaved: (value) => _pwd = value, ), 
-                  SizedBox(height: 30), 
+                  const SizedBox(height: 30), 
                   buildPwdFormField(label: 'Confirm Password',
                  hint: 'Re-enter your password',
                   validator: (value) => value.isEmpty ? 'Password can\'t be empty' : null, 
                   onSaved: (value) => _pwd = value, ), 
-                  SizedBox(height: 30), 
-                  DefaultButton(textBtn: 'Continue', press: validateAndSubmit)
+                  const SizedBox(height: 30), 
+                   DefaultButton(textBtn: 'Continue', press: (){
+                    Get.to(const CompleteProfile());
+                   }
+                   )
           ]),
           ),
 
