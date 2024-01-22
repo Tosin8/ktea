@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'body1.dart';
+
 class CompleteProfile extends StatefulWidget {
   const CompleteProfile({super.key});
 
@@ -13,12 +15,13 @@ class _CompleteProfileState extends State<CompleteProfile> {
   Widget build(BuildContext context) {
     return Scaffold( 
       appBar: AppBar(
-        title: Text('Sign Up'),
-        automaticallyImplyLeading: false, 
+        title: Text('Sign Up', style: TextStyle(color: Colors.grey[800], fontSize: 20),),
+centerTitle: true,        automaticallyImplyLeading: false, 
         leading: IconButton(onPressed: (){
           Get.back();
         }, icon: Icon(Icons.arrow_back_ios)),
       ),
+      body: CompleteProfileBody(),
     );
   }
 }
