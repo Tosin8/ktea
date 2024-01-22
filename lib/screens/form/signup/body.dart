@@ -18,12 +18,12 @@ class _SignUpBodyState extends State<SignUpBody> {
       width: double.infinity, 
       child: SingleChildScrollView(
         child: FadeInRight(
-          duration: Duration(milliseconds: 300),
+          duration: const Duration(milliseconds: 300),
           child: Column(
             children: [
               Text('Register Account', style: TextStyle(color: Colors.black.withOpacity(0.8), fontSize: 24, fontWeight: FontWeight.bold),), 
               const SizedBox(height: 6), 
-              Text('Complete your details or continue \nwith social media', 
+              const Text('Complete your details or continue \nwith social media', 
               
               textAlign: TextAlign.center,style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),),
               const SizedBox(height: 50), 
