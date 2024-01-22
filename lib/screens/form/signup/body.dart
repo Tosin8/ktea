@@ -18,7 +18,11 @@ class _SignUpBodyState extends State<SignUpBody> {
           duration: Duration(milliseconds: 300),
           child: Column(
             children: [
-              Text('Sign Up', style: TextStyle(color: Colors.black, fontSize: 28, fontWeight: FontWeight.bold),)
+              Text('Register Account', style: TextStyle(color: Colors.black.withOpacity(0.8), fontSize: 24, fontWeight: FontWeight.bold),), 
+              const SizedBox(height: 6), 
+              Text('Complete your details or continue \nwith social media', 
+              
+              textAlign: TextAlign.center,style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),),
             ],
           )),
       ),

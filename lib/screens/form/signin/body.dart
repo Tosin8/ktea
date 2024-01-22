@@ -19,9 +19,9 @@ class SignInBody extends StatelessWidget {
             duration: Duration(milliseconds: 300),
             child: Column(
               children: [
-                //SizedBox(height: 8), 
-                const Text('Welcome Back',
-                style: TextStyle(color: Colors.black, fontSize: 28, fontWeight: FontWeight.bold),),
+                SizedBox(height: 8), 
+                Text('Welcome Back',
+                style: TextStyle(color: Colors.black.withOpacity(0.8), fontSize: 24, fontWeight: FontWeight.bold),),
                 const SizedBox(height: 6),  
                 const Text('Sign in with your email and password \nor continue with your social media account',style: TextStyle(fontSize: 16), 
                 textAlign: TextAlign.center,), 
@@ -33,9 +33,9 @@ class SignInBody extends StatelessWidget {
                   const SocialCard(),
                   SizedBox(height: 20), 
                   GestureDetector(
-                    onTap: (){
-                      Get.to(const SignUp());
-                    },
+                    onTap: () =>
+                      Get.to(const SignUp()), 
+                    
                     child: const Text('Create Account', 
                     style: TextStyle(
                       color: Colors.orange,fontWeight: FontWeight.w600,
