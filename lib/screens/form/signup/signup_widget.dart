@@ -10,6 +10,8 @@ class AppForm1 extends StatefulWidget {
 class _AppForm1State extends State<AppForm1> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Form(
+      child: Padding(padding: EdgeInsets.only(left: 15, right: 15)),
+    );
   }
 }

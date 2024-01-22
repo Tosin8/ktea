@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 
 import '../signup/signup.dart';
 import '../widget.dart';
+import 'signin_widget.dart';
 
 class SignInBody extends StatelessWidget {
   const SignInBody({super.key});
