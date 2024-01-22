@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ktea/screens/form/widget.dart';
 
 class AppForm1 extends StatefulWidget {
   const AppForm1({super.key});
@@ -8,10 +9,54 @@ class AppForm1 extends StatefulWidget {
 }
 
 class _AppForm1State extends State<AppForm1> {
+  final formKey = GlobalKey<FormState>();
+
+  final List<String> errors = []; 
+  late String _email; 
+  late String _pwd; 
+
+  //FormType _formType = FormType.signup; 
+
+  bool validateAndSave() {
+   final form = formKey.currentState; 
+   if(form!.validate()) {
+    form.save();
+    return true; 
+   } else {
+    return false;
+   }
+  }
+
+void validateAndSubmit() {
+if (formKey.currentState!.validate()){
+  formKey.currentState?.save(); 
+}; 
+}
+
+
   @override
   Widget build(BuildContext context) {
     return Form(
-      child: Padding(padding: EdgeInsets.only(left: 15, right: 15)),
+      key: formKey, 
+      child: Padding(
+        padding: EdgeInsets.only(
+          left: 15, right: 15), 
+          child: Column(children: [
+            buildEmailFormField(
+              label: 'Email',
+               hint: 'Enter your email', 
+               validator: (value) {
+                if (value.isEmpty) {
+                  setState(() {
+                    errors.add('Email can\'t be empty');
+                  });
+                }
+                return null; 
+               },
+                onSaved: (value) => _email = value, )
+          ]),
+          ),
+
     );
   }
 }
