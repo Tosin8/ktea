@@ -19,6 +19,7 @@ final String hint;
   Widget build(BuildContext context) {
     return TextFormField(
       keyboardType: TextInputType.emailAddress,
+      textInputAction: TextInputAction.next,
       decoration: InputDecoration(
         suffixIcon: const Padding(
           padding: EdgeInsets.only(right: 10), 
@@ -60,6 +61,7 @@ final String hint;
     return TextFormField(
       obscureText: true,
       keyboardType: TextInputType.visiblePassword,
+      textInputAction: TextInputAction.done, 
       decoration: InputDecoration(
         suffixIcon: const Padding(
           padding: EdgeInsets.only(right: 10), 
@@ -254,7 +256,8 @@ final String hint;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      keyboardType: TextInputType.emailAddress,
+      keyboardType: TextInputType.name,
+      textInputAction: TextInputAction.next,
       decoration: InputDecoration(
         suffixIcon: const Padding(
           padding: EdgeInsets.only(right: 10), 
@@ -295,10 +298,93 @@ final String hint;
   Widget build(BuildContext context) {
     return TextFormField(
       keyboardType: TextInputType.name,
+      textInputAction: TextInputAction.next,
       decoration: InputDecoration(
         suffixIcon: const Padding(
           padding: EdgeInsets.only(right: 10), 
-          child: Icon(Icons.mail_outline,)),
+          child: Icon(Icons.person_2_outlined,)),
+    
+        labelText: label, 
+        hintText: hint,
+        
+         hintStyle: TextStyle(color: Colors.grey[500]), 
+        contentPadding: const EdgeInsets.symmetric(horizontal: 42, vertical: 20),
+        floatingLabelBehavior: FloatingLabelBehavior.always, 
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(28),
+          gapPadding: 10, 
+          borderSide: const BorderSide(color: Colors.orange),
+        ), 
+        focusedBorder: OutlineInputBorder(
+          
+          borderRadius: BorderRadius.circular(28), 
+          borderSide: const BorderSide(color: Colors.black), 
+          gapPadding: 10, 
+        )
+      ),
+    );
+  }
+}
+
+class buildUserPhoneFormField extends StatelessWidget {
+  const buildUserPhoneFormField({
+    Key? key,
+    required this.label,
+    required this.hint, required String? Function(dynamic value) validator, required Function(dynamic value) onSaved,
+  }) : super(key: key);
+
+final String label; 
+final String hint; 
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      keyboardType: TextInputType.number,
+      textInputAction: TextInputAction.next,
+      decoration: InputDecoration(
+        suffixIcon: const Padding(
+          padding: EdgeInsets.only(right: 10), 
+          child: Icon(Icons.phone_android_outlined,)),
+    
+        labelText: label, 
+        hintText: hint,
+        
+         hintStyle: TextStyle(color: Colors.grey[500]), 
+        contentPadding: const EdgeInsets.symmetric(horizontal: 42, vertical: 20),
+        floatingLabelBehavior: FloatingLabelBehavior.always, 
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(28),
+          gapPadding: 10, 
+          borderSide: const BorderSide(color: Colors.orange),
+        ), 
+        focusedBorder: OutlineInputBorder(
+          
+          borderRadius: BorderRadius.circular(28), 
+          borderSide: const BorderSide(color: Colors.black), 
+          gapPadding: 10, 
+        )
+      ),
+    );
+  }
+}
+
+class buildUserAddressFormField extends StatelessWidget {
+  const buildUserAddressFormField({
+    Key? key,
+    required this.label,
+    required this.hint, required String? Function(dynamic value) validator, required Function(dynamic value) onSaved,
+  }) : super(key: key);
+
+final String label; 
+final String hint; 
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      keyboardType: TextInputType.name,
+      textInputAction: TextInputAction.done,
+      decoration: InputDecoration(
+        suffixIcon: const Padding(
+          padding: EdgeInsets.only(right: 10), 
+          child: Icon(Icons.location_on_outlined,)),
     
         labelText: label, 
         hintText: hint,
