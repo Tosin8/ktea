@@ -31,7 +31,7 @@ class SignInBody extends StatelessWidget {
                   const Text('- OR USE - ') , 
                   const SizedBox(height: 15), 
                   const SocialCard(),
-                  
+                  SizedBox(height: 20), 
                   GestureDetector(
                     onTap: (){
                       Get.to(const SignUp());
