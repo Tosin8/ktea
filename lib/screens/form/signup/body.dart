@@ -1,5 +1,8 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:ktea/screens/form/widget.dart';
+
+import 'signup_widget.dart';
 
 class SignUpBody extends StatefulWidget {
   const SignUpBody({super.key});
@@ -23,6 +26,8 @@ class _SignUpBodyState extends State<SignUpBody> {
               Text('Complete your details or continue \nwith social media', 
               
               textAlign: TextAlign.center,style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),),
+              const SizedBox(height: 30), 
+              const AppForm1()
             ],
           )),
       ),
