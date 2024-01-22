@@ -17,9 +17,8 @@ class _Category_BodyState extends State<Category_Body> {
     return Padding(
         padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 10
       ),
-        child: CustomScrollView(
-          slivers:   [
-            SliverAppBar(title: Text('Collection')),  
+        child: ListView(
+          children:   [
             const SizedBox(height: 10), 
           const Text('Collection',
            style: TextStyle(color: Colors.black, fontSize: 30, fontWeight: FontWeight.w500),), 
