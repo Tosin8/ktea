@@ -34,6 +34,19 @@ class _DiningScreenState extends State<DiningScreen> {
     return DefaultTabController(
       length:4 ,
       child: Scaffold(
-        body: NestedScrollView(headerSliverBuilder: (), body: body))
+        body: NestedScrollView(
+          headerSliverBuilder: 
+          (BuildContext context, 
+          bool innerBoxIsScrolled) {
+            return [
+
+              SliverAppBar(
+                title: Text('Modern Dining'),
+                pinned: true, floating: true,
+              )
+            ];
+          }
+          
 
 
+        ))); }}
