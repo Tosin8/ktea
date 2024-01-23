@@ -120,7 +120,9 @@ flexibleSpace: const Column(
           Container(
             color: Colors.blue,
           ),  
-           Text('Hello'), Text('Hello'), Text('Hello'),
+           Text('Hello'),
+            Text('Hello'), 
+            Text('Hello'),
           ],)
         // ListView(
     //     children: const [
