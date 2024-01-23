@@ -31,25 +31,9 @@ class DiningScreen extends StatefulWidget {
 class _DiningScreenState extends State<DiningScreen> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: DefaultTabController(length: 4,
-       child: Scaffold(
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-          header(), 
-        ),
-       ))
-      body: ListView(
-        children: const [
-          // Hero(
-          //   tag: 'dining',
-          //   child: 
-          header(),
-          SizedBox(height: 5), 
+    return DefaultTabController(
+      length:4 ,
+      child: Scaffold(
+        body: NestedScrollView(headerSliverBuilder: (), body: body))
 
-         DiningCategoryTab() ,
-    ] ) 
-     
-    );
-  }
-}
+
