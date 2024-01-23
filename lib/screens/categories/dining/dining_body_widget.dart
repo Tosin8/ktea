@@ -97,16 +97,30 @@ class DiningCategoryTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const DefaultTabController(
-      length: 4,
-      child: TabBar(
-       isScrollable: true,
-         tabs: [
-          Tab(child: Text('Most Popular'),), 
-           Tab(child: Text('Most Popular'),),  
-           Tab(child: Text('Most Popular'),), 
+    return const Padding( 
+      padding: EdgeInsets.only(left: 0),
+      
+      child: DefaultTabController(
+        initialIndex: 0, 
+        animationDuration: Duration(milliseconds: 500), 
+        length: 4,
+        child: TabBar(
+          padding: EdgeInsets.only(left: 2),
+          indicatorColor: Colors.orange,
+          labelColor: Colors.orange,
+         // labelPadding: EdgeInsets.all(8),
+          // onTap: ( ) {
+            
+          // },
+         isScrollable: true,
+           tabs: [
             Tab(child: Text('Most Popular'),), 
-         ],),
+             Tab(child: Text('Furnitures'),),  
+             Tab(child: Text('Dishware'),), 
+              Tab(child: Text('Complementary'),), 
+           ],),
+        
+      ),
     );
   }
 }

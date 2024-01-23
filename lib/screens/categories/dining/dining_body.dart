@@ -9,17 +9,43 @@ class DiningScreen extends StatefulWidget {
   State<DiningScreen> createState() => _DiningScreenState();
 }
 
+// class _DiningScreenState extends State<DiningScreen> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: ListView(
+//         children: const [
+//           // Hero(
+//           //   tag: 'dining',
+//           //   child: 
+//           header(),
+//           SizedBox(height: 5), 
+
+//          DiningCategoryTab() ,
+//     ] ) 
+     
+//     );
+//   }
+// }
+
 class _DiningScreenState extends State<DiningScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return MaterialApp(
+      home: DefaultTabController(length: 4,
+       child: Scaffold(
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          header(), 
+        ),
+       ))
       body: ListView(
         children: const [
           // Hero(
           //   tag: 'dining',
           //   child: 
           header(),
-          SizedBox(height: 20), 
+          SizedBox(height: 5), 
 
          DiningCategoryTab() ,
     ] ) 
@@ -27,4 +53,3 @@ class _DiningScreenState extends State<DiningScreen> {
     );
   }
 }
-
