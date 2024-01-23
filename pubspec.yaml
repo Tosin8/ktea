@@ -156,7 +156,8 @@ flutter:
     - assets/images/collections/1.jpg
     - assets/images/collections/2.jpg
     - assets/images/collections/3.jpg
-  #   - images/a_dot_ham.jpeg
+    - assets/images/collections/4.jpg 
+    - assets/images/collections/5.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see
