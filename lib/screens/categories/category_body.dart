@@ -1,7 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ktea/screens/extended_screen/category_details/dining/dining_body.dart';
+import 'package:ktea/screens/categories/dining/dining_body.dart';
 
 
 class Category_Body extends StatefulWidget {
