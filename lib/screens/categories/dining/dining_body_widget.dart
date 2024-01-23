@@ -8,7 +8,7 @@ class appBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding( padding: EdgeInsets.all(20),
+    return Padding( padding: const EdgeInsets.all(20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween, 
         children: [
@@ -16,13 +16,14 @@ class appBar extends StatelessWidget {
             onTap: () {
               Get.back(); 
             },
-            child: Icon(Icons.arrow_back_ios, color: Colors.white,)), 
-          SizedBox(width: 260), 
-          Expanded(
+            child: const Icon(Icons.arrow_back_ios, color: Colors.white,)), 
+          const SizedBox(width: 260), 
+          const Expanded(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Icon(Icons.search_outlined, color: Colors.white,), SizedBox(width: 3), 
+                Icon(Icons.search_outlined, color: Colors.white,),
+                 
                 Icon(Icons.notifications, color: Colors.white,)
                 ],
                 ),
