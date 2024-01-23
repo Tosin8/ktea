@@ -65,7 +65,7 @@ if (formKey.currentState!.validate()){
     return Form(
       key: formKey, 
       child: Padding(
-        padding: EdgeInsets.only(left: 15, right: 15),
+        padding: const EdgeInsets.only(left: 15, right: 15),
         child: Column(
           children: [
             buildEmailFormField(
@@ -85,7 +85,7 @@ if (formKey.currentState!.validate()){
               
             ), 
 
-            SizedBox(height: 40), 
+            const SizedBox(height: 40), 
             buildPwdFormField(
               label: 'Password',
               hint: 'Enter your password',
@@ -93,10 +93,10 @@ if (formKey.currentState!.validate()){
                onSaved: (value) => _pwd = value, 
               ), 
            const SizedBox(height: 10),  
-          checkBox(),
+          const checkBox(),
               const SizedBox(height: 30), 
               FormError(errors: errors), 
-              SizedBox(height: 10), 
+              const SizedBox(height: 10), 
              DefaultButton(textBtn: 'Continue',
               press: validateAndSubmit,
              ),
