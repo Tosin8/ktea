@@ -32,8 +32,17 @@ class DiningScreen extends StatefulWidget {
 class _DiningScreenState extends State<DiningScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold( 
-      body: CustomScrollView(slivers: [Widget],)
+    return  Scaffold( 
+      body: CustomScrollView(slivers: [
+        SliverAppBar(
+          expandedHeight: 220, 
+          flexibleSpace: FlexibleSpaceBar(
+            background: Image.asset('assets/images/collections/1.jpg', 
+            fit: BoxFit.cover,),
+            
+          ),
+        )
+      ],)
     );
   }
 }
