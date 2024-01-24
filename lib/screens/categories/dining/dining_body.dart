@@ -41,6 +41,13 @@ class _DiningScreenState extends State<DiningScreen> {
             fit: BoxFit.cover,),
             
           ),
+          leading: const Padding(padding: EdgeInsets.only(left: 18), child: Icon(Icons.arrow_back_ios, color: Colors.white,),
+          ),
+          actions: [
+            IconButton(onPressed: (){}, icon: const Icon(Icons.search_rounded, color: Colors.white,)), 
+             IconButton(onPressed: (){}, icon: const Icon(Icons.notifications, color: Colors.white,))
+          ],
+          
         )
       ],)
     );
