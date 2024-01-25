@@ -1,6 +1,8 @@
 import 'package:get/get.dart';
 import 'package:ktea/constants/firebase.dart';
 
+import '../model/product.dart';
+
 class ProductsController extends GetxController{
   static ProductsController instance = Get.find(); 
   RxList<ProductModel> products = RxList<ProductModel>([]); 

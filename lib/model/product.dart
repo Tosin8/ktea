@@ -15,11 +15,13 @@ class ProductModel {
     required this.name,
     required this.price,
   });
+
+  static fromMap(Map<String, dynamic> data) {}
 }
 
-ProductModel.fromMap(Map<String, dynamic> data ) {
-  id = data[ID]; 
-  image = data[IMAGE]; 
-  name = data[NAME]; 
-  price = data[PRICE].toDouble(); 
-}
+// ProductModel.fromMap(Map<String, dynamic> data ) {
+//   id = data[ID]; 
+//   image = data[IMAGE]; 
+//   name = data[NAME]; 
+//   price = data[PRICE].toDouble(); 
+// }
