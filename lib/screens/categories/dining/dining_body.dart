@@ -5,27 +5,6 @@ import 'dining_body_widget.dart';
 
 
 
-
-// class _DiningScreenState extends State<DiningScreen> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: ListView(
-//         children: const [
-//           // Hero(
-//           //   tag: 'dining',
-//           //   child: 
-//           header(),
-//           SizedBox(height: 5), 
-
-//          DiningCategoryTab() ,
-//     ] ) 
-     
-//     );
-//   }
-// }
-
-
 class DiningScreen extends StatefulWidget {
   const DiningScreen({super.key});
 
@@ -36,6 +15,14 @@ class DiningScreen extends StatefulWidget {
 class _DiningScreenState extends State<DiningScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: ListView(
+        children: [
+          header(),
+          SizedBox(height: 5), 
+          DiningCategoryTab()
+        ],
+      )
+    );
   }
 }
