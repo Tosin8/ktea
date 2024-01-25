@@ -20,7 +20,7 @@ class _DiningScreenState extends State<DiningScreen> {
         children: [
           header(),
           SizedBox(height: 5), 
-          DiningCategoryTab()
+         
         ],
       )
     );
