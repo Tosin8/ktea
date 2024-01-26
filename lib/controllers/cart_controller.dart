@@ -3,6 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ktea/model/loginuser.dart'; 
 import 'package:uuid/uuid.dart';
 
+import '../constants/app_constants.dart';
 import '../model/product.dart'; 
 
 class CartController extends GetxController{
