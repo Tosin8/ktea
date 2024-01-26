@@ -45,6 +45,7 @@ dependencies:
   font_awesome_flutter: ^10.6.0
   get: ^4.6.6
   page_transition: ^2.1.0
+  uuid: ^4.3.3
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -156,7 +157,7 @@ flutter:
     - assets/images/collections/1.jpg
     - assets/images/collections/2.jpg
     - assets/images/collections/3.jpg
-    - assets/images/collections/4.jpg 
+    - assets/images/collections/4.jpg
     - assets/images/collections/5.jpg
 
     #collection dining product
