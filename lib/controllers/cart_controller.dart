@@ -1,6 +1,9 @@
 import 'package:get/get.dart';
-import 'package:cloud_firestore/cloud_firestore.dart'; 
-import 'package:uuid/uuid.dart'; 
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:ktea/model/loginuser.dart'; 
+import 'package:uuid/uuid.dart';
+
+import '../model/product.dart'; 
 
 class CartController extends GetxController{
   static CartController instance = Get.find(); 
@@ -53,5 +56,38 @@ class CartController extends GetxController{
     }
   }
 
-  changeCartTotalPrice
+  changeCartTotalPrice(UserModel userModel) {
+    totalCartPrice.value = 0.0; 
+    if(userModel.cart.isNotEmpty) {
+      userModel.cart.forEach((cartItem) {
+      totalCartPrice += cartItem.cost; 
+    }); 
+  }
+}
+
+bool _isItemAlreadyAdded(ProductModel product) => 
+userController.userModel.value.cart 
+.where((uten) => item.productId == product.id) 
+.isNotEmpty; 
+
+void decreaseQuantity(CartItemModel item) {
+  if(item.quantity == 1) {
+    removeCartItem(item); 
+  } else {
+    removeCartItem(item); 
+    item.quantity--; 
+    userController.updateUserData({
+      'cart': FieldValue.arrayUnion([item.toJson()])
+    }); 
+  }
+}
+
+void increaseQuantity(CartItemModel item) {
+  removeCartItem(item); 
+  item.quantity++; 
+  logger.i({'quantity': item.quantity}); 
+  userController.updateUserData({
+    'cart': FieldValue.arrayUnion([item.toJson()])
+  }); 
+}
 }
