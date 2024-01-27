@@ -65,14 +65,15 @@ class CartController extends GetxController{
     totalCartPrice.value = 0.0; 
     if(userModel.cart.isNotEmpty) {
       userModel.cart.forEach((cartItem) {
-      totalCartPrice += cartItem.cost; 
+     totalCartPrice.value = (cartItem.cost as RxDouble).value; 
+      //totalCartPrice += cartItem.cost; 
     }); 
   }
 }
 
 bool _isItemAlreadyAdded(ProductModel product) => 
 userController.userModel.value.cart 
-.where((uten) => item.productId == product.id) 
+.where((item) => item.productId == product.id) 
 .isNotEmpty; 
 
 void decreaseQuantity(CartItemModel item) {
