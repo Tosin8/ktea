@@ -1,11 +1,14 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ktea/model/loginuser.dart'; 
+ 
 import 'package:uuid/uuid.dart';
 
 import '../constants/app_constants.dart';
+import '../constants/controllers.dart';
 import '../model/cart_item.dart';
-import '../model/product.dart'; 
+import '../model/product.dart';
+import '../model/user.dart'; 
 
 class CartController extends GetxController{
   static CartController instance = Get.find(); 
@@ -54,7 +57,7 @@ class CartController extends GetxController{
       }); 
     } catch (e) {
       Get.snackbar('Error', 'Cannot remove this item'); 
-      debugPrint(e.message); 
+      debugPrint(e.toString()); 
     }
   }
 
