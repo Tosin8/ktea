@@ -1,17 +1,23 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ktea/screens/form/signin/signin.dart';
 import 'package:ktea/screens/profile/profile.dart';
 
+import '../constants/app_constants.dart';
+import '../constants/firebase.dart';
+import '../model/user.dart';
+import '../utils/helpers/showLoading.dart';
+
 class UserController extends GetxController {
   static UserController instance = Get.find(); 
-  Rx<User> firebaseUser; 
+  late Rx<User> firebaseUser; 
   RxBool isLoggedIn = false.obs; 
   TextEditingController name = TextEditingController(); 
   TextEditingController email = TextEditingController(); 
   TextEditingController password = TextEditingController(); 
   String usersCollection = 'users'; 
-  Rx<UserModel> userModel = UserModel().obs; 
+  Rx<UserModel> userModel = UserModel(id: '', email: '', name: '', cart: []).obs; 
 
   @override 
   void onReady() {
@@ -52,7 +58,7 @@ class UserController extends GetxController {
           .createUserWithEmailAndPassword(
               email: email.text.trim(), password: password.text.trim())
           .then((result) {
-        String _userId = result.user.uid;
+        String _userId = result.user!.uid;
         _addUserToFirestore(_userId);
         _clearControllers();
       });
