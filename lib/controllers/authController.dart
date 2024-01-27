@@ -22,8 +22,12 @@ class UserController extends GetxController {
   @override 
   void onReady() {
     super.onReady(); 
-    firebaseUser = Rx<User>(auth.currentUser); 
-    firebaseUser.bindStream(auth.userChanges()); 
+   // firebaseUser = Rx<User>(auth.currentUser); 
+    firebaseUser = Rx<User>(auth.currentUser!);
+    
+    firebaseUser.bindStream(auth.userChanges().whereType<User>());
+    //firebaseUser.bindStream(auth.userChanges().whereType<User>());
+   // firebaseUser.bindStream(auth.userChanges()); 
     ever(firebaseUser, _setInitialScreen);
   }
 
