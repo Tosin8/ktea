@@ -14,7 +14,7 @@ class UserModel {
    String email;
    List<CartItemModel> cart;
 
-  UserModel({this.id, this.name, this.email, this.cart});
+  UserModel({required this.id, required this.name, required this.email, required this.cart});
 
   UserModel.fromSnapshot(DocumentSnapshot snapshot) {
     name = snapshot.data()[NAME];
