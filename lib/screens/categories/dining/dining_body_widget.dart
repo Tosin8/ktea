@@ -24,7 +24,9 @@ class appBar extends StatelessWidget {
               children: [
                 Icon(Icons.search_outlined, color: Colors.white,),
                  
-                Icon(Icons.notifications, color: Colors.white,)
+                IconButton(onPressed: {
+
+                }, icon: Icon(Icons.shopping_cart))
                 ],
                 ),
                 )

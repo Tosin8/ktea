@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ktea/utils/helpers/showLoading.dart';
+import 'package:stripe_payment/stripe_payment.dart';
 import 'package:uuid/uuid.dart';
 
-import 'package:stripe_payment/stripe_payment.dart';
+import 'package:ktea/utils/helpers/showLoading.dart';
 
 import '../constants/app_constants.dart';
 import '../constants/controllers.dart';
 import '../constants/firebase.dart';
 import '../model/payments.dart';
+import '../screens/payments/payments.dart';
+import '../utils/custom_text.dart';
 
 class PaymentsController extends GetxController {
   static PaymentsController instance = Get.find();
@@ -73,8 +75,8 @@ class PaymentsController extends GetxController {
 
   void _showPaymentFailedAlert() {
     Get.defaultDialog(
-        content: CustomText(
-          text: "Payment failed, try another card",
+        content: const CustomText(
+          text: "Payment failed, try another card", key: null, size: null, color: null, weight: null,
         ),
         actions: [
           GestureDetector(
@@ -91,7 +93,7 @@ class PaymentsController extends GetxController {
   }
 
   _addToCollection({required String paymentStatus, required String paymentId}){
-    String id = Uuid().v1();
+    String id = const Uuid().v1();
     firebaseFirestore.collection(collection).doc(id).set({
       "id": id,
       "clientId": userController.userModel.value.id,

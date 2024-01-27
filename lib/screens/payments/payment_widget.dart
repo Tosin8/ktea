@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../model/payments.dart';
+import '../../utils/custom_text.dart';
 
 class PaymentWidget extends StatelessWidget {
   final PaymentsModel paymentsModel;
@@ -58,7 +59,7 @@ class PaymentWidget extends StatelessWidget {
     );
   }
   String _returnDate(){
-    DateTime date = new DateTime.fromMillisecondsSinceEpoch(paymentsModel.createdAt);
+    DateTime date = new DateTime.fromMillisecondsSinceEpoch(paymentsModel.createdAt as int);
     return timeago.format(date, locale: 'fr');
   }
 }
