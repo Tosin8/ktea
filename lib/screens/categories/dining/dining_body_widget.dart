@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
 class appBar extends StatelessWidget {
   const appBar({
@@ -18,14 +19,19 @@ class appBar extends StatelessWidget {
             },
             child: const Icon(Icons.arrow_back_ios, color: Colors.white,)), 
           const SizedBox(width: 260), 
-          const Expanded(
+           Expanded(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Icon(Icons.search_outlined, color: Colors.white,),
                  
-                IconButton(onPressed: {
-
+                IconButton(onPressed: (){
+showBarModalBottomSheet(
+context: context,
+builder: (context) => Container(
+  color: Colors.white, child: ShoppingCartWidget(),
+),
+);
                 }, icon: Icon(Icons.shopping_cart))
                 ],
                 ),
