@@ -1,6 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ktea/constants/firebase.dart';
+import 'package:ktea/controllers/app_controller.dart';
 
 import 'firebase_options.dart';
 import 'splash_screen/splash.dart';
@@ -10,8 +12,14 @@ import 'splash_screen/splash.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized(); 
 
+  // await Firebase.initializeApp(
+  //   options: DefaultFirebaseOptions.currentPlatform, 
+  // );
+
+  await initialization.then((value) => Get.put(AppController())); 
+    
   await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform, 
+    options: DefaultFirebaseOptions.currentPlatform,
   );
   runApp(const MyApp());
 }
