@@ -35,6 +35,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   curved_navigation_bar: ^1.0.3
   custom_navigation_bar: ^0.8.2
+  dio: ^5.4.0
   firebase_auth: ^4.15.3
   firebase_core: ^2.24.2
   firebase_messaging: ^14.7.10
@@ -46,6 +47,7 @@ dependencies:
   get: ^4.6.6
   logger: ^2.0.2+1
   page_transition: ^2.1.0
+  stripe_payment_flutter: ^1.1.2
   uuid: ^4.3.3
 
 dev_dependencies:
