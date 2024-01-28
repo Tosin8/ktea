@@ -26,7 +26,7 @@ class appBar extends StatelessWidget {
                 Icon(Icons.search_outlined, color: Colors.white,),
                  
                 IconButton(onPressed: (){
-showBarModalBottomSheet(
+showMaterialModalBottomSheet(
 context: context,
 builder: (context) => Container(
   color: Colors.white, child: ShoppingCartWidget(),
