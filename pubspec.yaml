@@ -49,7 +49,7 @@ dependencies:
   logger: ^2.0.2+1
   modal_bottom_sheet: ^2.1.2
   page_transition: ^2.1.0
-  stripe_payment_flutter: ^1.1.2
+
   timeago: ^3.6.0
   uuid: ^4.3.3
 
