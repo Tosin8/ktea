@@ -23,14 +23,12 @@ Future<void> main() async {
 
   await initialization.then((value) => 
   Get.put(AppController())); 
-  Get.put(UserController()); 
+  //Get.put(UserController()); 
   Get.put(ProductsController()); 
-  Get.put(CartController()); 
-  Get.put(PaymentsController()); 
+  // Get.put(CartController()); 
+  // Get.put(PaymentsController()); 
     
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+ 
   runApp(const MyApp());
 }
 
