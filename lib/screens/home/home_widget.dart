@@ -7,6 +7,7 @@ import 'package:badges/badges.dart' as badges;
 
 import 'dart:async';
 
+import '../../model/new_arrival.dart';
 import '../extended_screen/notification.dart';
 
 class App_Drawer extends StatelessWidget {
@@ -349,3 +350,93 @@ class notifcation_bell extends StatelessWidget {
   }
 }
 
+
+
+class newArrivalProductCard extends StatelessWidget {
+  const newArrivalProductCard({
+    super.key, required this.newProducts,
+  });
+
+final New newProducts;
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+        
+              height: 200, width: 200,
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.only(
+                  
+                  topLeft: Radius.circular(15),
+                  topRight: Radius.circular(15),
+                ),
+                image: DecorationImage(
+                  image: AssetImage(
+                    newProducts.imageUrl,
+                    
+                  ),
+                   fit: BoxFit.cover)
+              ),
+            ), 
+            Container(
+              padding: EdgeInsets.all(8),
+              width: 200, 
+              decoration:  BoxDecoration( 
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.4), 
+                    blurRadius: 0.2,
+                    spreadRadius: 0.1, 
+                    offset: const Offset(1, 1)
+                  )
+                ],
+                borderRadius:  const BorderRadius.only(
+                  bottomLeft: Radius.circular(15),
+                  bottomRight: Radius.circular(15),
+                )
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+ Text(
+              newProducts.title,style: TextStyle(
+                fontSize: 16, fontWeight: FontWeight.w600, color: Colors.black.withOpacity(0.7)),
+              ),
+              Text(newProducts.category, 
+            style: const TextStyle(color: Colors.grey, fontSize: 15),) ,
+               Row(
+             crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(newProducts.price.toString(), 
+                style: const TextStyle(
+                  color: Colors.black, fontSize: 16),
+                  ),
+                const SizedBox(width: 100),
+                GestureDetector(
+                  onTap: () {
+                    
+                  },
+                  child: const Icon(Icons.add_circle, size: 30,),
+                )
+              ],
+            )
+
+                ],
+                
+              ),
+            ), 
+           
+           
+            
+            
+             
+         
+          ]
+        );
+      
+    
+  }
+}
