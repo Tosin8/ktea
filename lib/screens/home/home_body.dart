@@ -59,63 +59,7 @@ SingleChildScrollView(
   scrollDirection: Axis.horizontal,
   child: Row(
     children: [
-      Container(
-             height: 320, 
-             width: 200,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  ClipRRect(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10), 
-                        image: const DecorationImage(image: AssetImage('assets/new_arrival/1.jpg'),
-                         fit: BoxFit.cover)
-                    
-                      ),
-                      width: 180,  
-                      height: 200,
-                      child: Align(
-                        alignment: Alignment.topRight,
-                        child: Row(
-                       
-                          children: [
-                            const Icon(Icons.favorite_border_outlined,
-                            color:
-                             Colors.black,
-                              size: 30,),
-                          ],
-                        ),
-                      ),
-                     ),
-                  ), 
-                  const SizedBox(height: 10,), 
-                  const Text('3 Set Marble', 
-                  style: TextStyle(
-                    fontSize: 20,
-                     fontWeight: FontWeight.w500),
-                     ), 
-                     const SizedBox(height: 2,), 
-                  const Text('Furniture', 
-                  style: TextStyle(
-                    fontSize: 18,
-                     fontWeight: FontWeight.w300),
-                     ),
-                     const SizedBox(height: 2,), 
-                  const Row(
-                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text('#3000', 
-                      style: TextStyle(
-                        fontSize: 20,
-                         fontWeight: FontWeight.w500),
-                         ),
-                         Icon(Icons.add_circle, size: 30,)
-                    ],
-                  ),  
-                ],
-              ),
-             ),
+      NewArrivalProductCard(),
              
         
     ],
@@ -130,6 +74,82 @@ SingleChildScrollView(
         ]
          )
          ); 
+  }
+}
+
+class NewArrivalProductCard extends StatelessWidget {
+   NewArrivalProductCard({
+    required imageUrl, 
+    required title, 
+    required category,
+     required price, 
+    super.key,
+  });
+
+final String imageUrl; 
+final String title;
+final String category; 
+final double price; 
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+           height: 320, 
+           width: 200,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                ClipRRect(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10), 
+                      image: const DecorationImage(image: AssetImage('assets/new_arrival/1.jpg'),
+                       fit: BoxFit.cover)
+                  
+                    ),
+                    width: 180,  
+                    height: 200,
+                    child: Align(
+                      alignment: Alignment.topRight,
+                      child: Row(
+                     
+                        children: [
+                          const Icon(Icons.favorite_border_outlined,
+                          color:
+                           Colors.black,
+                            size: 30,),
+                        ],
+                      ),
+                    ),
+                   ),
+                ), 
+                const SizedBox(height: 10,), 
+                const Text('3 Set Marble', 
+                style: TextStyle(
+                  fontSize: 20,
+                   fontWeight: FontWeight.w500),
+                   ), 
+                   const SizedBox(height: 2,), 
+                const Text('Furniture', 
+                style: TextStyle(
+                  fontSize: 18,
+                   fontWeight: FontWeight.w300),
+                   ),
+                   const SizedBox(height: 2,), 
+                const Row(
+                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text('#3000', 
+                    style: TextStyle(
+                      fontSize: 20,
+                       fontWeight: FontWeight.w500),
+                       ),
+                       Icon(Icons.add_circle, size: 30,)
+                  ],
+                ),  
+              ],
+            ),
+           );
   }
 }
 

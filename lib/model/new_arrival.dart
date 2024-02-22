@@ -2,6 +2,7 @@
 class New {
   String imageUrl; 
   String title; 
+  // ignore: non_constant_identifier_names
   String Category; 
   double Price; 
   New({
