@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 import 'package:ktea/components/app_widgets.dart';
+import 'package:ktea/model/popular.dart';
 
 
 import '../../model/new_arrival.dart';
@@ -73,6 +74,55 @@ class _Home_BodyState extends State<Home_Body> {
         
 const SizedBox(height: 10),
 titleCategory(title: 'Popular', press: (){}),
+const SizedBox(height: 10), 
+Container(
+  height: 120, width: 300, 
+  decoration: BoxDecoration(
+    borderRadius: BorderRadius.circular(15),
+    boxShadow: const [
+      BoxShadow(
+        color: Colors.black12
+      ),
+    ]
+  ),
+  child: Row(
+    children: [
+      Padding(
+        padding: const EdgeInsets.only(left: 8.0),
+        child: Container(
+          height: 100, width: 100,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            image: DecorationImage(
+              image: AssetImage(
+                popularProducts[0].imageUrl, 
+              ), fit: BoxFit.cover, 
+            )
+          ),
+         )),
+         const SizedBox(width: 10),
+         Padding(
+           padding: const EdgeInsets.all(8.0),
+           child: Column(
+            children: [
+              Text(
+                popularProducts[0].title, 
+                style: const TextStyle(
+                  color: Colors.black, 
+                fontWeight: FontWeight.bold, fontSize: 18),), 
+                Row(
+                  children: [
+                    Text(popularProducts[0].category), 
+                    Text(popularProducts[0].price.toString()), 
+                  ],
+                )
+            ],
+           ),
+         )
+      
+    ],
+  ),
+)
         
         ]
          )
