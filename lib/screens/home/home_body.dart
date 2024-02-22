@@ -55,27 +55,6 @@ class _Home_BodyState extends State<Home_Body> {
           const SizedBox(height: 10),
       
         
-SingleChildScrollView(
-  scrollDirection: Axis.horizontal,
-  child: Row(
-    children: [
-     
-             Container(
-             child: ListView.builder(
-              scrollDirection: Axis.horizontal, 
-              itemCount: news.length, 
-              itemBuilder: (BuildContext context, index) {
-
-                New new = news[index];
-               return  NewArrivalProductCard(); 
-              }
-
-          ),)
-        
-    ],
-  ),
-), 
-        
 
           
           
@@ -87,79 +66,80 @@ SingleChildScrollView(
   }
 }
 
-class NewArrivalProductCard extends StatelessWidget {
-   NewArrivalProductCard({
-    required this.imageUrl, 
-    required this.title, 
-    required this.category,
-     required this.price, 
-    super.key,
-  });
+// class NewArrivalProductCard extends StatelessWidget {
+//   const  NewArrivalProductCard({
+//     required this.imageUrl, 
+//     required this.title, 
+//     required this.category,
+//      required this.price, 
+//     super.key,
+//   });
 
-final String imageUrl; 
-final String title;
-final String category; 
-final int price; 
+// final String imageUrl; 
+// final String title;
+// final String category; 
+// final int price; 
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-           height: 320, 
-           width: 200,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                ClipRRect(
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10), 
-                      image: DecorationImage(image: AssetImage(new.imageUrl),
-                       fit: BoxFit.cover)
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//            height: 320, 
+//            width: 200,
+//             child: Column(
+//               crossAxisAlignment: CrossAxisAlignment.start,
+//               children: [
+//                 ClipRRect(
+//                   child: Container(
+//                     decoration: BoxDecoration(
+//                       borderRadius: BorderRadius.circular(10), 
+//                       image: DecorationImage(
+//                         image: AssetImage(new.imageUrl),
+//                        fit: BoxFit.cover), 
                   
-                    ),
-                    width: 180,  
-                    height: 200,
-                    child: const Align(
-                      alignment: Alignment.topRight,
-                      child: Row(
+//                     ),
+//                     width: 180,  
+//                     height: 200,
+//                     child: const Align(
+//                       alignment: Alignment.topRight,
+//                       child: Row(
                      
-                        children: [
-                          Icon(Icons.favorite_border_outlined,
-                          color:
-                           Colors.black,
-                            size: 30,),
-                        ],
-                      ),
-                    ),
-                   ),
-                ), 
-                const SizedBox(height: 10,), 
-                 Text(new.title, 
-                style: const TextStyle(
-                  fontSize: 20,
-                   fontWeight: FontWeight.w500),
-                   ), 
-                   const SizedBox(height: 2,), 
-             Text(category, 
-                style: const TextStyle(
-                  fontSize: 18,
-                   fontWeight: FontWeight.w300),
-                   ),
-                   const SizedBox(height: 2,), 
-                 Row(
-                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(new.price.toString(), 
-                    style: const TextStyle(
-                      fontSize: 20,
-                       fontWeight: FontWeight.w500),
-                       ),
-                       const Icon(Icons.add_circle, size: 30,)
-                  ],
-                ),  
-              ],
-            ),
-           );
-  }
-}
+//                         children: [
+//                           Icon(Icons.favorite_border_outlined,
+//                           color:
+//                            Colors.black,
+//                             size: 30,),
+//                         ],
+//                       ),
+//                     ),
+//                    ),
+//                 ), 
+//                 const SizedBox(height: 10,), 
+//                  Text(new.title, 
+//                 style: const TextStyle(
+//                   fontSize: 20,
+//                    fontWeight: FontWeight.w500),
+//                    ), 
+//                    const SizedBox(height: 2,), 
+//              Text(category, 
+//                 style: const TextStyle(
+//                   fontSize: 18,
+//                    fontWeight: FontWeight.w300),
+//                    ),
+//                    const SizedBox(height: 2,), 
+//                  Row(
+//                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                   children: [
+//                     Text(new.price.toString(), 
+//                     style: const TextStyle(
+//                       fontSize: 20,
+//                        fontWeight: FontWeight.w500),
+//                        ),
+//                        const Icon(Icons.add_circle, size: 30,)
+//                   ],
+//                 ),  
+//               ],
+//             ),
+//            );
+//   }
+// }
 
