@@ -1,12 +1,11 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 
 import 'package:ktea/components/app_widgets.dart';
 
 
 import 'home_widget.dart';
-
 class Home_Body extends StatefulWidget {
   const Home_Body({super.key});
 
@@ -59,13 +58,12 @@ SingleChildScrollView(
   scrollDirection: Axis.horizontal,
   child: Row(
     children: [
-      NewArrivalProductCard(
-        title: news[0]['title'], 
-        imageUrl: news[0]['imageUrl'], 
-        category: news[0]['Category'],
-        price: news[0]['Price'],
-      ),
-             
+     
+             Container(
+             child: ListView.builder(
+
+             New news = news[0];
+             itemCount: news.lenth,),)
         
     ],
   ),
@@ -114,12 +112,12 @@ final int price;
                     ),
                     width: 180,  
                     height: 200,
-                    child: Align(
+                    child: const Align(
                       alignment: Alignment.topRight,
                       child: Row(
                      
                         children: [
-                          const Icon(Icons.favorite_border_outlined,
+                          Icon(Icons.favorite_border_outlined,
                           color:
                            Colors.black,
                             size: 30,),
@@ -130,13 +128,13 @@ final int price;
                 ), 
                 const SizedBox(height: 10,), 
                  Text(title, 
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 20,
                    fontWeight: FontWeight.w500),
                    ), 
                    const SizedBox(height: 2,), 
              Text(category, 
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 18,
                    fontWeight: FontWeight.w300),
                    ),
@@ -144,12 +142,12 @@ final int price;
                  Row(
                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(price, 
-                    style: TextStyle(
+                    Text(price.toString(), 
+                    style: const TextStyle(
                       fontSize: 20,
                        fontWeight: FontWeight.w500),
                        ),
-                       Icon(Icons.add_circle, size: 30,)
+                       const Icon(Icons.add_circle, size: 30,)
                   ],
                 ),  
               ],
