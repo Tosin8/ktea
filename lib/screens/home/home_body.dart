@@ -54,6 +54,8 @@ class _Home_BodyState extends State<Home_Body> {
             ), 
           const SizedBox(height: 10),
       Container(
+        width: 200, 
+        height: 300,
         child: Card(
           elevation: 0,
           child: Column(
@@ -79,11 +81,24 @@ class _Home_BodyState extends State<Home_Body> {
                 ),
               
               Text(newProducts[0].category, 
-              style: TextStyle(color: Colors.grey, fontSize: 15),) ,
+              style: const TextStyle(color: Colors.grey, fontSize: 15),) ,
                
-              Text(newProducts[0].price.toString(), 
-              style: TextStyle(
-                color: Colors.black, fontSize: 16),)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(newProducts[0].price.toString(), 
+                  style: const TextStyle(
+                    color: Colors.black, fontSize: 16),
+                    ),
+                  const SizedBox(width: 10),
+                  GestureDetector(
+                    onTap: () {
+                      
+                    },
+                    child: Icon(Icons.add_circle, size: 30,),
+                  )
+                ],
+              )
             ]
           ),
         ),
