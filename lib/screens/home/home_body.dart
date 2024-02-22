@@ -75,7 +75,18 @@ class _Home_BodyState extends State<Home_Body> {
 const SizedBox(height: 10),
 titleCategory(title: 'Popular', press: (){}),
 const SizedBox(height: 10), 
-popularProductCard()
+SingleChildScrollView(
+  scrollDirection: Axis.horizontal,
+  child: Row(
+    children: [
+      ...List.generate(popularProducts.length, (index) =>   Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: popularProductCard(popularProducts: popularProducts[index],),
+      ),), 
+     
+    ],
+  ),
+)
         
         ]
          )
@@ -113,7 +124,7 @@ final Popular popularProducts;
                 borderRadius: BorderRadius.circular(10),
                 image: DecorationImage(
                   image: AssetImage(
-                    popularProducts[0].imageUrl, 
+                    popularProducts.imageUrl, 
                   ), fit: BoxFit.cover, 
                 )
               ),
@@ -125,15 +136,15 @@ final Popular popularProducts;
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    popularProducts[0].title, 
+                    popularProducts.title, 
                     style: const TextStyle(
                       color: Colors.black, 
                     fontWeight: FontWeight.bold, fontSize: 20),), 
                     SizedBox(height: 6,), 
                     Row(
                       children: [
-                        Text(popularProducts[0].category, style: TextStyle(fontSize: 18, color: Colors.black.withOpacity(0.6)),), 
-                        Text(popularProducts[0].price.toString(), style: TextStyle(fontSize: 18, 
+                        Text(popularProducts.category, style: TextStyle(fontSize: 18, color: Colors.black.withOpacity(0.6)),), 
+                        Text(popularProducts.price.toString(), style: TextStyle(fontSize: 18, 
                         fontWeight: FontWeight.w600),), 
                       ],
                     )
