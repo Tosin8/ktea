@@ -84,7 +84,7 @@ class _Home_BodyState extends State<Home_Body> {
             ],),
           ),
           SizedBox(height: 10),  
-          FadeInLeft(
+          FadeIn(
             child: Text(
               ' Unique Style \n Home Product',
               style: TextStyle(

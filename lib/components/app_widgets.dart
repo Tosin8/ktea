@@ -27,22 +27,23 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 6, right: 10),
-      child: FadeInDown(
+      child: FadeIn(
         child: TextFormField(
           keyboardType: TextInputType.text,
           textInputAction: TextInputAction.search,
           controller: _searchController,
           decoration: InputDecoration(
-              hintText: 'Search your products....',hintStyle: TextStyle(color: Colors.grey.shade500),
+              hintText: 'Search for products...',
+              hintStyle: TextStyle(color: Colors.grey.shade500),
               contentPadding:
                   const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
               enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(20),
                 borderSide: BorderSide(color: Colors.black),
                 gapPadding: 10,
               ),
               focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(20),
                 borderSide: BorderSide(color:Colors.orange),
                 gapPadding: 10,
               ),
