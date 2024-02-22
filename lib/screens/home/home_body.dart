@@ -111,6 +111,7 @@ final New newProducts;
               ),
             ), 
             Container(
+              padding: EdgeInsets.all(8),
               width: 200, 
               decoration:  BoxDecoration( 
                 color: Colors.white,
@@ -128,6 +129,7 @@ final New newProducts;
                 )
               ),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
  Text(
               newProducts.title,style: TextStyle(
