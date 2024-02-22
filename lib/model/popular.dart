@@ -11,3 +11,36 @@ class Popular {
     required this.price,
   });
 }
+
+final List<Popular> popularProducts = [
+  Popular(
+    imageUrl: 'assets/popular/1.jpg',
+    title: "Wooden Chair",
+    category: "Cabinet  ",
+    price: 2500,
+  ),
+  Popular(
+    imageUrl: 'assets/popular/2.jpg',
+    title: "Wooden Chair",
+    category: "Light",
+    price: 2500,
+  ), 
+   Popular(
+    imageUrl: 'assets/popular/3.jpg',
+    title: "Wooden Chair",
+    category: "Furniture",
+    price: 2500,
+  ), 
+  Popular(
+    imageUrl: 'assets/popular/4.jpg',
+    title: "Wooden Chair",
+    category: "Furniture",
+    price: 2500,
+  ), 
+  Popular(
+    imageUrl: 'assets/popular/5.jpg',
+    title: "Wooden Chair",
+    category: "Furniture",
+    price: 2500,
+  ), 
+];
