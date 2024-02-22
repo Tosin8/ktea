@@ -1,4 +1,5 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:flutter/cupertino.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -54,7 +55,21 @@ class _Home_BodyState extends State<Home_Body> {
             press: (){},
             ), 
           const SizedBox(height: 10),
-      newArrivalProductCard()
+   SingleChildScrollView( 
+    scrollDirection: Axis.horizontal,
+     child: Row(
+       children: [
+        ...List.generate(
+          newProducts.length, 
+          (index) =>   Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: newArrivalProductCard(
+              newProducts: newProducts[index],),
+          ),)
+         
+       ],
+     ),
+   ),
         
 
           
@@ -69,60 +84,88 @@ class _Home_BodyState extends State<Home_Body> {
 
 class newArrivalProductCard extends StatelessWidget {
   const newArrivalProductCard({
-    super.key,
+    super.key, required this.newProducts,
   });
 
+final New newProducts;
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-        borderRadius: BorderRadius.circular(5),
-      child: Card(
-        elevation: 1,
-        child: Column(
+    return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
         
               height: 200, width: 200,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: const BorderRadius.only(
+                  
+                  topLeft: Radius.circular(15),
+                  topRight: Radius.circular(15),
+                ),
                 image: DecorationImage(
                   image: AssetImage(
-                    newProducts[0].imageUrl,
+                    newProducts.imageUrl,
                     
                   ),
                    fit: BoxFit.cover)
               ),
             ), 
-            const SizedBox(height: 10),
-            Text(
-              newProducts[0].title,style: TextStyle(
+            Container(
+              width: 200, 
+              decoration:  BoxDecoration( 
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.4), 
+                    blurRadius: 0.2,
+                    spreadRadius: 0.1, 
+                    offset: const Offset(1, 1)
+                  )
+                ],
+                borderRadius:  const BorderRadius.only(
+                  bottomLeft: Radius.circular(15),
+                  bottomRight: Radius.circular(15),
+                )
+              ),
+              child: Column(
+                children: [
+ Text(
+              newProducts.title,style: TextStyle(
                 fontSize: 16, fontWeight: FontWeight.w600, color: Colors.black.withOpacity(0.7)),
               ),
-            
-            Text(newProducts[0].category, 
+              Text(newProducts.category, 
             style: const TextStyle(color: Colors.grey, fontSize: 15),) ,
-             
-            Row(
-             
+               Row(
+             crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(newProducts[0].price.toString(), 
+                Text(newProducts.price.toString(), 
                 style: const TextStyle(
                   color: Colors.black, fontSize: 16),
                   ),
-                const SizedBox(width: 120),
+                const SizedBox(width: 100),
                 GestureDetector(
                   onTap: () {
                     
                   },
-                  child: Icon(Icons.add_circle, size: 30,),
+                  child: const Icon(Icons.add_circle, size: 30,),
                 )
               ],
             )
+
+                ],
+                
+              ),
+            ), 
+           
+           
+            
+            
+             
+         
           ]
-        ),
-      ),
-    );
+        );
+      
+    
   }
 }
 
