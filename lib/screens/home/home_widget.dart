@@ -306,12 +306,15 @@ final GestureTapCallback press;
          Text(title, 
          style: const TextStyle(
            color: Colors.black,
-           fontSize: 20, fontWeight: FontWeight.w500),
+           fontSize: 20, 
+           fontWeight: FontWeight.w500),
            ), 
            GestureDetector(
              onTap: press ,
              child: const Text('View All', 
-             style: TextStyle(color: Colors.blue, fontSize: 15),),
+             style: TextStyle(
+              color: Colors.blue,
+               fontSize: 15),),
            ) , 
          
       ],
