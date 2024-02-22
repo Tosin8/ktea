@@ -15,19 +15,23 @@ class New {
     New(
       title:"4 Set Wooden Dining",
        Category:"Furniture", 
-        Price: 2500, imageUrl: ''),
+        Price: 2500, 
+        imageUrl: 'assets/new_arrival/1.jpg'),
        New(
       title:"iPhone 13 Pro Max", 
       Category:"Cabinet",  
-      Price: 3000, imageUrl: ''),   
+      Price: 3000, 
+      imageUrl: 'assets/new_arrival/2.jpg'),   
        New(
       title:"iPhone 13 Pro Max",
        Category:"Smartphones",
-         Price: 3000, imageUrl: ''),
+         Price: 3000, 
+         imageUrl: 'assets/new_arrival/3.jpg'),
           New(
       title:"iPhone 13 Pro Max",
        Category:"Smartphones",
-         Price: 3000, imageUrl: ''),
+         Price: 3000,
+          imageUrl: 'assets/new_arrival/4.jpg'),
   ];
 }
 
