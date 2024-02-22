@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:ktea/components/app_widgets.dart';
 
 
+import '../../model/new_arrival.dart';
 import 'home_widget.dart';
 class Home_Body extends StatefulWidget {
   const Home_Body({super.key});
@@ -61,9 +62,15 @@ SingleChildScrollView(
      
              Container(
              child: ListView.builder(
+              scrollDirection: Axis.horizontal, 
+              itemCount: news.length, 
+              itemBuilder: (BuildContext context, index) {
 
-             New news = news[0];
-             itemCount: news.lenth,),)
+                New new = news[index];
+               return  NewArrivalProductCard(); 
+              }
+
+          ),)
         
     ],
   ),
@@ -106,7 +113,7 @@ final int price;
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10), 
-                      image: DecorationImage(image: AssetImage(imageUrl),
+                      image: DecorationImage(image: AssetImage(new.imageUrl),
                        fit: BoxFit.cover)
                   
                     ),
@@ -127,7 +134,7 @@ final int price;
                    ),
                 ), 
                 const SizedBox(height: 10,), 
-                 Text(title, 
+                 Text(new.title, 
                 style: const TextStyle(
                   fontSize: 20,
                    fontWeight: FontWeight.w500),
@@ -142,7 +149,7 @@ final int price;
                  Row(
                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(price.toString(), 
+                    Text(new.price.toString(), 
                     style: const TextStyle(
                       fontSize: 20,
                        fontWeight: FontWeight.w500),
