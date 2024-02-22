@@ -59,7 +59,12 @@ SingleChildScrollView(
   scrollDirection: Axis.horizontal,
   child: Row(
     children: [
-      NewArrivalProductCard(),
+      NewArrivalProductCard(
+        title: news[0]['title'], 
+        imageUrl: news[0]['imageUrl'], 
+        category: news[0]['Category'],
+        price: news[0]['Price'],
+      ),
              
         
     ],
@@ -79,17 +84,17 @@ SingleChildScrollView(
 
 class NewArrivalProductCard extends StatelessWidget {
    NewArrivalProductCard({
-    required imageUrl, 
-    required title, 
-    required category,
-     required price, 
+    required this.imageUrl, 
+    required this.title, 
+    required this.category,
+     required this.price, 
     super.key,
   });
 
 final String imageUrl; 
 final String title;
 final String category; 
-final double price; 
+final int price; 
 
   @override
   Widget build(BuildContext context) {
@@ -103,7 +108,7 @@ final double price;
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10), 
-                      image: const DecorationImage(image: AssetImage('assets/new_arrival/1.jpg'),
+                      image: DecorationImage(image: AssetImage(imageUrl),
                        fit: BoxFit.cover)
                   
                     ),
@@ -124,22 +129,22 @@ final double price;
                    ),
                 ), 
                 const SizedBox(height: 10,), 
-                const Text('3 Set Marble', 
+                 Text(title, 
                 style: TextStyle(
                   fontSize: 20,
                    fontWeight: FontWeight.w500),
                    ), 
                    const SizedBox(height: 2,), 
-                const Text('Furniture', 
+             Text(category, 
                 style: TextStyle(
                   fontSize: 18,
                    fontWeight: FontWeight.w300),
                    ),
                    const SizedBox(height: 2,), 
-                const Row(
+                 Row(
                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('#3000', 
+                    Text(price, 
                     style: TextStyle(
                       fontSize: 20,
                        fontWeight: FontWeight.w500),
