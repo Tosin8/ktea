@@ -53,7 +53,41 @@ class _Home_BodyState extends State<Home_Body> {
             press: (){},
             ), 
           const SizedBox(height: 10),
-      
+      Container(
+        child: Card(
+          elevation: 0,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+          
+                height: 200, width: 200,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  image: DecorationImage(
+                    image: AssetImage(
+                      newProducts[0].imageUrl,
+                      
+                    ),
+                     fit: BoxFit.cover)
+                ),
+              ), 
+              const SizedBox(height: 10),
+              Text(
+                newProducts[0].title,style: TextStyle(
+                  fontSize: 16, fontWeight: FontWeight.w600, color: Colors.black.withOpacity(0.7)),
+                ),
+              
+              Text(newProducts[0].category, 
+              style: TextStyle(color: Colors.grey, fontSize: 15),) ,
+               
+              Text(newProducts[0].price.toString(), 
+              style: TextStyle(
+                color: Colors.black, fontSize: 16),)
+            ]
+          ),
+        ),
+      )
         
 
           
@@ -66,80 +100,4 @@ class _Home_BodyState extends State<Home_Body> {
   }
 }
 
-// class NewArrivalProductCard extends StatelessWidget {
-//   const  NewArrivalProductCard({
-//     required this.imageUrl, 
-//     required this.title, 
-//     required this.category,
-//      required this.price, 
-//     super.key,
-//   });
-
-// final String imageUrl; 
-// final String title;
-// final String category; 
-// final int price; 
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//            height: 320, 
-//            width: 200,
-//             child: Column(
-//               crossAxisAlignment: CrossAxisAlignment.start,
-//               children: [
-//                 ClipRRect(
-//                   child: Container(
-//                     decoration: BoxDecoration(
-//                       borderRadius: BorderRadius.circular(10), 
-//                       image: DecorationImage(
-//                         image: AssetImage(new.imageUrl),
-//                        fit: BoxFit.cover), 
-                  
-//                     ),
-//                     width: 180,  
-//                     height: 200,
-//                     child: const Align(
-//                       alignment: Alignment.topRight,
-//                       child: Row(
-                     
-//                         children: [
-//                           Icon(Icons.favorite_border_outlined,
-//                           color:
-//                            Colors.black,
-//                             size: 30,),
-//                         ],
-//                       ),
-//                     ),
-//                    ),
-//                 ), 
-//                 const SizedBox(height: 10,), 
-//                  Text(new.title, 
-//                 style: const TextStyle(
-//                   fontSize: 20,
-//                    fontWeight: FontWeight.w500),
-//                    ), 
-//                    const SizedBox(height: 2,), 
-//              Text(category, 
-//                 style: const TextStyle(
-//                   fontSize: 18,
-//                    fontWeight: FontWeight.w300),
-//                    ),
-//                    const SizedBox(height: 2,), 
-//                  Row(
-//                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                   children: [
-//                     Text(new.price.toString(), 
-//                     style: const TextStyle(
-//                       fontSize: 20,
-//                        fontWeight: FontWeight.w500),
-//                        ),
-//                        const Icon(Icons.add_circle, size: 30,)
-//                   ],
-//                 ),  
-//               ],
-//             ),
-//            );
-//   }
-// }
-
+//

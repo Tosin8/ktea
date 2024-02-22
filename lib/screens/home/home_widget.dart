@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:badges/badges.dart' as badges;
@@ -278,10 +280,10 @@ class _CarouselSliderState extends State<CarouselSlider> {
 //   }
 // }
 
-// ignore: camel_case_types
 
 
 
+// ignore: must_be_immutable
 class titleCategory extends StatelessWidget {
  titleCategory({
    required this.title,
@@ -290,25 +292,30 @@ class titleCategory extends StatelessWidget {
   });
 
 String title; 
-Function press; 
+final GestureTapCallback press; 
   @override
   Widget build(BuildContext context) {
-    return Row(
-     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-     children: [
-       Text(title, 
-       style: const TextStyle(
-         color: Colors.black,
-         fontSize: 20, fontWeight: FontWeight.w500),
-         ), 
-         GestureDetector(
-           onTap: press() ,
-           child: const Text('View All', 
-           style: TextStyle(color: Colors.blue, fontSize: 15),),
-         ) , 
-       
-    ],
-              );
+    return Padding(
+      padding: const EdgeInsets.only(
+        left: 10.0,
+       right: 10.0),
+      child: Row(
+       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+       children: [
+         Text(title, 
+         style: const TextStyle(
+           color: Colors.black,
+           fontSize: 20, fontWeight: FontWeight.w500),
+           ), 
+           GestureDetector(
+             onTap: press ,
+             child: const Text('View All', 
+             style: TextStyle(color: Colors.blue, fontSize: 15),),
+           ) , 
+         
+      ],
+                ),
+    );
   }
 }
 
