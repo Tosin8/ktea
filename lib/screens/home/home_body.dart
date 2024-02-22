@@ -72,10 +72,7 @@ class _Home_BodyState extends State<Home_Body> {
    ),
         
 const SizedBox(height: 10),
-titleCategory(title: 'Popular', press: (){})
-          
-          
-       
+titleCategory(title: 'Popular', press: (){}),
         
         ]
          )
