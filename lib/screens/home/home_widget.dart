@@ -28,7 +28,7 @@ class App_Drawer extends StatelessWidget {
                 children: [App_Icon_White(), Model_User(), User_Details()],
               ),
             ),
-            SizedBox(height: 12),
+            const SizedBox(height: 12),
             //const Screen_Nav(),
             const SizedBox(height: 170),
             const Divider(
@@ -239,441 +239,73 @@ class _CarouselSliderState extends State<CarouselSlider> {
   }
 }
 
-class ProductHeader_Title extends StatelessWidget {
-  const ProductHeader_Title({
-    super.key,
-    required this.title,
-  });
 
-  final String title;
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: const TextStyle(
-          fontSize: 18, fontWeight: FontWeight.w500, color: Colors.blue),
-    );
-  }
-}
 
-class ItemCard1 extends StatelessWidget {
-  const ItemCard1({
-    super.key,
-  });
+// class ItemCard1 extends StatelessWidget {
+//   const ItemCard1({
+//     super.key,
+//   });
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          ClipRRect(
-              borderRadius: BorderRadius.circular(16),
-              child: Image.asset(
-                products[0].image,
-              )),
-          const SizedBox(height: 8),
-          Padding(
-              padding: const EdgeInsets.only(left: 40),
-              child: Text(
-                products[0].title,
-                style: const TextStyle(fontWeight: FontWeight.w500),
-              )),
-          Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Text(
-              '\$${products[0].price}',
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       child: Column(
+//         children: [
+//           ClipRRect(
+//               borderRadius: BorderRadius.circular(16),
+//               child: Image.asset(
+//                 products[0].image,
+//               )),
+//           const SizedBox(height: 8),
+//           Padding(
+//               padding: const EdgeInsets.only(left: 40),
+//               child: Text(
+//                 products[0].title,
+//                 style: const TextStyle(fontWeight: FontWeight.w500),
+//               )),
+//           Padding(
+//             padding: const EdgeInsets.only(left: 30),
+//             child: Text(
+//               '\$${products[0].price}',
+//               style: const TextStyle(fontWeight: FontWeight.bold),
+//             ),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
 
 // ignore: camel_case_types
 
-class ItemCard2 extends StatelessWidget {
-  const ItemCard2({
+
+
+class titleCategory extends StatelessWidget {
+ titleCategory({
+   required this.title,
+  required this.press, 
     super.key,
   });
 
+String title; 
+Function press; 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          ClipRRect(
-              borderRadius: BorderRadius.circular(30),
-              child: Image.asset(
-                products[1].image,
-              )),
-          const SizedBox(height: 8),
-          Padding(
-              padding: const EdgeInsets.only(left: 40),
-              child: Text(
-                products[1].title,
-                style: const TextStyle(fontWeight: FontWeight.w500),
-              )),
-          Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Text(
-              '\$${products[1].price}',
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class ItemCard3 extends StatelessWidget {
-  const ItemCard3({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Image.asset(
-                products[2].image,
-              )),
-          const SizedBox(height: 8),
-          Padding(
-              padding: const EdgeInsets.only(left: 40),
-              child: Text(
-                products[2].title,
-                style: const TextStyle(fontWeight: FontWeight.w500),
-              )),
-          Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Text(
-              '\$${products[2].price}',
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class ItemCard4 extends StatelessWidget {
-  const ItemCard4({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Image.asset(
-                products[3].image,
-              )),
-          const SizedBox(height: 8),
-          Padding(
-              padding: const EdgeInsets.only(left: 40),
-              child: Text(
-                products[3].title,
-                style: const TextStyle(fontWeight: FontWeight.w500),
-              )),
-          Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Text(
-              '\$${products[3].price}',
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class ItemCard5 extends StatelessWidget {
-  const ItemCard5({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          ClipRRect(
-              borderRadius: BorderRadius.circular(16),
-              child: Image.asset(
-                products[4].image,
-              )),
-          const SizedBox(height: 8),
-          Padding(
-              padding: const EdgeInsets.only(left: 40),
-              child: Text(
-                products[4].title,
-                style: const TextStyle(fontWeight: FontWeight.w500),
-              )),
-          Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Text(
-              '\$${products[4].price}',
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class ItemCard6 extends StatelessWidget {
-  const ItemCard6({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Image.asset(
-                products[5].image,
-              )),
-          const SizedBox(height: 8),
-          Padding(
-              padding: const EdgeInsets.only(left: 40),
-              child: Text(
-                products[5].title,
-                style: const TextStyle(fontWeight: FontWeight.w500),
-              )),
-          Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Text(
-              '\$${products[5].price}',
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class ItemCard7 extends StatelessWidget {
-  const ItemCard7({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          ClipRRect(
-              borderRadius: BorderRadius.circular(16),
-              child: Image.asset(
-                products[6].image,
-              )),
-          const SizedBox(height: 8),
-          Padding(
-              padding: const EdgeInsets.only(left: 40),
-              child: Text(
-                products[6].title,
-                style: const TextStyle(fontWeight: FontWeight.w500),
-              )),
-          Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Text(
-              '\$${products[6].price}',
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class ItemCard8 extends StatelessWidget {
-  const ItemCard8({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          ClipRRect(
-              borderRadius: BorderRadius.circular(16),
-              child: Image.asset(
-                products[7].image,
-              )),
-          const SizedBox(height: 8),
-          Padding(
-              padding: const EdgeInsets.only(left: 40),
-              child: Text(
-                products[7].title,
-                style: const TextStyle(fontWeight: FontWeight.w500),
-              )),
-          Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Text(
-              '\$${products[7].price}',
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class ItemCard9 extends StatelessWidget {
-  const ItemCard9({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          ClipRRect(
-              borderRadius: BorderRadius.circular(16),
-              child: Image.asset(
-                products[8].image,
-              )),
-          const SizedBox(height: 8),
-          Padding(
-              padding: const EdgeInsets.only(left: 40),
-              child: Text(
-                products[8].title,
-                style: const TextStyle(fontWeight: FontWeight.w500),
-              )),
-          Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Text(
-              '\$${products[8].price}',
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class ItemCard10 extends StatelessWidget {
-  const ItemCard10({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          ClipRRect(
-              borderRadius: BorderRadius.circular(16),
-              child: Image.asset(
-                products[9].image,
-              )),
-          const SizedBox(height: 8),
-          Padding(
-              padding: const EdgeInsets.only(left: 40),
-              child: Text(
-                products[9].title,
-                style: const TextStyle(fontWeight: FontWeight.w500),
-              )),
-          Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Text(
-              '\$${products[9].price}',
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class ItemCard11 extends StatelessWidget {
-  const ItemCard11({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          ClipRRect(
-              borderRadius: BorderRadius.circular(16),
-              child: Image.asset(
-                products[10].image,
-              )),
-          const SizedBox(height: 8),
-          Padding(
-              padding: const EdgeInsets.only(left: 40),
-              child: Text(
-                products[10].title,
-                style: const TextStyle(fontWeight: FontWeight.w500),
-              )),
-          Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Text(
-              '\$${products[10].price}',
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class ItemCard12 extends StatelessWidget {
-  const ItemCard12({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          ClipRRect(
-              borderRadius: BorderRadius.circular(16),
-              child: Image.asset(
-                products[11].image,
-              )),
-          const SizedBox(height: 8),
-          Padding(
-              padding: const EdgeInsets.only(left: 40),
-              child: Text(
-                products[11].title,
-                style: const TextStyle(fontWeight: FontWeight.w500),
-              )),
-          Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Text(
-              '\$${products[11].price}',
-              style: const TextStyle(fontWeight: FontWeight.bold),
-            ),
-          ),
-        ],
-      ),
-    );
+    return Row(
+     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+     children: [
+       Text(title, 
+       style: const TextStyle(
+         color: Colors.black,
+         fontSize: 20, fontWeight: FontWeight.w500),
+         ), 
+         GestureDetector(
+           onTap: press() ,
+           child: const Text('View All', 
+           style: TextStyle(color: Colors.blue, fontSize: 15),),
+         ) , 
+       
+    ],
+              );
   }
 }
