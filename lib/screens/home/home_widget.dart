@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:badges/badges.dart' as badges;
 
-import '../../components/product_class.dart';
-import '../../components/routes.dart';
+
 import 'dart:async';
 
-// ignore: camel_case_types
+import '../extended_screen/notification.dart';
+
 class App_Drawer extends StatelessWidget {
   const App_Drawer({
     super.key,
@@ -309,3 +311,34 @@ Function press;
               );
   }
 }
+
+
+class notifcation_bell extends StatelessWidget {
+  const notifcation_bell({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+        onTap: () {
+          Get.to(const Notifications()); 
+        },
+        child: 
+        badges.Badge(
+          position: badges.BadgePosition.topEnd(top: -10, end: -5),
+          badgeContent: const Text('0'), 
+          showBadge: true,
+                      badgeAnimation: const badges.BadgeAnimation.scale(animationDuration: Duration(milliseconds: 4500), 
+                      curve: Curves.easeIn,
+                      loopAnimation: true),
+          child:  const Icon(Icons.notifications, 
+          
+                      color: Colors.black,),
+                      badgeStyle: badges.BadgeStyle(badgeColor: Colors.grey.shade300),
+    
+        )
+        );
+  }
+}
+

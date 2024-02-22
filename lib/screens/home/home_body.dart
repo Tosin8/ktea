@@ -1,10 +1,8 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'package:get/get.dart';
 import 'package:ktea/components/app_widgets.dart';
-import 'package:ktea/screens/extended_screen/notification.dart';
-import'package:badges/badges.dart' as badges;
 
 
 import 'home_widget.dart';
@@ -19,41 +17,22 @@ class Home_Body extends StatefulWidget {
 class _Home_BodyState extends State<Home_Body> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
     
-      body: Padding(
-        padding: const EdgeInsets.only(left: 10),
-        child: ListView(children: [
+      body: 
+        ListView(
+          children: [
           const SizedBox(height: 15), 
-          Padding( 
-            padding: const EdgeInsets.only(
+          const Padding( 
+            padding: EdgeInsets.only(
               left: 8, 
               right: 10),
             child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 
-              const Icon(Icons.menu_rounded), 
-            GestureDetector(
-                onTap: () {
-                  Get.to(const Notifications()); 
-                },
-                child: 
-                badges.Badge(
-                  position: badges.BadgePosition.topEnd(top: -10, end: -5),
-                  badgeContent: const Text('0'), 
-                  showBadge: true,
-                              badgeAnimation: const badges.BadgeAnimation.scale(animationDuration: Duration(milliseconds: 4500), 
-                              curve: Curves.easeIn,
-                              loopAnimation: true),
-                  child:  const Icon(Icons.notifications, 
-                  
-                              color: Colors.black,),
-                              badgeStyle: badges.BadgeStyle(badgeColor: Colors.grey.shade300),
-            
-                )
-                ), 
+      
+            notifcation_bell(), 
             ],),
           ),
           const SizedBox(height: 10),  
@@ -74,12 +53,83 @@ class _Home_BodyState extends State<Home_Body> {
             press: (){},
             ), 
           const SizedBox(height: 10),
-       
+      
+        
+SingleChildScrollView(
+  scrollDirection: Axis.horizontal,
+  child: Row(
+    children: [
+      Container(
+             height: 320, 
+             width: 200,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ClipRRect(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10), 
+                        image: const DecorationImage(image: AssetImage('assets/new_arrival/1.jpg'),
+                         fit: BoxFit.cover)
+                    
+                      ),
+                      width: 180,  
+                      height: 200,
+                      child: Align(
+                        alignment: Alignment.topRight,
+                        child: Row(
+                       
+                          children: [
+                            const Icon(Icons.favorite_border_outlined,
+                            color:
+                             Colors.black,
+                              size: 30,),
+                          ],
+                        ),
+                      ),
+                     ),
+                  ), 
+                  const SizedBox(height: 10,), 
+                  const Text('3 Set Marble', 
+                  style: TextStyle(
+                    fontSize: 20,
+                     fontWeight: FontWeight.w500),
+                     ), 
+                     const SizedBox(height: 2,), 
+                  const Text('Furniture', 
+                  style: TextStyle(
+                    fontSize: 18,
+                     fontWeight: FontWeight.w300),
+                     ),
+                     const SizedBox(height: 2,), 
+                  const Row(
+                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('#3000', 
+                      style: TextStyle(
+                        fontSize: 20,
+                         fontWeight: FontWeight.w500),
+                         ),
+                         Icon(Icons.add_circle, size: 30,)
+                    ],
+                  ),  
+                ],
+              ),
+             ),
+             
+        
+    ],
+  ),
+), 
         
 
           
+          
        
-        ] )))); 
+        
+        ]
+         )
+         ); 
   }
 }
 
