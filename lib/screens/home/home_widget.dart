@@ -8,6 +8,7 @@ import 'package:badges/badges.dart' as badges;
 import 'dart:async';
 
 import '../../model/new_arrival.dart';
+import '../../model/popular.dart';
 import '../extended_screen/notification.dart';
 
 class App_Drawer extends StatelessWidget {
@@ -443,3 +444,70 @@ final New newProducts;
     
   }
 }
+
+class popularProductCard extends StatelessWidget {
+  const popularProductCard({
+    super.key, required this.popularProducts,
+  });
+
+final Popular popularProducts; 
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 90, width: 300, 
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15),
+        color: Colors.white,
+        boxShadow: const [
+          BoxShadow(
+            color: Colors.black12, 
+            offset: Offset(1, 1)
+          ),
+        ]
+      ),
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 8.0),
+            child: Container(
+              height: 80, width: 80,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                image: DecorationImage(
+                  image: AssetImage(
+                    popularProducts.imageUrl, 
+                  ), fit: BoxFit.cover, 
+                )
+              ),
+             )),
+             const SizedBox(width: 10),
+             Padding(
+               padding: const EdgeInsets.all(10.0),
+               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    popularProducts.title, 
+                    style: const TextStyle(
+                      color: Colors.black, 
+                    fontWeight: FontWeight.bold, fontSize: 20),), 
+                    SizedBox(height: 6,), 
+                    Row(
+                      children: [
+                        Text(popularProducts.category, style: TextStyle(fontSize: 18, color: Colors.black.withOpacity(0.6)),), 
+                        Text(popularProducts.price.toString(), style: TextStyle(fontSize: 18, 
+                        fontWeight: FontWeight.w600),), 
+                      ],
+                    )
+                ],
+               ),
+             )
+          
+        ],
+      ),
+    );
+  }
+}
+
+
+
