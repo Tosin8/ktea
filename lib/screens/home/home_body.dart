@@ -87,7 +87,7 @@ SingleChildScrollView(
     ],
   ),
 ), 
-SizedBox(height: 10,), 
+const SizedBox(height: 10,), 
 titleCategory(title: 'Sofa', press: (){}), 
         
         ]

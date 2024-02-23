@@ -385,7 +385,7 @@ final New newProducts;
               ),
             ), 
             Container(
-              padding: EdgeInsets.all(8),
+              padding: const EdgeInsets.all(8),
               width: 200, 
               decoration:  BoxDecoration( 
                 color: Colors.white,
@@ -454,7 +454,7 @@ final Popular popularProducts;
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 90, width: 300, 
+      height: 110, width: 300, 
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         color: Colors.white,
@@ -491,14 +491,13 @@ final Popular popularProducts;
                     style: const TextStyle(
                       color: Colors.black, 
                     fontWeight: FontWeight.bold, fontSize: 20),), 
-                    SizedBox(height: 6,), 
-                    Row(
-                      children: [
-                        Text(popularProducts.category, style: TextStyle(fontSize: 18, color: Colors.black.withOpacity(0.6)),), 
-                        Text(popularProducts.price.toString(), style: TextStyle(fontSize: 18, 
+                   // SizedBox(height: 6,), 
+                 
+                        Text(popularProducts.category, style: TextStyle(fontSize: 18,
+                         color: Colors.black.withOpacity(0.6)),), 
+                        Text(popularProducts.price.toString(), style: const TextStyle(fontSize: 18, 
                         fontWeight: FontWeight.w600),), 
-                      ],
-                    )
+                    
                 ],
                ),
              )
