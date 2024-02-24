@@ -44,6 +44,7 @@ dependencies:
   flutter_fadein: ^2.0.0
   flutter_masonry_view: ^0.0.2
   flutter_spinkit: ^5.2.0
+  flutter_staggered_grid_view: ^0.7.0
   flutter_svg: ^2.0.7
   font_awesome_flutter: ^10.6.0
   get: ^4.6.6
