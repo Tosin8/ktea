@@ -92,41 +92,16 @@ SingleChildScrollView(
 ), 
 const SizedBox(height: 10,), 
  const productTitleCategory(title: 'Sofa',), 
-//  Expanded(
-   
-//      child: MasonryGridView.count(
-//       shrinkWrap: true,
-//       crossAxisCount: 2,
-//      mainAxisSpacing: 1, 
-//      crossAxisSpacing: 2,
-//      itemCount: sofas.length,
-//      itemBuilder: (context , index) {
-//        return  Padding(
-//          padding: const EdgeInsets.all(15.0),
-//          child: sofaProductCard(
-//          sofas: sofas[index],
-//               ),
-//        ); 
-//    }),
-//    ),
- 
-//  Expanded(
-//   child: MasonryView(
-//   listOfItem: sofas, 
-//   numberOfColumn: 2, 
-//   itemBuilder: (sofa) {
-//     return  sofaProductCard(
-//       sofas: sofas[sofas.indexOf(sofa)],
-//     ); 
-//   }
-//   ),
-//   ), 
+
+  
 Expanded(child: StaggeredGrid.count(
   crossAxisCount: 2, 
   mainAxisSpacing: 2, 
   crossAxisSpacing: 2, 
   children: List.generate(sofas.length, (index) => 
-  sofaProductCard(sofas: sofas[index]),
+  Padding(
+    padding: const EdgeInsets.all(12),
+    child: sofaProductCard(sofas: sofas[index])),
   )
   ),
   ),
@@ -136,43 +111,4 @@ Expanded(child: StaggeredGrid.count(
          ); 
   }
 }
-
-class sofaProductCard extends StatelessWidget {
-  const sofaProductCard({
-    super.key, required this.sofas,
-  });
-
-final Sofa sofas; 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-     height: 220,
-     child: Column(
-       crossAxisAlignment: CrossAxisAlignment.start,
-       children: [
-         Container(
-           height: 150, width: 150,
-           decoration: BoxDecoration(
-             borderRadius: BorderRadius.circular(12),
-             
-             image: DecorationImage(
-               image: AssetImage(sofas.imgUrl),
-                fit: BoxFit.cover),
-           ),
-           ), 
-           const SizedBox(height: 10),
-           Text(sofas.title, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
-           ),
-           Text(sofas.price,
-            style: const TextStyle(fontSize: 18,
-             fontWeight: FontWeight.w400),) 
-           
-       ]
-     ),
-    );
-  }
-}
-
-
-
 

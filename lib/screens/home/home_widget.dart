@@ -9,6 +9,7 @@ import 'dart:async';
 
 import '../../model/new_arrival.dart';
 import '../../model/popular.dart';
+import '../../model/sofa.dart';
 import '../extended_screen/notification.dart';
 
 class App_Drawer extends StatelessWidget {
@@ -480,3 +481,51 @@ final String title;
     );
   }
 }
+
+
+class sofaProductCard extends StatelessWidget {
+  const sofaProductCard({
+    super.key, required this.sofas,
+  });
+
+final Sofa sofas; 
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+    // height: 220,
+     child: Column(
+       crossAxisAlignment: CrossAxisAlignment.start,
+       children: [
+         Container(
+           height: 150, width: 150,
+           decoration: BoxDecoration(
+             borderRadius: BorderRadius.circular(12),
+             
+             image: DecorationImage(
+               image: AssetImage(sofas.imgUrl),
+                fit: BoxFit.cover),
+           ),
+           ), 
+           const SizedBox(height: 10),
+           Text(sofas.title, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+           ),
+           Row(
+            
+             children: [
+               Text(sofas.price,
+                style: const TextStyle(fontSize: 18,
+                 fontWeight: FontWeight.w400),), 
+                 SizedBox(width: 80,), 
+                 Icon(Icons.add_circle, size: 30)
+             ],
+           ) 
+           
+       ]
+     ),
+    );
+  }
+}
+
+
+
+
