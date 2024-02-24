@@ -13,17 +13,26 @@ class CabinetProduct {
 
 List <CabinetProduct> CabinetProducts = [
   CabinetProduct(
-    imgUrl: 'assets/products/light/1.jpg',
+    imgUrl: 'assets/products/cabinet/1.jpg',
     title: 'Brown Chair',
     price: '2000',
   ), 
   CabinetProduct(
-    imgUrl: 'assets/products/light/2.jpg',
+    imgUrl: 'assets/products/cabinet/2.jpg',
     title: 'Brown Chair',
     price: '2000',
   ), 
    CabinetProduct(
-    imgUrl: 'assets/products/light/3.jpg',
+    imgUrl: 'assets/products/cabinet/3.jpg',
+    title: 'Sofa',
+    price: '2000',
+  ),  
+  CabinetProduct(
+    imgUrl: 'assets/products/cabinet/4.jpg',
+    title: 'Sofa',
+    price: '2000',
+  ),  CabinetProduct(
+    imgUrl: 'assets/products/cabinet/5.jpg',
     title: 'Sofa',
     price: '2000',
   ),  
