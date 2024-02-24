@@ -10,6 +10,7 @@ import 'package:ktea/model/popular.dart';
 import 'package:ktea/model/table.dart';
 
 
+import '../../model/light.dart';
 import '../../model/new_arrival.dart';
 import '../../model/sofa.dart';
 import 'home_widget.dart';
@@ -118,6 +119,18 @@ Expanded(child: StaggeredGrid.count(
   ),
 
         const productTitleCategory(title: 'Light',), 
+         Expanded(child: StaggeredGrid.count(
+  crossAxisCount: 2, 
+  mainAxisSpacing: 2, 
+  crossAxisSpacing: 2, 
+  children: List.generate(LightProducts.length, (index) => 
+  Padding(
+    padding: const EdgeInsets.all(12),
+    child: lightProductCard(LightProducts: LightProducts[index])),
+  )
+  ),
+  ),
+ const productTitleCategory(title: 'Cabinet',), 
         ]
          )
          ); 

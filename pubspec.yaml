@@ -141,10 +141,11 @@ flutter:
     - assets/products/table/2_150.jpg
     - assets/products/table/3_150.jpg
     - assets/products/table/4_150.jpg
-    - assets/products/cabinet/9tier_shoe_rack.jpg
-    - assets/products/cabinet/clothes_hanger.jpg
-    - assets/products/cabinet/triangle_coat_rack.jpg
-    - assets/products/cabinet/handy_cabinet.jpg
+    - assets/products/cabinet/1.jpg
+    - assets/products/cabinet/2.jpg
+    - assets/products/cabinet/3.jpg
+    - assets/products/cabinet/4.jpg
+    - assets/products/cabinet/5.jpg
 
     # Splash Screen Images.
     - assets/images/splash/1.jpg
