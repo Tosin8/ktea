@@ -4,6 +4,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_masonry_view/flutter_masonry_view.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 import 'package:ktea/components/app_widgets.dart';
 import 'package:ktea/model/popular.dart';
@@ -109,18 +110,26 @@ const SizedBox(height: 10,),
 //    }),
 //    ),
  
- Expanded(
-  child: MasonryView(
-  listOfItem: sofas, 
-  numberOfColumn: 2, 
-  itemBuilder: (sofa) {
-    return  sofaProductCard(
-      sofas: sofas[sofas.indexOf(sofa)],
-    ); 
-  }
+//  Expanded(
+//   child: MasonryView(
+//   listOfItem: sofas, 
+//   numberOfColumn: 2, 
+//   itemBuilder: (sofa) {
+//     return  sofaProductCard(
+//       sofas: sofas[sofas.indexOf(sofa)],
+//     ); 
+//   }
+//   ),
+//   ), 
+Expanded(child: StaggeredGrid.count(
+  crossAxisCount: 2, 
+  mainAxisSpacing: 2, 
+  crossAxisSpacing: 2, 
+  children: List.generate(sofas.length, (index) => 
+  sofaProductCard(sofas: sofas[index]),
+  )
   ),
-  ), 
-
+  ),
         
         ]
          )
