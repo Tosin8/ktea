@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 import 'package:ktea/components/app_widgets.dart';
+import 'package:ktea/model/cabinet.dart';
 import 'package:ktea/model/popular.dart';
 import 'package:ktea/model/table.dart';
 
@@ -131,6 +132,18 @@ Expanded(child: StaggeredGrid.count(
   ),
   ),
  const productTitleCategory(title: 'Cabinet',), 
+     Expanded(child: StaggeredGrid.count(
+  crossAxisCount: 2, 
+  mainAxisSpacing: 2, 
+  crossAxisSpacing: 2, 
+  children: List.generate(CabinetProducts.length, (index) => 
+  Padding(
+    padding: const EdgeInsets.all(12),
+    child: cabinetProductCard(CabinetProducts: CabinetProducts[index])),
+  )
+  ),
+  ),
+
         ]
          )
          ); 

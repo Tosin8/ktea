@@ -644,17 +644,17 @@ final CabinetProduct CabinetProducts;
              borderRadius: BorderRadius.circular(12),
              
              image: DecorationImage(
-               image: AssetImage(LightProducts.imgUrl),
+               image: AssetImage(CabinetProducts.imgUrl),
                 fit: BoxFit.cover),
            ),
            ), 
            const SizedBox(height: 10),
-           Text(LightProducts.title, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+           Text(CabinetProducts.title, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
            ),
            Row(
             
              children: [
-               Text(LightProducts.price,
+               Text(CabinetProducts.price,
                 style: const TextStyle(fontSize: 18,
                  fontWeight: FontWeight.w400),), 
                  SizedBox(width: 80,), 
