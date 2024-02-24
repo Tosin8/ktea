@@ -13,24 +13,20 @@ class LightProduct {
 
 List <LightProduct> LightProducts = [
   LightProduct(
-    imgUrl: 'assets/products/table/1_150.jpg',
+    imgUrl: 'assets/products/light/1.jpg',
     title: 'Brown Chair',
     price: '2000',
   ), 
-  TableProduct(
-    imgUrl: 'assets/products/table/2_150.jpg',
+  LightProduct(
+    imgUrl: 'assets/products/light/2.jpg',
     title: 'Brown Chair',
     price: '2000',
   ), 
-   TableProduct(
-    imgUrl: 'assets/products/table/3_150.jpg',
+   LightProduct(
+    imgUrl: 'assets/products/light/3.jpg',
     title: 'Sofa',
     price: '2000',
   ),  
-  TableProduct(
-    imgUrl: 'assets/products/table/4_150.jpg',
-    title: 'Sofa',
-    price: '2000',
-  ), 
+  
 
 ]; 
