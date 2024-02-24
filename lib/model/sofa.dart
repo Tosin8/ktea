@@ -26,7 +26,8 @@ List <Sofa> sofas = [
     imgUrl: 'assets/products/sofa/3_150.jpg',
     title: 'Sofa',
     price: '2000',
-  ),  Sofa(
+  ),  
+  Sofa(
     imgUrl: 'assets/products/sofa/4_150.jpg',
     title: 'Sofa',
     price: '2000',

@@ -1,6 +1,9 @@
 import 'package:animate_do/animate_do.dart';
 
+
 import 'package:flutter/material.dart';
+
+import 'package:flutter_masonry_view/flutter_masonry_view.dart';
 
 import 'package:ktea/components/app_widgets.dart';
 import 'package:ktea/model/popular.dart';
@@ -87,11 +90,37 @@ SingleChildScrollView(
   ),
 ), 
 const SizedBox(height: 10,), 
-
  const productTitleCategory(title: 'Sofa',), 
- sofaProductCard(
-   sofas: sofas[index],
- )
+//  Expanded(
+   
+//      child: MasonryGridView.count(
+//       shrinkWrap: true,
+//       crossAxisCount: 2,
+//      mainAxisSpacing: 1, 
+//      crossAxisSpacing: 2,
+//      itemCount: sofas.length,
+//      itemBuilder: (context , index) {
+//        return  Padding(
+//          padding: const EdgeInsets.all(15.0),
+//          child: sofaProductCard(
+//          sofas: sofas[index],
+//               ),
+//        ); 
+//    }),
+//    ),
+ 
+ Expanded(
+  child: MasonryView(
+  listOfItem: sofas, 
+  numberOfColumn: 2, 
+  itemBuilder: (sofa) {
+    return  sofaProductCard(
+      sofas: sofas[sofas.indexOf(sofa)],
+    ); 
+  }
+  ),
+  ), 
+
         
         ]
          )
@@ -108,7 +137,7 @@ final Sofa sofas;
   @override
   Widget build(BuildContext context) {
     return Container(
-     height: 300,
+     height: 220,
      child: Column(
        crossAxisAlignment: CrossAxisAlignment.start,
        children: [
