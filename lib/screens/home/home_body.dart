@@ -89,32 +89,49 @@ SingleChildScrollView(
 const SizedBox(height: 10,), 
 
  const productTitleCategory(title: 'Sofa',), 
- Container(
-  height: 300,
-  child: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      Container(
-        height: 150, width: 150,
-        decoration: BoxDecoration(
-          
-          image: DecorationImage(image: AssetImage(sofas[0].imgUrl), fit: BoxFit.cover),
-        ),
-        ), 
-        const SizedBox(height: 10),
-        Text(sofas[0].title, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
-        ),
-        Text(sofas[0].price,
-         style: const TextStyle(fontSize: 18,
-          fontWeight: FontWeight.w400),) 
-        
-    ]
-  ),
+ sofaProductCard(
+   sofas: sofas[index],
  )
         
         ]
          )
          ); 
+  }
+}
+
+class sofaProductCard extends StatelessWidget {
+  const sofaProductCard({
+    super.key, required this.sofas,
+  });
+
+final Sofa sofas; 
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+     height: 300,
+     child: Column(
+       crossAxisAlignment: CrossAxisAlignment.start,
+       children: [
+         Container(
+           height: 150, width: 150,
+           decoration: BoxDecoration(
+             borderRadius: BorderRadius.circular(12),
+             
+             image: DecorationImage(
+               image: AssetImage(sofas.imgUrl),
+                fit: BoxFit.cover),
+           ),
+           ), 
+           const SizedBox(height: 10),
+           Text(sofas.title, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+           ),
+           Text(sofas.price,
+            style: const TextStyle(fontSize: 18,
+             fontWeight: FontWeight.w400),) 
+           
+       ]
+     ),
+    );
   }
 }
 
