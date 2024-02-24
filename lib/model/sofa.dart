@@ -11,14 +11,23 @@ class Sofa {
 }
 
 
-List <Sofa> sofa = [
+List <Sofa> sofas = [
   Sofa(
     imgUrl: 'assets/products/sofa/1_150.jpg',
-    title: 'Sofa',
+    title: 'Brown Chair',
     price: '2000',
   ), 
   Sofa(
     imgUrl: 'assets/products/sofa/2_150.jpg',
+    title: 'Brown Chair',
+    price: '2000',
+  ), 
+   Sofa(
+    imgUrl: 'assets/products/sofa/3_150.jpg',
+    title: 'Sofa',
+    price: '2000',
+  ),  Sofa(
+    imgUrl: 'assets/products/sofa/4_150.jpg',
     title: 'Sofa',
     price: '2000',
   ), 

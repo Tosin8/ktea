@@ -246,46 +246,6 @@ class _CarouselSliderState extends State<CarouselSlider> {
 }
 
 
-
-// class ItemCard1 extends StatelessWidget {
-//   const ItemCard1({
-//     super.key,
-//   });
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       child: Column(
-//         children: [
-//           ClipRRect(
-//               borderRadius: BorderRadius.circular(16),
-//               child: Image.asset(
-//                 products[0].image,
-//               )),
-//           const SizedBox(height: 8),
-//           Padding(
-//               padding: const EdgeInsets.only(left: 40),
-//               child: Text(
-//                 products[0].title,
-//                 style: const TextStyle(fontWeight: FontWeight.w500),
-//               )),
-//           Padding(
-//             padding: const EdgeInsets.only(left: 30),
-//             child: Text(
-//               '\$${products[0].price}',
-//               style: const TextStyle(fontWeight: FontWeight.bold),
-//             ),
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
-
-
-
-
-// ignore: must_be_immutable
 class titleCategory extends StatelessWidget {
  titleCategory({
    required this.title,
@@ -353,8 +313,6 @@ class notifcation_bell extends StatelessWidget {
         );
   }
 }
-
-
 
 class newArrivalProductCard extends StatelessWidget {
   const newArrivalProductCard({
@@ -432,12 +390,7 @@ final New newProducts;
                 
               ),
             ), 
-           
-           
-            
-            
-             
-         
+  
           ]
         );
       
@@ -454,7 +407,7 @@ final Popular popularProducts;
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 110, width: 300, 
+      height: 110, width: 310, 
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         color: Colors.white,
@@ -500,7 +453,9 @@ final Popular popularProducts;
                     
                 ],
                ),
-             )
+             ),
+             const SizedBox(width: 15,),  
+             const Icon(Icons.add_circle, size: 35,)
           
         ],
       ),
@@ -508,5 +463,20 @@ final Popular popularProducts;
   }
 }
 
+class productTitleCategory extends StatelessWidget {
+  const productTitleCategory({
+    super.key, required this.title,
+  });
 
-
+final String title; 
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+     padding: const EdgeInsets.all(10.0),
+     child: Text(title,
+     style: const TextStyle(
+      fontSize: 20, 
+      fontWeight: FontWeight.w500),),
+    );
+  }
+}

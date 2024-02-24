@@ -9,6 +9,7 @@ import 'package:ktea/model/popular.dart';
 
 
 import '../../model/new_arrival.dart';
+import '../../model/sofa.dart';
 import 'home_widget.dart';
 class Home_Body extends StatefulWidget {
   const Home_Body({super.key});
@@ -88,11 +89,37 @@ SingleChildScrollView(
   ),
 ), 
 const SizedBox(height: 10,), 
-titleCategory(title: 'Sofa', press: (){}), 
+
+ const productTitleCategory(title: 'Sofa',), 
+ Container(
+  height: 300,
+  child: Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Container(
+        height: 150, width: 150,
+        decoration: BoxDecoration(
+          
+          image: DecorationImage(image: AssetImage(sofas[0].imgUrl), fit: BoxFit.cover),
+        ),
+        ), 
+        const SizedBox(height: 10),
+        Text(sofas[0].title, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+        ),
+        Text(sofas[0].price,
+         style: const TextStyle(fontSize: 18,
+          fontWeight: FontWeight.w400),) 
+        
+    ]
+  ),
+ )
         
         ]
          )
          ); 
   }
 }
+
+
+
 

@@ -42,14 +42,13 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_fadein: ^2.0.0
+  flutter_masonry_view: ^0.0.2
   flutter_spinkit: ^5.2.0
   flutter_svg: ^2.0.7
   font_awesome_flutter: ^10.6.0
   get: ^4.6.6
   logger: ^2.0.2+1
-
   page_transition: ^2.1.0
-
   timeago: ^3.6.0
   uuid: ^4.3.3
 
@@ -170,7 +169,7 @@ flutter:
     - assets/products/dining/1.jpg
     - assets/products/dining/2.jpg
 
-    # new arrival 
+    # new arrival
     - assets/new_arrival/1.jpg
     - assets/new_arrival/2.jpg
     - assets/new_arrival/3.jpg
@@ -182,8 +181,6 @@ flutter:
     - assets/popular/3.jpg
     - assets/popular/4.jpg
     - assets/popular/5.jpg
-
-    
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see

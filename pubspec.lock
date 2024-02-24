@@ -254,6 +254,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.3"
+  flutter_masonry_view:
+    dependency: "direct main"
+    description:
+      name: flutter_masonry_view
+      sha256: b729d28c07f9d5b2011535c8823e72772247b0746fa37b0e1cabaa0ef2e9dbc0
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.2"
   flutter_spinkit:
     dependency: "direct main"
     description:
