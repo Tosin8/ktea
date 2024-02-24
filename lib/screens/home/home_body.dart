@@ -7,6 +7,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 import 'package:ktea/components/app_widgets.dart';
 import 'package:ktea/model/popular.dart';
+import 'package:ktea/model/table.dart';
 
 
 import '../../model/new_arrival.dart';
@@ -91,8 +92,6 @@ SingleChildScrollView(
 ), 
 const SizedBox(height: 10,), 
  const productTitleCategory(title: 'Sofa',), 
-
-  
 Expanded(child: StaggeredGrid.count(
   crossAxisCount: 2, 
   mainAxisSpacing: 2, 
@@ -106,6 +105,18 @@ Expanded(child: StaggeredGrid.count(
   ),
   const SizedBox(height: 10,), 
  const productTitleCategory(title: 'Table',), 
+ Expanded(child: StaggeredGrid.count(
+  crossAxisCount: 2, 
+  mainAxisSpacing: 2, 
+  crossAxisSpacing: 2, 
+  children: List.generate(tableProducts.length, (index) => 
+  Padding(
+    padding: const EdgeInsets.all(12),
+    child: tableProductCard(tableProducts: tableProducts[index])),
+  )
+  ),
+  ),
+
         
         ]
          )

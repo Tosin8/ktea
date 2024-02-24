@@ -1,15 +1,17 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 // ignore_for_file: camel_case_types
 
+import 'dart:async';
+
+import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:badges/badges.dart' as badges;
-
-
-import 'dart:async';
 
 import '../../model/new_arrival.dart';
 import '../../model/popular.dart';
 import '../../model/sofa.dart';
+import '../../model/table.dart' as prefix;
+import '../../model/table.dart';
 import '../extended_screen/notification.dart';
 
 class App_Drawer extends StatelessWidget {
@@ -513,6 +515,51 @@ final Sofa sofas;
             
              children: [
                Text(sofas.price,
+                style: const TextStyle(fontSize: 18,
+                 fontWeight: FontWeight.w400),), 
+                 SizedBox(width: 80,), 
+                 Icon(Icons.add_circle, size: 30)
+             ],
+           ) 
+           
+       ]
+     ),
+    );
+  }
+}
+
+
+class tableProductCard extends StatelessWidget {
+  const tableProductCard({
+    Key? key,
+    required this.tableProducts,
+  }) : super(key: key);
+
+final TableProduct tableProducts; 
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+    // height: 220,
+     child: Column(
+       crossAxisAlignment: CrossAxisAlignment.start,
+       children: [
+         Container(
+           height: 150, width: 150,
+           decoration: BoxDecoration(
+             borderRadius: BorderRadius.circular(12),
+             
+             image: DecorationImage(
+               image: AssetImage(tableProducts.imgUrl),
+                fit: BoxFit.cover),
+           ),
+           ), 
+           const SizedBox(height: 10),
+           Text(tableProducts.title, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+           ),
+           Row(
+            
+             children: [
+               Text(tableProducts.price,
                 style: const TextStyle(fontSize: 18,
                  fontWeight: FontWeight.w400),), 
                  SizedBox(width: 80,), 
