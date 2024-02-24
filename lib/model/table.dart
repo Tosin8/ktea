@@ -13,22 +13,22 @@ class Table {
 
 List <Table> tables = [
   Table(
-    imgUrl: 'assets/products/sofa/1_150.jpg',
+    imgUrl: 'assets/products/table/1_150.jpg',
     title: 'Brown Chair',
     price: '2000',
   ), 
   Table(
-    imgUrl: 'assets/products/sofa/2_150.jpg',
+    imgUrl: 'assets/products/table/2_150.jpg',
     title: 'Brown Chair',
     price: '2000',
   ), 
    Table(
-    imgUrl: 'assets/products/sofa/3_150.jpg',
+    imgUrl: 'assets/products/table/3_150.jpg',
     title: 'Sofa',
     price: '2000',
   ),  
   Table(
-    imgUrl: 'assets/products/sofa/4_150.jpg',
+    imgUrl: 'assets/products/table/4_150.jpg',
     title: 'Sofa',
     price: '2000',
   ), 
