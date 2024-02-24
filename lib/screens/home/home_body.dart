@@ -3,7 +3,6 @@ import 'package:animate_do/animate_do.dart';
 
 import 'package:flutter/material.dart';
 
-import 'package:flutter_masonry_view/flutter_masonry_view.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 import 'package:ktea/components/app_widgets.dart';
@@ -105,6 +104,8 @@ Expanded(child: StaggeredGrid.count(
   )
   ),
   ),
+  const SizedBox(height: 10,), 
+ const productTitleCategory(title: 'Table',), 
         
         ]
          )
