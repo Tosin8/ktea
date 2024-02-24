@@ -1,8 +1,6 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:flutter/cupertino.dart';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import 'package:ktea/components/app_widgets.dart';
 import 'package:ktea/model/popular.dart';
