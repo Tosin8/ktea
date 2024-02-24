@@ -117,7 +117,7 @@ Expanded(child: StaggeredGrid.count(
   ),
   ),
 
-        
+        const productTitleCategory(title: 'Light',), 
         ]
          )
          ); 
