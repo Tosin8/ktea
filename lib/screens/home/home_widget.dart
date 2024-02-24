@@ -7,6 +7,7 @@ import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../model/cabinet.dart';
 import '../../model/light.dart';
 import '../../model/new_arrival.dart';
 import '../../model/popular.dart';
@@ -581,6 +582,55 @@ class lightProductCard extends StatelessWidget {
   }) : super(key: key);
 
 final LightProduct LightProducts; 
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+    // height: 220,
+     child: Column(
+       crossAxisAlignment: CrossAxisAlignment.start,
+       children: [
+         Container(
+           height: 150, width: 150,
+           decoration: BoxDecoration(
+             borderRadius: BorderRadius.circular(12),
+             
+             image: DecorationImage(
+               image: AssetImage(LightProducts.imgUrl),
+                fit: BoxFit.cover),
+           ),
+           ), 
+           const SizedBox(height: 10),
+           Text(LightProducts.title, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+           ),
+           Row(
+            
+             children: [
+               Text(LightProducts.price,
+                style: const TextStyle(fontSize: 18,
+                 fontWeight: FontWeight.w400),), 
+                 SizedBox(width: 80,), 
+                 Icon(Icons.add_circle, size: 30)
+             ],
+           ) 
+           
+       ]
+     ),
+    );
+  }
+}
+
+
+
+
+
+
+class cabinetProductCard extends StatelessWidget {
+  const cabinetProductCard({
+    Key? key,
+     required this.CabinetProducts,
+  }) : super(key: key);
+
+final CabinetProduct CabinetProducts; 
   @override
   Widget build(BuildContext context) {
     return Container(
