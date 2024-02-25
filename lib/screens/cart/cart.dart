@@ -20,6 +20,7 @@ class _CartState extends State<Cart> {
     return Scaffold(
         
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           title: Text(
             'Cart',
             style: AppBar_Header,
