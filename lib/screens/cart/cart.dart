@@ -22,7 +22,7 @@ class _CartState extends State<Cart> {
         appBar: AppBar(
           automaticallyImplyLeading: false,
           title: Text(
-            'Cart',
+            'My Cart',
             style: AppBar_Header,
           ),
           centerTitle: true,

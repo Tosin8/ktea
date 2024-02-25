@@ -28,22 +28,22 @@ class CartItemModel {
   });
 
 //  static fromMap(Map<String, dynamic> data) {}
-CartItemModel.fromMap(Map<String, dynamic> data) {
-  id = data[ID]; 
-    image = data[IMAGE];
-    name = data[NAME];
-    quantity = data[QUANTITY];
-    cost = data[COST].toDouble();
-    productId = data[PRODUCT_ID]; 
-    price = data[PRICE].toDouble();  
-}
+// CartItemModel.fromMap(Map<String, dynamic> data) {
+//   id = data[ID]; 
+//     image = data[IMAGE];
+//     name = data[NAME];
+//     quantity = data[QUANTITY];
+//     cost = data[COST].toDouble();
+//     productId = data[PRODUCT_ID]; 
+//     price = data[PRICE].toDouble();  
+// }
 
-Map toJson() => {
-  ID: id,
-  IMAGE: image,
-  NAME: name,
-  QUANTITY: quantity,
-  COST: price * quantity, 
-  PRICE: price,
-}; 
+// Map toJson() => {
+//   ID: id,
+//   IMAGE: image,
+//   NAME: name,
+//   QUANTITY: quantity,
+//   COST: price * quantity, 
+//   PRICE: price,
+// }; 
 }

@@ -10,9 +10,23 @@ class Cart_Body extends StatefulWidget {
 class _Cart_BodyState extends State<Cart_Body> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-        body: Center(
-      child: Text('Cart is Empty'),
-    ));
+    return  Scaffold(
+    body: Column(
+      children: [
+        Container(
+          child: Row(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(''))),
+              )
+            ],
+          ),
+        )
+      ],
+    )
+        
+    ); 
   }
 }
