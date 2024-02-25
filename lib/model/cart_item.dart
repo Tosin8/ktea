@@ -1,13 +1,13 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 class CartItemModel {
-  // ignore: constant_identifier_names
-  static const ID = 'id'; 
-   static const IMAGE = 'image';
-    static const NAME = 'name'; 
-    static const QUANTITY = 'quantity'; 
-    static const COST = 'cost'; 
-    static const PRICE = 'price';
-     static const PRODUCT_ID = 'productId'; 
+  // // ignore: constant_identifier_names
+  // static const ID = 'id'; 
+  //  static const IMAGE = 'image';
+  //   static const NAME = 'name'; 
+  //   static const QUANTITY = 'quantity'; 
+  //   static const COST = 'cost'; 
+  //   static const PRICE = 'price';
+  //    static const PRODUCT_ID = 'productId'; 
 
 
  late  String id;
@@ -47,3 +47,27 @@ class CartItemModel {
 //   PRICE: price,
 // }; 
 }
+
+final List<CartItemModel> cartItems = [
+  CartItemModel(
+    id: '1',
+    image: 'assets/images/burger.png',
+    name: 'Burger',
+    quantity: 1,
+    cost: 10,
+    price: 10,
+    productId: '1'
+    
+    
+  ), 
+  CartItemModel(
+    id: '2',
+    image: 'assets/images/burger.png',
+    name: 'Burger',
+    quantity: 1,
+    cost: 10,
+    price: 10,
+    productId: '1'
+
+  ), 
+];
