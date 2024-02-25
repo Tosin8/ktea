@@ -18,7 +18,7 @@ class _CartState extends State<Cart> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: const App_Drawer(),
+        
         appBar: AppBar(
           title: Text(
             'Cart',
