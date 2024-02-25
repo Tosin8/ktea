@@ -30,8 +30,20 @@ class _Cart_BodyState extends State<Cart_Body> {
                 ), 
                 SizedBox(width: 10),
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(cartItems[0].name),
+                    Text(cartItems[0].productId),
+                    Text(cartItems[0].name, style: TextStyle(fontWeight: FontWeight.w400, fontSize: 18),),
+                    Text(cartItems[0].cost.toString(), 
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),),
+                  ],
+                ), 
+                SizedBox(width: 20,), 
+                Row(
+                  children: [
+                    IconButton(onPressed: (){}, icon: Icon(Icons.remove_circle)),
+                    Text(cartItems[0].quantity.toString()),
+                    IconButton(onPressed: (){}, icon: Icon(Icons.add_circle))
                   ],
                 )
               ],

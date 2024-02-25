@@ -54,9 +54,9 @@ final List<CartItemModel> cartItems = [
     image: 'assets/products/light/2.jpg',
     name: 'Hanging Light',
     quantity: 1,
-    cost: 10,
+    cost: 3600,
     price: 10,
-    productId: '1'
+    productId: '10021'
     
     
   ), 
@@ -64,10 +64,10 @@ final List<CartItemModel> cartItems = [
     id: '2',
     image: 'assets/products/cabinet/1.jpg',
     name: 'Burger',
-    quantity: 1,
-    cost: 10,
+    quantity: 2,
+    cost: 1000,
     price: 10,
-    productId: '1'
+    productId: '13948'
 
   ), 
 ];
