@@ -51,8 +51,8 @@ class CartItemModel {
 final List<CartItemModel> cartItems = [
   CartItemModel(
     id: '1',
-    image: 'assets/images/burger.png',
-    name: 'Burger',
+    image: 'assets/products/light/2.jpg',
+    name: 'Hanging Light',
     quantity: 1,
     cost: 10,
     price: 10,
@@ -62,7 +62,7 @@ final List<CartItemModel> cartItems = [
   ), 
   CartItemModel(
     id: '2',
-    image: 'assets/images/burger.png',
+    image: 'assets/products/cabinet/1.jpg',
     name: 'Burger',
     quantity: 1,
     cost: 10,
