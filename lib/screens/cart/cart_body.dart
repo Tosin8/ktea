@@ -50,9 +50,12 @@ class _Cart_BodyState extends State<Cart_Body> {
                       ),
                   ]
                 ),
-                Row(
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text('Total Cost: ',), 
+                    Text('Total Cost: ',
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),), 
+                    Text('4600', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
                   ],
                 )
               ],
