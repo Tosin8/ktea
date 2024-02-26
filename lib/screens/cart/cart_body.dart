@@ -27,13 +27,36 @@ class _Cart_BodyState extends State<Cart_Body> {
         
         ),
         const SizedBox(height: 100,), 
-        Container(
-          child: 
-          Row(
-            children: [
-              const Text('Total', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-              Text(cartItems.length.toString(), style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-            ]
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
+            child: 
+            Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text('Total Items: ', 
+                    style: TextStyle(
+                      fontSize: 16, 
+                      fontWeight: FontWeight.w400
+                      ),
+                      ),
+                    Text(cartItems.length.toString(),
+                     style: const TextStyle(
+                      fontSize: 18, 
+                      fontWeight: FontWeight.bold
+                      ),
+                      ),
+                  ]
+                ),
+                Row(
+                  children: [
+                    const Text('Total Cost: ',), 
+                  ],
+                )
+              ],
+            ),
           ),
         )
       ],

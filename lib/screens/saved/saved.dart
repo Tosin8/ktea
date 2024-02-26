@@ -18,8 +18,9 @@ class _SavedState extends State<Saved> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: App_Drawer(),
+     
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           title: Text(
             'Saved Items',
             style: AppBar_Header,

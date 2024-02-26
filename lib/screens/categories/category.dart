@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ktea/screens/home/home_widget.dart';
 
-import '../../components/app_widgets.dart';
 import 'category_body.dart';
 
 class Category extends StatefulWidget {
@@ -16,19 +14,10 @@ class Category extends StatefulWidget {
 class _CategoryState extends State<Category> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       
-      //drawer: const App_Drawer(),
-      // appBar: AppBar(
-      //   automaticallyImplyLeading: false,
-      //   iconTheme: const IconThemeData(color: Colors.blue),
-      //   // title: Text(
-      //   //   'Category',
-      //   //   style: AppBar_Header,
-      //   // ),
-      //  // centerTitle: true,
-      // ),
-      body: const Category_Body(),
+     
+      body: Category_Body(),
     );
   }
 }
