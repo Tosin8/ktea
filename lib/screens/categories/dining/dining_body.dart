@@ -19,9 +19,17 @@ class _DiningScreenState extends State<DiningScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        children: const [
+        children:  [
            header(),
            SizedBox(height: 5), 
+           Container(
+            height: 40, 
+            width: 60,
+            decoration: BoxDecoration(
+              color: Colors.white, 
+              borderRadius: BorderRadius.circular(20), 
+            ),
+           )
         
         ],
       )
