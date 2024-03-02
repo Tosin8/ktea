@@ -23,7 +23,9 @@ class appBar extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Icon(Icons.search_outlined, color: Colors.white,),
+                Icon(Icons.search_outlined, 
+                color: Colors.white,),
+                Icon(Icons.shopping_bag, color: Colors.white,)
                  
 //                 IconButton(onPressed: (){
 // showMaterialModalBottomSheet(
@@ -59,7 +61,8 @@ class header extends StatelessWidget {
      decoration: const BoxDecoration(
       image: DecorationImage(
         image: AssetImage(
-          'assets/images/collections/1.jpg',),fit: BoxFit.cover 
+          'assets/images/collections/1.jpg',),
+          fit: BoxFit.cover 
         ),
     
       ),
