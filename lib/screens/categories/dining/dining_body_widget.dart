@@ -19,13 +19,14 @@ class appBar extends StatelessWidget {
             },
             child: const Icon(Icons.arrow_back_ios, color: Colors.white,)), 
           const SizedBox(width: 260), 
-           Expanded(
+           const Expanded(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Icon(Icons.search_outlined, 
                 color: Colors.white,),
-                Icon(Icons.shopping_bag, color: Colors.white,)
+                Icon(Icons.shopping_bag, 
+                color: Colors.white,)
                  
 //                 IconButton(onPressed: (){
 // showMaterialModalBottomSheet(
