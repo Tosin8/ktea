@@ -1,10 +1,11 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
+
+
 import 'package:ktea/model/dining.dart';
 
 import 'dining_body_widget.dart';
-
-
 
 class DiningScreen extends StatefulWidget {
   const DiningScreen({super.key});
@@ -23,16 +24,48 @@ class _DiningScreenState extends State<DiningScreen> {
         children:  [
            const header(),
            const SizedBox(height: 5), 
-           Card(
+           Expanded(
+             child: GridView.builder(
+             itemCount: diningProducts.length,
+              physics: const NeverScrollableScrollPhysics(),
+              gridDelegate:const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, 
+              mainAxisSpacing: 2, crossAxisSpacing: 2, childAspectRatio: 1),
+             itemBuilder: (context, index) {
+               return diningProductsCard(
+              diningProducts: diningProducts[index], 
+                       );
+             },
+                       
+                   ),
+           ),
+        
+        ],
+      )
+    );
+  }
+}
+
+
+class diningProductsCard extends StatelessWidget {
+  const diningProductsCard({
+    Key? key,
+    required this.diningProducts,
+  }) : super(key: key);
+
+  final Dining diningProducts;
+
+  @override
+  Widget build(BuildContext context) {
+    return  Card(
             elevation: 1,
              child: Container(
-              height: 180, 
+              height: 40, 
     width: 50, 
               decoration: BoxDecoration(
                 color: Colors.white, 
                 borderRadius: BorderRadius.circular(5), 
                 image: DecorationImage(image: AssetImage(
-                  diningProducts[0].imgUrl, 
+                  diningProducts.imgUrl, 
                   
                 ), 
                 fit: BoxFit.cover, )
@@ -59,7 +92,7 @@ class _DiningScreenState extends State<DiningScreen> {
                       ],
                     ), 
                     const SizedBox(height: 20,), 
-                    Text(diningProducts[0].title, 
+                    Text(diningProducts.title, 
                     style: const TextStyle(
                       color: Colors.white, 
                       fontSize: 23,
@@ -69,7 +102,7 @@ class _DiningScreenState extends State<DiningScreen> {
                       const SizedBox(height: 5),
                       Row(
                         children: [
-                          Text(diningProducts[0].price.toString(), style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 20),
+                          Text(diningProducts.price.toString(), style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 20),
                           ),
                           const SizedBox(width: 100),
                           GestureDetector(
@@ -92,10 +125,6 @@ class _DiningScreenState extends State<DiningScreen> {
                 ),
               ),
              ),
-           )
-        
-        ],
-      )
-    );
+           );
   }
 }
