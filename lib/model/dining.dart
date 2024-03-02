@@ -13,13 +13,13 @@ class Dining {
 
 List <Dining> diningProducts = [
   Dining(
-    imgUrl: 'assets/products/sofa/1_150.jpg',
-    title: 'Brown Chair',
+    imgUrl: 'assets/products/dining/1.jpg',
+    title: 'Dining 1',
     price: '2000',
   ), 
   Dining(
-    imgUrl: 'assets/products/sofa/2_150.jpg',
-    title: 'Brown Chair',
+    imgUrl: 'assets/products/dining/2.jpg',
+    title: 'Dining 2',
     price: '2000',
   ), 
    Dining(
