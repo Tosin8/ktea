@@ -62,46 +62,48 @@ if (formKey.currentState!.validate()){
 
   @override
   Widget build(BuildContext context) {
-    return Form(
-      key: formKey, 
-      child: Padding(
-        padding: const EdgeInsets.only(left: 15, right: 15),
-        child: Column(
-          children: [
-            buildEmailFormField(
-              label: 'Email', 
-              hint: 'Enter your email',
-              validator: (value) {
-                if (value.isEmpty) {
-                  setState(() {
-                    errors.add('Email can\'t be empty');
-                  });
-                }
-                return null; 
-              },
-              
-              /*(value) => value.isEmpty ? 'Email can\'t be empty' : null, */ 
-              onSaved: (value) => _email = value, 
-              
-            ), 
-
-            const SizedBox(height: 40), 
-            buildPwdFormField(
-              label: 'Password',
-              hint: 'Enter your password',
-               validator: (value) => value.isEmpty ? 'Password can\'t be empty' : null, 
-               onSaved: (value) => _pwd = value, 
+    return Padding(
+      padding: const EdgeInsets.only(right: 25.0),
+      child: Form(
+        key: formKey, 
+       
+          child: Column(
+            children: [
+              buildEmailFormField(
+                label: 'Email', 
+                hint: 'Enter a valid email',
+                validator: (value) {
+                  if (value.isEmpty) {
+                    setState(() {
+                      errors.add('Email can\'t be empty');
+                    });
+                  }
+                  return null; 
+                },
+                
+                /*(value) => value.isEmpty ? 'Email can\'t be empty' : null, */ 
+                onSaved: (value) => _email = value, 
+                
               ), 
-           const SizedBox(height: 10),  
-          const checkBox(),
-              const SizedBox(height: 30), 
-              FormError(errors: errors), 
-              const SizedBox(height: 10), 
-             DefaultButton(textBtn: 'Continue',
-              press: validateAndSubmit,
-             ),
-          ],
-        ),
+      
+              const SizedBox(height: 5), 
+              buildPwdFormField(
+                label: 'Password',
+                hint: 'Enter your password',
+                 validator: (value) => value.isEmpty ? 'Password can\'t be empty' : null, 
+                 onSaved: (value) => _pwd = value, 
+                ), 
+             const SizedBox(height: 10),  
+            const checkBox(),
+                const SizedBox(height: 30), 
+                FormError(errors: errors), 
+                const SizedBox(height: 10), 
+               DefaultButton(textBtn: 'Continue',
+                press: validateAndSubmit,
+               ),
+            ],
+          ),
+        
       ),
     );
   }

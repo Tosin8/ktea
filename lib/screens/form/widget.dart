@@ -31,20 +31,12 @@ final String hint;
         hintText: hint,
         
          hintStyle: TextStyle(color: Colors.grey[500]), 
-        contentPadding: const EdgeInsets.symmetric(horizontal: 42, vertical: 20),
-        floatingLabelBehavior: FloatingLabelBehavior.always, 
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(28),
-          gapPadding: 10, 
-          borderSide: const BorderSide(color: Colors.orange),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 1, vertical: 16),
+       
+       
         ), 
-        focusedBorder: OutlineInputBorder(
-          
-          borderRadius: BorderRadius.circular(28), 
-          borderSide: const BorderSide(color: Colors.black), 
-          gapPadding: 10, 
-        )
-      ),
+      
+    
     );
   }
 }
@@ -71,19 +63,8 @@ final String hint;
     
         labelText: label, 
         hintText: hint, hintStyle: TextStyle(color: Colors.grey[500]), 
-        contentPadding: const EdgeInsets.symmetric(horizontal: 42, vertical: 20),
-        floatingLabelBehavior: FloatingLabelBehavior.always, 
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(28),
-          gapPadding: 10, 
-          borderSide: const BorderSide(color: Colors.orange),
-        ), 
-        focusedBorder: OutlineInputBorder(
-          
-          borderRadius: BorderRadius.circular(28), 
-          borderSide: const BorderSide(color: Colors.black), 
-          gapPadding: 10, 
-        )
+        contentPadding: const EdgeInsets.symmetric(horizontal: 1, vertical: 20),
+      
       ),
     );
   }
