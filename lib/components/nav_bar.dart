@@ -26,8 +26,8 @@ class _NavBarAppState extends State<NavBarApp> {
     const Category(), 
     const Cart(),
     const Saved(),
-   // const Profile(),
-   SignIn(), 
+   const Profile(),
+   //SignIn(), 
   ]; 
   @override
   Widget build(BuildContext context) {
