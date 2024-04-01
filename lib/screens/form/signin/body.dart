@@ -19,9 +19,10 @@ class SignInBody extends StatelessWidget {
           child: FadeInRight(
             duration: Duration(milliseconds: 300),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 SizedBox(height: 8), 
-                Text('Welcome Back',
+                Text('Login',
                 style: TextStyle(color: Colors.black.withOpacity(0.8), fontSize: 24, fontWeight: FontWeight.bold),),
                 const SizedBox(height: 6),  
                 const Text('Sign in with your email and password \nor continue with your social media account',style: TextStyle(fontSize: 16), 
