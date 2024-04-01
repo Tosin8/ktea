@@ -83,9 +83,9 @@ final GestureTapCallback press;
     return GestureDetector(
       onTap: press, 
       child: Container(
-        width: 350, height: 60,
+        width: 350, height: 50,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(40),
+          borderRadius: BorderRadius.circular(10),
           color: Colors.orange
         ),
         child: Align(
