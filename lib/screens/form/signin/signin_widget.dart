@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 import '../form_error.dart';
 import '../widget.dart';
 
-class AppForm extends StatefulWidget {
-  const AppForm({super.key});
+class SignInForm extends StatefulWidget {
+  const SignInForm({super.key});
 
   @override
-  State<AppForm> createState() => _AppFormState();
+  State<SignInForm> createState() => _SignInFormState();
   
   
 }
 
-class _AppFormState extends State<AppForm> {
+class _SignInFormState extends State<SignInForm> {
 final formKey = GlobalKey<FormState>(); 
 
 final List<String> errors = []; 
