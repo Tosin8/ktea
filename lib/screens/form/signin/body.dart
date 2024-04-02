@@ -25,7 +25,7 @@ class SignInBody extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(height: 8), 
-                  Text('Login',
+                  Text('Welcome Back!',
                   style: TextStyle(color: Colors.black.withOpacity(0.8), fontSize: 24, fontWeight: FontWeight.bold),),
                   const SizedBox(height: 6),  
                   const Text('Kindly sign in to continue',
