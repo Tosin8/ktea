@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:iconsax/iconsax.dart';
 
 import 'forgot_pass/forgot.dart';
 
@@ -57,9 +58,9 @@ final String hint;
       keyboardType: TextInputType.visiblePassword,
       textInputAction: TextInputAction.done, 
       decoration: InputDecoration(
-        suffixIcon: const Padding(
+        suffixIcon: Padding(
           padding: EdgeInsets.only(right: 10), 
-          child: Icon(Icons.key_rounded,)),
+          child: Icon(Iconsax.eye)),
     
         labelText: label, 
         hintText: hint, hintStyle: TextStyle(color: Colors.grey[500]), 
