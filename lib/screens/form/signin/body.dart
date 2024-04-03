@@ -17,14 +17,14 @@ class SignInBody extends StatelessWidget {
         width: double.infinity, 
         child: SingleChildScrollView(
           child: FadeInRight(
-            duration: Duration(milliseconds: 300),
+            duration: const Duration(milliseconds: 300),
             child: Padding( 
               padding: const EdgeInsets.only(left: 18),
               child: Column(
                
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 8), 
+                  const SizedBox(height: 8), 
                   Text('Welcome Back!',
                   style: TextStyle(color: Colors.black.withOpacity(0.8), fontSize: 24, fontWeight: FontWeight.bold),),
                   const SizedBox(height: 6),  
@@ -34,19 +34,19 @@ class SignInBody extends StatelessWidget {
                   const SizedBox(height: 30), 
                   const SignInForm(),
                     const SizedBox(height: 30), 
-                    const Text('- OR USE - ') , 
+                    const Center(
+                      child: Text('- OR USE - ', style: TextStyle(color: Colors.grey),)) , 
                     const SizedBox(height: 15), 
                     const SocialCard(),
-                    SizedBox(height: 20), 
-                    GestureDetector(
-                      onTap: () =>
-                        Get.to(const SignUp()), 
-                      
-                      child: const Text('Create Account', 
-                      style: TextStyle(
-                        color: Colors.orange,fontWeight: FontWeight.w600,
-                      fontSize: 18, decoration: TextDecoration.underline, decorationColor: Colors.orange)),
-                    ) , 
+                    const SizedBox(height: 100), 
+                   const Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text('Don\'t have an account? ', style: TextStyle(color: Colors.grey),), 
+                      Text('Sign Up', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),)
+                    ],
+                   )
+                    
                 ],
                 
               ),

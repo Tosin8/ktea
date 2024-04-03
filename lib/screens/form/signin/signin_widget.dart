@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+import '../forgot_pass/forgot.dart';
 import '../form_error.dart';
 import '../widget.dart';
 
@@ -96,11 +98,15 @@ if (formKey.currentState!.validate()){
              const SizedBox(height: 10),  
             const checkBox(),
                 const SizedBox(height: 30), 
-                FormError(errors: errors), 
-                const SizedBox(height: 10), 
-               DefaultButton(textBtn: 'Continue',
+
+                //FormError(errors: errors), 
+                
+               DefaultButton(textBtn: 'LOGIN',
                 press: validateAndSubmit,
                ),
+               SizedBox(height: 3,), 
+               TextButton(
+                onPressed: () => Get.to(() => ForgotPwd()) ,  child: Text('Forgot Password?', style: TextStyle(color: Colors.black),))
             ],
           ),
         

@@ -1,5 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -58,7 +60,7 @@ final String hint;
       keyboardType: TextInputType.visiblePassword,
       textInputAction: TextInputAction.done, 
       decoration: InputDecoration(
-        suffixIcon: Padding(
+        suffixIcon: const Padding(
           padding: EdgeInsets.only(right: 10), 
           child: Icon(Iconsax.eye)),
     
@@ -91,7 +93,7 @@ final GestureTapCallback press;
         ),
         child: Align(
           child: Text(textBtn, 
-          style: const TextStyle(color: Colors.white, fontSize: 20,
+          style: const TextStyle(color: Colors.white, fontSize: 16,
           fontWeight: FontWeight.w500),),
         ),
       ),
@@ -106,24 +108,21 @@ class checkBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-       children: [
-         Checkbox(
-           value: false,
-            onChanged: (bool? value) {  },
-         ), 
-         const Text('Remember me'),
-         const SizedBox(width: 100), 
-         Expanded(child: GestureDetector(
-           onTap: () {
-             Get.to(const ForgotPwd());
-           },
-           child: const Text('Forgot Password',
-           style: TextStyle(
-             decoration: TextDecoration.underline
-           ),)))
-       ],
-     );
+    return Padding(
+      padding: const EdgeInsets.only(right:30.0, left: 0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+         children: [
+           Checkbox(
+             value: false,
+              onChanged: (bool? value) {  },
+           ), 
+           const Text('Remember me'),
+          
+           
+         ],
+       ),
+    );
   }
 }
 
@@ -135,63 +134,44 @@ class SocialCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        GestureDetector(
-          onTap: () {
-            Get.to(''); 
-          },
-          child: Container(
-            height: 40, width: 40,
-                        decoration: BoxDecoration(
-                          color: Colors.white10,
-                         borderRadius: BorderRadius.circular(30),
-                         boxShadow: [
-                          BoxShadow(
-                          color:Colors.grey.withOpacity(0.2),  
-                          spreadRadius: 1,
-                           ), 
-                         ]),
-                
-                child: Image.asset('assets/icons/social/fb-logo.png')),
-        ),
+      
           
-         GestureDetector(
+         GestureDetector( 
           onTap: () {
-            Get.to(''); 
+            
           },
-          child: Container(
-            height: 40, width: 40,
-            decoration: BoxDecoration( color: Colors.white10,
-                         borderRadius: BorderRadius.circular(30),
-                         boxShadow: [
-                          BoxShadow(
-                          color:Colors.grey.withOpacity(0.2),  
-                          spreadRadius: 1,
-                           ), 
-                         ]),
-                        
+           child: Row(
+             children: [
                 
-                child: Image.asset('assets/icons/social/google-logo.png')),
-        ),
+                  Container(
+                    width: 30, height: 30,
+                    child: Image.asset('assets/icons/social/google-logo.png'), 
+                    ), 
+           const SizedBox(width: 5,), 
+                  const Text('Google')
+             ],
+           
+           ),
+         ), 
+         SizedBox(width: 30,),  
+      GestureDetector( 
+        onTap: () {
           
-      GestureDetector(
-          onTap: () {
-            Get.to(''); 
-          },
-          child: Container(
-            height: 40, width: 40,
-                        decoration: BoxDecoration( color: Colors.white10,
-                         borderRadius: BorderRadius.circular(30),
-                         boxShadow: [
-                          BoxShadow(
-                          color:Colors.grey.withOpacity(0.2),  
-                          spreadRadius: 1,
-                           ), 
-                         ]),
-                
-                child: Image.asset('assets/icons/social/apple-logo.png')),
+        },
+        child: Row(
+          children: [
+           Container(
+                  height: 40, width: 35,
+                         child: Image.asset('assets/icons/social/apple-logo.png'), 
+                         ),
+              
+              const SizedBox(width: 5,), 
+              const Text('IOS')
+          ],
         ),
+      ),
           
      
       ],
