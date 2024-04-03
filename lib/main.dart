@@ -7,8 +7,8 @@ import 'splash_screen/splash.dart';
 
 
  main() {
-  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  // WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   // await Firebase.initializeApp(
   //   options: DefaultFirebaseOptions.currentPlatform, 

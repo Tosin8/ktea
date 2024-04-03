@@ -64,6 +64,10 @@ flutter_native_splash:
   color: "#ffffff"
   image: assets/splash_screen.png
 
+  android_12:
+    image: assets/splash_screen.png
+    icon_background_color: "#ffffff"
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
