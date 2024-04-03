@@ -60,6 +60,10 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+flutter_native_splash: 
+  color: "#ffffff"
+  image: assets/splash_screen.png
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
