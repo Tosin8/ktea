@@ -52,6 +52,7 @@ dependencies:
   iconsax: ^0.0.8
   logger: ^2.0.2+1
   page_transition: ^2.1.0
+  pin_code_fields: ^8.0.1
   timeago: ^3.6.0
   uuid: ^4.3.3
 
@@ -60,14 +61,13 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-flutter_native_splash: 
+flutter_native_splash:
   color: "#ffffff"
   image: assets/splash_screen.png
 
   android_12:
     image: assets/splash_screen.png
     icon_background_color: "#ffffff"
-
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

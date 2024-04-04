@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:ktea/features/auth/screens/signup/sign_up_btn.dart';
 
 class SignUpForm extends StatefulWidget {
   const SignUpForm({super.key});
@@ -79,7 +80,7 @@ SizedBox(height: 10,),
             // Password
               TextFormField(
               keyboardType: TextInputType.phone, 
-              textInputAction: TextInputAction.next, 
+              textInputAction: TextInputAction.done, 
               decoration: const InputDecoration(
                 suffixIcon: Padding(
                   padding: EdgeInsets.only(right: 10),
@@ -89,9 +90,9 @@ SizedBox(height: 10,),
                 labelText: 'Phone Number',
               ),
             ),
-
+SizedBox(height:30 ,), 
             // Button
-            
+            SignUpBtn(), 
           ]
         )
       ),

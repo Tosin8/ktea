@@ -1,10 +1,11 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+
 import 'package:ktea/features/auth/screens/widget.dart';
 
 import 'header.dart';
 import 'signup_form.dart';
-import 'signup_widget.dart';
+
 
 class SignUpBody extends StatefulWidget {
   const SignUpBody({super.key});
@@ -31,14 +32,15 @@ class _SignUpBodyState extends State<SignUpBody> {
               SizedBox(height: 30), 
               SocialCard(),
               SizedBox(height: 20), 
-              Column(
-                children: [
-                  Text('By continuing with the registration, it clearly \nshows you have agree with our', style: TextStyle(fontSize: 15),textAlign: TextAlign.center,),
-                  Text('Terms and Conditions', 
-                  style: TextStyle(color: Colors.orangeAccent,
-                    decoration: TextDecoration.underline, decorationColor: Colors.orangeAccent
-                  ),)
-                ],
+              Center(
+          
+                child: 
+                    
+                    Text('Terms and Conditions', 
+                    style: TextStyle(color: Colors.orangeAccent,
+                    
+                    ),)
+                  
               )
             ],
           )),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:iconsax/iconsax.dart';
 
 import 'body.dart';
 
@@ -24,11 +25,11 @@ class _SignUpState extends State<SignUp> {
             onTap: () {
               Get.back();
             },
-            child: Icon(Icons.close)),  
-        SizedBox(width: 20),   
+            child: const Icon(Iconsax.close_circle)),  
+        const SizedBox(width: 20),   
         ],
         
       ),
-      body: SignUpBody());
+      body: const SignUpBody());
   }
 }
