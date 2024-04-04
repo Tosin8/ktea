@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:iconsax/iconsax.dart';
 
 import 'forgot_body.dart';
 
@@ -17,12 +18,11 @@ class _ForgotPwdState extends State<ForgotPwd> {
       
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        leading: IconButton(onPressed: (){
-          Get.back();
-        }, icon: const Icon(Icons.arrow_back_ios)),
-        title: Text('Forgot Password', 
-        style: TextStyle(color: Colors.grey[800], fontSize: 20),), 
-      centerTitle: true,
+        actions: [
+          IconButton(onPressed: () => Get.back(), icon: const Icon(Iconsax.close_circle), 
+          ),
+          SizedBox(width: 10,), 
+        ],
       ),
       body: const ForgotPwdBody(),
 

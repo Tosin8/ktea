@@ -14,7 +14,8 @@ class fgtPassword extends StatelessWidget {
         Get.to(() => const ForgotPwd()); 
       },
       child: Text('Forgot Password? ',
-       style: TextStyle(color: Colors.black.withOpacity(0.8), fontSize: 14),),
+       style: TextStyle(color: Colors.black.withOpacity(0.8),
+        fontSize: 14),),
     );
   }
 }
