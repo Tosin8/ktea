@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ktea/screens/form/otp/otp.dart';
-import 'package:ktea/screens/form/widget.dart';
+import 'package:ktea/features/auth/screens/otp/otp.dart';
+import 'package:ktea/features/auth/screens/widget.dart';
 
 class AppForm2 extends StatefulWidget {
   const AppForm2({super.key});

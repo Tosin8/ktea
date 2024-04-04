@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ktea/screens/form/widget.dart';
+import 'package:ktea/features/auth/screens/widget.dart';
 
 class ForgotPwdForm extends StatefulWidget {
   const ForgotPwdForm({super.key});

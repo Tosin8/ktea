@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:ktea/screens/categories/category.dart';
 
 import '../screens/cart/cart.dart';
-import '../screens/form/signin/signin.dart';
+import '../features/auth/screens/signin/signin.dart';
 import '../screens/home/home.dart';
 import '../screens/profile/profile.dart';
 import 'package:antdesign_icons/antdesign_icons.dart';

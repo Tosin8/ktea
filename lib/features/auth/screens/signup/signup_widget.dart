@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ktea/screens/form/signup/complete_profile/signup1.dart';
-import 'package:ktea/screens/form/widget.dart';
+import 'package:ktea/features/auth/screens/signup/complete_profile/signup1.dart';
+import 'package:ktea/features/auth/screens/widget.dart';
 
 class AppForm1 extends StatefulWidget {
   const AppForm1({super.key});

@@ -1,6 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:ktea/screens/form/widget.dart';
+import 'package:ktea/features/auth/screens/widget.dart';
 
 import 'forgot_pass_widget.dart';
 
