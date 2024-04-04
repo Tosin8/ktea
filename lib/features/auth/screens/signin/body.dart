@@ -1,8 +1,10 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 import '../widget.dart';
-import 'signin_widget.dart';
+import 'signin_form.dart';
+
 
 class SignInBody extends StatelessWidget {
   const SignInBody({super.key});
@@ -31,23 +33,28 @@ class SignInBody extends StatelessWidget {
                   const Text('Kindly sign in to continue',
                   style: TextStyle(fontSize: 15, color: Colors.grey), 
                 ), 
-                  const SizedBox(height: 30), 
+                  const SizedBox(height: 60), 
 
                   // Form Body
                   const SignInForm(),
                     const SizedBox(height: 30), 
+
+                    // Footer
                     const Center(
                       child: Text('- OR USE - ', style: TextStyle(color: Colors.grey),)) , 
                     const SizedBox(height: 15), 
                     const SocialCard(),
                     const SizedBox(height: 100), 
-                   const Row(
+                    Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('Don\'t have an account? ',
+                      const Text('Don\'t have an account? ',
                        style: TextStyle(color: Colors.grey),), 
-                      Text('Sign Up', 
-                      style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),)
+                      GestureDetector( 
+                        onTap: (){},
+                        child: const Text('Sign Up', 
+                        style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),),
+                      )
                     ],
                    )
                     
