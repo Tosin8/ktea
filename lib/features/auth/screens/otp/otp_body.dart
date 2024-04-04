@@ -2,6 +2,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
 import 'otp_widget.dart';
+import 'timer.dart';
 
 class OTPBody extends StatefulWidget {
   const OTPBody({super.key});
