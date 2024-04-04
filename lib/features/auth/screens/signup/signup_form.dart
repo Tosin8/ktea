@@ -19,13 +19,79 @@ class _SignUpFormState extends State<SignUpForm> {
             TextFormField(
               keyboardType: TextInputType.emailAddress, 
               textInputAction: TextInputAction.next, 
-              decoration: InputDecoration(
-                suffixIcon: const Padding(
+              decoration: const InputDecoration(
+                suffixIcon: Padding(
                   padding: EdgeInsets.only(right: 10),
                   child: Icon(Iconsax.sms),
-                )
+                  
+                ), 
+                labelText: 'Email',
               ),
-            )
+            ), 
+SizedBox(height: 10,), 
+// First Name
+              TextFormField(
+              keyboardType: TextInputType.name, 
+              textInputAction: TextInputAction.next, 
+              decoration: const InputDecoration(
+                suffixIcon: Padding(
+                  padding: EdgeInsets.only(right: 10),
+                  child: Icon(Iconsax.user),
+                  
+                ), 
+                labelText: 'First Name',
+              ),
+            ),
+            SizedBox(height: 10,), 
+
+            // Last Name
+              TextFormField(
+              keyboardType: TextInputType.name, 
+              textInputAction: TextInputAction.next, 
+              decoration: const InputDecoration(
+                suffixIcon: Padding(
+                  padding: EdgeInsets.only(right: 10),
+                  child: Icon(Iconsax.user),
+                  
+                ), 
+                labelText: 'Last Name',
+              ),
+            ),
+
+            SizedBox(height: 10,), 
+
+            // Password
+              TextFormField(
+              keyboardType: TextInputType.visiblePassword, 
+              textInputAction: TextInputAction.next, 
+              decoration: const InputDecoration(
+                suffixIcon: Padding(
+                  padding: EdgeInsets.only(right: 10),
+                  child: Icon(Iconsax.eye),
+                  
+                ), 
+                labelText: 'Password',
+              ),
+            ),
+
+              SizedBox(height: 10,), 
+
+            // Password
+              TextFormField(
+              keyboardType: TextInputType.phone, 
+              textInputAction: TextInputAction.next, 
+              decoration: const InputDecoration(
+                suffixIcon: Padding(
+                  padding: EdgeInsets.only(right: 10),
+                  child: Icon(Iconsax.mobile),
+                  
+                ), 
+                labelText: 'Phone Number',
+              ),
+            ),
+
+            // Button
+            
           ]
         )
       ),

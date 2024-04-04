@@ -5,6 +5,9 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:ktea/utils/nav_bar.dart';
 
+import 'forget_psw_btn.dart';
+import 'login_btn.dart';
+
 class SignInForm extends StatefulWidget {
   const SignInForm({super.key});
 
@@ -51,32 +54,12 @@ class _SignInFormState extends State<SignInForm> {
           const SizedBox(height: 50,), 
 
           // Button
-          GestureDetector( 
-            onTap: () {
-              Get.to(() => NavBarApp());
-            },
-            child: Container(width: 350, height: 50, decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: Colors.orange), 
-            child: const Align(
-              child: Text(
-              'LOGIN', 
-              style: TextStyle(
-                color: Colors.white, 
-                fontSize: 16, 
-                fontWeight: FontWeight.w500)
-                ),
-                ),
-                ),
-          ),
-          SizedBox(height: 15,), 
-          GestureDetector(
-            onTap:() {
-              
-            },
-            child: Text('Forgot Password? ',
-             style: TextStyle(color: Colors.black.withOpacity(0.8), fontSize: 14),),
-          ),
+          const LoginBtn(),
+          const SizedBox(height: 15,), 
+          const fgtPassword(),
         ],
       )),
     );
   }
 }
+

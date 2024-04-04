@@ -2,6 +2,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:ktea/features/auth/screens/widget.dart';
 
+import 'header.dart';
 import 'signup_form.dart';
 import 'signup_widget.dart';
 
@@ -20,22 +21,17 @@ class _SignUpBodyState extends State<SignUpBody> {
       child: SingleChildScrollView(
         child: FadeInRight(
           duration: const Duration(milliseconds: 300),
-          child: Column(
+          child: const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Create Account', 
-              style: TextStyle(color: Colors.black.withOpacity(0.8), fontSize: 24, fontWeight: FontWeight.bold),), 
-              const SizedBox(height: 6), 
-              const Text('Complete your details or continue \nwith social media', 
-              
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),),
-              const SizedBox(height: 20), 
+              signupheader(), 
+              SizedBox(height: 20), 
               SignUpForm(), 
               //const AppForm1(), 
-              const SizedBox(height: 30), 
-              const SocialCard(),
-              const SizedBox(height: 20), 
-              const Column(
+              SizedBox(height: 30), 
+              SocialCard(),
+              SizedBox(height: 20), 
+              Column(
                 children: [
                   Text('By continuing with the registration, it clearly \nshows you have agree with our', style: TextStyle(fontSize: 15),textAlign: TextAlign.center,),
                   Text('Terms and Conditions', 
@@ -52,3 +48,4 @@ class _SignUpBodyState extends State<SignUpBody> {
     );
   }
 }
+
