@@ -51,6 +51,7 @@ dependencies:
   get: ^4.6.6
   iconsax: ^0.0.8
   logger: ^2.0.2+1
+  lottie: ^3.1.0
   page_transition: ^2.1.0
   pin_code_fields: ^8.0.1
   timeago: ^3.6.0
@@ -194,6 +195,9 @@ flutter:
     - assets/popular/3.jpg
     - assets/popular/4.jpg
     - assets/popular/5.jpg
+
+    #animation
+    - assets/animation/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see

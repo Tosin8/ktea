@@ -16,3 +16,6 @@ const String kMatchPassError = "Passwords don't match";
 const String kNamelNullError = "Please Enter your name";
 const String kPhoneNumberNullError = "Please Enter your phone number";
 const String kAddressNullError = "Please Enter your address";
+
+// Images
+String successImage = "assets/animation/Animation - 1712269756160.json"; 
