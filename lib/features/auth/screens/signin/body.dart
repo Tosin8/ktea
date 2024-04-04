@@ -1,8 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
-import '../signup/signup.dart';
 import '../widget.dart';
 import 'signin_widget.dart';
 
@@ -24,6 +22,8 @@ class SignInBody extends StatelessWidget {
                
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+
+                  // Header
                   const SizedBox(height: 8), 
                   Text('Welcome Back!',
                   style: TextStyle(color: Colors.black.withOpacity(0.8), fontSize: 24, fontWeight: FontWeight.bold),),
@@ -32,6 +32,8 @@ class SignInBody extends StatelessWidget {
                   style: TextStyle(fontSize: 15, color: Colors.grey), 
                 ), 
                   const SizedBox(height: 30), 
+
+                  // Form Body
                   const SignInForm(),
                     const SizedBox(height: 30), 
                     const Center(
@@ -42,8 +44,10 @@ class SignInBody extends StatelessWidget {
                    const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('Don\'t have an account? ', style: TextStyle(color: Colors.grey),), 
-                      Text('Sign Up', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),)
+                      Text('Don\'t have an account? ',
+                       style: TextStyle(color: Colors.grey),), 
+                      Text('Sign Up', 
+                      style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),)
                     ],
                    )
                     
