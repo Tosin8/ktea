@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ktea/components/nav_bar.dart';
 
 import '../forgot_pass/forgot.dart';
 import '../form_error.dart';
@@ -102,11 +103,11 @@ if (formKey.currentState!.validate()){
                 //FormError(errors: errors), 
                 
                DefaultButton(textBtn: 'LOGIN',
-                press: (){},
+                press: () => Get.to(() => const NavBarApp()),
                ),
-               SizedBox(height: 3,), 
+               const SizedBox(height: 3,), 
                TextButton(
-                onPressed: () => Get.to(() => ForgotPwd()) ,  child: Text('Forgot Password?', style: TextStyle(color: Colors.black),))
+                onPressed: () => Get.to(() => const ForgotPwd()) ,  child: const Text('Forgot Password?', style: TextStyle(color: Colors.black),))
             ],
           ),
         
