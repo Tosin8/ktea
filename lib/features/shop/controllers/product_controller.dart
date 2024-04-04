@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:ktea/constants/firebase.dart';
+import 'package:ktea/utils/firebase.dart';
 
-import '../features/personalization/models/product_model/product.dart';
+import '../../personalization/models/product_model/product.dart';
 
 class ProductsController extends GetxController{
   static ProductsController instance = Get.find(); 

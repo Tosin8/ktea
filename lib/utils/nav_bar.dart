@@ -2,14 +2,14 @@
 import 'package:custom_navigation_bar/custom_navigation_bar.dart';
 
 import 'package:flutter/material.dart';
-import 'package:ktea/screens/categories/category.dart';
+import 'package:ktea/features/shop/screens/categories/category.dart';
 
-import '../screens/cart/cart.dart';
+import '../features/shop/screens/extend/cart/cart.dart';
 import '../features/auth/screens/signin/signin.dart';
-import '../screens/home/home.dart';
-import '../screens/profile/profile.dart';
+import '../features/shop/screens/home/home.dart';
+import '../features/shop/screens/profile/profile.dart';
 import 'package:antdesign_icons/antdesign_icons.dart';
-import '../screens/saved/saved.dart';
+import '../features/shop/screens/wishlist/saved.dart';
 
 class NavBarApp extends StatefulWidget {
   const NavBarApp({super.key});

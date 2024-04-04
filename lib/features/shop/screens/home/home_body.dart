@@ -5,15 +5,15 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
-import 'package:ktea/components/app_widgets.dart';
+import 'package:ktea/utils/app_widgets.dart';
 import 'package:ktea/features/personalization/models/product_model/cabinet.dart';
 import 'package:ktea/features/personalization/models/product_model/popular.dart';
 import 'package:ktea/features/personalization/models/product_model/table.dart';
 
 
-import '../../features/personalization/models/product_model/light.dart';
-import '../../features/personalization/models/product_model/new_arrival.dart';
-import '../../features/personalization/models/product_model/sofa.dart';
+import '../../../personalization/models/product_model/light.dart';
+import '../../../personalization/models/product_model/new_arrival.dart';
+import '../../../personalization/models/product_model/sofa.dart';
 import 'home_widget.dart';
 class Home_Body extends StatefulWidget {
   const Home_Body({super.key});

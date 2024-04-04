@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 
-import '../../components/app_widgets.dart';
-import '../home/home_widget.dart';
+import '../../../../../utils/app_widgets.dart';
+import '../../home/home_widget.dart';
 import 'help_body.dart';
 
 class Help extends StatefulWidget {

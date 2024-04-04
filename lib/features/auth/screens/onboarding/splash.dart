@@ -1,7 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ktea/components/nav_bar.dart';
+import 'package:ktea/utils/nav_bar.dart';
 import 'package:ktea/features/auth/screens/signin/signin.dart';
 
 class Onboarding extends StatefulWidget {

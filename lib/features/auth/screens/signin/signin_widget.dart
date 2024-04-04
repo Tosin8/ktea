@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ktea/components/nav_bar.dart';
+import 'package:ktea/utils/nav_bar.dart';
 
 import '../forgot_pass/forgot.dart';
 import '../form_error.dart';
