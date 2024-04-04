@@ -7,13 +7,13 @@ import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../model/cabinet.dart';
-import '../../model/light.dart';
-import '../../model/new_arrival.dart';
-import '../../model/popular.dart';
-import '../../model/sofa.dart';
-import '../../model/table.dart' as prefix;
-import '../../model/table.dart';
+import '../../features/personalization/models/product_model/cabinet.dart';
+import '../../features/personalization/models/product_model/light.dart';
+import '../../features/personalization/models/product_model/new_arrival.dart';
+import '../../features/personalization/models/product_model/popular.dart';
+import '../../features/personalization/models/product_model/sofa.dart';
+import '../../features/personalization/models/product_model/table.dart' as prefix;
+import '../../features/personalization/models/product_model/table.dart';
 import '../extended_screen/notification.dart';
 
 class App_Drawer extends StatelessWidget {

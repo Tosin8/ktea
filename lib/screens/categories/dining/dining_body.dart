@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 
 
-import 'package:ktea/model/dining.dart';
+import 'package:ktea/features/personalization/models/product_model/dining.dart';
 
 import 'dining_body_widget.dart';
 

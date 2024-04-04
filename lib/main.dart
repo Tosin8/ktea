@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'splash_screen/splash.dart';
+import 'features/auth/screens/onboarding/splash.dart';
 
 
 
