@@ -2,6 +2,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:ktea/features/auth/screens/widget.dart';
 
+import 'signup_form.dart';
 import 'signup_widget.dart';
 
 class SignUpBody extends StatefulWidget {
@@ -20,14 +21,17 @@ class _SignUpBodyState extends State<SignUpBody> {
         child: FadeInRight(
           duration: const Duration(milliseconds: 300),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Register Account', style: TextStyle(color: Colors.black.withOpacity(0.8), fontSize: 24, fontWeight: FontWeight.bold),), 
+              Text('Create Account', 
+              style: TextStyle(color: Colors.black.withOpacity(0.8), fontSize: 24, fontWeight: FontWeight.bold),), 
               const SizedBox(height: 6), 
               const Text('Complete your details or continue \nwith social media', 
               
-              textAlign: TextAlign.center,style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),),
-              const SizedBox(height: 50), 
-              const AppForm1(), 
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),),
+              const SizedBox(height: 20), 
+              SignUpForm(), 
+              //const AppForm1(), 
               const SizedBox(height: 30), 
               const SocialCard(),
               const SizedBox(height: 20), 

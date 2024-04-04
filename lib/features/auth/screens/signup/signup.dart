@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 import 'body.dart';
@@ -17,16 +18,13 @@ class _SignUpState extends State<SignUp> {
       
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        leading: IconButton(
-          onPressed: (){
-            Get.back(); 
-          }, 
-          icon: Icon(Icons.arrow_back_ios)),
-        
-        title: Text('Sign Up', style: TextStyle(color: Colors.grey[800], fontSize: 20),), 
-        centerTitle: true,
+      
         actions: [
-          Text('1/3'), 
+          GestureDetector(
+            onTap: () {
+              Get.back();
+            },
+            child: Icon(Icons.close)),  
         SizedBox(width: 20),   
         ],
         

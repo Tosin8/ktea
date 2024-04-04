@@ -1,6 +1,8 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
+import 'package:ktea/features/auth/screens/signup/signup.dart';
 
 import '../widget.dart';
 import 'signin_form.dart';
@@ -51,7 +53,9 @@ class SignInBody extends StatelessWidget {
                       const Text('Don\'t have an account? ',
                        style: TextStyle(color: Colors.grey),), 
                       GestureDetector( 
-                        onTap: (){},
+                        onTap: (){
+                          Get.to(() => SignUp()); 
+                        },
                         child: const Text('Sign Up', 
                         style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),),
                       )
