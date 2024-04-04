@@ -1,7 +1,8 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:ktea/features/auth/screens/otp/otp_btn.dart';
 
-import 'otp_widget.dart';
+import 'otp_pin_field.dart';
 import 'timer.dart';
 
 class OTPBody extends StatefulWidget {
@@ -24,10 +25,18 @@ class _OTPBodyState extends State<OTPBody> {
         const SizedBox(height: 6,), 
         const Text("We've sent your code to your phone number "), 
         const SizedBox(height: 10), 
-        buildTimer(), 
-        const SizedBox(height: 120), 
+        const buildTimer(), 
+        const SizedBox(height: 100), 
         const OTPForm(), 
-        const SizedBox(height: 120,), 
+        const SizedBox(height: 80,), 
+        OtpBtn(),
+        SizedBox(height: 20,), 
+        const Text('Didn\'t receive the code? ', style: TextStyle(color: Colors.grey),),
+        
+        
+         
+        const SizedBox(height: 10,),
+
         GestureDetector(
           onTap: (){},
           child: const Text('Resend OTP Code', style: TextStyle(color: Colors.orange, decoration: TextDecoration.underline, decorationColor: Colors.orange), ))

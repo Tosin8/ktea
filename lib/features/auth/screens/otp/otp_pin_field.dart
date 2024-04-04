@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ktea/features/auth/screens/widget.dart';
+
 
 
 
@@ -149,8 +149,7 @@ void nextField({required String value, required FocusNode focusNode}) {
                 )
               ],
             ),
-            SizedBox(height: 80), 
-            DefaultButton(textBtn: 'Register', press: (){})
+          
           ],
         ),
       ),
