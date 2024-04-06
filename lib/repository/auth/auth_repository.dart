@@ -47,6 +47,13 @@ void phoneAuthentication(String phoneNo) async {
   ); 
 }
 
+void verifyOTP(String otp) async {
+  await _auth.signInWithCredential(
+    PhoneAuthProvider.credential(
+      verificationId: this.verificationId.value, 
+      smsCode: otp)); 
+}
+
 
   Future<void> createUserWithEmailAndPassword(String email, String password) async {
 
