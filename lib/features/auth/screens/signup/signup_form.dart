@@ -94,9 +94,11 @@ const SizedBox(height:50 ,),
            GestureDetector( 
       onTap: () {
         if(_formKey.currentState!.validate()) {
-          SignUpController.instance.registerUser(
-            controller.email.text.trim(),
-          controller.password.text.trim()); 
+          // SignUpController.instance.registerUser(
+          //   controller.email.text.trim(),
+          // controller.password.text.trim()); 
+          SignUpController.instance.phoneAuthentication(
+            controller.phone.text.trim()); 
         }
        // Get.to(() => const SuccessScreen());
       },

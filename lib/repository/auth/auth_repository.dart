@@ -50,7 +50,7 @@ void phoneAuthentication(String phoneNo) async {
 Future<bool> verifyOTP(String otp) async {
   var credentials = await _auth.signInWithCredential(
     PhoneAuthProvider.credential(
-      verificationId: this.verificationId.value, 
+      verificationId: verificationId.value, 
       smsCode: otp)); 
       return credentials.user != null ? true: false; 
 }
