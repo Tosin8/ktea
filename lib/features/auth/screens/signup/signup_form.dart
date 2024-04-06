@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:ktea/features/auth/controllers/signup_controller.dart';
 import 'package:ktea/features/auth/screens/signup/sign_up_btn.dart';
 
 class SignUpForm extends StatefulWidget {
@@ -10,6 +12,7 @@ class SignUpForm extends StatefulWidget {
 }
 
 class _SignUpFormState extends State<SignUpForm> {
+  final controller = Get.put(SignUpController());
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -77,7 +80,7 @@ SizedBox(height: 10,),
 
               SizedBox(height: 10,), 
 
-            // Password
+            // Phone
               TextFormField(
               keyboardType: TextInputType.phone, 
               textInputAction: TextInputAction.done, 
