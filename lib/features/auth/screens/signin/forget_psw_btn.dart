@@ -35,7 +35,9 @@ style: TextStyle(
     btnIcon: Iconsax.sms,
      title: 'E-Mail', 
      subTitle: 'Reset via E-Mail Verification',
-     onTap: () {},
+     onTap: () {
+      Get.to(() => ForgotPwd());
+     },
      ), 
 SizedBox(height: 20,), 
      OptionResetBtn(
