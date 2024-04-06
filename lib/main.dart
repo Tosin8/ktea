@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ktea/firebase_options.dart';
+import 'package:ktea/repository/auth/auth_repository.dart';
 
 import 'features/auth/screens/onboarding/splash.dart';
 
@@ -9,7 +10,7 @@ import 'features/auth/screens/onboarding/splash.dart';
 
  main() {
   WidgetsFlutterBinding.ensureInitialized(); 
-  Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform).then((value) => Get.put(AuthenticationRepository()));
     
  
   runApp(const MyApp());
