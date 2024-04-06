@@ -2,6 +2,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:ktea/features/auth/screens/onboarding/splash.dart';
+import 'package:ktea/repository/exceptions/signup_email_pwd_failure.dart';
 import 'package:ktea/utils/nav_bar.dart';
 
 class AuthenticationRepository extends GetxController{
@@ -26,9 +27,16 @@ class AuthenticationRepository extends GetxController{
 
     try{
    await _auth.createUserWithEmailAndPassword(email: email, password: password); 
+   firebaseUser.value != null ? Get.offAll(() => const NavBarApp()): Get.offAll(() => const Onboarding());
   } on FirebaseAuthException catch (e) {
-    
-  } catch (_){}
+    final ex = SignUpWithEmailAndPasswordFailure.code(e.code); 
+    print('FIREBASE AUTH EXCEPTION - ${ex.message}');
+    throw ex; 
+  } catch (_){
+  final ex = SignUpWithEmailAndPasswordFailure(); 
+    print('EXCEPTION - ${ex.message}');
+    throw ex;
+  }
 }
 
 
