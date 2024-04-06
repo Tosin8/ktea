@@ -4,6 +4,8 @@ import 'package:iconsax/iconsax.dart';
 import 'package:ktea/features/auth/controllers/signup_controller.dart';
 import 'package:ktea/features/auth/screens/signup/sign_up_btn.dart';
 
+import '../success_screen.dart';
+
 class SignUpForm extends StatefulWidget {
   const SignUpForm({super.key});
 
@@ -90,7 +92,28 @@ const SizedBox(height: 10,),
             ),
 const SizedBox(height:50 ,), 
             // Button
-            const SignUpBtn(), 
+           // const SignUpBtn(), 
+           GestureDetector( 
+      onTap: () {
+        if(_formKey.currentState!.validate()) {
+          SignUpController.instance.registerUser(
+            controller.email.text.trim(),
+          controller.password.text.trim()); 
+        }
+       // Get.to(() => const SuccessScreen());
+      },
+      child: Container(width: 350, height: 50, decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: Colors.orange), 
+      child: const Align(
+        child: Text(
+        'SIGN UP', 
+        style: TextStyle(
+          color: Colors.white, 
+          fontSize: 16, 
+          fontWeight: FontWeight.w500)
+          ),
+          ),
+          ),
+    )
           ]
         )
       ),

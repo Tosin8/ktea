@@ -10,7 +10,8 @@ import 'features/auth/screens/onboarding/splash.dart';
 
  main() {
   WidgetsFlutterBinding.ensureInitialized(); 
-  Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform).then((value) => Get.put(AuthenticationRepository()));
+  Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform)
+  .then((value) => Get.put(AuthenticationRepository()));
     
  
   runApp(const MyApp());

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ktea/repository/auth/auth_repository.dart';
 
 import 'profile_widget.dart';
 
@@ -40,7 +41,9 @@ class _Profile_BodyState extends State<Profile_Body> {
         Profile_Menu(
           text: 'Log Out',
           icon_prefix: 'assets/icons/logout_20.png',
-          press: () {},
+          press: () {
+            AuthenticationRepository.instance.logOut(); 
+          },
         ),
       ],
     );
