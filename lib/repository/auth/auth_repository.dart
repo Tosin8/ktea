@@ -11,6 +11,7 @@ class AuthenticationRepository extends GetxController{
   // Variables
   final _auth = FirebaseAuth.instance;
  late final Rx<User?> firebaseUser; 
+ var verificationId = ''.obs; 
 
   @override 
   void onReady() {
@@ -30,7 +31,9 @@ void phoneAuthentication(String phoneNo) async {
     verificationCompleted: (credential)  async{
       await _auth.signInWithCredential(credential); 
     },
-    codeSent:(verificationId, resendToken) {},
+    codeSent:(verificationId, resendToken) {
+      this.verificationId.value = verificationId; 
+    },
     codeAutoRetrievalTimeout: (verificationId){}, 
     verificationFailed: (e) {
       
