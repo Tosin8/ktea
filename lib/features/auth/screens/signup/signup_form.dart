@@ -12,9 +12,13 @@ class SignUpForm extends StatefulWidget {
 }
 
 class _SignUpFormState extends State<SignUpForm> {
-  final controller = Get.put(SignUpController());
+  
+
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(SignUpController());
+  final _formKey = GlobalKey<FormState>();
+  
     return Padding(
       padding: const EdgeInsets.only(left: 15.0, right: 15.0),
       child: Form( 
