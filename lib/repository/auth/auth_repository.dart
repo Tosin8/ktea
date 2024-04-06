@@ -27,12 +27,16 @@ class AuthenticationRepository extends GetxController{
 void phoneAuthentication(String phoneNo) async {
   await _auth.verifyPhoneNumber (
     phoneNumber: phoneNo,
-    verificationCompleted: (credentials) {},
+    verificationCompleted: (credential)  async{
+      await _auth.signInWithCredential(credential); 
+    },
+    codeSent:(verificationId, resendToken) {},
+    codeAutoRetrievalTimeout: (verificationId){}, 
     verificationFailed: (e) {
       
     },
-    codeSent: (verificationId, resendToken) {},
-    codeAutoRetrievalTimeout: (verificationId) {},
+
+  
   ); 
 }
 
