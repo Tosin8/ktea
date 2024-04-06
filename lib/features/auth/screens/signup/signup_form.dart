@@ -18,13 +18,15 @@ class _SignUpFormState extends State<SignUpForm> {
   Widget build(BuildContext context) {
     final controller = Get.put(SignUpController());
   final _formKey = GlobalKey<FormState>();
-  
+
     return Padding(
       padding: const EdgeInsets.only(left: 15.0, right: 15.0),
       child: Form( 
+        key: _formKey,
         child: Column(
           children: [
             TextFormField(
+              controller: controller.email, 
               keyboardType: TextInputType.emailAddress, 
               textInputAction: TextInputAction.next, 
               decoration: const InputDecoration(
@@ -37,7 +39,7 @@ class _SignUpFormState extends State<SignUpForm> {
               ),
             ), 
 SizedBox(height: 10,), 
-// First Name
+// Full Name
               TextFormField(
               keyboardType: TextInputType.name, 
               textInputAction: TextInputAction.next, 
@@ -52,21 +54,7 @@ SizedBox(height: 10,),
             ),
             SizedBox(height: 10,), 
 
-            // Last Name
-              TextFormField(
-              keyboardType: TextInputType.name, 
-              textInputAction: TextInputAction.next, 
-              decoration: const InputDecoration(
-                suffixIcon: Padding(
-                  padding: EdgeInsets.only(right: 10),
-                  child: Icon(Iconsax.user),
-                  
-                ), 
-                labelText: 'Last Name',
-              ),
-            ),
-
-            SizedBox(height: 10,), 
+      
 
             // Password
               TextFormField(
@@ -97,7 +85,7 @@ SizedBox(height: 10,),
                 labelText: 'Phone Number',
               ),
             ),
-SizedBox(height:30 ,), 
+SizedBox(height:50 ,), 
             // Button
             SignUpBtn(), 
           ]
