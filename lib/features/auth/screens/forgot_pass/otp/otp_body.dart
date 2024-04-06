@@ -1,5 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:ktea/features/auth/screens/forgot_pass/otp/otp_btn.dart';
 
 import 'otp_pin_field.dart';
@@ -28,6 +29,7 @@ class _OTPBodyState extends State<OTPBody> {
         //const buildTimer(), 
         const SizedBox(height: 100), 
         //const OTPForm(), 
+        OtpTextField(), 
         const SizedBox(height: 80,), 
         OtpBtn(),
         SizedBox(height: 20,), 
