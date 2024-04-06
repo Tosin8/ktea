@@ -36,10 +36,10 @@ style: TextStyle(
      title: 'E-Mail', 
      subTitle: 'Reset via E-Mail Verification',
      onTap: () {
-      Get.to(() => ForgotPwd());
+      Get.to(() => const ForgotPwd());
      },
      ), 
-SizedBox(height: 20,), 
+const SizedBox(height: 20,), 
      OptionResetBtn(
     btnIcon: Iconsax.mobile,
      title: 'Phone', 

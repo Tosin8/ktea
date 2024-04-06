@@ -1,6 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:ktea/features/auth/screens/otp/otp_btn.dart';
+import 'package:ktea/features/auth/screens/forgot_pass/otp/otp_btn.dart';
 
 import 'otp_pin_field.dart';
 import 'timer.dart';
@@ -23,11 +23,11 @@ class _OTPBodyState extends State<OTPBody> {
           Text('OTP Verification', style: TextStyle(color: Colors.black.withOpacity(0.8), fontSize: 24, fontWeight: FontWeight.bold),
         ), 
         const SizedBox(height: 6,), 
-        const Text("We've sent your code to your phone number "), 
+        const Text("We've sent your code to your email address "), 
         const SizedBox(height: 10), 
-        const buildTimer(), 
+        //const buildTimer(), 
         const SizedBox(height: 100), 
-        const OTPForm(), 
+        //const OTPForm(), 
         const SizedBox(height: 80,), 
         OtpBtn(),
         SizedBox(height: 20,), 
