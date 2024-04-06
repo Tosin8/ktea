@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:ktea/features/auth/controllers/signup_controller.dart';
-import 'package:ktea/features/auth/screens/signup/sign_up_btn.dart';
 
-import '../success_screen.dart';
 
 class SignUpForm extends StatefulWidget {
   const SignUpForm({super.key});

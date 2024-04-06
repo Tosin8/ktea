@@ -56,7 +56,12 @@ class _SignInFormState extends State<SignInForm> {
           // Button
           const LoginBtn(),
           const SizedBox(height: 15,), 
-          const fgtPassword(),
+          //const fgtPassword(),
+          TextButton(onPressed: (){
+            showModalBottomSheet(context: context, builder: (context) => Container()); 
+          }, child: 
+          Text('Forgot Password?', style: TextStyle(color: Colors.black.withOpacity(0.8), fontSize: 14),)),
+          
         ],
       )),
     );
