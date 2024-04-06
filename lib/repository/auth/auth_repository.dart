@@ -36,10 +36,14 @@ void phoneAuthentication(String phoneNo) async {
     },
     codeAutoRetrievalTimeout: (verificationId){}, 
     verificationFailed: (e) {
-      
-    },
+      if(e.code == 'invalid-phone-number') {
+        Get.snackbar('Error', 
+        'The provided phone number is not valid'); 
+    } else{
+      Get.snackbar('Error', 'Something went wrong, try again');
+    }
 
-  
+    }
   ); 
 }
 
