@@ -38,7 +38,7 @@ class _SignUpFormState extends State<SignUpForm> {
                 labelText: 'Email',
               ),
             ), 
-SizedBox(height: 10,), 
+const SizedBox(height: 10,), 
 // Full Name
               TextFormField(
               keyboardType: TextInputType.name, 
@@ -52,12 +52,14 @@ SizedBox(height: 10,),
                 labelText: 'First Name',
               ),
             ),
-            SizedBox(height: 10,), 
+            const SizedBox(height: 10,), 
 
       
 
             // Password
               TextFormField(
+                obscureText: true, 
+                controller: controller.password, 
               keyboardType: TextInputType.visiblePassword, 
               textInputAction: TextInputAction.next, 
               decoration: const InputDecoration(
@@ -70,7 +72,7 @@ SizedBox(height: 10,),
               ),
             ),
 
-              SizedBox(height: 10,), 
+              const SizedBox(height: 10,), 
 
             // Phone
               TextFormField(
@@ -85,9 +87,9 @@ SizedBox(height: 10,),
                 labelText: 'Phone Number',
               ),
             ),
-SizedBox(height:50 ,), 
+const SizedBox(height:50 ,), 
             // Button
-            SignUpBtn(), 
+            const SignUpBtn(), 
           ]
         )
       ),
