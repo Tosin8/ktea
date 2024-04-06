@@ -24,7 +24,19 @@ class AuthenticationRepository extends GetxController{
   }
 
 // Func for Phone Number
-void phoneAuthentication(String phoneNo) {}
+void phoneAuthentication(String phoneNo) {
+  _auth.verifyPhoneNumber (
+    phoneNumber: phoneNo,
+    verificationCompleted: (credentials) {},
+    verificationFailed: (e) {
+      
+    },
+    codeSent: (verificationId, resendToken) {},
+    codeAutoRetrievalTimeout: (verificationId) {},
+  ); 
+}
+
+
   Future<void> createUserWithEmailAndPassword(String email, String password) async {
 
     try{
