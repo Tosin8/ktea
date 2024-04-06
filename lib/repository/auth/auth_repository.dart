@@ -23,6 +23,8 @@ class AuthenticationRepository extends GetxController{
     user == null ? Get.offAll(() => const Onboarding()): Get.offAll(() => const NavBarApp());  
   }
 
+// Func for Phone Number
+void phoneAuthentication(String phoneNo) {}
   Future<void> createUserWithEmailAndPassword(String email, String password) async {
 
     try{
