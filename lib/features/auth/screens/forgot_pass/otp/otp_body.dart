@@ -20,7 +20,7 @@ class _OTPBodyState extends State<OTPBody> {
       width: double.infinity,
       child: SingleChildScrollView(
         child: FadeInRight(child: Column(children: [
-          const SizedBox(height: 20), 
+          const SizedBox(height: 60), 
           Text('OTP Verification', style: TextStyle(color: Colors.black.withOpacity(0.8), fontSize: 24, fontWeight: FontWeight.bold),
         ), 
         const SizedBox(height: 6,), 
@@ -29,10 +29,17 @@ class _OTPBodyState extends State<OTPBody> {
         //const buildTimer(), 
         const SizedBox(height: 100), 
         //const OTPForm(), 
-        OtpTextField(), 
+        OtpTextField(
+          numberOfFields: 6,
+          fillColor: Colors.black.withOpacity(0.1),
+          filled: true,
+          onSubmit: (code) {
+            print('OTP is => $code'); 
+          },
+        ), 
         const SizedBox(height: 80,), 
-        OtpBtn(),
-        SizedBox(height: 20,), 
+        const OtpBtn(),
+        const SizedBox(height: 20,), 
         const Text('Didn\'t receive the code? ', style: TextStyle(color: Colors.grey),),
         
         
