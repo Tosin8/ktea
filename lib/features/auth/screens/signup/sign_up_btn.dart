@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ktea/features/auth/screens/otp/otp.dart';
+import 'package:ktea/features/auth/controllers/signup_controller.dart';
 import 'package:ktea/features/auth/screens/success_screen.dart';
-import 'package:ktea/utils/nav_bar.dart';
 
 class SignUpBtn extends StatelessWidget {
   const SignUpBtn({
@@ -11,8 +10,15 @@ class SignUpBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(SignUpController());
+    final _formKey = GlobalKey<FormState>();
     return GestureDetector( 
       onTap: () {
+        if(_formKey.currentState!.validate()) {
+          SignUpController.instance.registerUser(
+            controller.email.text.trim(),
+          controller.password.text.trim()); 
+        }
         Get.to(() => const SuccessScreen());
       },
       child: Container(width: 350, height: 50, decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: Colors.orange), 
