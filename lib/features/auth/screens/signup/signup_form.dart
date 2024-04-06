@@ -49,7 +49,7 @@ const SizedBox(height: 10,),
                   child: Icon(Iconsax.user),
                   
                 ), 
-                labelText: 'First Name',
+                labelText: 'Full Name',
               ),
             ),
             const SizedBox(height: 10,), 
@@ -76,6 +76,7 @@ const SizedBox(height: 10,),
 
             // Phone
               TextFormField(
+                controller: controller.phone,
               keyboardType: TextInputType.phone, 
               textInputAction: TextInputAction.done, 
               decoration: const InputDecoration(

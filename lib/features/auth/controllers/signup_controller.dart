@@ -6,8 +6,8 @@ class SignUpController extends GetxController{
 
   // Text field controllers
 final  email = TextEditingController(); 
-final firstname = TextEditingController(); 
-final lastname = TextEditingController();
+final name = TextEditingController(); 
+
 
   final password = TextEditingController(); 
   final phone = TextEditingController();

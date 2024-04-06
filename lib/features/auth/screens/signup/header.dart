@@ -19,7 +19,7 @@ class signupheader extends StatelessWidget {
              fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 6), 
-    const Text('Complete your details or continue \nwith social media', 
+    const Text('Fill your details below or continue \nwith your social media account', 
     
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
                 ),
