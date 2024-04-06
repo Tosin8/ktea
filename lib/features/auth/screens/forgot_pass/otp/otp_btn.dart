@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ktea/features/auth/controllers/otp_controller.dart';
 import 'package:ktea/features/auth/screens/success_screen.dart';
 
 class OtpBtn extends StatelessWidget {
@@ -9,8 +10,10 @@ class OtpBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var otp; 
     return GestureDetector( 
       onTap: () {
+        OTPController.instance.verifyOTP(otp); 
       //  Get.to(() => const SuccessScreen());
       },
       child: Container(width: 350, height: 50, decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: Colors.orange), 

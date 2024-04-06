@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:ktea/features/auth/controllers/signup_controller.dart';
+import 'package:ktea/features/auth/screens/forgot_pass/otp/otp.dart';
 
 
 class SignUpForm extends StatefulWidget {
@@ -99,6 +100,7 @@ const SizedBox(height:50 ,),
           // controller.password.text.trim()); 
           SignUpController.instance.phoneAuthentication(
             controller.phone.text.trim()); 
+            Get.to(()=> const OTP());
         }
        // Get.to(() => const SuccessScreen());
       },

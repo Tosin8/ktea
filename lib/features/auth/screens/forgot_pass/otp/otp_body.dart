@@ -1,10 +1,10 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
+import 'package:get/get.dart';
+import 'package:ktea/features/auth/controllers/otp_controller.dart';
 import 'package:ktea/features/auth/screens/forgot_pass/otp/otp_btn.dart';
 
-import 'otp_pin_field.dart';
-import 'timer.dart';
 
 class OTPBody extends StatefulWidget {
   const OTPBody({super.key});
@@ -16,6 +16,9 @@ class OTPBody extends StatefulWidget {
 class _OTPBodyState extends State<OTPBody> {
   @override
   Widget build(BuildContext context) {
+    var otpController = Get.put(OTPController()); 
+    var otp; 
+
     return SizedBox( 
       width: double.infinity,
       child: SingleChildScrollView(
@@ -34,11 +37,13 @@ class _OTPBodyState extends State<OTPBody> {
           fillColor: Colors.black.withOpacity(0.1),
           filled: true,
           onSubmit: (code) {
-            print('OTP is => $code'); 
+           //  print('OTP is => $code'); 
+           otp = code; 
+           OTPController.instance.verifyOTP(otp);
           },
         ), 
         const SizedBox(height: 80,), 
-        const OtpBtn(),
+       const OtpBtn(),
         const SizedBox(height: 20,), 
         const Text('Didn\'t receive the code? ', style: TextStyle(color: Colors.grey),),
         
