@@ -29,8 +29,12 @@ void registerUser(String email, String password) {
 // Get phoneNo from user and pass it to Auth Repo for Firebase Auth. 
 // Auth Repo will call firebase auth and send OTP to user.
 
-void createUser(UserModel user) {
-  userRepo.createUser(user); 
+
+// Getting phoneno from user and pass it to Auth. Repo for firebase Auth. 
+
+void createUser(UserModel user) async {
+  await userRepo.createUser(user); 
+  phoneAuthentication(user.phoneNo);
   }
 
   

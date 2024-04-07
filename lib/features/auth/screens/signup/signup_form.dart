@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:ktea/features/auth/controllers/signup_controller.dart';
+import 'package:ktea/features/auth/model/user_model.dart';
 import 'package:ktea/features/auth/screens/forgot_pass/otp/otp.dart';
 
 
@@ -98,9 +99,18 @@ const SizedBox(height:50 ,),
           // SignUpController.instance.registerUser(
           //   controller.email.text.trim(),
           // controller.password.text.trim()); 
-          SignUpController.instance.phoneAuthentication(
-            controller.phone.text.trim()); 
-            Get.to(()=> const OTP());
+          // SignUpController.instance.phoneAuthentication(
+          //   controller.phone.text.trim()); 
+          //   Get.to(()=> const OTP());
+        final user = UserModel(
+      
+           fullName: controller.name.text.trim(), 
+            email: controller.email.text.trim(), 
+             phoneNo: controller.phone.text.trim(), password: controller.password.text.trim()
+             );
+             SignUpController.instance.createUser(user); 
+             Get.to(() => const OTP());  
+        
         }
        // Get.to(() => const SuccessScreen());
       },
