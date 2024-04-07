@@ -104,7 +104,8 @@ const SizedBox(height:50 ,),
         }
        // Get.to(() => const SuccessScreen());
       },
-      child: Container(width: 350, height: 50, decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: Colors.orange), 
+      child: Container(width: 350, height: 50, decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), 
+      color: Colors.orange), 
       child: const Align(
         child: Text(
         'SIGN UP', 

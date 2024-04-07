@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ktea/features/auth/screens/forgot_pass/otp/otp.dart';
-import 'package:ktea/utils/nav_bar.dart';
 
 class SendLinkBtn extends StatelessWidget {
   const SendLinkBtn({
