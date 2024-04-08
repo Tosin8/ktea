@@ -1,9 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:ktea/utils/nav_bar.dart';
 
 import 'forget_psw_btn.dart';
 import 'login_btn.dart';

@@ -2,7 +2,6 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:ktea/features/auth/screens/forgot_pass/send_link_btn.dart';
-import 'package:ktea/features/auth/screens/widget.dart';
 
 
 
