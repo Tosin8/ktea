@@ -19,13 +19,15 @@ createUser(UserModel user)  async{
      'Your account has been created', 
   snackPosition: SnackPosition.BOTTOM, 
   backgroundColor: Colors.green.withOpacity(0.1), 
-  colorText: Colors.green
+  colorText: Colors.green,
   ); 
 }
   ).catchError((error, snackTrace){
     Get.snackbar('Error', 'Something went wrong. Try again', 
     snackPosition: SnackPosition.BOTTOM, 
-    backgroundColor: Colors.redAccent.withOpacity(0.1), colorText: Colors.red); 
-    print(error.toString()); 
+    backgroundColor: Colors.redAccent.withOpacity(0.1), 
+    colorText: Colors.red); 
+    print('Error -$error'); 
   }); 
-} }
+}
+ }

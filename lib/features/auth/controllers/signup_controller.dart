@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:ktea/features/auth/screens/forgot_pass/otp/otp.dart';
 import 'package:ktea/repository/auth/auth_repository.dart';
 import 'package:ktea/repository/user/user_repository.dart';
 
@@ -35,6 +36,7 @@ void registerUser(String email, String password) {
 void createUser(UserModel user) async {
   await userRepo.createUser(user); 
   phoneAuthentication(user.phoneNo);
+  Get.to(() => const OTP());
   }
 
   

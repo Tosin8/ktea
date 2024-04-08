@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:ktea/features/auth/controllers/signup_controller.dart';
 import 'package:ktea/features/auth/model/user_model.dart';
-import 'package:ktea/features/auth/screens/forgot_pass/otp/otp.dart';
 
 
 class SignUpForm extends StatefulWidget {
@@ -106,10 +105,11 @@ const SizedBox(height:50 ,),
       
            fullName: controller.name.text.trim(), 
             email: controller.email.text.trim(), 
-             phoneNo: controller.phone.text.trim(), password: controller.password.text.trim()
+             phoneNo: controller.phone.text.trim(), 
+             password: controller.password.text.trim(), 
              );
              SignUpController.instance.createUser(user); 
-             Get.to(() => const OTP());  
+            
         
         }
        // Get.to(() => const SuccessScreen());
