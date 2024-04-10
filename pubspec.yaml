@@ -37,7 +37,7 @@ dependencies:
   custom_navigation_bar: ^0.8.2
   dio: ^5.4.0
   firebase_auth: ^4.15.3
-  firebase_core: ^2.24.2
+  firebase_core: ^2.29.0
   firebase_messaging: ^14.7.10
   flutter:
     sdk: flutter

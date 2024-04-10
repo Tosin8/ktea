@@ -44,38 +44,38 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBXWrGHzCBS-0rVk5JXoVkU7O-63mkdwNc',
-    appId: '1:255258755366:web:a22ced8aa4d1cd0f71c1e7',
-    messagingSenderId: '255258755366',
-    projectId: 'ktea-6274c',
-    authDomain: 'ktea-6274c.firebaseapp.com',
-    storageBucket: 'ktea-6274c.appspot.com',
-    measurementId: 'G-ZGPSCFJNGH',
+    apiKey: 'AIzaSyB1T2ZKh-LrNbi5p_jkYjZIhBivtgpokRk',
+    appId: '1:609967972913:web:86f975f6fa0ed546826b10',
+    messagingSenderId: '609967972913',
+    projectId: 'ktea-d27b0',
+    authDomain: 'ktea-d27b0.firebaseapp.com',
+    storageBucket: 'ktea-d27b0.appspot.com',
+    measurementId: 'G-VBQVWWQRZM',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDjgE1TaK8zmJXfLAOfv4hi1v57f7qMhgg',
-    appId: '1:255258755366:android:de30983b2b492bfc71c1e7',
-    messagingSenderId: '255258755366',
-    projectId: 'ktea-6274c',
-    storageBucket: 'ktea-6274c.appspot.com',
+    apiKey: 'AIzaSyAVFMSrxttYdiz4DvaQhZ681Y69Ayzj2zI',
+    appId: '1:609967972913:android:eac29da50f7e612e826b10',
+    messagingSenderId: '609967972913',
+    projectId: 'ktea-d27b0',
+    storageBucket: 'ktea-d27b0.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCahhfMLcyrPJmi8e_xSql3RmEB4DR8rxQ',
-    appId: '1:255258755366:ios:8222b9522fae554c71c1e7',
-    messagingSenderId: '255258755366',
-    projectId: 'ktea-6274c',
-    storageBucket: 'ktea-6274c.appspot.com',
+    apiKey: 'AIzaSyDGp6Y2-tXkwfi7FDuGGvuKQNOC8esuMcU',
+    appId: '1:609967972913:ios:591e99355149df52826b10',
+    messagingSenderId: '609967972913',
+    projectId: 'ktea-d27b0',
+    storageBucket: 'ktea-d27b0.appspot.com',
     iosBundleId: 'com.example.furnitureApp',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCahhfMLcyrPJmi8e_xSql3RmEB4DR8rxQ',
-    appId: '1:255258755366:ios:a9c08dd53b4f2e1c71c1e7',
-    messagingSenderId: '255258755366',
-    projectId: 'ktea-6274c',
-    storageBucket: 'ktea-6274c.appspot.com',
+    apiKey: 'AIzaSyDGp6Y2-tXkwfi7FDuGGvuKQNOC8esuMcU',
+    appId: '1:609967972913:ios:db95949ee8fc88b6826b10',
+    messagingSenderId: '609967972913',
+    projectId: 'ktea-d27b0',
+    storageBucket: 'ktea-d27b0.appspot.com',
     iosBundleId: 'com.example.furnitureApp.RunnerTests',
   );
 }
