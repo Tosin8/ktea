@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -40,19 +41,44 @@ class _SignUpFormState extends State<SignUpForm> {
               ),
             ), 
 const SizedBox(height: 10,), 
-// Full Name
-              TextFormField(
-              keyboardType: TextInputType.name, 
-              textInputAction: TextInputAction.next, 
-              decoration: const InputDecoration(
-                suffixIcon: Padding(
-                  padding: EdgeInsets.only(right: 10),
-                  child: Icon(Iconsax.user),
-                  
-                ), 
-                labelText: 'Full Name',
+
+// first name & last name
+
+              Row(
+                children: [
+                  Expanded(
+                    child: TextFormField(
+                      expands: false,
+                    keyboardType: TextInputType.name, 
+                    textInputAction: TextInputAction.next, 
+                    decoration: const InputDecoration(
+                      suffixIcon: Padding(
+                        padding: EdgeInsets.only(right: 10),
+                        child: Icon(Iconsax.user),
+                        
+                      ), 
+                      labelText: 'First Name',
+                    ),
+                                ),
+                  ),
+                  SizedBox(width: 10,), 
+                   Expanded(
+                    child: TextFormField(
+                      expands: false,
+                    keyboardType: TextInputType.name, 
+                    textInputAction: TextInputAction.next, 
+                    decoration: const InputDecoration(
+                      suffixIcon: Padding(
+                        padding: EdgeInsets.only(right: 10),
+                        child: Icon(Iconsax.user),
+                        
+                      ), 
+                      labelText: 'Last Name',
+                    ),
+                                ),
+                  ),
+                ],
               ),
-            ),
             const SizedBox(height: 10,), 
 
       

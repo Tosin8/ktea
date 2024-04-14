@@ -35,7 +35,7 @@ class SignInBody extends StatelessWidget {
                   const Text('Kindly sign in to continue',
                   style: TextStyle(fontSize: 15, color: Colors.grey), 
                 ), 
-                  const SizedBox(height: 60), 
+                  const SizedBox(height: 30), 
 
                   // Form Body
                   const SignInForm(),
