@@ -61,7 +61,7 @@ const SizedBox(height: 10,),
                     ),
                                 ),
                   ),
-                  SizedBox(width: 10,), 
+                  const SizedBox(width: 10,), 
                    Expanded(
                     child: TextFormField(
                       expands: false,
@@ -81,7 +81,23 @@ const SizedBox(height: 10,),
               ),
             const SizedBox(height: 10,), 
 
-      
+// Username
+      TextFormField(
+              
+                controller: controller.name, 
+              keyboardType: TextInputType.visiblePassword, 
+              textInputAction: TextInputAction.next, 
+              decoration: const InputDecoration(
+                suffixIcon: Padding(
+                  padding: EdgeInsets.only(right: 10),
+                  child: Icon(Iconsax.user),
+                  
+                ), 
+                labelText: 'Username',
+              ),
+            ),
+
+              const SizedBox(height: 10,), 
 
             // Password
               TextFormField(
@@ -92,7 +108,7 @@ const SizedBox(height: 10,),
               decoration: const InputDecoration(
                 suffixIcon: Padding(
                   padding: EdgeInsets.only(right: 10),
-                  child: Icon(Iconsax.eye),
+                  child: Icon(Iconsax.eye_slash),
                   
                 ), 
                 labelText: 'Password',
@@ -115,32 +131,41 @@ const SizedBox(height: 10,),
                 labelText: 'Phone Number',
               ),
             ),
-const SizedBox(height:50 ,), 
+
+const SizedBox(height: 10,), 
+             // CheckBox
+              Row(
+                children: [
+                  SizedBox(
+                    width: 25,
+                    child: Checkbox(value: true, 
+                    onChanged: (value){}),
+                  ), 
+                  const SizedBox(width: 10,), 
+                  const Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(text: 'I agree to the '),
+                        TextSpan(text: 'Terms and Conditions', 
+                        style: TextStyle(
+                          color: Colors.orangeAccent, 
+                          )),
+                         
+                      ]))
+                ],
+              ), 
+const SizedBox(height:30 ,), 
             // Button
+          
            // const SignUpBtn(), 
            GestureDetector( 
       onTap: () {
-        if(_formKey.currentState!.validate()) {
-          // SignUpController.instance.registerUser(
-          //   controller.email.text.trim(),
-          // controller.password.text.trim()); 
-          // SignUpController.instance.phoneAuthentication(
-          //   controller.phone.text.trim()); 
-          //   Get.to(()=> const OTP());
-        final user = UserModel(
-      
-           fullName: controller.name.text.trim(), 
-            email: controller.email.text.trim(), 
-             phoneNo: controller.phone.text.trim(), 
-             password: controller.password.text.trim(), 
-             );
-             SignUpController.instance.createUser(user); 
-            
-        
-        }
-       // Get.to(() => const SuccessScreen());
-      },
-      child: Container(width: 350, height: 50, decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), 
+      }, 
+      child: Container(
+        width: 350, 
+        height: 50,
+         decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10), 
       color: Colors.orange), 
       child: const Align(
         child: Text(

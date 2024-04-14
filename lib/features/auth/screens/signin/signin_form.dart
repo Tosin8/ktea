@@ -56,8 +56,11 @@ class _SignInFormState extends State<SignInForm> {
             padding: const EdgeInsets.only(left: 0),
              child: Row(
               children: [
-             Checkbox(value: true, 
-             onChanged: (value){}), 
+             SizedBox(
+              width: 20,
+               child: Checkbox(value: true, 
+               onChanged: (value){}),
+             ), const SizedBox(width: 10,),
              const Text('Remember Me'), 
               ],
              ),

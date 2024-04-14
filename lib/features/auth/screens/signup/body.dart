@@ -22,26 +22,19 @@ class _SignUpBodyState extends State<SignUpBody> {
       child: SingleChildScrollView(
         child: FadeInRight(
           duration: const Duration(milliseconds: 300),
-          child: const Column(
+          child:  const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               signupheader(), 
-              SizedBox(height: 20), 
+              SizedBox(height: 10), 
               SignUpForm(), 
               //const AppForm1(), 
               SizedBox(height: 30), 
               SocialCard(),
               SizedBox(height: 20), 
-              Center(
-          
-                child: 
-                    
-                    Text('Terms and Conditions', 
-                    style: TextStyle(color: Colors.orangeAccent,
-                    
-                    ),)
-                  
-              )
+
+             
+            
             ],
           )),
       ),
