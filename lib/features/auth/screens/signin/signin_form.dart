@@ -48,8 +48,24 @@ class _SignInFormState extends State<SignInForm> {
               ), 
               labelText: 'Password',
             ),
-          ), 
+          ),
+
+           // Remember Me - Check box
+           const SizedBox(height: 10,), 
+           Padding(
+            padding: const EdgeInsets.only(left: 0),
+             child: Row(
+              children: [
+             Checkbox(value: true, 
+             onChanged: (value){}), 
+             const Text('Remember Me'), 
+              ],
+             ),
+           ) , 
           const SizedBox(height: 50,), 
+
+         
+
 
           // Button
           const LoginBtn(),

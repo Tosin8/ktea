@@ -47,6 +47,8 @@ class SignInBody extends StatelessWidget {
                     const SizedBox(height: 15), 
                     const SocialCard(),
                     const SizedBox(height: 100), 
+                   
+                   // footer text
                     Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
