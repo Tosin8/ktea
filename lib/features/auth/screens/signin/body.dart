@@ -30,7 +30,8 @@ class SignInBody extends StatelessWidget {
                   // Header
                   const SizedBox(height: 8), 
                   Text('Welcome Back!',
-                  style: TextStyle(color: Colors.black.withOpacity(0.8), fontSize: 24, fontWeight: FontWeight.bold),),
+                  style: TextStyle(
+                    color: Colors.black.withOpacity(0.8), fontSize: 24, fontWeight: FontWeight.bold),),
                   const SizedBox(height: 6),  
                   const Text('Kindly sign in to continue',
                   style: TextStyle(fontSize: 15, color: Colors.grey), 

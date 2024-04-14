@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:ktea/features/auth/controllers/signup_controller.dart';
 import 'package:ktea/features/auth/model/user_model.dart';
+import 'package:ktea/features/auth/screens/verify_pass/verify_pass.dart';
 
 
 class SignUpForm extends StatefulWidget {
@@ -157,9 +158,12 @@ const SizedBox(height: 10,),
 const SizedBox(height:30 ,), 
             // Button
           
+          
+          
            // const SignUpBtn(), 
            GestureDetector( 
       onTap: () {
+        Get.to(() => const VerifyEmail());
       }, 
       child: Container(
         width: 350, 
