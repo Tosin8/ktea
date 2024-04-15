@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:ktea/features/auth/screens/success_screen.dart';
+import 'package:lottie/lottie.dart';
 
 class VerifyEmail extends StatelessWidget {
   const VerifyEmail({super.key});
@@ -27,7 +29,7 @@ class VerifyEmail extends StatelessWidget {
 Container(
   height: 250, 
   width: MediaQuery.of(context).size.width,
-  child: const Placeholder(),
+  child: Lottie.asset('assets/animation/json/mail_sent.json'),
 ),
 const SizedBox(height: 20,), 
 
@@ -45,12 +47,12 @@ const SizedBox(height: 10,),
   textAlign: TextAlign.center,
    ),  
 
-   SizedBox(height: 40,), 
+   const SizedBox(height: 40,), 
 
           // const SignUpBtn(), 
            GestureDetector( 
       onTap: () {
-      // Get.to(() => const VerifyEmail());
+       Get.to(() => const SuccessScreen());
       }, 
       child: Container(
         width: 350, 
@@ -70,7 +72,11 @@ const SizedBox(height: 10,),
           ),
     ), 
 
-    SizedBox(height: 20,), 
+    const SizedBox(height: 20,),
+    
+    // Resend Mail Btn
+    TextButton(onPressed: (){}, 
+    child: Text('Resend Email', style: TextStyle(color: Colors.orange.withOpacity(0.8)),)), 
   
         ],
       ),
