@@ -11,6 +11,7 @@ final lastName = TextEditingController();
 final phoneNumber = TextEditingController();
 final userName = TextEditingController();
 final password = TextEditingController();
+GlobalKey<FormState> signupFormKey = GlobalKey<FormState>(); // form key for form validation
 
 /// Sign Up Methods
 

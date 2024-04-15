@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:ktea/features/auth/controllers/signup_controller.dart';
-import 'package:ktea/features/auth/model/user_model.dart';
 import 'package:ktea/features/auth/screens/verify_pass/verify_pass.dart';
 
 
@@ -19,16 +18,20 @@ class _SignUpFormState extends State<SignUpForm> {
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(SignUpController());
-  final _formKey = GlobalKey<FormState>();
+    final controller = Get.put(SignUpController()); // creating dependency. 
+  //final _formKey = GlobalKey<FormState>();
 
     return Padding(
       padding: const EdgeInsets.only(left: 15.0, right: 15.0),
       child: Form( 
-        key: _formKey,
+      //  key: _formKey,
+      key: controller.signupFormKey, 
         child: Column(
           children: [
             TextFormField(
+              validator: (value) {
+                
+              },
               controller: controller.email, 
               keyboardType: TextInputType.emailAddress, 
               textInputAction: TextInputAction.next, 
@@ -49,6 +52,7 @@ const SizedBox(height: 10,),
                 children: [
                   Expanded(
                     child: TextFormField(
+                      controller: controller.firstName,
                       expands: false,
                     keyboardType: TextInputType.name, 
                     textInputAction: TextInputAction.next, 
@@ -65,6 +69,7 @@ const SizedBox(height: 10,),
                   const SizedBox(width: 10,), 
                    Expanded(
                     child: TextFormField(
+                      controller: controller.lastName, 
                       expands: false,
                     keyboardType: TextInputType.name, 
                     textInputAction: TextInputAction.next, 
@@ -85,7 +90,7 @@ const SizedBox(height: 10,),
 // Username
       TextFormField(
               
-                controller: controller.name, 
+                controller: controller.userName, 
               keyboardType: TextInputType.visiblePassword, 
               textInputAction: TextInputAction.next, 
               decoration: const InputDecoration(
@@ -120,7 +125,7 @@ const SizedBox(height: 10,),
 
             // Phone
               TextFormField(
-                controller: controller.phone,
+                controller: controller.phoneNumber,
               keyboardType: TextInputType.phone, 
               textInputAction: TextInputAction.done, 
               decoration: const InputDecoration(
