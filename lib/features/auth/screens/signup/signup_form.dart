@@ -108,6 +108,7 @@ const SizedBox(height: 10,),
 
             // Password
               TextFormField(
+                validator: (value) => Validators.validatePhoneNumber(value),
                 obscureText: true, 
                 controller: controller.password, 
               keyboardType: TextInputType.visiblePassword, 
@@ -126,6 +127,7 @@ const SizedBox(height: 10,),
 
             // Phone
               TextFormField(
+                validator: (value) => Validators.validatePhoneNumber(value),
                 controller: controller.phoneNumber,
               keyboardType: TextInputType.phone, 
               textInputAction: TextInputAction.done, 
