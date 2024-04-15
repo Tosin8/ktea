@@ -171,7 +171,8 @@ const SizedBox(height:30 ,),
            // const SignUpBtn(), 
            GestureDetector( 
       onTap: () {
-        Get.to(() => const VerifyEmail());
+        // Get.to(() => const VerifyEmail());
+        controller.signUp(); // calling the sign up function controller
       }, 
       child: Container(
         width: 350, 
