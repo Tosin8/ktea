@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ktea/utils/loaders/full_screen_loader.dart';
 
 class SignUpController extends GetxController{
 static SignUpController get instance => Get.find();
@@ -19,9 +20,11 @@ Future<void> signUp() async {
   try {
 
 // Start Loading 
+FullScreenLoader.openLoadingDialog('We are processing your informaion...', 
+'assets/animation/json/loading_processing.json' );
 
 // Check Internet Connectivity 
-
+final isConnected = await NetworkManager.instance.isConnected(); 
 // Form Validation 
 
 // Privacy Policy Check
