@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ktea/utils/loaders/full_screen_loader.dart';
-import 'package:ktea/utils/network/network_manager.dart';
+import 'package:ktea/utils/http/network_manager.dart';
 
 class SignUpController extends GetxController{
 static SignUpController get instance => Get.find();
@@ -26,6 +26,10 @@ FullScreenLoader.openLoadingDialog('We are processing your informaion...',
 
 // Check Internet Connectivity 
 final isConnected = await NetworkManager.instance.isConnected(); 
+if(!isConnected){
+  FullScreenLoader.stopLoading();
+  return; 
+}
 // Form Validation 
 
 // Privacy Policy Check
