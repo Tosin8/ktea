@@ -21,7 +21,7 @@ class NetworkManager extends GetxController{
   @override 
   void onInit() {
     super.onInit(); 
-    _connectivitySubscription = _connectivity.onConnectivityChanged.listen(_updateConnectionStatus); 
+    _connectivitySubscription = _connectivity.onConnectivityChanged.listen(_updateConnectionStatus as void Function(List<ConnectivityResult> event)?) as StreamSubscription<ConnectivityResult>; 
     }
 
     ///Update the connection status used on changes in connectivity and show a reelevant popup for an internet connection. 

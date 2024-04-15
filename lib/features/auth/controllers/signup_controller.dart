@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ktea/utils/loaders/full_screen_loader.dart';
 import 'package:ktea/utils/http/network_manager.dart';
+import 'package:ktea/utils/loaders/loaders.dart';
 
 class SignUpController extends GetxController{
 static SignUpController get instance => Get.find();
@@ -50,8 +51,12 @@ if(!signupFormKey.currentState!.validate()) {
 
   } catch (e) {
     
-  } finally {
+
     // Callback when the process is finished,
+    Loaders.errorSnackBar(title: 'Oh Snap', message: e.toString()); 
+  } finally {
+    // Remove loader 
+    FullScreenLoader.stopLoading(); 
   }
 }
 }

@@ -18,7 +18,7 @@ Get.snackbar(
   );
 }
 
-succesSnackBar({required title, message = ''}) {
+static succesSnackBar({required title, message = ''}) {
 
 Get.snackbar(
   title, 
@@ -43,9 +43,9 @@ static errorSnackBar({required title, message = ''}) {
      colorText: Colors.white, 
      backgroundColor: Colors.red.shade600, 
      snackPosition: SnackPosition.BOTTOM,
-      duration: Duration(seconds: 3), 
+      duration: const Duration(seconds: 3), 
       margin: const EdgeInsets.all(20), 
-      icon: Icon(Iconsax.warning_2, color: Colors.white)
+      icon: const Icon(Iconsax.warning_2, color: Colors.white)
      );
 }
 }
