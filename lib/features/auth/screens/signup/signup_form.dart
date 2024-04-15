@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:ktea/features/auth/controllers/signup_controller.dart';
 import 'package:ktea/features/auth/screens/verify_pass/verify_pass.dart';
+import 'package:ktea/utils/validators/validation.dart';
 
 
 class SignUpForm extends StatefulWidget {
@@ -29,9 +30,7 @@ class _SignUpFormState extends State<SignUpForm> {
         child: Column(
           children: [
             TextFormField(
-              validator: (value) {
-                
-              },
+              validator: (value) => Validators.validateEmail( value),
               controller: controller.email, 
               keyboardType: TextInputType.emailAddress, 
               textInputAction: TextInputAction.next, 
@@ -52,6 +51,7 @@ const SizedBox(height: 10,),
                 children: [
                   Expanded(
                     child: TextFormField(
+                      validator: (value) => Validators.validateEmptyText('First Name', value),
                       controller: controller.firstName,
                       expands: false,
                     keyboardType: TextInputType.name, 
@@ -69,6 +69,7 @@ const SizedBox(height: 10,),
                   const SizedBox(width: 10,), 
                    Expanded(
                     child: TextFormField(
+                      validator: (value) => Validators.validateEmptyText('Last Name', value),
                       controller: controller.lastName, 
                       expands: false,
                     keyboardType: TextInputType.name, 
@@ -89,7 +90,7 @@ const SizedBox(height: 10,),
 
 // Username
       TextFormField(
-              
+              validator: (value) => Validators.validateEmptyText('Username', value),
                 controller: controller.userName, 
               keyboardType: TextInputType.visiblePassword, 
               textInputAction: TextInputAction.next, 
