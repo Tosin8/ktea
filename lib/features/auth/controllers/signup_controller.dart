@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ktea/utils/loaders/full_screen_loader.dart';
+import 'package:ktea/utils/network/network_manager.dart';
 
 class SignUpController extends GetxController{
 static SignUpController get instance => Get.find();
