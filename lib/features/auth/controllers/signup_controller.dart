@@ -30,7 +30,12 @@ if(!isConnected){
   FullScreenLoader.stopLoading();
   return; 
 }
+
 // Form Validation 
+if(!signupFormKey.currentState!.validate()) {
+  FullScreenLoader.stopLoading(); 
+  return; 
+}
 
 // Privacy Policy Check
 
