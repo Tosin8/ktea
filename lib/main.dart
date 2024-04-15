@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ktea/bindings/general_bindings.dart';
 import 'package:ktea/firebase_options.dart';
 import 'package:ktea/repository/auth/auth_repository.dart';
 
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
       // initialRoute: FurnitureSplash.routeName,
       // routes: routes,
      home: const Onboarding(), 
-
+initialBinding: GeneralBindings(),
      //home: SignIn(), 
     );
   }
