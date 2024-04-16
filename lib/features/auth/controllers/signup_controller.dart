@@ -8,6 +8,7 @@ class SignUpController extends GetxController{
 static SignUpController get instance => Get.find();
 
 /// Variables
+final hidePassword = true.obs;  // obs for hiding /showing passwords. 
 final email = TextEditingController(); 
 final firstName = TextEditingController();
 final lastName = TextEditingController();
@@ -28,13 +29,12 @@ FullScreenLoader.openLoadingDialog('We are processing your informaion...',
 // Check Internet Connectivity 
 final isConnected = await NetworkManager.instance.isConnected(); 
 if(!isConnected){
-  FullScreenLoader.stopLoading();
   return; 
 }
 
 // Form Validation 
 if(!signupFormKey.currentState!.validate()) {
-  FullScreenLoader.stopLoading(); 
+  
   return; 
 }
 

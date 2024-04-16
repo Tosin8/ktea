@@ -107,21 +107,26 @@ const SizedBox(height: 10,),
               const SizedBox(height: 10,), 
 
             // Password
-              TextFormField(
-                validator: (value) => Validators.validatePhoneNumber(value),
-                obscureText: true, 
-                controller: controller.password, 
-              keyboardType: TextInputType.visiblePassword, 
-              textInputAction: TextInputAction.next, 
-              decoration: const InputDecoration(
-                suffixIcon: Padding(
-                  padding: EdgeInsets.only(right: 10),
-                  child: Icon(Iconsax.eye_slash),
-                  
-                ), 
-                labelText: 'Password',
+              Obx(
+                () =>  TextFormField(
+                  validator: (value) => Validators.validatePhoneNumber(value),
+                  obscureText: controller.hidePassword.value, 
+                  controller: controller.password, 
+                keyboardType: TextInputType.visiblePassword, 
+                textInputAction: TextInputAction.next, 
+                decoration: InputDecoration(
+                  suffixIcon: Padding(
+                    padding: const EdgeInsets.only(right: 10),
+                    child: IconButton(
+                      onPressed: () => controller.hidePassword.value = !controller.hidePassword.value,
+                       icon: Icon(controller.hidePassword.value ? Iconsax.eye : Iconsax.eye_slash), 
+                       ),
+                    
+                  ), 
+                  labelText: 'Password',
+                ),
+                            ),
               ),
-            ),
 
               const SizedBox(height: 10,), 
 
